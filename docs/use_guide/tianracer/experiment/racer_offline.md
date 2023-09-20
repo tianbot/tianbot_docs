@@ -1,0 +1,18 @@
+<p style="font-size:30px; font-weight:bolder; text-align:center ">比赛二 F1TENTH线下竞速赛</p>
+
+### 【比赛目标】
+
+- 参照2021ROS暑期学校F1TENTH线上仿真赛，与比赛一的形式，可自行组织学生完成线下比赛，学生自行进行调参，以跑3圈所用时间为竞技标准
+- 比赛形式为线下
+- 老师可组织学生自行搭建赛道，自定比赛规则
+
+### 【比赛内容及详解】
+
+B站视频链接：
+2021ROS暑期学校-F1TENTH无人车挑战赛线上答疑8月10日 天之博特田博：https://www.bilibili.com/video/BV1c64y1q7mg?spm_id_from=333.999.0.0
+F1TENTH Simulator仿真课（田博）：https://www.bilibili.com/video/BV1YP4y1L7sz?spm_id_from=333.999.0.0
+更多教程可关注天之博特B站账号：天之博特TIANBOT
+
+### 【注意事项】
+
+线下赛与线上赛虽然形式类似，但实际操作起来还是会遇到一些问题，这就考验到学生对整车、结构、电路、算法、部署等的调节能力，同时要考虑赛道的搭建等。

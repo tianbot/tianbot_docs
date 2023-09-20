@@ -1,0 +1,324 @@
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  lang: 'zh-CN',
+  title: " 📖 Tianbot",
+  description: "快跟我一起快乐的学习ROS机器人",
+  titleTemplate: "Docs",
+
+  // #region fav
+  head: [
+    ['link',{ rel: 'icon', href: '/logo.ico'}],
+    
+    // get picture no referrer， such as aliyun-oss,  the follower code change " <meta name="referrer" content="no-referrer" /> " in .html file
+    ['meta',{ name:'referrer', content:'no-referrer'}],
+  ],
+  // #endregion fav
+
+  base: '/', //网站部署到github的vitepress这个仓库里
+
+  cleanUrls:true, //开启纯净链接无html
+
+
+  //启用深色模式
+  appearance:'dark',
+
+  //多语言
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'Zh_CN',
+    },
+    en: {
+      label: 'English',
+      lang: 'en',
+      link: '/en/',
+    },
+    fr: {
+      label: 'French',
+      lang: 'fr',
+      link: '/fr/',
+    }
+  },
+
+  //markdown配置
+  markdown: {
+    //行号显示
+    lineNumbers: true, 
+
+  },
+
+
+  //主题配置
+  themeConfig: {
+    //左上角logo
+    //logo: '/logo.png',
+    //logo: 'https://vitejs.cn/vite3-cn/logo-with-shadow.png', //远程引用
+    //siteTitle: false, //标题隐藏
+
+    //设置站点标题 会覆盖title
+    //siteTitle: 'Hello World',
+
+    //导航栏
+    nav: [
+      { text: '首页', link: '/' },
+      { text: '官网', link: 'https://www.tianbot.com' },
+      {
+        text: '相关文档',
+        items: [
+          {
+            // 分组标题1
+            text: '基础知识',
+            items: [
+              { text: 'git快速使用', link: '/basic_guide/git' },
+              { text: 'linux快速使用', link: '/basic_guide/linux' },
+              { text: 'markdown快速使用', link: '/basic_guide/markdown' },
+              { text: 'Vi/Vim快速使用', link: '/basic_guide/vi_or_vim' },
+              { text: '如何备份你的linux系统', link: '/basic_guide/backup_linux' },
+              { text: 'VScode中的开发环境配置', link: '/basic_guide/vscode/index' },
+              { text: '如何优雅的提问', link: '/basic_guide/how_to_ask_for_help' },
+            ],
+          },
+          {
+            // 分组标题2
+            text: '仿真模拟',
+            items: [
+              { text: '轮式机器人仿真实例', link: '/simulation' },
+              { text: '足式机器人仿真实例', link: '/simulation' },
+              { text: '机械臂仿真实例', link: '/simulation' },
+              { text: '无人机仿真实例', link: '/simulation' },
+              { text: '集群仿真仿真实例', link: '/simulation' },
+              { text: '传感器仿真实例', link: '/simulation' },
+            ],
+          },
+          {
+            // 分组标题3
+            text: '拓展提升',
+            items: [
+              { text: '参数调整开发指南', link: '/enhance/Lidar_SLAM/index' },
+              { text: '传感器标定开发指南', link: '/enhance/Sensor_Calib/index' },
+              { text: '计算机视觉开发指南', link: '/enhance/CV/index' },
+              { text: '运动控制开发指南', link: '/enhance/Motion_Control/index' },
+              { text: '激光SLAM开发指南', link: '/enhance/Lidar_SLAM/index' },
+              { text: '视觉SLAM开发指南', link: '/enhance/Visual_SLAM/index' },
+            ],
+          },
+        ],
+      },
+      
+
+    { text: '关于我们', link: 'https://www.tianbot.com/page?id=4' },
+
+    ],
+
+
+    //侧边栏
+    sidebar: [
+      {
+        //分组标题1
+        text: '💿 ROS2GO文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/ros2go/' },
+          { text: '常见问题', link: '/use_guide/ros2go/question.md' },
+          { text: '更新日志', link: '/use_guide/ros2go/changelog.md' },
+        ],
+      },
+      {
+        //分组标题2
+        text: '🚚 TOM文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/tianracer/' },
+          {
+            text: '实验手册',
+            collapsed: true,
+            items: [
+              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1.md' },
+              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2.md' },
+              { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3.md' },
+              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4.md' },
+              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianracer/experiment/chapter5.md' },
+              { text: '实验六 自主导航', link: '/use_guide/tianracer/experiment/chapter6.md' },
+              { text: '实验七 多点导航', link: '/use_guide/tianracer/experiment/chapter7.md' },
+              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianracer/experiment/chapter8.md'},
+              { text: '线上挑战赛', link: '/use_guide/tianracer/experiment/racer_offline.md' },
+              { text: '线下挑战赛', link: '/use_guide/tianracer/experiment/racer_online.md' },
+            ],
+          },
+          { text: '更新日志', link: '/use_guide/tianracer/changelog' },
+        ],
+      },
+      {
+        //分组标题3
+        text: '🏁 TIANRACER文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/tianracer/' },
+          {
+            text: '实验手册',
+            collapsed: true,
+            items: [
+              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1.md' },
+              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2.md' },
+              { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3.md' },
+              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4.md' },
+              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianracer/experiment/chapter5.md' },
+              { text: '实验六 自主导航', link: '/use_guide/tianracer/experiment/chapter6.md' },
+              { text: '实验七 多点导航', link: '/use_guide/tianracer/experiment/chapter7.md' },
+              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianracer/experiment/chapter8.md'},
+              { text: '线上挑战赛', link: '/use_guide/tianracer/experiment/racer_offline.md' },
+              { text: '线下挑战赛', link: '/use_guide/tianracer/experiment/racer_online.md' },
+            ],
+          },
+          { text: '更新日志', link: '/use_guide/tianracer/changelog' },
+        ],
+      },
+      {
+        //分组标题3
+        text: 'TIANROVER文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/tianrover/' },
+          { text: '更新日志', link: '/use_guide/tianracer/changelog' },
+        ],
+      },
+      {
+        //分组标题4
+        text: '🚗 TIANBOT MINI文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/tianbot_mini/' },
+          { text: '实验手册', link: '/use_guide/tianbot_mini/experiment/' },
+          { text: '更新日志', link: '/use_guide/tianbot_mini/changelog' },
+        ],
+      },
+      {
+        //分组标题5
+        text: '🚁 ROBOMASTER TT文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/rmtt/' },
+          { text: '实验手册', link: '/use_guide/rmtt/experiment/' },
+          { text: '更新日志', link: '/use_guide/rmtt/changelog' },
+        ],
+      },
+
+      {
+        //分组标题6
+        text: '📢 ROSECHO 文档',
+        collapsed: false,
+        items: [
+          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '使用手册', link: '/use_guide/rosecho/' },
+          { text: '实验手册', link: '/use_guide/rosecho/experiment/' },
+          { text: '更新日志', link: '/use_guide/rosecho/changelog' },
+        ],
+      },
+    ],
+
+
+
+    //本地搜索
+    search: {
+      provider: 'local',
+      options: {
+        locales: {
+          zh: {
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                noResultsText: '无法找到相关结果',
+                resetButtonTitle: '清除查询条件',
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换'
+                },
+              },
+            },
+          },
+        },
+      },
+    },
+
+    
+
+
+
+    //社交链接
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/tianbot' },
+      // { icon: 'twitter', link: 'https://twitter.com/' }, 
+      // { icon: 'discord', link: 'https://chat.vitejs.dev/' }, 
+      // 自定义社交链接 
+      {
+        // taobao
+        icon: { 
+          svg: '<img src="https://gw.alicdn.com/imgextra/i1/O1CN018qjIZA1yiLUFgmBpM_!!6000000006612-73-tps-64-64.ico"  height="24" width="24" title="淘宝产品购买" />',
+          // svg: '<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>taobao</title><d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>'
+        },
+        link: 'https://tianbot.taobao.com/',
+        ariaLabel: 'taobao'
+      },
+      {
+        // qq
+        icon: {
+          svg: '<img src="https://qq-web.cdn-go.cn//im.qq.com_new/7bce6d6d/asset/favicon.ico" height="24" width="24" title="加入我们的QQ频道"></img>'
+        },
+        link: 'https://pd.qq.com/s/ff87jqozl',
+        ariaLabel: 'qqchannel'
+      },
+    ],
+
+    //手机端深浅模式文字修改
+    darkModeSwitchLabel: '深浅模式',
+
+    //页脚
+    footer: {
+      // message: 'Released under the MIT License.',
+      // copyright: 'Copyright © 2023 备案号：<a href="https://beian.miit.gov.cn/">京****号</a>',
+      copyright: 'Copyright © 2023 天之博特',
+    },
+
+
+    //侧边栏文字更改(移动端)
+    sidebarMenuLabel:'目录',
+
+    //返回顶部文字修改(移动端)
+    returnToTopLabel:'返回顶部',
+
+
+    //大纲显示2-3级标题
+    outline:[2,3],
+    //大纲顶部标题
+    outlineTitle:'当前页大纲',
+
+
+    //编辑本页
+    editLink: {
+     pattern: 'https://github.com/账户名/仓库名/edit/main/docs/:path',
+     text: '在GitHub编辑本页'
+    },
+    
+    //上次更新时间
+    //lastUpdatedText:'Updated Date',
+
+
+    //自定义上下页名
+    docFooter: { 
+      prev: '上一页', 
+      next: '下一页', 
+    }, 
+
+  },
+  
+})
