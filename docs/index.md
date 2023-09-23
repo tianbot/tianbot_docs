@@ -24,9 +24,9 @@ features:
     details: 像ROS2GO的名字一样，随时随地带走自己工作环境，更加标准化开发和科研，经过简单几步很短时间就可以体验ROS的乐趣，而无需繁碎的环境配置，这就是ROS2GO...
     link: /use_guide/ros2go/
   - icon: 🐢
-    title: ROS快速入门文档
+    title: ROS机器人学习指南
     details: ROS是一个功能强大、灵活多样的机器人软件框架，可以帮助开发者快速构建出各种类型的机器人应用。它的开放源代码特性也使得它可以不断发展壮大，并得到广泛的应用和支持...
-    link: /use_guide/ros/
+    link: /use_guide/ros2go/ros/
   - icon: 🚚
     title: TOM文档
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用USB、CAN、UART等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
@@ -34,7 +34,7 @@ features:
   - icon: 🪐
     title: Tianrover文档
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用USB、CAN、UART等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
-    link: /use_guide/tianbot/
+    link: /use_guide/tianrover/
   - icon: 🏁
     title: Tianracer文档
     details: 使用Jetson Nano计算平台作为核心控制器的TianRacer-Dev无人车开发平台的使用说明，涉及基本功能、硬件、软件的相关信息...

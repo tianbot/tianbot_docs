@@ -84,12 +84,12 @@ export default defineConfig({
             // 分组标题2
             text: '仿真模拟',
             items: [
-              { text: '轮式机器人仿真实例', link: '/simulation' },
-              { text: '足式机器人仿真实例', link: '/simulation' },
-              { text: '机械臂仿真实例', link: '/simulation' },
-              { text: '无人机仿真实例', link: '/simulation' },
-              { text: '集群仿真仿真实例', link: '/simulation' },
-              { text: '传感器仿真实例', link: '/simulation' },
+              { text: '轮式机器人仿真实例', link: '/simulation/wheel_robot/' },
+              { text: '足式机器人仿真实例', link: '/simulation/legged_robot/' },
+              { text: '机械臂仿真实例', link: '/simulation/arm/' },
+              { text: '无人机仿真实例', link: '/simulation/drone/' },
+              { text: '集群仿真仿真实例', link: '/simulation/swarm/' },
+              { text: '传感器仿真实例', link: '/simulation/sensor/' },
             ],
           },
           {
@@ -124,8 +124,9 @@ export default defineConfig({
           {
             text: '使用手册',
             collapsed: true,
+            link: '/use_guide/ros2go/',
             items: [
-              { text: '开箱说明', link: '/use_guide/ros2go/' },
+              { text: '开箱说明', link: '/use_guide/ros2go/guide/' },
               { text: '如何启动', link: '/use_guide/ros2go/guide/chapter1' },
               { text: '如何备份', link: '/use_guide/ros2go/guide/chapter2' },
               { text: '如何恢复', link: '/use_guide/ros2go/guide/chapter3' },
@@ -139,6 +140,17 @@ export default defineConfig({
                   { text: '兼容的网卡型号', link: '/use_guide/ros2go/applicable/chapter2' },
                   { text: '兼容的底盘型号', link: '/use_guide/ros2go/applicable/chapter3' },
                   { text: '兼容的传感器型号', link: '/use_guide/ros2go/applicable/chapter4' },
+                ],
+              },
+              {
+                text: 'ROS学习指南',
+                collapsed: true,
+                link: '/use_guide/ros2go/ros/index',
+                items: [
+                  { text: '机器人学习路线建议', link: '/use_guide/ros2go/ros/chapter1' },
+                  { text: 'ROS1与ROS2的对比', link: '/use_guide/ros2go/ros/chapter2' },
+                  { text: 'ROS2GO资料使用说明', link: '/use_guide/ros2go/ros/chapter3' },
+                  { text: '其他ROS学习资料', link: '/use_guide/ros2go/ros/chapter4' },
                 ],
               },
             ],

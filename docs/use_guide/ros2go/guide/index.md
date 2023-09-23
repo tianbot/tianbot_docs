@@ -1,39 +1,44 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">使用指引</p>
+<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 开箱说明</p>
 
-## 如何开机
+像ROS2GO的名字一样，随时随地带走自己工作环境，更加标准化开发和科研，经过简单几步很短时间就可以体验ROS的乐趣，而无需繁碎的环境配置，这就是ROS2GO。
 
-电源开关短按显示电量，长按开机或关机，并确认电源指示灯亮起，开机后将小车放在附带组装好后的调车台上，打开车体左侧电调开关（电调是电机和舵机中间的控制器，拨动开关会听到电调发出‘嘀 嘀嘀’的声音确定电调启动）
+为了保证用户体验，ROS2GO在出厂时已预装系统并充分测试，确保每一个ROS2GO都可以正常启动使用，开箱后请您检查是否完整以及产品运输过程中造成损坏，如有问题您随时联系客服人员反映，我们尽快为您处理，您拿到的ROS2GO如图所示，其中包含：
+- ROS2GO1个
+- 说明书1个
+- 快速使用1个
+- 挂绳2根
 
-::: tip 说明
-注意: 缓慢推动摇杆，多试几次找找感觉，以防撞车。
+包装内容变更恕不另外单独通知，具体包装以收到货物为准。
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109251636820.webp)
+
+## 产品开箱
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+## 配套资源
+
+ROS2GO系统本身带了资料、在线课程、仿真案例、常用功能包、基础软件等大家可以通过下面视频进行全面了解
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=626705909&bvid=BV1St4y1D7ZK&cid=221476779&p=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+
+## 售后支持
+
+关于ROS2GO需要提醒您，我们只保证ROS2GO到手可以正常运行，关于ROS2GO使用的问题可以咨询我们，但是我们不承担ROS相关知识咨询必问必答的技术支持，随货附带的说明书上有加群二维码（只支持扫码加群），您可以使用手机QQ扫码加群，工作人员收到消息会及时通过加群申请。
+
+::: tip 提示
+如果依旧无法启动：我们的技术工程师永远是您坚实的后盾，与老司机同在！
 :::
 
-## 设备关机
-
-::: danger 警告
-切勿使用直接关闭总电源的方式给Jetson Nano断电，正确方式是ssh登录Jetson Nano平台，使用命令`sudo shutdown now`关闭系统，当Nano电源指示灯熄灭时，再长按关闭
-:::
-
-## 如何充电
-
-在电量显示不足或听到电量报警情况下，我们需要给动力电池充电，充电时是不需要卸下电池的，充电器和电池连接方式如下（具体充电器以实物为准）：
-
-![充电器](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211514679.jpg)
-
-
-## 无线遥控
-
-TIANRACER使用遥控器DT7进行控制 ，DT7是一款工作于 2.4GHz 频段的无线电通讯设备，该遥控器仅能与DR16接收机搭配使用，该遥控器在开阔室外的最大控制范围可达1000m，内置锂电池，最长工作时间可达到12个小时。
-
-![DT7](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211514356.jpg)
-
-向右拨电源开关，开启遥控器。向左拨电源开关，关闭遥控器。
-遥控器开启时有提示音，开启后电源指示灯绿灯长亮并伴随蜂鸣器提示音。
-左手摇杆前进后退，右手摇杆转向，S1模式控制设置
-
-遥控正常连接可控（使用DJ dt7进行前后、转向控制）
-在运动过程中，观察转速变化的线性度，舵机转向的灵敏程度。以确定PID参数是否合适
-
-::: danger 警告
-切勿大幅度推动遥控摇杆，会使得车速过快撞击其他物体，极易造成车体损坏。
-:::
+不能启动，不能正常运行等等问题比较复杂，很多情况不是一句话能解决的，为了提升效率，以及记录相关问题，您在咨询这些问题的时候建议在群里进行， 问题尽量详尽，包含自己的电脑型号，出现问题的原因和图片，必要的时候可以拍视频发出来，举例如：
+- 型号：Thinkpad X1 2019款
+- 问题：我昨天可以正常用，系统关机了以后，今天无法启动，多次重启也不行，需要怎么解决
+- 其他：问题图片、开机启动项图片等，必要的时候可以提供开机启动的视频。
+（整理完群里@老司机）
