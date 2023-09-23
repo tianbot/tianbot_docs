@@ -1,31 +1,19 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 使用常见问题</p>
 
-<<<<<<< HEAD
-## 如何查看自己的ROS2GO版本
-=======
 ## 如何查看自己的ROS2GO版本？
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
 打开终端后运行如下命令
 
 ```shell
 lsb_release -a
 ```
 
-<<<<<<< HEAD
-## ROS2GO的用户名和密码是什么
-=======
 ## ROS2GO的用户名和密码是什么？
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
 
 - 用户名：**tianbot** 
 - 密码：**ros** 
 
 
-<<<<<<< HEAD
 ## 如何切换ROS1/ROS2运行环境
-=======
-## 如何切换ROS1/ROS2运行环境？
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
 
 切换到ROS1：
 ```shell
@@ -36,11 +24,7 @@ source $(ros2go_switch -v 1)
 source $(ros2go_switch -v 2) 
 ```
 
-<<<<<<< HEAD
 ## 为什么看视频没声音
-=======
-## 为什么看视频没声音？
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
 
 首先你需要确定一下，
 
@@ -61,12 +45,8 @@ ROS2GO是基于linux内核和Ubuntu打造，所以也是一样的。通常ubuntu
 ## 在部分电脑上无法正常关机？
 
 ::: tip 解决方案 
-<<<<<<< HEAD
 
 很多人会出现，电脑黑屏后，很长时间没有反应，此时不要过于担心，粗暴的方法就是按住开关键，强制关机，不影响恢复，当然这种情况**很少**发生，**但是千万不要在关机途中强制断电，拔掉ROS2GO等操作
-=======
- 
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
 目前这个问题在部分电脑上比较常见，目前有两种方式： 
  
 1. 直接强制关机 
@@ -82,7 +62,6 @@ ROS2GO是基于linux内核和Ubuntu打造，所以也是一样的。通常ubuntu
 1. 不要在使用中直接拔掉ROS2GO
 2. 不要随意修改根（/）目录下的文件
 3. 不要轻易安装NVIDIA驱动，这可能会导致该ROS2GO的兼容性变差，无法在其他电脑上使用
-<<<<<<< HEAD
 :::
 
 ::: danger 提示
@@ -176,7 +155,4 @@ ROS2GO设计的初衷快捷启动、便捷移动、安全方便的特点，在�
 ROS2GO为企业提供软硬件客制化方案，定制包含不仅限于：容量、LOGO、用户名、随盘资料、驱动支持、软件包、桌面等，如您有需要，请联系在线客服 ，我们会有专人为您解答。
 
 ##  **一些奇怪的知识点**
-1、[UEFI和Secure Boot相关知识](http://www.ruanyifeng.com/blog/2013/01/secure_boot.html)
-=======
-:::
->>>>>>> 557d26d69713d93add3c69150a0514b150206bdd
+- [UEFI和Secure Boot相关知识](http://www.ruanyifeng.com/blog/2013/01/secure_boot.html)
