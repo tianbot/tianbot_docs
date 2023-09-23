@@ -134,9 +134,9 @@ git push origin master
     
 完成以上步骤后，您的本地项目就会被上传到 GitHub，并开始进行版本管理。您可以在 GitHub 仓库页面上看到您的上传的文件和提交历史。
 
-> [!NOTE]
-> 如果您之前已经将文件添加到.gitignore中排除版本控制，则需要先从.gitignore中移除这些文件，才能将它们添加到本地仓库中。
-
+::: info 提示
+如果您之前已经将文件添加到.gitignore中排除版本控制，则需要先从.gitignore中移除这些文件，才能将它们添加到本地仓库中。
+:::
 
 
 ### 场景二
@@ -158,8 +158,9 @@ git checkout -b bug-fix
 ```
 将 bug-fix 替换为一个描述性的分支名称。
 
-> [!tip]
-> [大厂的Git代码管理规范是怎样的？](https://mp.weixin.qq.com/s/LWQolvFQQndBhFQ2lP2vhQ)
+::: tip 提示
+[大厂的Git代码管理规范是怎样的？](https://mp.weixin.qq.com/s/LWQolvFQQndBhFQ2lP2vhQ)
+:::
 
 #### 3.应用修复 
 找到包含 bug 的代码文件，并进行相应的修改。使用您的解决方案来修复该问题。
@@ -191,8 +192,9 @@ git push origin bug-fix
 项目维护者会收到您的 Pull Request，并对您的代码进行审核和讨论。
 根据反馈，您可能需要进一步修改代码或回答问题。
 
-> [!TIP]
-> 提交代码是为开源社区做贡献的重要方式
+::: info 提示
+提交代码是为开源社区做贡献的重要方式
+:::
 
 <p style="font-size:30px ;font-weight: bolder">References</p>
 

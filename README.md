@@ -30,6 +30,11 @@ pnpm run docs:dev
 ```
 # Contact
 
+5. 编译语法检查
+```shell
+pnpm run docs:build
+```
+
 * Admin：JIT_SU
 
 * E-mail: sujie@tianbot.com

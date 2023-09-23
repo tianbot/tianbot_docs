@@ -33,6 +33,11 @@ pnpm install
 pnpm run docs:dev
 ```
 
+5. 编译语法检查
+```shell
+pnpm run docs:build
+```
+
 # PicGo + 图床
 
 1. Typora+PicGo+阿里云OSS搭建博客图床（超详细）
@@ -146,7 +151,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 ```
 <!-- tabs:end -->
 
-> [!tip]
+
 > 原本`<details>`标签默认为折叠状态，如果希望默认为展开状态， 可以将`<details>`标签改为`<details open>`即可
 
 ## md文件链接
@@ -184,7 +189,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 ```
 <!-- tabs:end -->
 
-> [!tip]
+
 > B站视频链接，注意在链接`&page=1`后加上`&autoplay=0"`,以禁止自动播放
 
 ## 文章标题居中、粗体、大字
@@ -193,19 +198,19 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 <!-- tabs:start -->
 
 ### **效果**
-<p style="font-size:30px ;font-weight: bolder ;  text-align:center""> Tianbot-Doc 使用说明 </p>
+<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> Tianbot-Doc 使用说明 </p>
 
 ### **Markdown 源代码**
+
 ```markdown
-<p style="font-size:30px ;font-weight: bolder ;  text-align:center""> Tianbot-Doc 使用说明 </p>
+<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> Tianbot-Doc 使用说明 </p>
 ```
 <!-- tabs:end -->
 
-> [!tip]
 > 注意， 尽量不要使用`<h1></h1>`这样的html标签，会导致大纲中出现`Undefined`，建议使用的格式如下
-> `<p style="font-size:30px ;font-weight: bolder ;  text-align:center""> Tianbot-Doc 使用说明 </p>`
-> - https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight
-> - https://docsify.js.org/#/zh-cn/configuration
+> `<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> Tianbot-Doc 使用说明 </p>`
+
+- https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight
 
 ## 注意事项
 <!-- tabs:start -->

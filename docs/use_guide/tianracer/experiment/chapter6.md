@@ -25,7 +25,7 @@ roslaunch tianracer_navigation tianracer_teb_nav.launch
 
 3、启动Rviz
 
-> [!note]
+::: note]
 > 导航前应先将遥控器模式从CL切换到OFF，不然会卡顿没办法进行导航操作，或者直接关掉遥控器
 
 使用2D Nav Goal，在地图中选择目标点进行导航
@@ -35,7 +35,7 @@ roslaunch tianracer_rviz view_teb_planner.launch
 
 导航效果：
 
-> [!attention]
+::: attention]
 > 启动导航是在移动机器人上位机，如果上位机没有配屏幕，需要在有屏幕的同ROS网络的机器人启动，来界面化查看机器人激光点云和位置信息，同时可以利用rviz给定机器人导航目标点。
 
 #### 全局规划之A*算法

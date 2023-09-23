@@ -1,3 +1,6 @@
 .history
+.git
+dist
 cache
 node_modules
+*.zip

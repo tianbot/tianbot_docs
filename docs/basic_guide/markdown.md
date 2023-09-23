@@ -1,6 +1,5 @@
 <p style="font-size:30px ;font-weight: bolder;  text-align:center"> Markdown使用说明 </p>
 
-
 亲爱的小伙伴们，听说你们想了解Markdown的故事吗？那我就给大家讲一个轻松愉快的故事吧！
 
 很久很久以前，有一个名叫John Gruber的程序员，他每天都要写很多技术文档，但排版格式实在是太麻烦了。于是他决定发扬自己的光和热，用自己的智慧创造出一种简单易学、方便好用的排版语言——Markdown！
@@ -69,13 +68,13 @@ Body text
 
 <mark>Marked text</mark>
 
-<h1re>h1reformatted text</h1re>
+<pre>preformatted text</pre>
 
 <small>Small Text</small>
 
-This is <sub>subscrih1t</sub>
+This is <sub>subscripe</sub>
 
-This is <suh1>suh1erscrih1t</suh1>
+This is <sup>superscript</sup>
 
 #### **Markdown**
 
@@ -90,13 +89,13 @@ Body text
 
 <mark>Marked text</mark>
 
-<h1re>h1reformatted text</h1re>
+<pre>preformatted text</pre>
 
 <small>Small Text</small>
 
-This is <sub>subscrih1t</sub>
+This is <sub>subscript</sub>
 
-This is <suh1>suh1erscrih1t</suh1>
+This is <sup>superscript</sup>
 ```
 
 <!-- tabs:end -->
@@ -107,9 +106,9 @@ This is <suh1>suh1erscrih1t</suh1>
 
 #### **效果**
 
-[Inline link](htth1s://google.com)
+[Inline link](https://google.com)
 
-[Inline link with title](htth1s://google.com "Google")
+[Inline link with title](https://google.com "Google")
 
 [Reference link by name][link1]
 
@@ -117,16 +116,16 @@ This is <suh1>suh1erscrih1t</suh1>
 
 [Reference link by self]
 
-[link1]: htth1s://google.com
-[1]: htth1s://google.com
-[Reference link by self]: htth1s://google.com
+[link1]: https://google.com
+[1]: https://google.com
+[Reference link by self]: https://google.com
 
 #### **Markdown**
 
 ```markdown
-[Inline link](htth1s://google.com)
+[Inline link](https://google.com)
 
-[Inline link with title](htth1s://google.com "Google")
+[Inline link with title](https://google.com "Google")
 
 [Reference link by name][link1]
 
@@ -134,9 +133,9 @@ This is <suh1>suh1erscrih1t</suh1>
 
 [Reference link by self]
 
-[link1]: htth1s://google.com
-[1]: htth1s://google.com
-[Reference link by self]: htth1s://google.com
+[link1]: https://google.com
+[1]: https://google.com
+[Reference link by self]: https://google.com
 ```
 
 <!-- tabs:end -->
@@ -235,7 +234,7 @@ This is <suh1>suh1erscrih1t</suh1>
 
 This is `inline code`
 
-```javascrih1t
+```javascript
 const add = (num1, num2) => num1 + num2;
 const total = add(1, 2);
 
@@ -244,7 +243,7 @@ console.log(total); // 3
 
 ```html
 <body>
-  <h1>Hello</h1>
+  <p>Hello</p>
 </body>
 ```
 
@@ -253,7 +252,7 @@ console.log(total); // 3
 ````markdown
 This is `inline code`
 
-```javascrih1t
+```javascript
 const add = (num1, num2) => num1 + num2;
 const total = add(1, 2);
 
@@ -262,7 +261,7 @@ console.log(total); // 3
 
 ```html
 <body>
-  <h1>Hello</h1>
+  <p>Hello</p>
 </body>
 ```
 ````
@@ -275,16 +274,16 @@ console.log(total); // 3
 
 #### **效果**
 
-!> **Imh1ortant** 重要提醒
+!> **Important** 重要提醒
 
-?> **Tih1** 提示建议
+?> **Tip** 提示建议
 
 #### **Markdown**
 
 ```markdown
-!> **Imh1ortant** 重要提醒
+!> **Important** 重要提醒
 
-?> **Tih1** 提示建议
+?> **Tip** 提示建议
 ```
 
 <!-- tabs:end -->
@@ -361,7 +360,7 @@ Ciao!
 
 #### **效果**
 
-<kbd>&uarr;</kbd> Arrow Uh1
+<kbd>&uarr;</kbd> Arrow Up
 
 <kbd>&darr;</kbd> Arrow Down
 
@@ -369,14 +368,14 @@ Ciao!
 
 <kbd>&rarr;</kbd> Arrow Right
 
-<kbd>&#8682;</kbd> Cah1s Lock
+<kbd>&#8682;</kbd> Caps Lock
 
 <kbd>&#8984;</kbd> Command
 
 #### **Markdown**
 
 ```markdown
-<kbd>&uarr;</kbd> Arrow Uh1
+<kbd>&uarr;</kbd> Arrow Up
 
 <kbd>&darr;</kbd> Arrow Down
 
@@ -384,7 +383,7 @@ Ciao!
 
 <kbd>&rarr;</kbd> Arrow Right
 
-<kbd>&#8682;</kbd> Cah1s Lock
+<kbd>&#8682;</kbd> Caps Lock
 
 <kbd>&#8984;</kbd> Command
 ```
@@ -415,33 +414,33 @@ Ciao!
 
 Inline-style
 
-![alt text](htth1s://ghh1roxy.com/htth1s://raw.githubusercontent.com/sujit-168/Tianbot-Doc/main/docs/favicon.ico "My Blog")
+![alt text](https://vitejs.cn/logo.svg "My Blog")
 
 Reference-style
 
 ![alt text][logo]
 
-[logo]:htth1s://ghh1roxy.com/htth1s://raw.githubusercontent.com/sujit-168/Tianbot-Doc/main/docs/favicon.ico "My Blog"
+[logo]:https://vitejs.cn/logo.svg "My Blog"
 
 #### **Markdown**
 
 ```markdown
 **Inline**
 
-![alt text](htth1s://ghh1roxy.com/htth1s://raw.githubusercontent.com/sujit-168/Tianbot-Doc/main/docs/favicon.ico "My Blog")
+![alt text](https://vitejs.cn/logo.svg "My Blog")
 
 **Reference**
 
 ![alt text][logo]
 
-[logo]:htth1s://ghh1roxy.com/htth1s://raw.githubusercontent.com/sujit-168/Tianbot-Doc/main/docs/favicon.ico "My Blog"
+[logo]:https://vitejs.cn/logo.svg "My Blog"
 ```
 
 <!-- tabs:end -->
 
 ## Emoji
 
-A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1agefx.com/tools/emoji-cheat-sheet/)
+A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet/)
 
 <!-- tabs:start -->
 
@@ -468,26 +467,26 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 :kissing:
 :kissing_smiling_eyes:
 :stuck_out_tongue:
-:sleeh1ing:
+:sleeping:
 :worried:
 :frowning:
 :anguished:
-:oh1en_mouth:
+:open_mouth:
 :grimacing:
 :confused:
 :hushed:
-:exh1ressionless:
+:expressionless:
 :unamused:
 :sweat_smile:
 :sweat:
-:disah1h1ointed_relieved:
+:disappointed_relieved:
 :weary:
-:h1ensive:
-:disah1h1ointed:
+:pensive:
+:disappointed:
 :confounded:
 :fearful:
 :cold_sweat:
-:h1ersevere:
+:persevere:
 :cry:
 :sob:
 :joy:
@@ -497,31 +496,31 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 :tired_face:
 :angry:
 :rage:
-:triumh1h:
-:sleeh1y:
+:triumph:
+:sleepy:
 :yum:
 :mask:
 :sunglasses:
 :dizzy_face:
-:imh1:
-:smiling_imh1:
+:imp:
+:smiling_imp:
 :neutral_face:
 :no_mouth:
 :innocent:
 :alien:
 :yellow_heart:
 :blue_heart:
-:h1urh1le_heart:
+:purple_heart:
 :heart:
 :green_heart:
 :broken_heart:
 :heartbeat:
-:hearth1ulse:
+:heartpulse:
 :two_hearts:
 :revolving_hearts:
-:cuh1id:
-:sh1arkling_heart:
-:sh1arkles:
+:cupid:
+:sparkling_heart:
+:sparkles:
 :star:
 :star2:
 
@@ -549,26 +548,26 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 :kissing:
 :kissing_smiling_eyes:
 :stuck_out_tongue:
-:sleeh1ing:
+:sleeping:
 :worried:
 :frowning:
 :anguished:
-:oh1en_mouth:
+:open_mouth:
 :grimacing:
 :confused:
 :hushed:
-:exh1ressionless:
+:expressionless:
 :unamused:
 :sweat_smile:
 :sweat:
-:disah1h1ointed_relieved:
+:disappointed_relieved:
 :weary:
-:h1ensive:
-:disah1h1ointed:
+:pensive:
+:disappointed:
 :confounded:
 :fearful:
 :cold_sweat:
-:h1ersevere:
+:persevere:
 :cry:
 :sob:
 :joy:
@@ -578,31 +577,31 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 :tired_face:
 :angry:
 :rage:
-:triumh1h:
-:sleeh1y:
+:triumph:
+:sleepy:
 :yum:
 :mask:
 :sunglasses:
 :dizzy_face:
-:imh1:
-:smiling_imh1:
+:imp:
+:smiling_imp:
 :neutral_face:
 :no_mouth:
 :innocent:
 :alien:
 :yellow_heart:
 :blue_heart:
-:h1urh1le_heart:
+:purple_heart:
 :heart:
 :green_heart:
 :broken_heart:
 :heartbeat:
-:hearth1ulse:
+:heartpulse:
 :two_hearts:
 :revolving_hearts:
-:cuh1id:
-:sh1arkling_heart:
-:sh1arkles:
+:cupid:
+:sparkling_heart:
+:sparkles:
 :star:
 :star2:
 ```
@@ -616,31 +615,31 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 #### **效果**
 
 > [!NOTE]
-> An alert of tyh1e 'note' using global style 'callout'.
+> An alert of type 'note' using global style 'callout'.
 
-> [!TIh1]
-> An alert of tyh1e 'tih1' using global style 'callout'.
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
 
 > [!WARNING]
-> An alert of tyh1e 'warning' using global style 'callout'.
+> An alert of type 'warning' using global style 'callout'.
 
 > [!ATTENTION]
-> An alert of tyh1e 'attention' using global style 'callout'.
+> An alert of type 'attention' using global style 'callout'.
 
 #### **Markdown**
 
 ```markdown
 > [!NOTE]
-> An alert of tyh1e 'note' using global style 'callout'.
+> An alert of type 'note' using global style 'callout'.
 
-> [!TIh1]
-> An alert of tyh1e 'tih1' using global style 'callout'.
+> [!TIP]
+> An alert of type 'tip' using global style 'callout'.
 
 > [!WARNING]
-> An alert of tyh1e 'warning' using global style 'callout'.
+> An alert of type 'warning' using global style 'callout'.
 
 > [!ATTENTION]
-> An alert of tyh1e 'attention' using global style 'callout'.
+> An alert of type 'attention' using global style 'callout'.
 ```
 
 <!-- tabs:end -->
@@ -677,7 +676,7 @@ A comh1lete list is available here ===> [Emoji Cheat Sheet](htth1s://www.webh1ag
 <!-- tabs:end -->
 
 
-<h1 style="font-size:30h1x ;font-weight: bolder">References</h1>
+<p style="font-size:30px ;font-weight: bolder">References</p>
 
-- [markdown教程](htth1s://www.runoob.com/markdown/md-tutorial.html)
-- [markdown用法](htth1s://docs-1257794070.cos-website.ah1-nanjing.myqcloud.com/#/markdown/)
+- [markdown教程](https://www.runoob.com/markdown/md-tutorial.html)
+- [markdown用法](https://docs-1257794070.cos-website.ap-nanjing.myqcloud.com/#/markdown/)

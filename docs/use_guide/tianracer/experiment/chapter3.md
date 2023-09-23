@@ -46,7 +46,7 @@ roslaunch tianracer_navigation simulator_f1_nav.launch
 ```
 
 
-> [!note]
+::: note]
 > tianracer功能包中没有单独部署该避障算法节点，而是将全部算法集成在L1_controller节点中，建议参考以下链接，自己动手按照wall_follow.py的部署方法尝试一下Follow The Gap避障算法
 
 方法详解：https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html

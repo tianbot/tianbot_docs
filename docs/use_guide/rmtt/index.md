@@ -160,8 +160,9 @@ rosrun tf static_transform_publisher 0 0 0 0 0 0 world /map 20
 
 三个TF树反应了不同坐标系下的TF关系，值得深思！
 
-> [!attention]
-> 注意：如果涉及到多台机器人时，需要注意命名空间的问题
+::: warning
+注意：如果涉及到多台机器人时，需要注意命名空间的问题
+:::
 
 如果您观看了空地协同两台RMTT与两台TBMini的话，可能会使用下面方式来启动机器人，
 ```shell

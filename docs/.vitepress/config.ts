@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: " 📖 Tianbot",
+  title: " Tianbot",
   description: "快跟我一起快乐的学习ROS机器人",
   titleTemplate: "Docs",
 
@@ -21,7 +21,8 @@ export default defineConfig({
 
 
   //启用深色模式
-  appearance:'dark',
+  appearance:true, //默认浅色且开启切换
+  // appearance:'dark',
 
   //多语言
   locales: {
@@ -117,80 +118,121 @@ export default defineConfig({
       {
         //分组标题1
         text: '💿 ROS2GO文档',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
-          { text: '使用手册', link: '/use_guide/ros2go/' },
-          { text: '常见问题', link: '/use_guide/ros2go/question.md' },
-          { text: '更新日志', link: '/use_guide/ros2go/changelog.md' },
+          {
+            text: '使用手册',
+            collapsed: true,
+            items: [
+              { text: '开箱说明', link: '/use_guide/ros2go/' },
+              { text: '如何启动', link: '/use_guide/ros2go/guide/chapter1' },
+              { text: '如何备份', link: '/use_guide/ros2go/guide/chapter2' },
+              { text: '如何恢复', link: '/use_guide/ros2go/guide/chapter3' },
+              { text: '如何升级', link: '/use_guide/ros2go/guide/chapter4' },
+              {
+                text: '设备兼容',
+                collapsed: true,
+                link: '/use_guide/ros2go/applicable/index',
+                items: [
+                  { text: '兼容的电脑型号', link: '/use_guide/ros2go/applicable/chapter1' },
+                  { text: '兼容的网卡型号', link: '/use_guide/ros2go/applicable/chapter2' },
+                  { text: '兼容的底盘型号', link: '/use_guide/ros2go/applicable/chapter3' },
+                  { text: '兼容的传感器型号', link: '/use_guide/ros2go/applicable/chapter4' },
+                ],
+              },
+            ],
+          },
+          { text: '常见问题', link: '/use_guide/ros2go/question' },
+          { text: '更新日志', link: '/use_guide/ros2go/changelog' },
         ],
       },
       {
         //分组标题2
         text: '🚚 TOM文档',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
-          { text: '使用手册', link: '/use_guide/tianracer/' },
+          { text: '使用手册', link: '/use_guide/tianbot/' },
           {
             text: '实验手册',
             collapsed: true,
             items: [
-              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1.md' },
-              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2.md' },
-              { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3.md' },
-              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4.md' },
-              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianracer/experiment/chapter5.md' },
-              { text: '实验六 自主导航', link: '/use_guide/tianracer/experiment/chapter6.md' },
-              { text: '实验七 多点导航', link: '/use_guide/tianracer/experiment/chapter7.md' },
-              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianracer/experiment/chapter8.md'},
-              { text: '线上挑战赛', link: '/use_guide/tianracer/experiment/racer_offline.md' },
-              { text: '线下挑战赛', link: '/use_guide/tianracer/experiment/racer_online.md' },
+              { text: '实验一、实验工具的使用', link: '/use_guide/tianbot/experiment/chapter1' },
+              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianbot/experiment/chapter2' },
+              { text: '实验三 反应式方法', link: '/use_guide/tianbot/experiment/chapter3' },
+              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianbot/experiment/chapter4' },
+              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianbot/experiment/chapter5' },
+              { text: '实验六 自主导航', link: '/use_guide/tianbot/experiment/chapter6' },
+              { text: '实验七 多点导航', link: '/use_guide/tianbot/experiment/chapter7' },
+              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianbot/experiment/chapter8'},
+              { text: '线上挑战赛', link: '/use_guide/tianbot/experiment/racer_offline' },
+              { text: '线下挑战赛', link: '/use_guide/tianbot/experiment/racer_online' },
             ],
           },
-          { text: '更新日志', link: '/use_guide/tianracer/changelog' },
+          { text: '更新日志', link: '/use_guide/tianbot/changelog' },
         ],
       },
       {
         //分组标题3
         text: '🏁 TIANRACER文档',
-        collapsed: false,
+        collapsed: true,
+        link: '/use_guide/tianracer/',
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
-          { text: '使用手册', link: '/use_guide/tianracer/' },
+          { text: '收货清单', link: '/use_guide/tianracer/list' },
+          {
+            text: '使用手册',
+            collapsed: true,
+            items: [
+              { text: '使用指引', link: '/use_guide/tianracer/guide/' },
+              { text: '软件环境配置', link: '/use_guide/tianracer/guide/chapter1' },
+              { text: 'ROS基础功能', link: '/use_guide/tianracer/guide/chapter2' },
+              { text: 'SLAM建图', link: '/use_guide/tianracer/guide/chapter3' },
+              { text: '自主导航', link: '/use_guide/tianracer/guide/chapter4' },
+            ],
+          },
           {
             text: '实验手册',
             collapsed: true,
             items: [
-              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1.md' },
-              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2.md' },
-              { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3.md' },
-              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4.md' },
-              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianracer/experiment/chapter5.md' },
-              { text: '实验六 自主导航', link: '/use_guide/tianracer/experiment/chapter6.md' },
-              { text: '实验七 多点导航', link: '/use_guide/tianracer/experiment/chapter7.md' },
-              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianracer/experiment/chapter8.md'},
-              { text: '线上挑战赛', link: '/use_guide/tianracer/experiment/racer_offline.md' },
-              { text: '线下挑战赛', link: '/use_guide/tianracer/experiment/racer_online.md' },
+              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1' },
+              { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2' },
+              { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3' },
+              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4' },
+              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianracer/experiment/chapter5' },
+              { text: '实验六 自主导航', link: '/use_guide/tianracer/experiment/chapter6' },
+              { text: '实验七 多点导航', link: '/use_guide/tianracer/experiment/chapter7' },
+              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianracer/experiment/chapter8'},
+              { text: '线上挑战赛', link: '/use_guide/tianracer/experiment/racer_offline' },
+              { text: '线下挑战赛', link: '/use_guide/tianracer/experiment/racer_online' },
             ],
           },
+          {
+            text: '仿真模拟',
+            collapsed: true,
+            items: [
+              { text: 'Tianracer F1TENTH仿真', link: '/use_guide/tianracer/simulation/chapter1' },
+            ],
+          },
+          { text: '常见问题', link: '/use_guide/tianracer/question' },
           { text: '更新日志', link: '/use_guide/tianracer/changelog' },
         ],
       },
       {
         //分组标题3
-        text: 'TIANROVER文档',
-        collapsed: false,
+        text: '🚀 TIANROVER文档',
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
           { text: '使用手册', link: '/use_guide/tianrover/' },
-          { text: '更新日志', link: '/use_guide/tianracer/changelog' },
+          { text: '更新日志', link: '/use_guide/tianrover/changelog' },
         ],
       },
       {
         //分组标题4
         text: '🚗 TIANBOT MINI文档',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
           { text: '使用手册', link: '/use_guide/tianbot_mini/' },
@@ -201,7 +243,7 @@ export default defineConfig({
       {
         //分组标题5
         text: '🚁 ROBOMASTER TT文档',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
           { text: '使用手册', link: '/use_guide/rmtt/' },
@@ -213,7 +255,7 @@ export default defineConfig({
       {
         //分组标题6
         text: '📢 ROSECHO 文档',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
           { text: '使用手册', link: '/use_guide/rosecho/' },
