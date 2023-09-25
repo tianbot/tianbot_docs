@@ -42,7 +42,7 @@ features:
   - icon: 🚗
     title: Tianbot mini文档
     details: TIANBOT迷你机器人配备2D 激光雷达，集成差速运动控制系统，3步实现SLAM建图导航，从开机到建图导航仅需数秒钟，快速帮您学习和使用ROS机器人操作系统控制与构建智能机器人...
-    link: /use_guide/tiabotmini/
+    link: /use_guide/tianbot_mini/
   - icon: 🚁
     title: Robomaster TT文档
     details: 大疆 RoboMaster TT，不仅可满足日常无人机教学、部分竞赛、演示等多种需求，也可搭配Tianbot mini机器人即可构成空地协同套装，让学生和老师更专注在空地协同和编队控制的学习上...

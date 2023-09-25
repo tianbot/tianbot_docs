@@ -1,44 +1,64 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 开箱说明</p>
+<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 使用手册</p>
 
-像ROS2GO的名字一样，随时随地带走自己工作环境，更加标准化开发和科研，经过简单几步很短时间就可以体验ROS的乐趣，而无需繁碎的环境配置，这就是ROS2GO。
+## 产品介绍
+ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，基于Ubuntu的深度定制使得本产品无需对原有PC系统做任何改造，可以在绝大多数x86架构的PC、笔记本上快速启动，秒级进入ROS开发环境；无论是ROS初学者还是开发人员都能得到快速一致的ROS开发体验。
 
-为了保证用户体验，ROS2GO在出厂时已预装系统并充分测试，确保每一个ROS2GO都可以正常启动使用，开箱后请您检查是否完整以及产品运输过程中造成损坏，如有问题您随时联系客服人员反映，我们尽快为您处理，您拿到的ROS2GO如图所示，其中包含：
-- ROS2GO1个
-- 说明书1个
-- 快速使用1个
-- 挂绳2根
-
-包装内容变更恕不另外单独通知，具体包装以收到货物为准。
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109251636820.webp)
-
-## 产品开箱
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-## 配套资源
-
-ROS2GO系统本身带了资料、在线课程、仿真案例、常用功能包、基础软件等大家可以通过下面视频进行全面了解
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=626705909&bvid=BV1St4y1D7ZK&cid=221476779&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-
-## 售后支持
-
-关于ROS2GO需要提醒您，我们只保证ROS2GO到手可以正常运行，关于ROS2GO使用的问题可以咨询我们，但是我们不承担ROS相关知识咨询必问必答的技术支持，随货附带的说明书上有加群二维码（只支持扫码加群），您可以使用手机QQ扫码加群，工作人员收到消息会及时通过加群申请。
-
-::: tip 提示
-如果依旧无法启动：我们的技术工程师永远是您坚实的后盾，与老司机同在！
+::: info
+如果您有以下需求，ROS2GO可能会帮助到您
 :::
 
-不能启动，不能正常运行等等问题比较复杂，很多情况不是一句话能解决的，为了提升效率，以及记录相关问题，您在咨询这些问题的时候建议在群里进行， 问题尽量详尽，包含自己的电脑型号，出现问题的原因和图片，必要的时候可以拍视频发出来，举例如：
-- 型号：Thinkpad X1 2019款
-- 问题：我昨天可以正常用，系统关机了以后，今天无法启动，多次重启也不行，需要怎么解决
-- 其他：问题图片、开机启动项图片等，必要的时候可以提供开机启动的视频。
-（整理完群里@老司机）
+- 想快速了解ROS的初学者
+- 需要统一标准开发环境的工程师
+- 需要统一便捷教学环境的高校实验室、培训机构
+- 需要统一产品出厂标配的资料环境
+- 需要统一比赛开发环境RUMA、智能车等比赛
+
+## 产品参数
+| 类型 | 明细 |
+| --- | --- |
+| 材质 | 合金 |
+| 容量 | 64G， 128G |
+| 接口 | USB3.0 |
+| 启动方式 | 自主研发混合启动模式 |
+| 预装系统 | Ubuntu18.04+ ROS Melodic |
+|  | Ubuntu 20.04+ ROS Noetic， Galactic， Humble（源码编译） |
+| 系统密码  |   ros |
+| 预装功能包 | TIANBOT、TIANRACER、Turtlebot、Movelt、Hector、Gmapping、OpenNI、Cartographer等 |
+| 预装软件 | VScode、Arduino、QQ、WPS、Sougou、Gimp等 |
+| 支持硬件 | 激光雷达：傲视智绘、思岚、北阳、西克等 |
+|  | 深度相机：Intel RealSense、Asus、Astra、Kinect等 |
+
+
+## 保修政策
+自收到货物起算，保修期内客户正常使用，无擅自拆修、改装，出现非人为的性能故障，提供有效的购买证明、单据
+| 类型   |   时效  |
+| :---: | :---: |
+|  ROS2GO本体  |   365天  |
+|  系统重置  |  1次  |
+|  系统升级  |  1次  |
+1次免费系统重置代指U盘内系统不能正常启动，如需系统重置请联系客服，确认购买信息无误，寄回重置。
+1次免费系统升级代指ROS2GO系统更新，功能包升级，如需升级请联系客服，确认购买信息无误，寄回重置。
+升级日志请查看：wiki.ros.org/ros2go或者doc.tianbot.com
+
+::: info 说明
+新版本ROS2GO有什么优点
+:::
+
+- 手动恢复出厂系统
+- 自动增量式系统备份
+
+::: info 提示
+您也可以通过以下链接了解ROS2GO
+:::
+
+说明文档：[doc.tianbot.com](https://doc.tianbot.com)
+
+视频教程：[space.bilibili.com/451561151](https://space.bilibili.com/451561151/channel/collectiondetail?sid=426454)
+
+使用文章：
+- [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)  
+- [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)  
+- [ROS2Go--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)   
+- [巧萌易携之ROS2Go的不完全教研攻略](https://blog.csdn.net/zhangrelay/article/details/83615341)   
+- [带上ROS2GO，来一场说走就走的ROS旅行](http://www.guyuehome.com/2237)  
+- [ROS2GO系统简介](http://www.corvin.cn/990.html)  

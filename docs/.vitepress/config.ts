@@ -120,13 +120,12 @@ export default defineConfig({
         text: '💿 ROS2GO文档',
         collapsed: true,
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '开箱说明', link: '/use_guide/ros2go/' },
           {
             text: '使用手册',
             collapsed: true,
-            link: '/use_guide/ros2go/',
+            link: '/use_guide/ros2go/guide/',
             items: [
-              { text: '开箱说明', link: '/use_guide/ros2go/guide/' },
               { text: '如何启动', link: '/use_guide/ros2go/guide/chapter1' },
               { text: '如何备份', link: '/use_guide/ros2go/guide/chapter2' },
               { text: '如何恢复', link: '/use_guide/ros2go/guide/chapter3' },
@@ -164,7 +163,7 @@ export default defineConfig({
         text: '🚚 TOM文档',
         collapsed: true,
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '注意事项', link: '/use_guide/tianbot/notice' },
           { text: '使用手册', link: '/use_guide/tianbot/' },
           {
             text: '实验手册',
@@ -191,7 +190,7 @@ export default defineConfig({
         collapsed: true,
         link: '/use_guide/tianracer/',
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '注意事项', link: '/use_guide/tianracer/notice' },
           { text: '收货清单', link: '/use_guide/tianracer/list' },
           {
             text: '使用手册',
@@ -236,7 +235,7 @@ export default defineConfig({
         text: '🚀 TIANROVER文档',
         collapsed: true,
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
+          { text: '注意事项', link: '/use_guide/tianrover/notice' },
           { text: '使用手册', link: '/use_guide/tianrover/' },
           { text: '更新日志', link: '/use_guide/tianrover/changelog' },
         ],
@@ -245,9 +244,21 @@ export default defineConfig({
         //分组标题4
         text: '🚗 TIANBOT MINI文档',
         collapsed: true,
+        link: '/use_guide/tianbot_mini/',
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
-          { text: '使用手册', link: '/use_guide/tianbot_mini/' },
+          { text: '注意事项', link: '/use_guide/tianbot_mini/notice' },
+          { text: '收货清单', link: '/use_guide/tianbot_mini/list' },
+          {
+            text: '使用手册',
+            collapsed: true,
+            items: [
+              { text: '使用指引', link: '/use_guide/tianbot_mini/guide/' },
+              { text: '软件环境配置', link: '/use_guide/tianbot_mini/guide/chapter1' },
+              { text: 'ROS基础功能', link: '/use_guide/tianbot_mini/guide/chapter2' },
+              { text: 'SLAM建图', link: '/use_guide/tianbot_mini/guide/chapter3' },
+              { text: '自主导航', link: '/use_guide/tianbot_mini/guide/chapter4' },
+            ],
+          },
           { text: '实验手册', link: '/use_guide/tianbot_mini/experiment/' },
           { text: '更新日志', link: '/use_guide/tianbot_mini/changelog' },
         ],
@@ -269,7 +280,6 @@ export default defineConfig({
         text: '📢 ROSECHO 文档',
         collapsed: true,
         items: [
-          { text: '注意事项', link: '/use_guide/notice' },
           { text: '使用手册', link: '/use_guide/rosecho/' },
           { text: '实验手册', link: '/use_guide/rosecho/experiment/' },
           { text: '更新日志', link: '/use_guide/rosecho/changelog' },
