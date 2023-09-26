@@ -19,7 +19,6 @@ export default defineConfig({
 
   cleanUrls:true, //开启纯净链接无html
 
-
   //启用深色模式
   appearance:true, //默认浅色且开启切换
   // appearance:'dark',
@@ -48,7 +47,6 @@ export default defineConfig({
     lineNumbers: true, 
 
   },
-
 
   //主题配置
   themeConfig: {
@@ -106,12 +104,10 @@ export default defineConfig({
           },
         ],
       },
-      
 
     { text: '关于我们', link: 'https://www.tianbot.com/page?id=4' },
 
     ],
-
 
     //侧边栏
     sidebar: [
@@ -253,13 +249,48 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: '使用指引', link: '/use_guide/tianbot_mini/guide/' },
-              { text: '软件环境配置', link: '/use_guide/tianbot_mini/guide/chapter1' },
+              { text: '使用环境配置', link: '/use_guide/tianbot_mini/guide/chapter1' },
+              {
+                text: '快速上手',
+                collapsed: true,
+                items: [
+                  { text: '命令行的讲解', link: '/use_guide/tianbot_mini/guide/quick_start/' },
+                  { text: 'ROS控制mini移动', link: '/use_guide/tianbot_mini/guide/quick_start/chapter1' },
+                  { text: 'rviz的使用', link: '/use_guide/tianbot_mini/guide/quick_start/chapter2' },
+                  { text: '发布者编程', link: '/use_guide/tianbot_mini/guide/quick_start/chapter3' },
+                  { text: '订阅者编程', link: '/use_guide/tianbot_mini/guide/quick_start/chapter4' },
+                  { text: '话题通讯（发布/订阅）', link: '/use_guide/tianbot_mini/guide/quick_start/chapter5' },
+                ],
+              },
               { text: 'ROS基础功能', link: '/use_guide/tianbot_mini/guide/chapter2' },
-              { text: 'SLAM建图', link: '/use_guide/tianbot_mini/guide/chapter3' },
-              { text: '自主导航', link: '/use_guide/tianbot_mini/guide/chapter4' },
+              {
+                text: 'SLAM建图',
+                collapsed: true,
+                items: [
+                  { text: 'Gmapping建图', link: '/use_guide/tianbot_mini/guide/quick_start/' },
+                  { text: 'Hector SLAM建图', link: '/use_guide/tianbot_mini/guide/quick_start/chapter1' },
+                  { text: 'Cartographer建图', link: '/use_guide/tianbot_mini/guide/quick_start/chapter2' },
+                ],
+              },
+              { text: '自主导航', link: '/use_guide/tianbot_mini/guide/chapter3' },
+              { text: '机器人集群', link: '/use_guide/tianbot_mini/guide/chapter4' },
+              {
+                text: '更多功能应用',
+                collapsed: true,
+                items: [
+                  { text: 'Arduino转圈讲解', link: '/use_guide/tianbot_mini/more_application/' },
+                  { text: 'python转圈、点灯', link: '/use_guide/tianbot_mini/more_application/chapter1' },
+                  { text: '超声波测距', link: '/use_guide/tianbot_mini/more_application/chapter2' },
+                  { text: 'ROSECHO', link: '/use_guide/tianbot_mini/more_application/chapter3' },
+                  { text: 'TTS与ASR节点编程', link: '/use_guide/tianbot_mini/more_application/chapter4' },
+                  { text: 'HTML机器人的GUI搭建', link: '/use_guide/tianbot_mini/more_application/chapter5' },
+                  { text: '图传机器人', link: '/use_guide/tianbot_mini/more_application/chapter6' },
+                  { text: '增加IMU工具', link: '/use_guide/tianbot_mini/more_application/chapter7' },
+                  { text: 'TTS语音播报', link: '/use_guide/tianbot_mini/more_application/chapter8' },
+                ],
+              },
             ],
           },
-          { text: '实验手册', link: '/use_guide/tianbot_mini/experiment/' },
           { text: '更新日志', link: '/use_guide/tianbot_mini/changelog' },
         ],
       },
@@ -287,8 +318,6 @@ export default defineConfig({
       },
     ],
 
-
-
     //本地搜索
     search: {
       provider: 'local',
@@ -313,10 +342,6 @@ export default defineConfig({
         },
       },
     },
-
-    
-
-
 
     //社交链接
     socialLinks: [
@@ -353,13 +378,11 @@ export default defineConfig({
       copyright: 'Copyright © 2023 天之博特',
     },
 
-
     //侧边栏文字更改(移动端)
     sidebarMenuLabel:'目录',
 
     //返回顶部文字修改(移动端)
     returnToTopLabel:'返回顶部',
-
 
     //大纲显示2-3级标题
     outline:[2,3],

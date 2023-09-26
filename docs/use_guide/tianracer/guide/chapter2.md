@@ -65,7 +65,7 @@ TIANRACER使用遥控器DT7进行控制 ，DT7是一款工作于 2.4GHz 频段�
 **终端话题发布**
 
 ```shell
-rostopic pub /turtle1/cmd_vel geometry_msgs/Twist "linear:
+rostopic pub /tianracer/cmd_vel geometry_msgs/Twist "linear:
   x: 0.1
   y: 0.0
   z: 0.0

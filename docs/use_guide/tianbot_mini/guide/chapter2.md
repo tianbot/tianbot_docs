@@ -1,62 +1,37 @@
 <p style="font-size:30px ; font-weight:bolder; text-align:center">ROS基础功能</p>
 
-## 快速体验Gmapping建图
-可以在终端中输入下面的命令，运行gmapping建图
+## 快速体验slam建图
+可以在终端中输入下面的命令，运行slam建图
 
 ```shell
-roslaunch tianracer_test test_gmapping.launch 
+roslaunch tianbot_mini demo_slam.launch
 ```
 
 ## 逐个体验单项功能
 
 ### 驱动底盘及传感器
 
-TIANRACER底盘（编码器+IMU）
+Tinabot mini（编码器+IMU）
 ```shell
-roslaunch tianracer_core tianracer_core.launch    # 单独驱动底盘
-rostopic echo /tianracer/imu                      # 查看IMU数据
-rostopic echo /tianracer/odom                     # 查看里程计数据
+roslaunch tianbot_mini bringup.launch
+rostopic echo /tianbot_mini/odom                     # 查看里程计数据
 ```
 
 ### 激光雷达
 ```shell
-roslaunch tianracer_bringup lidar.launch          # 单独驱动激光雷达
-roslaunch tianracer_rviz view_lidar.launch        # 查看雷达数据
-```
-
-### USB摄像头
-```shell
-roslaunch tianracer_bringup usb_cam.launch        # 单独驱动相机
-roslaunch tianracer_rviz view_image.launch        # 查看图像数据
-```
-
-### GPS（选配）
-```shell
-roslaunch tianracer_bringup gps.launch            # 单独驱动GPS
-rostopic echo /tianracer/gps                      # 查看GPS数据
-```
-
-### 深度相机（选配）
-```shell
-roslaunch tianracer_bringup rgbd_camera.launch      
-roslaunch tianracer_rviz view_image.launch        # 查看图像数据
+roslaunch tianbot_mini lidar.launch          # 单独驱动激光雷达
 ```
 
 ## 如何控制底盘运动
 
-### DBUS直接通信
+### 网页遥控
 
-直接控制舵机和电机
+迷你机器人开机后使用电脑/手机等连接到TBMINI-XXXX热点后，可以打开浏览器访问[tianbot_mini.local/joystick](http://tianbot_mini.local/joystick)进行遥控控制，点击按键切换不同模式。
 
-**遥控器遥控**
+- 智能模式（ROS），默认是这个模式，系统状态指示灯为绿色，此模式我们可以控制小车移动建图，如果上位机未运行ROS节点，此模式下网页控制小车移动会卡顿；
+- 遥控模式（WEB），系统状态指示灯变为白色，此模式相当于遥控小车，我们可以拖动摇杆控制机器人运动。
 
-TIANRACER使用遥控器DT7进行控制 ，DT7是一款工作于 2.4GHz 频段的无线电通讯设备，该遥控器仅能与DR16接收机搭配使用，该遥控器在开阔室外的最大控制范围可达1000m，内置锂电池，最长工作时间可达到12个小时。
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211514356.jpg)
-
-- 向右拨电源开关，开启遥控器。向左拨电源开关，关闭遥控器。
-- 遥控器开启时有提示音，开启后电源指示灯绿灯长亮并伴随蜂鸣器提示音。
-- 左手摇杆前进后退，右手摇杆转向，S1模式控制设置
+通用遥控页面：[tianbot_mini.local/joystick](http://tianbot_mini.local/joystick)
 
 ### ROS Topic通信
 
@@ -65,7 +40,7 @@ TIANRACER使用遥控器DT7进行控制 ，DT7是一款工作于 2.4GHz 频段�
 **终端话题发布**
 
 ```shell
-rostopic pub /turtle1/cmd_vel geometry_msgs/Twist "linear:
+rostopic pub /tianbot_mini/cmd_vel geometry_msgs/Twist "linear:
   x: 0.1
   y: 0.0
   z: 0.0
@@ -81,7 +56,7 @@ angular:
 
 **键盘控制**
 ```shell
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
+roslaunch tianbot_mini teleop.launch
 
 ```
 
