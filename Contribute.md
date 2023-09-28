@@ -280,3 +280,19 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 - [廖雪峰：Git的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
 ```
 <!-- tabs:end -->
+
+
+::: code-group
+
+```sh [melodic]
+source /opt/ros/melodic/setup.bash
+```
+
+```sh [noetic]
+source /opt/ros/melodic/setup.bash
+```
+
+```sh [通用]
+source /opt/ros/$ROS_DISTRO/setup.bash
+```
+:::

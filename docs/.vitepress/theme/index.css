@@ -1,0 +1,70 @@
+/* .vitepress/theme/index.css */
+/* Ref: https://bddxg.top/article/note/vitepress%E4%BC%98%E5%8C%96/%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7.html */
+
+/* click midium image */
+.medium-zoom-overlay {
+    z-index: 20;
+}
+  
+.medium-zoom-image {
+    z-index: 21;
+}
+
+/* h1 ~ h5 add highlight */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6,
+.vp-doc .header-anchor:before {
+  color: unset !important;
+  background: linear-gradient(to right, #6fbef7, #ba89ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: max-content;
+}
+
+/* dark font color fixed */
+:root {
+  --vp-c-text-dark-1: rgba(255, 255, 197, .86);
+  --vp-c-text-dark-2: rgba(207, 216, 231, .6);
+  --vp-c-text-dark-3: rgba(207, 216, 231, .38)
+}
+  
+/* bolder 、blockquote style fixed */
+.vp-doc strong {
+  font-weight:bolder!important;
+  color:var(--vp-c-brand);
+  padding:0 4px
+}
+.vp-doc blockquote {
+  border-left:unset!important;
+  border-radius:4px;
+  background-color:var(--vp-badge-tip-bg);
+  position:relative
+}
+.vp-doc blockquote:before {
+  content:"";
+  position:absolute;
+  left:0;
+  width:4px;
+  height:100%;
+  border-radius:6px;
+  background-color:var(--vp-c-brand-3)
+}
+
+/* code style fixed */
+li>code,
+table code,
+p code {
+  word-break:break-word;
+  color:#ba89ff!important;
+  font-weight:700
+}
+
+/* herf style fixed */
+.vp-doc a {
+  text-decoration:underline
+}

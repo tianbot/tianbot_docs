@@ -1,5 +1,96 @@
 import { defineConfig } from 'vitepress'
 
+// Katex support
+import markdownItKatex from 'markdown-it-katex'
+
+const customElements = [
+  'math',
+  'maction',
+  'maligngroup',
+  'malignmark',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mi',
+  'mlongdiv',
+  'mmultiscripts',
+  'mn',
+  'mo',
+  'mover',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'ms',
+  'mscarries',
+  'mscarry',
+  'mscarries',
+  'msgroup',
+  'mstack',
+  'mlongdiv',
+  'msline',
+  'mstack',
+  'mspace',
+  'msqrt',
+  'msrow',
+  'mstack',
+  'mstack',
+  'mstyle',
+  'msub',
+  'msup',
+  'msubsup',
+  'mtable',
+  'mtd',
+  'mtext',
+  'mtr',
+  'munder',
+  'munderover',
+  'semantics',
+  'math',
+  'mi',
+  'mn',
+  'mo',
+  'ms',
+  'mspace',
+  'mtext',
+  'menclose',
+  'merror',
+  'mfenced',
+  'mfrac',
+  'mpadded',
+  'mphantom',
+  'mroot',
+  'mrow',
+  'msqrt',
+  'mstyle',
+  'mmultiscripts',
+  'mover',
+  'mprescripts',
+  'msub',
+  'msubsup',
+  'msup',
+  'munder',
+  'munderover',
+  'none',
+  'maligngroup',
+  'malignmark',
+  'mtable',
+  'mtd',
+  'mtr',
+  'mlongdiv',
+  'mscarries',
+  'mscarry',
+  'msgroup',
+  'msline',
+  'msrow',
+  'mstack',
+  'maction',
+  'semantics',
+  'annotation',
+  'annotation-xml'
+]
+
 export default defineConfig({
   lang: 'zh-CN',
   title: " Tianbot",
@@ -12,6 +103,8 @@ export default defineConfig({
     
     // get picture no referrer， such as aliyun-oss,  the follower code change " <meta name="referrer" content="no-referrer" /> " in .html file
     ['meta',{ name:'referrer', content:'no-referrer'}],
+
+    ['link',{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'}],
   ],
   // #endregion fav
 
@@ -45,7 +138,20 @@ export default defineConfig({
   markdown: {
     //行号显示
     lineNumbers: true, 
+     
+    // katex
+    config: (md) => {
+      md.use(markdownItKatex)
+    },
+  },
 
+  // katex
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => customElements.includes(tag)
+      }
+    }
   },
 
   //主题配置
@@ -56,7 +162,7 @@ export default defineConfig({
     //siteTitle: false, //标题隐藏
 
     //设置站点标题 会覆盖title
-    //siteTitle: 'Hello World',
+    // siteTitle: 'Let’s learn robots happily together',
 
     //导航栏
     nav: [
@@ -266,14 +372,22 @@ export default defineConfig({
               {
                 text: 'SLAM建图',
                 collapsed: true,
+                link: '/use_guide/tianbot_mini/guide/slam/',
                 items: [
-                  { text: 'Gmapping建图', link: '/use_guide/tianbot_mini/guide/quick_start/' },
-                  { text: 'Hector SLAM建图', link: '/use_guide/tianbot_mini/guide/quick_start/chapter1' },
-                  { text: 'Cartographer建图', link: '/use_guide/tianbot_mini/guide/quick_start/chapter2' },
+                  { text: 'Gmapping建图', link: '/use_guide/tianbot_mini/guide/slam/chapter1' },
+                  { text: 'Hector SLAM建图', link: '/use_guide/tianbot_mini/guide/slam/chapter2' },
+                  { text: 'Cartographer建图', link: '/use_guide/tianbot_mini/guide/slam/chapter3' },
                 ],
               },
-              { text: '自主导航', link: '/use_guide/tianbot_mini/guide/chapter3' },
-              { text: '机器人集群', link: '/use_guide/tianbot_mini/guide/chapter4' },
+              {
+                text: '自主导航',
+                collapsed: true,
+                link: '/use_guide/tianbot_mini/guide/navigation/',
+                items: [
+                  { text: 'move_base框架分析', link: '/use_guide/tianbot_mini/guide/navigation/chapter1' },
+                ],
+              },
+              { text: '机器人集群', link: '/use_guide/tianbot_mini/guide/chapter3' },
               {
                 text: '更多功能应用',
                 collapsed: true,
@@ -314,6 +428,16 @@ export default defineConfig({
           { text: '使用手册', link: '/use_guide/rosecho/' },
           { text: '实验手册', link: '/use_guide/rosecho/experiment/' },
           { text: '更新日志', link: '/use_guide/rosecho/changelog' },
+        ],
+      },
+      {
+        //分组标题6
+        text: '🐝 机器人集群控制 文档',
+        collapsed: true,
+        items: [
+          { text: '使用说明', link: '/use_guide/swarm/' },
+          { text: 'abc_swarm', link: '/use_guide/swarm/abc_swarm/' },
+          { text: '更新日志', link: '/use_guide/swarm/changelog' },
         ],
       },
     ],
@@ -375,7 +499,7 @@ export default defineConfig({
     footer: {
       // message: 'Released under the MIT License.',
       // copyright: 'Copyright © 2023 备案号：<a href="https://beian.miit.gov.cn/">京****号</a>',
-      copyright: 'Copyright © 2023 天之博特',
+      copyright: 'Copyright © 2016 天之博特. All rights reserved.' ,
     },
 
     //侧边栏文字更改(移动端)
@@ -397,7 +521,7 @@ export default defineConfig({
     },
     
     //上次更新时间
-    //lastUpdatedText:'Updated Date',
+    lastUpdatedText:'Updated Date',
 
 
     //自定义上下页名

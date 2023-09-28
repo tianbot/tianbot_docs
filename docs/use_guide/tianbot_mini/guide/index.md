@@ -40,7 +40,7 @@
 
 首先，同时按下配网按钮和开关机按钮，等待蜂鸣器发出响声，听到响声后仅松开电源键按钮，继续按住配网键按钮，等待系统状态指示灯由**红->蓝->紫**，此时小车进入自检模式。
 
-![](https://img.kancloud.cn/44/93/4493f767fd25dfc28fc2b4c05d7cada2_6290x3098.png)
+![](https://img.kancloud.cn/44/93/4493f767fd25dfc28fc2b4c05d7cada2_6290x3098.png){data-zoomable}
 
 ## 网页遥控
 

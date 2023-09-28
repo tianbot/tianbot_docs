@@ -1,5 +1,10 @@
 <p style="font-size:30px ;font-weight: bolder ;  text-align:center"> Tianbot-Doc 使用说明 </p>
 
+<script setup>
+  import Typer from '../announcement/Typer.vue'
+  </script>
+
+<Typer />
 
 欢迎来到Tianbot-Doc使用文档，在这里，你可以不仅可以找到Tianbot旗下的产品使用文档，也可以找到与机器人相关的开发技巧、仿真实例、和拓展提升的相关文档
 
@@ -12,6 +17,9 @@
 
 
 #### Contract：
+
+有问题请在 [Issues](https://github.com/tianbot/Tianbot-vitepress/issues) 
+或者 [WeChat](https://gitee.com/jinyang7/blog-image/raw/master/img/202208141742797.jpeg) 联系我。
 
 * Admin：Tianbot
 * E-mail: sales@tianbot.com

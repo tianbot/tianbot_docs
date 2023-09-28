@@ -15,9 +15,10 @@ hero:
         - theme: alt
           text: Github
           link: https://github.com/tianbot
-        - theme: Bilibili
+        - theme: sponsor
           text: Bilibili
-          link: https://space.bilibili.com/451561151       
+          link: https://space.bilibili.com/451561151
+
 features:
   - icon: 💿
     title: ROS2GO文档
