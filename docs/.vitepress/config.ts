@@ -2,6 +2,11 @@ import { defineConfig } from 'vitepress'
 
 // Katex support
 import markdownItKatex from 'markdown-it-katex'
+import { createWriteStream } from 'node:fs'
+
+// sitemap url
+const fs = require('fs');
+const spawn = require('cross-spawn');
 
 const customElements = [
   'math',
@@ -89,7 +94,7 @@ const customElements = [
   'semantics',
   'annotation',
   'annotation-xml'
-]
+];
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -115,6 +120,8 @@ export default defineConfig({
   //启用深色模式
   appearance:true, //默认浅色且开启切换
   // appearance:'dark',
+
+  lastUpdated: true,
 
   //多语言
   locales: {
@@ -151,6 +158,44 @@ export default defineConfig({
       compilerOptions: {
         isCustomElement: (tag) => customElements.includes(tag)
       }
+    }
+  },
+
+  // generate sitemap
+  // Ref: https://laros.io/generating-a-dynamic-sitemap-with-vitepress
+  //      https://blog.laoyutang.cn/seo/vitepressCreateSitemapXml.html
+
+  async buildEnd(siteConfig) {
+    const baseURL = 'https://doc.sujie-168.top/';
+
+    try {
+      let siteMapStr = '';
+      for (const page of siteConfig.pages) {
+        if (page === 'index.md') continue;
+        // 获取最后修改日期，基于git
+        const filePath = siteConfig.srcDir + '/' + page;
+        const date = new Date(
+          parseInt(
+            spawn.sync('git', ['log', '-1', '--format=%at', filePath]).stdout.toString('utf-8')
+          ) * 1000
+        );
+        siteMapStr += `
+        <url>
+          <loc>${baseURL}/${page.replace(/\.md$/, '.html')}</loc>
+          <lastmod>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</lastmod>
+        </url>
+      `;
+      }
+
+      const xmlStr = `<?xml version="1.0" encoding="UTF-8"?>
+        <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        ${siteMapStr}
+        </urlset>
+      `;
+
+      fs.writeFileSync(`${siteConfig.outDir}/sitemap.xml`, xmlStr);
+    } catch (err) {
+      console.log('create sitemap.txt failed!', err);
     }
   },
 
