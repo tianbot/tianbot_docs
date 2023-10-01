@@ -2,11 +2,10 @@ import { defineConfig } from 'vitepress'
 
 // Katex support
 import markdownItKatex from 'markdown-it-katex'
-import { createWriteStream } from 'node:fs'
 
 // sitemap url
-const fs = require('fs');
-const spawn = require('cross-spawn');
+import fs from 'node:fs'
+import { spawn } from 'cross-spawn';
 
 const customElements = [
   'math',
@@ -292,7 +291,7 @@ export default defineConfig({
                 ],
               },
               {
-                text: 'ROS学习指南',
+                text: 'ROS学习指南及小技巧串讲',
                 collapsed: true,
                 link: '/use_guide/ros2go/ros/index',
                 items: [
