@@ -166,7 +166,7 @@ export default defineConfig({
   //      https://blog.laoyutang.cn/seo/vitepressCreateSitemapXml.html
 
   async buildEnd(siteConfig) {
-    const baseURL = 'https://doc.sujie-168.top/';
+    const baseURL = 'https://doc.sujie-168.top';
 
     try {
       let siteMapStr = '';
@@ -179,10 +179,13 @@ export default defineConfig({
             spawn.sync('git', ['log', '-1', '--format=%at', filePath]).stdout.toString('utf-8')
           ) * 1000
         );
+
+        // <lastmod>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</lastmod> generate is not fomatter for google search console
+
         siteMapStr += `
         <url>
           <loc>${baseURL}/${page.replace(/\.md$/, '.html')}</loc>
-          <lastmod>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</lastmod>
+          <lastmod>${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${("0" + date.getDate()).slice(-2)}</lastmod>
         </url>
       `;
       }
