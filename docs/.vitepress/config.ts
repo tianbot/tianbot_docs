@@ -461,6 +461,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '注意事项', link: '/use_guide/notice' },
+          { text: '开箱说明', link: '/use_guide/rmtt/list' },
           { text: '使用手册', link: '/use_guide/rmtt/' },
           { text: '实验手册', link: '/use_guide/rmtt/experiment/' },
           { text: '更新日志', link: '/use_guide/rmtt/changelog' },
@@ -472,7 +473,19 @@ export default defineConfig({
         text: '📢 ROSECHO 文档',
         collapsed: true,
         items: [
-          { text: '使用手册', link: '/use_guide/rosecho/' },
+          { text: '开箱说明', link: '/use_guide/rosecho/' },
+          { text: '使用手册', link: '/use_guide/rosecho/guide/' },
+          {
+            text: '快速上手',
+            collapsed: true,
+            items: [
+              { text: '云端问答', link: '/use_guide/rosecho/guide/chapter1' },
+              { text: 'rosecho功能包详解', link: '/use_guide/rosecho/guide/chapter2' },
+              { text: '语音遥控', link: '/use_guide/rosecho/guide/chapter3' },
+              { text: '用户自定义问答', link: '/use_guide/rosecho/guide/chapter4' },
+              { text: 'AIUI配置', link: '/use_guide/rosecho/guide/chapter5' },
+            ],
+          },
           { text: '实验手册', link: '/use_guide/rosecho/experiment/' },
           { text: '更新日志', link: '/use_guide/rosecho/changelog' },
         ],
