@@ -122,9 +122,9 @@ goal_id:
 goal:
   text: '你好机器人'"
 ```
-## 演示：语音命令控制自主导航
+## 演示
 
-所有的基本功能测试成功后，可以实现一个简单的演示。在turtlebot_stage下可以使用语音指令控制仿真的Turtlebot去到不同的地点。
+所有的基本功能测试成功后，可以实现一个简单的语音命令控制自主导航演示。在turtlebot_stage下可以使用语音指令控制仿真的Turtlebot去到不同的地点。
 
 这个Demo融合了语音识别、自主问答（非云端）、TTS，并且与移动机器人自主导航进行结合。
 
@@ -137,3 +137,24 @@ rosrun rosecho demo.py
 程序运行完之后，可以使用“波弟波弟”唤醒ROSECHO，然后说出语音指令“去端茶”，ROSECHO会语音回复，然后命令Turtlebot去到指定地点。“回家”，也会有语音回复，然后回到初始位置。
 
 在运行过程中说出唤醒词“波弟波弟”，机器人会停下并转向声源方向（声源定位功能）。大家可以基于这个简单的Demo开发自己的应用案例。
+
+## 深入开发
+
+深入开发ROSECHO，仅提供参考资料
+
+### ROS机器人操作系统
+
+入门免费视频可以观看古月居的B站视频
+- [ROS入门21讲](https://www.bilibili.com/video/BV1zt411G7Vn/)
+
+快速进阶可以选择ROS2GO
+
+- [ROS2GO使用手册](/use_guide/ros2go/)
+
+### 状态机
+
+ROS下的状态机开发smach更加方便
+- [SMACH 层次并发状态机](http://wiki.ros.org/smach)
+
+游戏级的基于C++的状态机开发
+- [游戏编程模式-状态（英文）](https://gameprogrammingpatterns.com/state.html)
