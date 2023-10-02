@@ -1,5 +1,6 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">实验三 反应式方法</p>
 
+
 #### 【实验目标】
 
 在F1TENTH仿真环境下完成:
@@ -23,6 +24,7 @@ roslaunch tianracer_navigation simulator_wall_following.launch
 
 方法详解：https://linklab-uva.github.io/autonomousracing/assets/files/assgn4-print.pdf
 
+
 ##### Follow the Gap避障算法
 
 在本实验中，您将实现一种用于避障的反应式算法，该算法的python代码总共只有120行左右。
@@ -43,9 +45,9 @@ roslaunch f1tenth_simulator simulator.launch
 roslaunch tianracer_navigation simulator_f1_nav.launch
 ```
 
-::: info 提示
-tianracer功能包中没有单独部署该避障算法节点，而是将全部算法集成在L1_controller节点中，建议参考以下链接，自己动手按照wall_follow.py的部署方法尝试一下Follow The Gap避障算法
-:::
+
+::: note]
+> tianracer功能包中没有单独部署该避障算法节点，而是将全部算法集成在L1_controller节点中，建议参考以下链接，自己动手按照wall_follow.py的部署方法尝试一下Follow The Gap避障算法
 
 方法详解：https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html
 

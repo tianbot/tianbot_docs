@@ -9,9 +9,8 @@
 ### 【比赛内容及详解】
 
 B站视频链接：
-- 2021ROS暑期学校-F1TENTH无人车挑战赛线上答疑8月10日 天之博特田博：https://www.bilibili.com/video/BV1c64y1q7mg?spm_id_from=333.999.0.0
-- F1TENTH Simulator仿真课（田博）：https://www.bilibili.com/video/BV1YP4y1L7sz?spm_id_from=333.999.0.0
-
+2021ROS暑期学校-F1TENTH无人车挑战赛线上答疑8月10日 天之博特田博：https://www.bilibili.com/video/BV1c64y1q7mg?spm_id_from=333.999.0.0
+F1TENTH Simulator仿真课（田博）：https://www.bilibili.com/video/BV1YP4y1L7sz?spm_id_from=333.999.0.0
 更多教程可关注天之博特B站账号：天之博特TIANBOT
 
 ### 【注意事项】

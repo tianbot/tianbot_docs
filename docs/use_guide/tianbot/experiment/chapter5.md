@@ -27,20 +27,13 @@ move_base的local_planner配置文件：
 #### TEB
 
 teb_local_planner包是2D导航功能包中base_local_planner的插件实现。
-
 “TEB”全称Timed Elastic Band，可翻译为“时间弹性带”，该方法针对全局路径规划器生成的初始轨迹进行后续修正，从而优化机器人的运动轨迹，属于局部路径规划。
-
 在运行时，优化由全局路径规划器生成的初始轨迹，以便最小化轨迹执行时间（时间最优目标），与障碍物分离，并遵守诸如满足最大速度和加速度的动力学约束。
-
 基于 TEB 算法的自主导航实验需要配置 teb_local_planner_params.yaml, 设置时间分辨率、机器人速度范围等参数
-
 算法详解可参考：http://wiki.ros.org/teb_local_planner
-
 TEB应用在F1TENTH simulator里：
-```shell
 roslaunch f1tenth_simulator simulator.launch
 roslaunch tianracer_competition open_map_teb.launch
-```
 TEB参数文件配置 -----可修改其中参数使无人车行驶达到理想效果
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211741150.png)

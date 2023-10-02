@@ -226,6 +226,7 @@ export default defineConfig({
               { text: 'linux快速使用', link: '/basic_guide/linux' },
               { text: 'markdown快速使用', link: '/basic_guide/markdown' },
               { text: 'Vi/Vim快速使用', link: '/basic_guide/vi_or_vim' },
+              { text: '如何用Rustdesk进行远程连接', link: '/basic_guide/remote_connect'},
               { text: '如何备份你的linux系统', link: '/basic_guide/backup_linux' },
               { text: 'VScode中的开发环境配置', link: '/basic_guide/vscode/index' },
               { text: '如何优雅的提问', link: '/basic_guide/how_to_ask_for_help' },
@@ -311,14 +312,26 @@ export default defineConfig({
         //分组标题2
         text: '🚚 TOM文档',
         collapsed: true,
+        link: '/use_guide/tianbot/',
         items: [
           { text: '注意事项', link: '/use_guide/tianbot/notice' },
-          { text: '使用手册', link: '/use_guide/tianbot/' },
+          { text: '收货清单', link: '/use_guide/tianbot/list' },
+          {
+            text: '使用手册',
+            collapsed: true,
+            items: [
+              { text: '使用指引', link: '/use_guide/tianbot/guide/' },
+              { text: '软件环境配置', link: '/use_guide/tianbot/guide/chapter1' },
+              { text: 'ROS基础功能', link: '/use_guide/tianbot/guide/chapter2' },
+              { text: 'SLAM建图', link: '/use_guide/tianbot/guide/chapter3' },
+              { text: '自主导航', link: '/use_guide/tianbot/guide/chapter4' },
+            ],
+          },
           {
             text: '实验手册',
             collapsed: true,
             items: [
-              { text: '实验一、实验工具的使用', link: '/use_guide/tianbot/experiment/chapter1' },
+              { text: '实验一 实验工具的使用', link: '/use_guide/tianbot/experiment/chapter1' },
               { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianbot/experiment/chapter2' },
               { text: '实验三 反应式方法', link: '/use_guide/tianbot/experiment/chapter3' },
               { text: '实验四 定位与建图SLAM', link: '/use_guide/tianbot/experiment/chapter4' },
@@ -330,6 +343,7 @@ export default defineConfig({
               { text: '线下挑战赛', link: '/use_guide/tianbot/experiment/racer_online' },
             ],
           },
+          { text: '常见问题', link: '/use_guide/tianbot/question' },
           { text: '更新日志', link: '/use_guide/tianbot/changelog' },
         ],
       },
@@ -356,7 +370,7 @@ export default defineConfig({
             text: '实验手册',
             collapsed: true,
             items: [
-              { text: '实验一、实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1' },
+              { text: '实验一 实验工具的使用', link: '/use_guide/tianracer/experiment/chapter1' },
               { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianracer/experiment/chapter2' },
               { text: '实验三 反应式方法', link: '/use_guide/tianracer/experiment/chapter3' },
               { text: '实验四 定位与建图SLAM', link: '/use_guide/tianracer/experiment/chapter4' },

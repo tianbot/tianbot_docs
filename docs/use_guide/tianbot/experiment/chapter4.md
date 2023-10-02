@@ -25,24 +25,15 @@ Particle Filter粒子滤波
 1、启动底盘
 先SSH远程连接
 
-小车终端：
-```shell
-roslaunch tianracer_bringup tianracer_bringup.launch
-```
+小车终端：roslaunch tianracer_bringup tianracer_bringup.launch
 
 2、使用GMpping建图
 
-小车终端
-```shell
-roslaunch tianracer_slam tianracer_gmapping.launch
-```
+小车终端roslaunch tianracer_slam tianracer_gmapping.launch
 
 3、打开Rviz观察地图
 
-个人PC终端：
-```shell
-roslaunch tianracer_rviz view_mapping.launch
-```
+个人PC终端：roslaunch tianracer_rviz view_mapping.launch
 
 注意！！！
 启动rviz、rqt等图形化界面，建议在个人PC端启动，也就是在计算机名为ros2go的终端
@@ -50,9 +41,7 @@ roslaunch tianracer_rviz view_mapping.launch
 4、使用遥控器控制小车运动建图
 5、地图尽量封闭后，保存地图
 
-```shell
 roslaunch tianracer_slam map_save.launch map_file:=gmapping(自定义地图名称)
-```
 
 地图默认保存在tianracer_slam/maps/目录下
 gmapping建图效果:
@@ -62,9 +51,9 @@ gmapping建图效果:
 #### Cartographer建图
 
 启动tianracer_cartographer节点，用Cartographer进行建图，并保存地图
-```shell
+
 roslaunch tianracer_slam tianracer_cartographer.launch
-```
+
 cartographer建图效果：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740232.png)
@@ -72,9 +61,9 @@ cartographer建图效果：
 #### Hector_Slam建图
 
 启动tianracer_hector节点，用Hector_Slam进行建图，并保存地图
-```shell
+
 roslaunch tianracer_slam tianracer_hector.launch
-```
+
 hector_slam建图效果如下：
 
 激光雷达消息结构
