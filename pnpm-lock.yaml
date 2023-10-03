@@ -14,9 +14,6 @@ devDependencies:
   cross-spawn:
     specifier: ^7.0.3
     version: 7.0.3
-  markdown-it-katex:
-    specifier: ^2.0.3
-    version: 2.0.3
   medium-zoom:
     specifier: ^1.0.8
     version: 1.0.8
@@ -712,13 +709,6 @@ packages:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
     dev: true
 
-  /katex@0.6.0:
-    resolution: {integrity: sha512-rS4mY3SvHYg5LtQV6RBcK0if7ur6plyEukAOV+jGGPqFImuzu8fHL6M752iBmRGoUyF0bhZbAPoezehn7xYksA==}
-    hasBin: true
-    dependencies:
-      match-at: 0.1.1
-    dev: true
-
   /magic-string@0.30.1:
     resolution: {integrity: sha512-mbVKXPmS0z0G4XqFDCTllmDQ6coZzn94aMlb0o/A4HEHJCKcanlDZwYJgwnkmgD3jyWhUgj9VsPrfd972yPffA==}
     engines: {node: '>=12'}
@@ -728,16 +718,6 @@ packages:
 
   /mark.js@8.11.1:
     resolution: {integrity: sha512-1I+1qpDt4idfgLQG+BNWmrqku+7/2bi5nLf4YwF8y8zXvmfiTBY3PV3ZibfrjBueCByROpuBjLLFCajqkgYoLQ==}
-    dev: true
-
-  /markdown-it-katex@2.0.3:
-    resolution: {integrity: sha512-nUkkMtRWeg7OpdflamflE/Ho/pWl64Lk9wNBKOmaj33XkQdumhXAIYhI0WO03GeiycPCsxbmX536V5NEXpC3Ng==}
-    dependencies:
-      katex: 0.6.0
-    dev: true
-
-  /match-at@0.1.1:
-    resolution: {integrity: sha512-h4Yd392z9mST+dzc+yjuybOGFNOZjmXIPKWjxBd1Bb23r4SmDOsk2NYCU2BMUBGbSpZqwVsZYNq26QS3xfaT3Q==}
     dev: true
 
   /medium-zoom@1.0.8:

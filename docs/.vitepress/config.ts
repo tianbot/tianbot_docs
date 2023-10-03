@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 // Katex support
-import markdownItKatex from 'markdown-it-katex'
+// import markdownItKatex from 'markdown-it-katex'
 
 // sitemap url
 import fs from 'node:fs'
@@ -108,7 +108,7 @@ export default defineConfig({
     // get picture no referrer， such as aliyun-oss,  the follower code change " <meta name="referrer" content="no-referrer" /> " in .html file
     ['meta',{ name:'referrer', content:'no-referrer'}],
 
-    ['link',{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'}],
+    // ['link',{ rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css'}],
   ],
   // #endregion fav
 
@@ -146,19 +146,19 @@ export default defineConfig({
     lineNumbers: true, 
      
     // katex
-    config: (md) => {
-      md.use(markdownItKatex)
-    },
+    // config: (md) => {
+    //   md.use(markdownItKatex)
+    // },
   },
 
   // katex
-  vue: {
-    template: {
-      compilerOptions: {
-        isCustomElement: (tag) => customElements.includes(tag)
-      }
-    }
-  },
+  // vue: {
+  //   template: {
+  //     compilerOptions: {
+  //       isCustomElement: (tag) => customElements.includes(tag)
+  //     }
+  //   }
+  // },
 
   // generate sitemap
   // Ref: https://laros.io/generating-a-dynamic-sitemap-with-vitepress
@@ -333,14 +333,14 @@ export default defineConfig({
             items: [
               { text: '实验一 实验工具的使用', link: '/use_guide/tianbot/experiment/chapter1' },
               { text: '实验二 ROS控制底盘运动', link: '/use_guide/tianbot/experiment/chapter2' },
-              { text: '实验三 反应式方法', link: '/use_guide/tianbot/experiment/chapter3' },
-              { text: '实验四 定位与建图SLAM', link: '/use_guide/tianbot/experiment/chapter4' },
-              { text: '实验五 Cartographer与TEB详解', link: '/use_guide/tianbot/experiment/chapter5' },
+              { text: '实验三 摄像头图像获取', link: '/use_guide/tianbot/experiment/chapter3' },
+              { text: '实验四 二维码追踪导航', link: '/use_guide/tianbot/experiment/chapter4' },
+              { text: '实验五 激光SLAM建图', link: '/use_guide/tianbot/experiment/chapter5' },
               { text: '实验六 自主导航', link: '/use_guide/tianbot/experiment/chapter6' },
-              { text: '实验七 多点导航', link: '/use_guide/tianbot/experiment/chapter7' },
-              { text: '实验八 深度学习与视觉导航', link: '/use_guide/tianbot/experiment/chapter8'},
-              { text: '线上挑战赛', link: '/use_guide/tianbot/experiment/racer_offline' },
-              { text: '线下挑战赛', link: '/use_guide/tianbot/experiment/racer_online' },
+              { text: '实验七 常用的局部导航', link: '/use_guide/tianbot/experiment/chapter7' },
+              { text: '实验八 Action与语音控制', link: '/use_guide/tianbot/experiment/chapter8'},
+              { text: '实验八 视觉SLAM', link: '/use_guide/tianbot/experiment/chapter9' },
+              { text: '实验九 人机交互GUI', link: '/use_guide/tianbot/experiment/chapter10' },
             ],
           },
           { text: '常见问题', link: '/use_guide/tianbot/question' },
