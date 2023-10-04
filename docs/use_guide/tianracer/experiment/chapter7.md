@@ -1,13 +1,13 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">实验七 多点导航</p>
 
-### 【实验目标】
+## 【实验目标】
 
 - 实现多点导航（真实场景）
 - 实现多点导航（仿真环境）
 
-### 【实验内容】
+## 【实验内容】
 
-#### 多点导航真车应用
+### 多点导航真车应用
 
 在实际环境中实现多点导航
 1、启动真车
@@ -27,7 +27,7 @@ roslaunch tianracer_navigation tianracer_multi_goal.launch
 ```
 
 
-#### 多点导航仿真应用
+### 多点导航仿真应用
 
 在simulator仿真环境中实现多点导航，先修改tianracer_multi_goal.launch文件，将false改为true，保存
 

@@ -1,19 +1,19 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">实验五 Cartographer与TEB详解</p>
 
-### 【实验目标】
+## 【实验目标】
 
 - 详细了解Cartographer建图算法与TEB等局部路径规划器并进行配置
 
-### 【实验内容】
+## 【实验内容】
 
-#### Cartographer框架
+### Cartographer框架
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740786.png)
 
-#### Tianracer.lua配置
+### Tianracer.lua配置
 
 
-#### 局部规划器base_local planner
+### 局部规划器base_local planner
 
 base_local_planner是move_base默认的局部规划包，该软件包提供了对平面上本地机器人导航的轨迹展开和动态窗口方法的实现。
 
@@ -24,7 +24,7 @@ base_local_planner使用Trajectory Rollout and Dynamic Window approaches来做�
 move_base的local_planner配置文件：
 
 
-#### TEB
+### TEB
 
 teb_local_planner包是2D导航功能包中base_local_planner的插件实现。
 

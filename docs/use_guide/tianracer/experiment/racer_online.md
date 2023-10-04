@@ -1,11 +1,11 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">比赛一 F1TENTH线上仿真赛</p>
 
-### 【比赛目标】
+## 【比赛目标】
 
 - 参照2021ROS暑期学校F1TENTH线上仿真赛，可自行组织学生完成线上比赛，学生自行进行调参，以跑3圈所用时间为竞技标准
 - 比赛形式为线上
 
-### 【比赛内容及详解】
+## 【比赛内容及详解】
 
 B站视频链接：
 - 2021ROS暑期学校-F1TENTH无人车挑战赛线上答疑8月10日 天之博特田博：https://www.bilibili.com/video/BV1c64y1q7mg?spm_id_from=333.999.0.0
@@ -23,7 +23,7 @@ source devel/setup.bash
 ```
 
 
-### wall_following算法
+## wall_following算法
 启动仿真环境并运行wall_following算法：
 ```shell
 roslaunch tianracer_navigation simulator_wall_following.launch

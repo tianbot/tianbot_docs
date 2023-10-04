@@ -1,14 +1,14 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">实验三 反应式方法</p>
 
-#### 【实验目标】
+## 【实验目标】
 
 在F1TENTH仿真环境下完成:
 - 了解并实现simulator下wall_flowing算法（PID控制器）
 - 了解并实现一种用于避障的反应式算法Follow the Gap
 
-#### 【实验内容】
+## 【实验内容】
 
-##### Wall Following巡墙算法
+### Wall Following巡墙算法
 
 在本实验中，您将实现一个 PID（比例积分微分）控制器，以使汽车以固定距离平行于走廊的墙壁行驶。从高层次上讲，您将通过从 Hokuyo LiDAR 获取激光扫描距离、计算所需的转向角和速度（驱动参数）并将这些信息发布到 VESC 以驱动汽车来实现这一点。
 
@@ -23,7 +23,7 @@ roslaunch tianracer_navigation simulator_wall_following.launch
 
 方法详解：https://linklab-uva.github.io/autonomousracing/assets/files/assgn4-print.pdf
 
-##### Follow the Gap避障算法
+### Follow the Gap避障算法
 
 在本实验中，您将实现一种用于避障的反应式算法，该算法的python代码总共只有120行左右。
 原理概括： 根据激光雷达扫描到的数据，设定阈值，计算出前方每处障碍物离当前车辆位置的时间步（timestep），避开最近的障碍物，选择时间步Gap最大的一处通过，详细讲解参考下面链接
@@ -49,7 +49,7 @@ tianracer功能包中没有单独部署该避障算法节点，而是将全部�
 
 方法详解：https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html
 
-##### Pure Pursuit纯跟踪算法
+### Pure Pursuit纯跟踪算法
 
 pure pursuit纯跟踪算法—
 

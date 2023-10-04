@@ -1,6 +1,6 @@
 <p style="font-size:30px; font-weight:bolder; text-align:center ">实验四 定位与建图SLAM</p>
 
-### 【实验目标】
+## 【实验目标】
 
 【实验目标】
 
@@ -9,7 +9,7 @@
 实现三种激光雷达建图算法的使用，并对比建图效果
 了解激光雷达消息结构
 
-### 【实验内容】
+## 【实验内容】
 
 Scan Matching扫描匹配定位算法
 
@@ -19,7 +19,7 @@ Particle Filter粒子滤波
 
 粒子滤波通过非参数化的蒙特卡洛 (Monte Carlo) 模拟方法来实现递推贝叶斯滤波，适用于任何能用状态空间模型描述的非线性系统，精度可以逼近最优估计。粒子滤波器具有简单、易于实现等特点，它为分析非线性动态系统提供了一种有效的解决方法，从而引起目标跟踪、信号处理以及自动控制等领域的广泛关注。
 
-#### GMapping建图
+### GMapping建图
 
 启动tianracer_gmapping节点，用GMapping进行建图，并保存地图
 1、启动底盘
@@ -59,7 +59,7 @@ gmapping建图效果:
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740958.png)
 
-#### Cartographer建图
+### Cartographer建图
 
 启动tianracer_cartographer节点，用Cartographer进行建图，并保存地图
 ```shell
@@ -69,7 +69,7 @@ cartographer建图效果：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740232.png)
 
-#### Hector_Slam建图
+### Hector_Slam建图
 
 启动tianracer_hector节点，用Hector_Slam进行建图，并保存地图
 ```shell
