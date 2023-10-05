@@ -300,6 +300,7 @@ export default defineConfig({
                   { text: 'ROS1与ROS2的对比', link: '/use_guide/ros2go/ros/chapter2' },
                   { text: 'ROS2GO资料使用说明', link: '/use_guide/ros2go/ros/chapter3' },
                   { text: '其他ROS学习资料', link: '/use_guide/ros2go/ros/chapter4' },
+                  { text: 'ROS中的多机通信', link: '/use_guide/ros2go/ros/multi_machine_communicate' },
                 ],
               },
             ],

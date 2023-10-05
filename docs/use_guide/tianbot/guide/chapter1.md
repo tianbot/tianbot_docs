@@ -28,4 +28,4 @@
 - 妙算则为`dji`
 - x86平台使用ros2go系统的话用户名为`tianbot`密码为`ros`
 
-若要使用ROS多机通信机制请参考ROS2GO使用手册中的[ROS多机通信](/use_guide/ros2go/multi_machine_communicate)。
+若要使用ROS多机通信机制请参考ROS2GO使用手册中的[ROS多机通信](/use_guide/ros2go/ros/multi_machine_communicate)。

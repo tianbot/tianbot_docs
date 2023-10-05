@@ -35,6 +35,17 @@ pnpm run docs:dev
 pnpm run docs:build
 ```
 
+# 特别鸣谢
+
+- [vuejs/vitepress](https://github.com/vuejs/vitepress)
+- [vitejs/vite](https://github.com/vitejs/vite) （参考主页美化）
+- ......
+
+# License
+
+- Copyright © 2016 Tianbot
+
 * Admin：JIT_SU
 
 * E-mail: sujie@tianbot.com
+
