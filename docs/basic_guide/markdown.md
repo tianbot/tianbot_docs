@@ -52,6 +52,29 @@ Markdown还非常贴心，它知道程序员们最珍视的两种东西：时间
 
 <!-- tabs:end -->
 
+
+## Mermaid
+
+<!-- tabs:start -->
+
+#### **效果**
+
+```mermaid
+flowchart LR
+	Start --> Stop
+```
+
+#### **Markdown**
+
+```markdown
+
+flowchart LR
+	Start --> Stop
+
+```
+
+<!-- tabs:end -->
+
 ## Latex
 
 <!-- tabs:start -->

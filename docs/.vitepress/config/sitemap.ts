@@ -2,10 +2,6 @@
 import fs from 'node:fs'
 import { spawn } from 'cross-spawn';
 
-export const generateSitemap = {
-  // generate sitemap
-  // Ref: https://laros.io/generating-a-dynamic-sitemap-with-vitepress
-  //      https://blog.laoyutang.cn/seo/vitepressCreateSitemapXml.html
 
   async buildEnd(siteConfig) {
     const baseURL = 'https://doc.sujie-168.top';
@@ -42,5 +38,4 @@ export const generateSitemap = {
     } catch (err) {
       console.log('create sitemap.txt failed!', err);
     }
-  },
-}
+  }

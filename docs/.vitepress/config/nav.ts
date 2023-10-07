@@ -31,7 +31,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: '集群仿真仿真实例', link: '/simulation/swarm/index', activeMatch: '/simulation/swarm/' },
             { text: '传感器仿真实例', link: '/simulation/sensor/index', activeMatch: '/simulation/sensor/' },
             ],
-            activeMatch: '/simulation/'
+            // activeMatch: '/simulation/'
         },
         {
             text: '拓展提升',
@@ -43,7 +43,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: '激光SLAM开发指南', link: '/enhance/Lidar_SLAM/index', activeMatch: '/enhance/Lidar_SLAM/' },
             { text: '视觉SLAM开发指南', link: '/enhance/Visual_SLAM/index', activeMatch: '/enhance/Visual_SLAM/' },
             ],
-            activeMatch: '/enhance/'  // 当前页面处于匹配路径下时, 对应导航菜单将突出显示
+            // activeMatch: '/enhance/'  // 当前页面处于匹配路径下时, 对应导航菜单将突出显示
         },
         ],
     },

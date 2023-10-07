@@ -1,11 +1,24 @@
 {
+  "name": "tianbot-doc",
+  "description": "用于记录tianbot产品的使用手册和ROS开发者指南",
+  "author": "tianbot",
+  "private": true,
+  "type": "module",
   "devDependencies": {
     "@algolia/client-search": "^4.19.1",
     "@types/node": "^20.8.0",
     "cross-spawn": "^7.0.3",
+    "fast-glob": "^3.3.1",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^13.0.2",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.0.8",
+    "mermaid": "^10.5.0",
     "search-insights": "^2.7.0",
-    "vitepress": "1.0.0-beta.6",
+    "vite": "^4.4.11",
+    "vitepress": "1.0.0-rc.20",
+    "vitepress-plugin-mermaid": "^2.0.15",
     "vue": "^3.3.4"
   },
   "scripts": {
