@@ -19,7 +19,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'VScode中的开发环境配置', link: '/basic_guide/vscode/index' },
             { text: '如何优雅的提问', link: '/basic_guide/how_to_ask_for_help' },
             ],
-            activeMatch: '/basic_guide/'
+            // activeMatch: '/basic_guide/'
         },
         {
             text: '仿真模拟',
