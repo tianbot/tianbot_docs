@@ -3,7 +3,6 @@ import { withMermaid } from 'vitepress-plugin-mermaid';
 import { metaConfig } from './config/constants';
 import { head } from './config/head';
 import { markdown } from './config/markdown';
-// import { generateSitemap } from './config/sitemap';
 import { themeConfig } from './config/theme';
 
 // sitemap url

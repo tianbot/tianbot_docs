@@ -29,7 +29,7 @@
 
 ### 恢复方式选择
 
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/use_guide/ros2go/guide/chapter2#%E6%81%A2%E5%A4%8D%E5%88%B0%E6%9F%90%E4%B8%80%E4%B8%AA%E5%A4%87%E4%BB%BD)
+- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/use_guide/ros2go/guide/chapter2#引导界面恢复)
 
 - B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击B 选项即可。
 
