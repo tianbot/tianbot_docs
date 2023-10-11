@@ -1,8 +1,12 @@
 <p style="font-size:30px ; font-weight:bolder; text-align:center">收货清单</p>
 
+::: tip 注意
+包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准。
+:::
+
 ## T108收货清单
 
-|序号|名称|数量|图片|
+|序号|名称|数量|图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
 |1| Tianracer T108 | 1 | ![](https://static.tianbot.com/product/20220316/0270c2851da25e9e8ab5b8c05a5d9faa.png)| 
 |2| 大疆DT7遥控器 | 1 | ![](https://asset1.djicdn.com/uploads/product_photo/image/952/7.jpg) |     
@@ -11,7 +15,7 @@
 
 ## T110收货清单
 
-|序号|名称|数量|图片|
+|序号|名称|数量|图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
 |1| Tianracer T110 | 1 | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)| 
 |2| 大疆DT7遥控器 | 1 | ![](https://asset1.djicdn.com/uploads/product_photo/image/952/7.jpg) |     

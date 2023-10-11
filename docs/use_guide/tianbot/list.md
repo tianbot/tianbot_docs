@@ -1,10 +1,14 @@
 <p style="font-size:30px ; font-weight:bolder; text-align:center">收货清单</p>
 
+::: tip 注意
+包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准。
+:::
+
 ## TOM06收货清单
 
 **注：对于TOM06、08对应的C2款为全地形橡胶轮，Q2为麦克纳姆万向轮**
 
-|序号|名称|数量|图片|
+|序号|名称|数量|图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
 |1| TOM06C2/Q2 | 1 | ![](https://gd1.alicdn.com/imgextra/i1/3428759044/O1CN01V8HWhZ2GgCjzuJ4so_!!3428759044.jpg) | 
 |2| 大疆DT7遥控器 | 1 | ![](https://asset1.djicdn.com/uploads/product_photo/image/952/7.jpg) |     
@@ -15,7 +19,7 @@
 
 **注：对于TOM06、08对应的C2款为全地形橡胶轮，Q2为麦克纳姆万向轮**
 
-|序号|名称|数量|图片|
+|序号|名称|数量|图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
 |1| TOM08C2/Q2 | 1 | ![](https://static.tianbot.com/product/20220225/893cc85a16f8b75cbe755f3b13f54d68.png)| 
 |2| 大疆DT7遥控器 | 1 | ![](https://asset1.djicdn.com/uploads/product_photo/image/952/7.jpg) |     

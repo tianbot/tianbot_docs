@@ -1,3 +1,3 @@
-<p align="center"> 如何备份你的Ubuntu系统 </p>
+<p style="font-size:30px ;font-weight: bolder;  text-align:center"> VScode中推荐安装的插件 </p>
 
 # TODO
