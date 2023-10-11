@@ -65,7 +65,7 @@ git submodule add -b master https://github.com/othername/otherproject.git
 
 如何查看当前所处git分支？
 ```shell
-git brnach -a
+git branch -a
 ```
 
 如何从当前所处git分支切换到新分支？
