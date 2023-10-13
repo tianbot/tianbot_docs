@@ -36,7 +36,7 @@ export default withMermaid(
         },
       },
       async buildEnd(siteConfig) {
-        const baseURL = 'https://doc.sujie-168.top';
+        const baseURL = 'https://docs.tianbot.com';
     
         try {
           let siteMapStr = '';
