@@ -1,4 +1,4 @@
-const site = 'https://doc.sujie-168.top';
+const site = 'https://docs.tianbot.com';
 
 export const metaConfig = {
     lang: 'zh-CN',
