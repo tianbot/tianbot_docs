@@ -1,6 +1,5 @@
 <p style="font-size:30px ;font-weight: bolder;  text-align:center"> git 快速使用 </p>
 
-
 ## 什么是Git
 
 很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
@@ -70,13 +69,11 @@ git branch -a
 
 如何从当前所处git分支切换到新分支？
 ```shell
-git checkout -b newbranch
+git checkout -b new branch
 ```
 
 
-
-
-# 常用git场景
+## 常用git场景
 
 ### 场景一
 
@@ -108,7 +105,7 @@ git init
 -  运行以下命令来将本地仓库与远程仓库关联起来 
 ```shell
 git remote add origin <仓库 URL>
-``` 
+```
 例如   
 ```shell    
 git remote add origin https://github.com/yourname/yourproject.git
@@ -131,7 +128,7 @@ git commit -m "提交信息"   # 提交信息可自定义
 ```shell
 git push origin master
 ```
-    
+
 完成以上步骤后，您的本地项目就会被上传到 GitHub，并开始进行版本管理。您可以在 GitHub 仓库页面上看到您的上传的文件和提交历史。
 
 ::: info 提示

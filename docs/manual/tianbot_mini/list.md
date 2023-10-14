@@ -23,24 +23,24 @@ TIANBOT迷你机器人在发货之前已测试确保每一个都可以正常使�
 
 ## 使用案例
 
-[tianbot_mini开箱以及入门配置](/use_guide/tianbot_mini/user_case_sharing/chapter1.md)
+[tianbot_mini开箱以及入门配置](/manual/tianbot_mini/user_case_sharing/chapter1.md)
 
-[他来了，Tianbot mini——我的第一台ROS小车](/use_guide/tianbot_mini/user_case_sharing/chapter2.md)
+[他来了，Tianbot mini——我的第一台ROS小车](/manual/tianbot_mini/user_case_sharing/chapter2.md)
 
-[Tianbot Mini 小车开箱贴及网络配置](/use_guide/tianbot_mini/user_case_sharing/chapter3.md)
+[Tianbot Mini 小车开箱贴及网络配置](/manual/tianbot_mini/user_case_sharing/chapter3.md)
 
-[可能是Tianbot mini的第一个订单的开箱](/use_guide/tianbot_mini/user_case_sharing/chapter4.md)
+[可能是Tianbot mini的第一个订单的开箱](/manual/tianbot_mini/user_case_sharing/chapter4.md)
 
-[Tianbot mini开箱贴-57v6y_3886](/use_guide/tianbot_mini/user_case_sharing/chapter5.md)
+[Tianbot mini开箱贴-57v6y_3886](/manual/tianbot_mini/user_case_sharing/chapter5.md)
 
-[tianbot mini开箱贴-fuct1_7292](/use_guide/tianbot_mini/user_case_sharing/chapter6.md)
+[tianbot mini开箱贴-fuct1_7292](/manual/tianbot_mini/user_case_sharing/chapter6.md)
 
-[床上的开箱贴](/use_guide/tianbot_mini/user_case_sharing/chapter7.md)
+[床上的开箱贴](/manual/tianbot_mini/user_case_sharing/chapter7.md)
 
-[Tianbot mini开箱-LinLIinLin](/use_guide/tianbot_mini/user_case_sharing/chapter8.md)
+[Tianbot mini开箱-LinLIinLin](/manual/tianbot_mini/user_case_sharing/chapter8.md)
 
-[Tianbot Mini全球首发开箱，3分钟动次打次燥起来](/use_guide/tianbot_mini/user_case_sharing/chapter9.md)
+[Tianbot Mini全球首发开箱，3分钟动次打次燥起来](/manual/tianbot_mini/user_case_sharing/chapter9.md)
 
-[整活了tianbot mini 版turtlebot](/use_guide/tianbot_mini/user_case_sharing/chapter10.md)
+[整活了tianbot mini 版turtlebot](/manual/tianbot_mini/user_case_sharing/chapter10.md)
 
-[全球第二台tianbot mini首发开箱，西安同城自提](/use_guide/tianbot_mini/user_case_sharing/chapter11.md)
+[全球第二台tianbot mini首发开箱，西安同城自提](/manual/tianbot_mini/user_case_sharing/chapter11.md)

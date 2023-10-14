@@ -64,10 +64,10 @@ pnpm run docs:build
 tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 .
 ├── docs
-│   ├── basic_guide
+│   ├── basic
 │   │   ├── ....
 │   ├── CNAME
-│   ├── enhance
+│   ├── advanced
 │   │   ├── ....
 │   ├── index.md
 │   ├── markdown-examples.md
@@ -78,7 +78,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 │   ├── qqchannel.md
 │   ├── simulation
 │   │   └── .....
-│   └── use_guide
+│   └── manual
 │       ├── index.md           （vitepress渲染入口）
 │       ├── notice.md
 │       ├── rmtt
@@ -159,11 +159,11 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 <!-- tabs:start -->
 
 ### **效果**
-[QA](use_guide/tianracer/problem.md)
+[QA](manual/tianracer/problem.md)
 
 ### **Markdown 源代码**
 ```markdown
-[QA](use_guide/tianracer/problem.md)
+[QA](manual/tianracer/problem.md)
 ```
 <!-- tabs:end -->
 

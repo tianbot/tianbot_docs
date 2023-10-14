@@ -113,26 +113,26 @@ ROS端的底层驱动预置于配套的运算平台，代码开源，包含
 
 ## 如何进行设备检查
 
-- [使用指引](/use_guide/tianracer/guide/)
+- [使用指引](/manual/tianracer/guide/)
 
 
 ## 无线遥控
 
-- [无线遥控](/use_guide/tianracer/guide/#无线遥控)
+- [无线遥控](/manual/tianracer/guide/#无线遥控)
 
 ## 实验手册
 
-- [Tianracer实验](/use_guide/tianracer/experiment/)
+- [Tianracer实验](/manual/tianracer/experiment/)
 
 ## F1TENTH仿真
 
-- [F1TENTH_simulation](/use_guide/tianracer/simulation/chapter1)
+- [F1TENTH_simulation](/manual/tianracer/simulation/chapter1)
 
 ## 拓展提升
 
-- [参数调整开发指南](/enhance/Params_Config/)
-- [传感器标定开发指南](/enhance/Sensor_Calib/)
-- [计算机视觉开发指南](/enhance/CV/)
-- [运动控制开发指南](/enhance/Motion_Control/)
-- [激光SLAM开发指南](/enhance/Lidar_SLAM/)
-- [视觉SLAM开发指南](/enhance/Visual_SLAM/)
+- [参数调整开发指南](/advanced/params_config/)
+- [传感器标定开发指南](/advanced/sensor_calib/)
+- [计算机视觉开发指南](/advanced/cv/)
+- [运动控制开发指南](/advanced/motion_control/)
+- [激光SLAM开发指南](/advanced/lidar_slam/)
+- [视觉SLAM开发指南](/advanced/visual_slam/)

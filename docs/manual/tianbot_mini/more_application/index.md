@@ -13,7 +13,7 @@
 ![](https://img.kancloud.cn/87/7f/877f7a58b9b122a2ced638ba478da316_395x129.png)
 
 点击工具，开发板选为Arduino Nano，选择Arduino所在的端口
-点击文件，实例，01Basics，Blink
+点击文件，实例，01basic，Blink
 
 ![](https://img.kancloud.cn/16/7e/167e575474abb8d47dce444493858c3d_804x249.png)
 
