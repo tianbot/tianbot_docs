@@ -13,7 +13,7 @@ export const markdown: MarkdownOptions = {
             // 渲染标题结束
             let htmlResult = slf.renderToken(tokens, idx, options);
             // 如果当前标签是h1，则添加文章元数据
-            if (tokens[idx].tag === "h1") {
+            if (tokens[idx].tag === "h2") {
                 htmlResult += `\n<ClientOnly><ArticleMetadata v-if="($frontmatter?.aside ?? true) && ($frontmatter?.showArticleMetadata ?? true)" :article="$frontmatter" /></ClientOnly>`;
             }
             return htmlResult;
