@@ -48,10 +48,10 @@ export const themeConfig: DefaultTheme.Config = {
     darkModeSwitchLabel: '深浅模式',
 
     //页脚
+    
     footer: {
-    // message: 'Released under the MIT License.',
-    // copyright: 'Copyright © 2023 备案号：<a href="https://beian.miit.gov.cn/">京****号</a>',
-    copyright: 'Copyright © 2016 天之博特. All rights reserved.' ,
+    message: 'Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en/">CC-BY-SA-4.0</a> License.',
+    copyright: 'Copyright © 2023 天之博特  备案号：<a href="https://beian.miit.gov.cn/">苏ICP备18008740号</a>',
     },
 
     //侧边栏文字更改(移动端)
@@ -68,7 +68,7 @@ export const themeConfig: DefaultTheme.Config = {
 
     //编辑本页
     editLink: {
-    pattern: 'https://github.com/账户名/仓库名/edit/main/docs/:path',
+    pattern: 'https://github.com/tianbot/tianbot_docs/edit/main/docs/:path',
     text: '在GitHub编辑本页'
     },
     
