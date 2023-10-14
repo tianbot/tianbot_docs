@@ -54,5 +54,5 @@ git status
 git pull    
 ```
 ::: tip 提示
-> [git快速使用](/basic_guide/git.md "git快速使用")
+> [git快速使用](/basic/git.md "git快速使用")
 :::

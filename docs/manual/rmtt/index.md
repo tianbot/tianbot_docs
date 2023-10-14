@@ -186,4 +186,4 @@ rostopic pub /rmtt_01/takeoff std_msgs/Empty
 
 ### 实验手册
 
-* [experiment](/use_guide/rmtt/experiment/)
+* [experiment](/manual/rmtt/experiment/)

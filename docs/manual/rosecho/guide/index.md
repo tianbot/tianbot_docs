@@ -35,7 +35,7 @@ ROSECHO有多种配置网络的方式。如果在Ubuntu下配网，可以略过�
 
 ROSECHO上有状态指示灯。未唤醒时指示`灯灭`。设备唤醒后，状态指示灯为`蓝色`，ROSECHO可以接收语音命令。`绿灯亮`时说明云端没有返回。
 
-现在，ROSECHO就可以完成一个普通智能音箱的对话、查询天气、唱歌、垃圾分类等语音交互。查看[云端问答](/use_guide/rosecho/guide/chapter1.md)可以了解更多ROSECHO能够自主回答的问题。
+现在，ROSECHO就可以完成一个普通智能音箱的对话、查询天气、唱歌、垃圾分类等语音交互。查看[云端问答](/manual/rosecho/guide/chapter1.md)可以了解更多ROSECHO能够自主回答的问题。
 
 ## 使用指南
 ### 驱动安装
@@ -100,7 +100,7 @@ ROSECHO接收语音指令或问题后，会在云端识别并匹配问答库，�
 
 rosrun rosecho answer_echo.py
 
-云端问答库是由官方维护的。查看[云端问答](/use_guide/rosecho/guide/chapter1.md)可以了解更多ROSECHO能够自主回答的问题。
+云端问答库是由官方维护的。查看[云端问答](/manual/rosecho/guide/chapter1.md)可以了解更多ROSECHO能够自主回答的问题。
 ### 说：运行TTS文本转语音
 
 云端问答库很丰富，帮助大家解决的绝大多数常见问题的语音问答。但是如果希望针对特定问题进行自主问答的开发，就需要ROSECHO的文本转语音的功能，即`TTS（Text to Speech）`。ROSECHO的默认TTS是在线处理的，如果需要离线版本，可以联系客服，或者查看AIUI配置以了解如何改变为离线TTS。TTS功能在ROS中使用`actionlib`的方式执行，因为语句较长不能够马上执行完毕，需要检测其状态。
@@ -149,7 +149,7 @@ rosrun rosecho demo.py
 
 快速进阶可以选择ROS2GO
 
-- [ROS2GO使用手册](/use_guide/ros2go/)
+- [ROS2GO使用手册](/manual/ros2go/)
 
 ### 状态机
 

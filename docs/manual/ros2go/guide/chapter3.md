@@ -29,11 +29,11 @@
 
 ### 恢复方式选择
 
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/use_guide/ros2go/guide/chapter2#引导界面恢复)
+- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/manual/ros2go/guide/chapter2#引导界面恢复)
 
 - B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击B 选项即可。
 
-- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/use_guide/ros2go/guide/chapter4#%E5%8D%87%E7%BA%A7%E7%AE%80%E8%BF%B0)
+- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/manual/ros2go/guide/chapter4#%E5%8D%87%E7%BA%A7%E7%AE%80%E8%BF%B0)
 
 针对各自遇到的情况选择恢复方式即可快速进行恢复，关于恢复相关技术支持可以在技术支持群进行咨询。
 
@@ -79,4 +79,4 @@ USB 设备，添加 ROS2GO
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555694.png)
 
-其他与[升级步骤](/use_guide/ros2go/guide/chapter4#%E5%8D%87%E7%BA%A7%E7%AE%80%E8%BF%B0)进行相同操作即可。
+其他与[升级步骤](/manual/ros2go/guide/chapter4#%E5%8D%87%E7%BA%A7%E7%AE%80%E8%BF%B0)进行相同操作即可。
