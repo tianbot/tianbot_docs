@@ -57,7 +57,7 @@ Puppy Rescue OS独立恢复系统内核比较旧，某些电脑比较新，可�
 
 ### ROS2GO系统恢复工具
 
-[恢复工具下载](https://www.ttttt.link/?tmpui_page=/file&ukey=6444ece3edbad)
+[恢复工具下载](https://pan.baidu.com/e/1OJHoi_Z3KXnSi_4zCzFSpQ)
 
 打开 VirtualBox 选择导入，选中下载完成的 ROS2GO系统恢复工具.ova
 
