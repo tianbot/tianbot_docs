@@ -8,6 +8,10 @@ https://wiki.ros.org/ROS/Tutorials
 
 ROS2 官方链接如下，可详细学习
 https://docs.ros.org/en/humble/
+
+ROS1与ROS2之间的变化
+http://design.ros2.org/articles/changes.html
+
 ## **常用操作**
 
 ### **ros工作空间**

@@ -14,6 +14,50 @@
 
 ## Linux常用命令
 
+|  pwd   | 显示当前目录的路径    |
+| --- | --- |
+| cd    | 进入用户主目录   |
+| cd ~   |  进入用户主目录 ,root用户，cd ~ 相当于 cd /root , 普通用户，cd ~ 相当于cd /home/当前用户名  |
+| cd ..     |返回上一级目录     |
+| ls   | 查看linux文件夹包含的文件，查看文件权限,查看目录信息等    |
+| ls -l    |  除了文件名之外，还将文件的权限、所有者、文件大小等信息详细列出来   |
+| ls -t    |以文件修改时间排序     |
+| ls -lag  |  列出所有文件的访问权限   |
+| ls -S     | 以文件大小排序    |
+| ls -h    | 以易读大小显示    |
+| ls -r    |反序排列     |
+| ls -ltr    |  按时间的反向顺序排列文件   |
+| mkdir     | 创建文件    |
+| rmdir    | 删除和设置为空的目录    |
+| cp     |   复制文件  |
+| mv     | 移动或重命名一个文件    |
+| rm    |删除文件     |
+| r  |  表示读取权限   |
+|  w  | 表示写权限    |
+|  x   |   表示执行权限  |
+|  ./   | 运行程序    |
+| ^C     |   杀死在前台运行的作业 |
+| ^Z    |  暂停在前台运行的作业   |
+|  ps   |要查看您正在运行的进程     |
+| top    |要查看所有进程的CPU使用情况     |
+|   kill  | 终止进程的使用“杀死”    |
+| grep     | 要搜索目录中查找特定字符串的文件，请使用“grep”    |
+| diff    | 要与文件比较差异    |
+|  ssh   | ssh用于安全地登录到远程系统，这是telnet的后继者    |
+|  source   |配置文件档名     |
+|  ~/.bashrc   |     |
+| export    |自定义变量转成环境变量     |
+| env   |  观察环境变量与常见环境变量说明   |
+| chmod \[options\]file    | 更改命名文件的访问权限    |
+| clean     | 清屏    |
+| cat *file*     |   display a file  |
+|  less*file*   |  display a file a page at a time   |
+| apt-get update    |    更新软件源 |
+| apt-get upgrade   | 更新升级所有软件    |
+|  apt-get upgrade package_name  |    更新升级某个软件 |
+|  apt-get install package_name  |   安装一个软件包  |
+| apt-get remove package    | 删除一个软件包    |
+
 详细内容可参考下面的文章
 - [Linux 命令大全 ](https://www.runoob.com/linux/linux-command-manual.html)
 
