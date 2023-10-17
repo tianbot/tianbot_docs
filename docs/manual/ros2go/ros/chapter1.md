@@ -1,3 +1,20 @@
 <p style="font-size:30px ;font-weight: bolder ;  text-align:center"> 机器人学习路线建议 </p>
 
-# TODO
+::: tip 提示
+学习是一个长期的过程， 需要不断的积累。
+:::
+
+
+### 必备的工程素养
+- 英语（主要集中在读和写、能说当然更佳）
+
+### 基础的机器人知识
+
+
+### 充满好奇心
+
+
+### 学习机器人运动控制
+
+
+- [机器人工程师学习计划](https://zhuanlan.zhihu.com/p/22266788)
