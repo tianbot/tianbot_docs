@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">tianbot_mini使用案例</p>
+# tianbot_mini使用案例
 
 tianbot_mini开箱以及入门配置
 

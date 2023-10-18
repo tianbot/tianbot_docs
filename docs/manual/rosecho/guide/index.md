@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROSECHO 使用手册</p>
+# ROSECHO 使用手册
 
 ## 开箱测试
 ### 开机上电

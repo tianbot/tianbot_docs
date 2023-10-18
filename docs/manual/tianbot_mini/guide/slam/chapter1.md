@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">Gmapping建图</p>
+# Gmapping建图
 
 分步启动mini时，首先启动机器人，再启动雷达，再运行SLAM，再启动键盘节点，机器人才能移动。直接启动一个launch 文件即可，这是为什么呢？
 

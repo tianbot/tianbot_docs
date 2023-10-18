@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验九 人机交互GUI</p>
+# 实验九 人机交互GUI
 
 ## **【实验目标】**
 * 学习古月居课程，实现Qt与ROS之间的通讯，用人机交互界面（GUI）控制小车

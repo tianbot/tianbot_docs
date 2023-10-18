@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">收货清单</p>
+# 收货清单
 
 ::: tip 注意
 包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准。

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">Tianbot mini开箱~</p>
+# Tianbot mini开箱~
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/21
 >

@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">兼容的网卡型号</p>
+# 兼容的网卡型号
 
 ::: warning 提示
 如果您发现不支持的网卡型号也可以在本页面留言或者反馈给客服，反馈有礼哟。

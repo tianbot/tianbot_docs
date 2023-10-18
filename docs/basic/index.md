@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> 开发技巧说明 </p>
+# 开发技巧说明 
 
 - git快速使用
 

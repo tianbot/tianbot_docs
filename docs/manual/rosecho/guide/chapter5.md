@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">AIUI配置</p>
+# AIUI配置
 
 ::: info 注意
 大多数用户无需进行AIUI配置

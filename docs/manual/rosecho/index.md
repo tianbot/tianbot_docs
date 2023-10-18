@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROSECHO 开箱说明</p>
+# ROSECHO 开箱说明
 
 如果你想为自己的ROS移动机器人增加“听”和“说”的能力，那么可以选择`ROSECHO`。
 

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 开箱说明</p>
+# ROS2GO 开箱说明
 
 像ROS2GO的名字一样，随时随地带走自己工作环境，更加标准化开发和科研，经过简单几步很短时间就可以体验ROS的乐趣，而无需繁碎的环境配置，这就是ROS2GO。
 

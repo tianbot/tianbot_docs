@@ -11,7 +11,11 @@
 }
 
 /* h1 ~ h5 add highlight */
-.vp-doc h1,
+
+.vp-doc h1 {
+	text-align: center;
+}
+
 .vp-doc h2,
 .vp-doc h3,
 .vp-doc h4,

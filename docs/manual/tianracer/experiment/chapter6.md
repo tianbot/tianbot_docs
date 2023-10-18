@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验六 自主导航</p>
+# 实验六 自主导航
 
 ## 【实验目标】
 

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验三 反应式方法</p>
+# 实验三 反应式方法
 
 ## 【实验目标】
 

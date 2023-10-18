@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">可能是Tianbot mini的第一个订单的开箱</p>
+# 可能是Tianbot mini的第一个订单的开箱
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/17
 >

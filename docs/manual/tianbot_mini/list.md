@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">收货清单</p>
+# 收货清单
 
 
 TIANBOT迷你机器人在发货之前已测试确保每一个都可以正常使用，开箱后请您检查产品及其配件完整以及运输过程中是否造成损坏，如有问题您及时联系客服，我们尽快为您处理。

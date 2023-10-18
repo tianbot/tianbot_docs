@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">使用指引</p>
+# 使用指引
 
 ## 如何开机
 
