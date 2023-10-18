@@ -38,7 +38,7 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 |  系统升级  |  1次  |
 1次免费系统重置代指U盘内系统不能正常启动，如需系统重置请联系客服，确认购买信息无误，寄回重置。
 1次免费系统升级代指ROS2GO系统更新，功能包升级，如需升级请联系客服，确认购买信息无误，寄回重置。
-升级日志请查看：[docs.tianbot.com/manual/ros2go/changelog](docs.tianbot.com/manual/ros2go/changelog)
+升级日志请查看：[docs.tianbot.com/manual/ros2go/changelog](/manual/ros2go/changelog)
 
 ::: info 说明
 新版本ROS2GO有什么优点
