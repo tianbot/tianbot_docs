@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">ROS基础功能</p>
+# ROS基础功能
 
 ## 快速体验slam建图
 可以在终端中输入下面的命令，运行slam建图

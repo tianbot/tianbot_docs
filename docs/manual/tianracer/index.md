@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> tianracer使用手册</p>
+# tianracer使用手册
 
 ## 产品简介·
 

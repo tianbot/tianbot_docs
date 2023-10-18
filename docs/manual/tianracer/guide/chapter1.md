@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">软件环境配置</p>
+# 软件环境配置
 
 ## 连接网络
 

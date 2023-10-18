@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 使用常见问题</p>
+# ROS2GO 使用常见问题
 
 ## 如何查看自己的ROS2GO版本？
 打开终端后运行如下命令

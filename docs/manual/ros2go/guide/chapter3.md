@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">如何恢复</p>
+# 如何恢复
 
 
 ## 系统恢复介绍

@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> Markdown使用说明 </p>
+# Markdown使用说明
 
 亲爱的小伙伴们，听说你们想了解Markdown的故事吗？那我就给大家讲一个轻松愉快的故事吧！
 

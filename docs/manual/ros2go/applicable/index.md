@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">设备兼容说明</p>
+# 设备兼容说明
 
 电脑类型更新换代比较频繁，硬件（底盘、传感器）型号无以计数
 

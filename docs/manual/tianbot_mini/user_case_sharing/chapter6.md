@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">tianbot mini开箱贴-fuct1_7292</p>
+# tianbot mini开箱贴-fuct1_7292
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/19
 >

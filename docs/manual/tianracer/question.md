@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">常见问题</p>
+# 常见问题
 
 ### cartographer建图导航说明
 

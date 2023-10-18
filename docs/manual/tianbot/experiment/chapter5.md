@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验五 激光SLAM建图</p>
+# 实验五 激光SLAM建图
 
 ## **【实验目标】**
 * 实现激光雷达建图功能

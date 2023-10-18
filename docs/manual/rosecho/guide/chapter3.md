@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">语音遥控</p>
+# 语音遥控
 
 除了给机器人下发任务指令，我们还可以简单的用语音对机器人进行遥控操作。使用ROSECHO，可以用中文语音控制你的机器人，终端并不需要置于最前激活状态。
 

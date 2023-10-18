@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">比赛一 F1TENTH线上仿真赛</p>
+# 比赛一 F1TENTH线上仿真赛
 
 ## 【比赛目标】
 

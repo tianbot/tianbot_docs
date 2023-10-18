@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">全球第二台tianbot mini首发开箱，西安同城自提</p>
+# 全球第二台tianbot mini首发开箱，西安同城自提
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/179
 >
