@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">如何升级</p>
+# 如何升级
 
 ::: danger 注意
 系统固件升级会丢失数据，在操作前请备份好数据，未备份导致个人数据丢失，天之博特不承担任何责任。

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验六 自主导航</p>
+# 实验六 自主导航
 
 ## **【实验目标】**
 * 用实验六里建好的地图，实现自主导航功能

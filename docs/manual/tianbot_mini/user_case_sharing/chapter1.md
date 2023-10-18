@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">tianbot_mini开箱以及入门配置</p>
+# tianbot_mini开箱以及入门配置
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/5
 >

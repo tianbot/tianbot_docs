@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验八 深度学习与视觉导航</p>
+# 实验八 深度学习与视觉导航
 
 
 ## 【实验目标】

@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> 机器人的仿真模拟开发 </p>
+# 机器人的仿真模拟开发 
 
 ## 仿真模拟在机器人开发中的重要性
 

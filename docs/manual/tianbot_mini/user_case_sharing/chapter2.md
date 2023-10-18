@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">他来了，Tianbot mini——我的第一台ROS小车</p>
+# 他来了，Tianbot mini——我的第一台ROS小车
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/11
 >

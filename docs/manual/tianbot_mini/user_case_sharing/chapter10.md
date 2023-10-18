@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">整活了tianbot mini 版turtlebot</p>
+# 整活了tianbot mini 版turtlebot
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/177
 >

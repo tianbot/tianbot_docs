@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">自主导航</p>
+# 自主导航
 
 因传感器的不同，支持三种不同模式：激光导航、磁导航、二维码导航
 

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验七 多点导航</p>
+# 实验七 多点导航
 
 ## **【实验目标】**
 * 实现机器人全向导航

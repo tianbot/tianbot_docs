@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> linux 快速使用 </p>
+# linux 快速使用 
 
 ## 什么是Linux
 

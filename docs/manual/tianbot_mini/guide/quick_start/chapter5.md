@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">话题通讯（发布/订阅）</p>
+# 话题通讯（发布/订阅）
 
 **视频地址**
 

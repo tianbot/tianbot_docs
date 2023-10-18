@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">超声波测距</p>
+# 超声波测距
 
 **视频地址**
 

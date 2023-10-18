@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">使用指引</p>
+# 使用指引
 
 ### **开关机**
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202110212120450.webp)

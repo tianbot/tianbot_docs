@@ -293,7 +293,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: 'AIUI配置', link: '/manual/rosecho/guide/chapter5' },
                 ],
               },
-              { text: '实验手册', link: '/manual/rosecho/experiment/' },
               { text: '更新日志', link: '/manual/rosecho/changelog' },
             ],
           },

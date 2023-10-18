@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> ROS1与ROS2的对比 </p>
+#  ROS1与ROS2的对比 
 
 
 本章节将总结和对比ROS1与ROS2的一些常用指令，

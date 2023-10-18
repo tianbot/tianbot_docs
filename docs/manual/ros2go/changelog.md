@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center"> 更新日志</p>
+#  更新日志
 
 ## v4.2.2 20230817
 1. 修复23ROS暑期学校中ROS1下invalid ROS_IP问题

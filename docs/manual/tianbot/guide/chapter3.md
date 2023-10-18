@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">SLAM建图</p>
+# SLAM建图
 
 ## 如何通过激光SLAM建立地图
 

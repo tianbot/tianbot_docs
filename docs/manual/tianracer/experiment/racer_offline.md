@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">比赛二 F1TENTH线下竞速赛</p>
+# 比赛二 F1TENTH线下竞速赛
 
 ## 【比赛目标】
 

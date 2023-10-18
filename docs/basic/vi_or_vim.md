@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> Vi/Vim快速使用 </p>
+# Vi/Vim快速使用 
 
 哈哈，你居然提到了程序员界的两大神器——vi和vim！我的开发者小伙伴们都亲切地称它们为"魔法师"和"维姆大师"。
 
