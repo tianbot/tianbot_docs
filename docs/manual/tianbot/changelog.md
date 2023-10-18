@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">更新日志</p>
+# 更新日志
 
 ## v1.0.0 Released
 

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-wight:bloder; text-align:center ">Tianracer F1TENTH 仿真实例 </p>
+# Tianracer F1TENTH 仿真实例 
 
 ### 1.简介
 
@@ -14,4 +14,4 @@ roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
 
 ### 3.如何魔改
 
-# TODO
+## TODO

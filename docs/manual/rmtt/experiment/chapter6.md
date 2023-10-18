@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-wight:bloder; text-align:center ">ROS机器人集群的仿真与实践 </p>
+# ROS机器人集群的仿真与实践 
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">

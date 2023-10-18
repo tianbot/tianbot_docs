@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">HTML机器人的GUI搭建</p>
+# HTML机器人的GUI搭建
 
 **视频地址**
 

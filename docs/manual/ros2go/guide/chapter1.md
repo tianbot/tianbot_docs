@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">如何启动</p>
+# 如何启动
 
 ## 启动步骤
 

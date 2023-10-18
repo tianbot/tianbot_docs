@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> 机器人学习路线建议 </p>
+#  机器人学习路线建议 
 
 ::: tip 提示
 学习是一个长期的过程， 需要不断的积累。

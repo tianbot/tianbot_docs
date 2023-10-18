@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">命令行的讲解</p>
+# 命令行的讲解
 
 **视频地址**
 

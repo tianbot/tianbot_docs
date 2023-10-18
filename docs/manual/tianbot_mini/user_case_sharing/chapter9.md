@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">Tianbot Mini全球首发开箱，3分钟动次打次燥起来</p>
+# Tianbot Mini全球首发开箱，3分钟动次打次燥起来
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/23
 >

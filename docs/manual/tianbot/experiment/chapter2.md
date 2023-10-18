@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验二 ROS控制底盘运动</p>
+# 实验二 ROS控制底盘运动
 
 ## **【实验目标】**
 * 通过roslaunch指令启动小车底盘，了解如何通过ROS启动TOM车底盘

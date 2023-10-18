@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center "> ROSECHO 语音交互</p>
+#  ROSECHO 语音交互
 
 **视频地址**
 

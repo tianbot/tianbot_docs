@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">ROS2GO 使用手册</p>
+# ROS2GO 使用手册
 
 ## 产品介绍
 ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，基于Ubuntu的深度定制使得本产品无需对原有PC系统做任何改造，可以在绝大多数x86架构的PC、笔记本上快速启动，秒级进入ROS开发环境；无论是ROS初学者还是开发人员都能得到快速一致的ROS开发体验。
@@ -38,7 +38,7 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 |  系统升级  |  1次  |
 1次免费系统重置代指U盘内系统不能正常启动，如需系统重置请联系客服，确认购买信息无误，寄回重置。
 1次免费系统升级代指ROS2GO系统更新，功能包升级，如需升级请联系客服，确认购买信息无误，寄回重置。
-升级日志请查看：wiki.ros.org/ros2go或者doc.tianbot.com
+升级日志请查看：[docs.tianbot.com/manual/ros2go/changelog](docs.tianbot.com/manual/ros2go/changelog)
 
 ::: info 说明
 新版本ROS2GO有什么优点

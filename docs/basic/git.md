@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> git 快速使用 </p>
+# git 快速使用 
 
 ## 什么是Git
 

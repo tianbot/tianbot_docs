@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">床上的开箱贴</p>
+# 床上的开箱贴
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/20
 >

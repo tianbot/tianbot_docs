@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验四 二维码追踪导航</p>
+# 实验四 二维码追踪导航
 
 ## **【实验目标】**
 * 实现用摄像头识别二维码进行追踪实验

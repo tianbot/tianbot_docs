@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight:bolder; text-align:center ">实验三 摄像头图像获取</p>
+# 实验三 摄像头图像获取
 
 
 ## **【实验目标】**

@@ -1,4 +1,4 @@
-<p style="font-size:30px; font-weight: bolder; text-align:center ">增加IMU工具</p>
+# 增加IMU工具
 
 **视频地址**
 

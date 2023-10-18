@@ -1,4 +1,4 @@
-<p style="font-size:30px ;font-weight: bolder;  text-align:center"> 远程连接 </p>
+# 远程连接 
 
 ## 远程连接 
 ::: info 注意

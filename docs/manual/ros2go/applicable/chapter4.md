@@ -1,4 +1,4 @@
-<p style="font-size:30px ; font-weight:bolder; text-align:center">兼容的传感器型号</p>
+# 兼容的传感器型号
 
 ::: danger 注意
 ROS2GO不是万能的，传感器型号实在太多了，无法面面俱到，不能使用，可能是因为：ROS2GO中没有编译安装驱动，遇到此类问题，您可以尝试以下几种方法解决。
