@@ -8,6 +8,7 @@
 ## **【实验内容】**
 ### **实现自主导航**
 激光雷达建图保存地图后，可直接用建好的地图实现导航功能
+
 **1、启动底盘**
 ```
 roslaunch tianbot_bringup tianbot_bringup.launch

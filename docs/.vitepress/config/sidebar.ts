@@ -34,9 +34,37 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
             text: '仿真模拟',
             items: [
-            { text: '轮式机器人仿真实例', link: '/simulation/wheel_robot/index' },
-            { text: '足式机器人仿真实例', link: '/simulation/legged_robot/index' },
-            { text: '机械臂仿真实例', link: '/simulation/arm/index' },
+            {
+              text: '轮式机器人仿真实例',
+              link: '/simulation/wheel_robot/index',
+              collapsed: true,
+              items: [
+                { text: 'Turtlebot仿真实例', link: '/simulation/wheel_robot/diff/chapter1' },
+                { text: 'Turtlebot3仿真实例', link: '/simulation/wheel_robot/diff/chapter2' },
+                { text: 'Husky仿真实例', link: '/simulation/wheel_robot/diff/chapter3' },
+              ],
+            },
+            {
+              text: '足式机器人仿真实例',
+              link: '/simulation/legged_robot/index',
+              collapsed: true,
+              items: [
+                { text: 'spotmini仿真实例', link: '/simulation/legged_robot/chapter1' },
+                { text: 'spotmicro仿真实例', link: '/simulation/legged_robot/chapter2' },
+                { text: '宇树四足狗仿真实例 ', link: '/simulation/legged_robot/chapter3' },
+              ],
+            },
+            {
+              text: '机械臂仿真实例',
+              link: '/simulation/arm/index',
+              collapsed: true,
+              items: [
+                { text: 'Franka Panda仿真实例', link: '/simulation/arm/chapter1' },
+                { text: 'UR5仿真实例', link: '/simulation/arm/chapter2' },
+                { text: 'PROBOT仿真实例', link: '/simulation/arm/chapter3' },
+                { text: 'jaka_robot仿真实例', link: '/simulation/arm/chapter4' },
+              ],
+            },
             { text: '无人机仿真实例', link: '/simulation/drone/index' },
             { text: '集群仿真仿真实例', link: '/simulation/swarm/index' },
             { text: '传感器仿真实例', link: '/simulation/sensor/index' },
@@ -47,12 +75,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
             text: '拓展提升',
             items: [
-            { text: '参数调整开发指南', link: '/advanced/params_config/index' },
-            { text: '传感器标定开发指南', link: '/advanced/sensor_calib/index' },
-            { text: '计算机视觉开发指南', link: '/advanced/cv/index' },
-            { text: '运动控制开发指南', link: '/advanced/motion_control/index' },
-            { text: '激光SLAM开发指南', link: '/advanced/lidar_slam/index' },
-            { text: '视觉SLAM开发指南', link: '/advanced/visual_slam/index' },
+              { text: '参数调整开发指南', link: '/advanced/params_config/index' },
+              { text: '传感器标定开发指南', link: '/advanced/sensor_calib/index' },
+              { text: '计算机视觉开发指南', link: '/advanced/cv/index' },
+              { text: '运动控制开发指南', link: '/advanced/motion_control/index' },
+              { text: '激光SLAM开发指南', link: '/advanced/lidar_slam/index' },
+              { text: '视觉SLAM开发指南', link: '/advanced/visual_slam/index' },
             ],
         },
     ],
@@ -88,7 +116,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               {
                 text: 'ROS学习指南及小技巧串讲',
                 collapsed: true,
-                link: '/manual/ros2go/ros/index',
                 items: [
                   { text: '机器人学习路线建议', link: '/manual/ros2go/ros/chapter1' },
                   { text: 'ROS1与ROS2的对比', link: '/manual/ros2go/ros/chapter2' },
