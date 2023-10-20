@@ -12,7 +12,7 @@
 
 #### Contract：
 
-有问题请在 [Issues](https://github.com/tianbot/Tianbot-vitepress/issues) 
+有问题请在 [Issues](https://github.com/tianbot/tianbot_docs/issues) 
 或者 [WeChat](https://work.weixin.qq.com/kf/kefu/qrcode?kfcode=kfc023b1f66e23716fd) 联系我。
 
 * Admin：Tianbot
