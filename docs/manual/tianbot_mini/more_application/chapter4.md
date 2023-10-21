@@ -1,4 +1,4 @@
-# TTS 与 ASR 节点编程
+# TTS与ASR节点编程
 
 **视频地址**
 
@@ -23,7 +23,7 @@ roslaunch rosecho rosecho.launch
 
 在对应的文件夹下运行`python pub.py`
 
-这个时候 rosecho 就会发出一键三连的声音
+这个时候rosecho就会发出一键三连的声音
 
 把我们的话转成文本并做出判断是否正确
 
@@ -31,4 +31,4 @@ roslaunch rosecho rosecho.launch
 
 ![](https://img.kancloud.cn/47/50/47507c42fe00979c83c588bc51b27418_786x464.png)
 
-此时 ROSECHO 就可将说的话转化为文字
+此时ROSECHO就可将说的话转化为文字

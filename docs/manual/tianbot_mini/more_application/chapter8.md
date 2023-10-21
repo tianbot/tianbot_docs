@@ -1,4 +1,4 @@
-# TTS 语音播报
+# TTS语音播报
 
 **视频地址**
 
@@ -13,13 +13,13 @@
 ```shell
 roslaunch rosbridge_server rosbridge_websocket.launch
 ```
-查询 IP 地址并在手机 APP 输入 IP，点击 Contect
+查询IP地址并在手机APP输入IP，点击Contect
 ```shell
 rostopic list
 ```
 会看到此话题 `/tianbot_mini/tts`
 
-Pub 发送，手机会播放“今天和王老师学习机器人”
+Pub发送，手机会播放“今天和王老师学习机器人”
 ```shell
 rostopic pub /tianbot_mini/tts std_msgs/String "data: '今天和王老师学习机器人'"
 ```
@@ -31,7 +31,7 @@ rostopic pub /tianbot_mini/tts std_msgs/String "data: '今天和王老师学习�
 语音转文字目前仅支持小米手机
 :::
 
-建立 python 文件，在对应的文件下打开
+建立python文件，在对应的文件下打开
 
 ![](https://img.kancloud.cn/08/8e/088efad4e3b314f9f856de7c0dd2e210_727x334.png)
 

@@ -8,9 +8,9 @@
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-手机端的 APP 去公众号回复 迷你机器人
+手机端的APP去公众号回复 迷你机器人
 
-在手机端安装好 TBCamTools 的 APP
+在手机端安装好TBCamTools的APP
 电脑端打开终端
 
 ```shell
@@ -22,8 +22,8 @@ rospack profile   # 更新一下缓存
 ```
 
 注意：手机与电脑在同一个路由器下面
-电脑端`ifconfig`查询 IP 地址
-输入手机端后点击 Connect
+电脑端`ifconfig`查询IP地址
+输入手机端后点击Connect
 
 打开新的终端
 ```shell
@@ -40,7 +40,7 @@ rostopic list
 
 - `/tianbot_mini/image_raw/compressed`
 
-手机，电脑，mini 机器人都要连接到同一个路由器的 WIFI 信号下
+手机，电脑，mini机器人都要连接到同一个路由器的WIFI信号下
 
 `rqt_image_view`
 

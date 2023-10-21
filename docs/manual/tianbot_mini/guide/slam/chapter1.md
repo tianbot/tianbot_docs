@@ -1,17 +1,17 @@
-# Gmapping 建图
+# Gmapping建图
 
-分步启动 mini 时，首先启动机器人，再启动雷达，再运行 SLAM，再启动键盘节点，机器人才能移动。直接启动一个 launch 文件即可，这是为什么呢？
+分步启动mini时，首先启动机器人，再启动雷达，再运行SLAM，再启动键盘节点，机器人才能移动。直接启动一个launch 文件即可，这是为什么呢？
 
-我们打开直接启动的 demo_slam.launch，发现其包括了分布启动时所需要的 launch 文件：
+我们打开直接启动的demo_slam.launch,发现其包括了分布启动时所需要的launch文件：
 
 ![](https://img.kancloud.cn/1e/13/1e1358f49186daf3dd6ceaf45a23efd9_708x280.png)
 
-说明一个 launch 文件可以包含其他 launch 文件，直接把多个 launch 文件封装起来就可以一次启动。
+说明一个launch文件可以包含其他launch文件，直接把多个launch文件封装起来就可以一次启动。
 
-**我们把 slam.launch 拆分成建图定位，导航移动，单独运行，看只有一个是什么效果**
+**我们把slam.launch 拆分成建图定位，导航移动，单独运行，看只有一个是什么效果**
 
-- 在 slam_gmapping.launch 中删去如图高亮的 move_base 代码。
-- 在 slam_movebase.launch 中删去 Gmapping 的代码，因只需打开一次 RViz，故再删去 RViz 的代码。
+- 在slam_gmapping.launch中删去如图高亮的move_base代码。
+- 在slam_movebase.launch中删去Gmapping的代码，因只需打开一次RViz，故再删去RViz的代码。
 
 ![](https://img.kancloud.cn/58/b9/58b96c00f3a7f9ce244bfc14910dfb3c_965x429.png)
 
@@ -25,7 +25,7 @@ roslaunch tianbot_mini bringup.launch
 ```shell
 roslaunch tianbot_mini lidar.launch
 ```
-3. 打开新终端输入以下命令：运行 SLAM
+3. 打开新终端输入以下命令：运行SLAM
 ```shell
 roslaunch tianbot_mini slam_gmapping.launch
 ```
@@ -47,7 +47,7 @@ roslaunch tianbot_mini slam_movebase.launch
 ![](https://img.kancloud.cn/c3/1f/c31f443690e790fe890c945dfb2f8369_1920x1080.png)
 
 
-通过分写`slam.launch`我们更深入理解到 gmapping 的建图，和 movebase 到目标点的移动。
+通过分写`slam.launch`我们更深入理解到gmapping的建图，和movebase到目标点的移动。
 
 最后可以存取地图
 ```shell
@@ -65,11 +65,11 @@ roslaunch tianbot_mini map_save.launch
 ```shell
 roscore
 ```
-打开地图 yaml 文件
+打开地图yaml文件
 ```shell
 rosrun map_server map_server map.yaml
 ```
-订阅 map
+订阅map
 
 ![](https://img.kancloud.cn/bb/1a/bb1a756a10138a6ca151e559dd597c54_1269x883.png)
 

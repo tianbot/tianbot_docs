@@ -31,5 +31,5 @@ roslaunch rosecho rosecho.launch
 ![](https://img.kancloud.cn/5f/00/5f007e853ebf64d05c4133d851688657_736x267.png)
 
 ::: info 提示
-多用 Tab 键补齐
+多用Tab键补齐
 :::
