@@ -29,7 +29,7 @@ roslaunch tianracer_navigation tianracer_multi_goal.launch
 
 ### 多点导航仿真应用
 
-在simulator仿真环境中实现多点导航，先修改tianracer_multi_goal.launch文件，将false改为true，保存
+在 simulator 仿真环境中实现多点导航，先修改 tianracer_multi_goal.launch 文件，将 false 改为 true，保存
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740915.png)
 

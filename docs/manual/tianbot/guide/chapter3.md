@@ -1,17 +1,17 @@
-# SLAM建图
+# SLAM 建图
 
-## 如何通过激光SLAM建立地图
+## 如何通过激光 SLAM 建立地图
 
 1、启动底盘
-先SSH远程连接
+先 SSH 远程连接
 
 小车终端：
 ```shell
 roslaunch tianbot_bringup tianbot_bringup.launch
 ```
 
-2、SLAM建图
-我们提供三种方式进行建图，分别是Gmapping，Cartographer和HectorSLAM
+2、SLAM 建图
+我们提供三种方式进行建图，分别是 Gmapping，Cartographer 和 HectorSLAM
 
 在小车终端输入下面的任何一条命令：
 - Gmapping
@@ -36,15 +36,15 @@ roslaunch tianbot_slam tianbot_hector.launch
 而下面的操作过程则要在属于个人电脑（主机）的终端里完成，这是为什么呢？且听我娓娓道来这里需要引入一个概念，**多机通信**，那什么是多机通信呢？,点开[这里](/manual/ros2go/ros/multi_machine_communicate.md)，你就能知道答案
 :::
 
-3、打开Rviz观察地图
+3、打开 Rviz 观察地图
 
-个人PC终端：
+个人 PC 终端：
 ```shell
 roslaunch tianbot_rviz view_mapping.launch
 ```
 
 ::: tip 说明
-启动rviz、rqt等图形化界面，建议在个人PC端启动，也就是在计算机名为ros2go的终端
+启动 rviz、rqt 等图形化界面，建议在个人 PC 端启动，也就是在计算机名为 ros2go 的终端
 :::
 
 4、使用遥控器控制小车运动建图
@@ -53,7 +53,7 @@ roslaunch tianbot_rviz view_mapping.launch
 
 ## 如何保存建立的地图
 
-地图默认保存在tianbot_slam/maps/目录下，名称为tianbot_office
+地图默认保存在 tianbot_slam/maps/目录下，名称为 tianbot_office
 
 ```shell
 roslaunch tianbot_slam map_save.launch

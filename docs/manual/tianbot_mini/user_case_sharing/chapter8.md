@@ -1,13 +1,13 @@
-# Tianbot mini开箱~
+# Tianbot mini 开箱~
 
 > 原文链接：https://www.guyuehome.com/bubble/detail/id/21
 >
 > 原文作者：LinLIinLin
 >
-> 原文标题：Tianbot mini开箱~
+> 原文标题：Tianbot mini 开箱~
 
 
-顺丰今天上午到，我在中午终于通过人山人海的快递拿到了我的mini。
+顺丰今天上午到，我在中午终于通过人山人海的快递拿到了我的 mini。
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109281646407.webp)
 
@@ -15,7 +15,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109281646264.webp)
 
-我还以为这个会很大，其实实际尺寸并没有那么大，只有20cm14cm13cm，重量也没有很重（我还找了好久有没有钥匙呢，发现其实并没有，那这个锁洞是干啥的哈哈哈哈）
+我还以为这个会很大，其实实际尺寸并没有那么大，只有 20cm14cm13cm，重量也没有很重（我还找了好久有没有钥匙呢，发现其实并没有，那这个锁洞是干啥的哈哈哈哈）
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109281646410.webp)
 
@@ -27,7 +27,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109281646383.webp)
 
-拿开隔板以后第二层就是这样啦，有三根天线和一根usb数据线
+拿开隔板以后第二层就是这样啦，有三根天线和一根 usb 数据线
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109281646383.webp)
 

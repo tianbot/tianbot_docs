@@ -1,16 +1,16 @@
-# Markdown使用说明
+# Markdown 使用说明
 
-亲爱的小伙伴们，听说你们想了解Markdown的故事吗？那我就给大家讲一个轻松愉快的故事吧！
+亲爱的小伙伴们，听说你们想了解 Markdown 的故事吗？那我就给大家讲一个轻松愉快的故事吧！
 
-很久很久以前，有一个名叫John Gruber的程序员，他每天都要写很多技术文档，但排版格式实在是太麻烦了。于是他决定发扬自己的光和热，用自己的智慧创造出一种简单易学、方便好用的排版语言——Markdown！
+很久很久以前，有一个名叫 John Gruber 的程序员，他每天都要写很多技术文档，但排版格式实在是太麻烦了。于是他决定发扬自己的光和热，用自己的智慧创造出一种简单易学、方便好用的排版语言——Markdown！
 
-Markdown和传统的HTML标记不同，一些复杂的元素都可以通过简单的符号来表示。就像是“#”这个井号，它可以代表不同级别的标题；“*”和“_”就是Markdown的重点强调工具，可以让你的文本变得更加醒目生动。
+Markdown 和传统的 HTML 标记不同，一些复杂的元素都可以通过简单的符号来表示。就像是“#”这个井号，它可以代表不同级别的标题；“*”和“_”就是 Markdown 的重点强调工具，可以让你的文本变得更加醒目生动。
 
-Markdown还非常贴心，它知道程序员们最珍视的两种东西：时间和精力。所以，你只需要一些简单的符号，它就会帮你完成排版，让你不再为无尽的标签而烦恼。
+Markdown 还非常贴心，它知道程序员们最珍视的两种东西：时间和精力。所以，你只需要一些简单的符号，它就会帮你完成排版，让你不再为无尽的标签而烦恼。
 
-还有，Markdown非常人性化！它的语法规则像一只聪明机灵的小精灵，指导你去写出结构清晰、排版美观的文档。即使你是一个新手，也能够很快地跟上步伐，轻松愉快地玩转Markdown。
+还有，Markdown 非常人性化！它的语法规则像一只聪明机灵的小精灵，指导你去写出结构清晰、排版美观的文档。即使你是一个新手，也能够很快地跟上步伐，轻松愉快地玩转 Markdown。
 
-所以呐，小伙伴们，如果你们还在为文档排版烦恼，千万别错过Markdown这个好帮手哦！它简单、实用，而且免费——就像是一颗闪耀的黑钻石，让你的文档变得更加精美动人！
+所以呐，小伙伴们，如果你们还在为文档排版烦恼，千万别错过 Markdown 这个好帮手哦！它简单、实用，而且免费——就像是一颗闪耀的黑钻石，让你的文档变得更加精美动人！
 
 !> 这是一个 MarkDown 教学
 
@@ -80,7 +80,7 @@ flowchart LR
 <!-- tabs:start -->
 
 #### **效果**
-公式$\sqrt{3x-1}+(1+x)^2$公式
+公式 $\sqrt{3x-1}+(1+x)^2$ 公式
 
 # Hello Equations!
 
@@ -129,15 +129,15 @@ Body text
 
 ~~Strikethrough~~
 
-<mark>Marked text</mark>
+<mark> Marked text </mark>
 
-<pre>preformatted text</pre>
+<pre> preformatted text </pre>
 
-<small>Small Text</small>
+<small> Small Text </small>
 
-This is <sub>subscripe</sub>
+This is <sub> subscripe </sub>
 
-This is <sup>superscript</sup>
+This is <sup> superscript </sup>
 
 #### **Markdown**
 
@@ -315,16 +315,16 @@ console.log(total); // 3
 ````markdown
 This is `inline code`
 
-```javascript
+``` javascript
 const add = (num1, num2) => num1 + num2;
 const total = add(1, 2);
 
 console.log(total); // 3
 ```
 
-```html
+``` html
 <body>
-  <p>Hello</p>
+  <p> Hello </p>
 </body>
 ```
 ````
@@ -401,7 +401,7 @@ Ciao!
 
 #### **效果**
 
-| 表头A    |  表头B   |    表头C |
+| 表头 A    |  表头 B   |    表头 C |
 | :------- | :------: | -------: |
 | 内容居左 | 内容居中 | 内容居右 |
 | 内容居左 | 内容居中 | 内容居右 |
@@ -409,7 +409,7 @@ Ciao!
 #### **Markdown**
 
 ```markdown
-| 表头A    |  表头B   |    表头C |
+| 表头 A    |  表头 B   |    表头 C |
 | :------- | :------: | -------: |
 | 内容居左 | 内容居中 | 内容居右 |
 | 内容居左 | 内容居中 | 内容居右 |
@@ -423,17 +423,17 @@ Ciao!
 
 #### **效果**
 
-<kbd>&uarr;</kbd> Arrow Up
+<kbd>&uarr; </kbd> Arrow Up
 
-<kbd>&darr;</kbd> Arrow Down
+<kbd>&darr; </kbd> Arrow Down
 
-<kbd>&larr;</kbd> Arrow Left
+<kbd>&larr; </kbd> Arrow Left
 
-<kbd>&rarr;</kbd> Arrow Right
+<kbd>&rarr; </kbd> Arrow Right
 
-<kbd>&#8682;</kbd> Caps Lock
+<kbd>&#8682; </kbd> Caps Lock
 
-<kbd>&#8984;</kbd> Command
+<kbd>&#8984; </kbd> Command
 
 #### **Markdown**
 
@@ -509,83 +509,83 @@ A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx
 
 #### **效果**
 
-:bowtie:
-:smile:
-:laughing:
-:blush:
-:smiley:
-:relaxed:
-:smirk:
-:heart_eyes:
-:kissing_heart:
-:kissing_closed_eyes:
-:flushed:
-:relieved:
-:satisfied:
-:grin:
-:wink:
-:stuck_out_tongue_winking_eye:
-:stuck_out_tongue_closed_eyes:
-:grinning:
-:kissing:
-:kissing_smiling_eyes:
-:stuck_out_tongue:
-:sleeping:
-:worried:
-:frowning:
-:anguished:
-:open_mouth:
-:grimacing:
-:confused:
-:hushed:
-:expressionless:
-:unamused:
-:sweat_smile:
-:sweat:
-:disappointed_relieved:
-:weary:
-:pensive:
-:disappointed:
-:confounded:
-:fearful:
-:cold_sweat:
-:persevere:
-:cry:
-:sob:
-:joy:
-:astonished:
-:scream:
-:neckbeard:
-:tired_face:
-:angry:
-:rage:
-:triumph:
-:sleepy:
-:yum:
-:mask:
-:sunglasses:
-:dizzy_face:
-:imp:
-:smiling_imp:
-:neutral_face:
-:no_mouth:
-:innocent:
-:alien:
-:yellow_heart:
-:blue_heart:
-:purple_heart:
-:heart:
-:green_heart:
-:broken_heart:
-:heartbeat:
-:heartpulse:
-:two_hearts:
-:revolving_hearts:
-:cupid:
-:sparkling_heart:
-:sparkles:
-:star:
-:star2:
+: bowtie:
+: smile:
+: laughing:
+: blush:
+: smiley:
+: relaxed:
+: smirk:
+: heart_eyes:
+: kissing_heart:
+: kissing_closed_eyes:
+: flushed:
+: relieved:
+: satisfied:
+: grin:
+: wink:
+: stuck_out_tongue_winking_eye:
+: stuck_out_tongue_closed_eyes:
+: grinning:
+: kissing:
+: kissing_smiling_eyes:
+: stuck_out_tongue:
+: sleeping:
+: worried:
+: frowning:
+: anguished:
+: open_mouth:
+: grimacing:
+: confused:
+: hushed:
+: expressionless:
+: unamused:
+: sweat_smile:
+: sweat:
+: disappointed_relieved:
+: weary:
+: pensive:
+: disappointed:
+: confounded:
+: fearful:
+: cold_sweat:
+: persevere:
+: cry:
+: sob:
+: joy:
+: astonished:
+: scream:
+: neckbeard:
+: tired_face:
+: angry:
+: rage:
+: triumph:
+: sleepy:
+: yum:
+: mask:
+: sunglasses:
+: dizzy_face:
+: imp:
+: smiling_imp:
+: neutral_face:
+: no_mouth:
+: innocent:
+: alien:
+: yellow_heart:
+: blue_heart:
+: purple_heart:
+: heart:
+: green_heart:
+: broken_heart:
+: heartbeat:
+: heartpulse:
+: two_hearts:
+: revolving_hearts:
+: cupid:
+: sparkling_heart:
+: sparkles:
+: star:
+: star2:
 
 #### **Markdown**
 
@@ -677,16 +677,16 @@ A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx
 
 #### **效果**
 
-> [!NOTE]
+> [! NOTE]
 > An alert of type 'note' using global style 'callout'.
 
-> [!TIP]
+> [! TIP]
 > An alert of type 'tip' using global style 'callout'.
 
-> [!WARNING]
+> [! WARNING]
 > An alert of type 'warning' using global style 'callout'.
 
-> [!ATTENTION]
+> [! ATTENTION]
 > An alert of type 'attention' using global style 'callout'.
 
 #### **Markdown**
@@ -716,7 +716,7 @@ A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx
 <details>
 
 
-<summary>我的列表(点击打开/折叠)</summary>
+<summary> 我的列表 (点击打开/折叠)</summary>
 
 - 123
 - abc
@@ -728,7 +728,7 @@ A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx
 ```markdown
 <details>
 
-<summary>我的列表(点击打开/折叠)</summary>
+<summary>我的列表 (点击打开/折叠)</summary>
 
 - 123
 - abc
@@ -739,7 +739,7 @@ A complete list is available here ===> [Emoji Cheat Sheet](https://www.webpagefx
 <!-- tabs:end -->
 
 
-<p style="font-size:30px ;font-weight: bolder">References</p>
+<p style="font-size:30px ;font-weight: bolder"> References </p>
 
-- [markdown教程](https://www.runoob.com/markdown/md-tutorial.html)
-- [markdown用法](https://docs-1257794070.cos-website.ap-nanjing.myqcloud.com/#/markdown/)
+- [markdown 教程](https://www.runoob.com/markdown/md-tutorial.html)
+- [markdown 用法](https://docs-1257794070.cos-website.ap-nanjing.myqcloud.com/#/markdown/)

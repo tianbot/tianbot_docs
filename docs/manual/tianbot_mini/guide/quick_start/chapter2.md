@@ -1,4 +1,4 @@
-# 可视化工具rviz的使用
+# 可视化工具 rviz 的使用
 
 
 **视频**
@@ -10,13 +10,13 @@
 
 ## 概要：
 
-在RViz中观察机器人里程计信息，和机器人模型与里程计信息的结合。
+在 RViz 中观察机器人里程计信息，和机器人模型与里程计信息的结合。
 
 ## 正文：
 
 ::: info 提示
-- Rviz为可视化工具，是让数据可视化。
-- 而Gazebo是用于模拟真实环境生产数据，是用来产生数据的。
+- Rviz 为可视化工具，是让数据可视化。
+- 而 Gazebo 是用于模拟真实环境生产数据，是用来产生数据的。
 :::
 
 打开终端启动机器人
@@ -24,7 +24,7 @@
 roslaunch tianbot_mini bringup.launch
 ```
 
-打开终端启动RViz
+打开终端启动 RViz
 ```shell
 rviz
 ```
@@ -39,6 +39,6 @@ rviz
 ![](https://img.kancloud.cn/fa/e0/fae039c84d4a0ba7898f7e4183881180_513x466.png)
 
 
-此处如果报错，请在robot_description处添加tianbot_mini
+此处如果报错，请在 robot_description 处添加 tianbot_mini
 
 ![](https://img.kancloud.cn/2e/c2/2ec2bf44544cc3b9564f12bdb5158295_1266x881.png)

@@ -1,28 +1,28 @@
 # git 快速使用 
 
-## 什么是Git
+## 什么是 Git
 
-很多人都知道，Linus在1991年创建了开源的Linux，从此，Linux系统不断发展，已经成为最大的服务器系统软件了。
+很多人都知道，Linus 在 1991 年创建了开源的 Linux，从此，Linux 系统不断发展，已经成为最大的服务器系统软件了。
 
-Linus虽然创建了Linux，但Linux的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为Linux编写代码，那Linux的代码是如何管理的呢？
+Linus 虽然创建了 Linux，但 Linux 的壮大是靠全世界热心的志愿者参与的，这么多人在世界各地为 Linux 编写代码，那 Linux 的代码是如何管理的呢？
 
-事实是，在2002年以前，世界各地的志愿者把源代码文件通过diff的方式发给Linus，然后由Linus本人通过手工方式合并代码！
+事实是，在 2002 年以前，世界各地的志愿者把源代码文件通过 diff 的方式发给 Linus，然后由 Linus 本人通过手工方式合并代码！
 
-你也许会想，为什么Linus不把Linux代码放到版本控制系统里呢？不是有CVS、SVN这些免费的版本控制系统吗？因为Linus坚定地反对CVS和SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比CVS、SVN好用，但那是付费的，和Linux的开源精神不符。
+你也许会想，为什么 Linus 不把 Linux 代码放到版本控制系统里呢？不是有 CVS、SVN 这些免费的版本控制系统吗？因为 Linus 坚定地反对 CVS 和 SVN，这些集中式的版本控制系统不但速度慢，而且必须联网才能使用。有一些商用的版本控制系统，虽然比 CVS、SVN 好用，但那是付费的，和 Linux 的开源精神不符。
 
-不过，到了2002年，Linux系统已经发展了十年了，代码库之大让Linus很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。
+不过，到了 2002 年，Linux 系统已经发展了十年了，代码库之大让 Linus 很难继续通过手工方式管理了，社区的弟兄们也对这种方式表达了强烈不满，于是 Linus 选择了一个商业的版本控制系统 BitKeeper，BitKeeper 的东家 BitMover 公司出于人道主义精神，授权 Linux 社区免费使用这个版本控制系统。
 
-安定团结的大好局面在2005年就被打破了，原因是Linux社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发Samba的Andrew试图破解BitKeeper的协议（这么干的其实也不只他一个），被BitMover公司发现了（监控工作做得不错！），于是BitMover公司怒了，要收回Linux社区的免费使用权。
+安定团结的大好局面在 2005 年就被打破了，原因是 Linux 社区牛人聚集，不免沾染了一些梁山好汉的江湖习气。开发 Samba 的 Andrew 试图破解 BitKeeper 的协议（这么干的其实也不只他一个），被 BitMover 公司发现了（监控工作做得不错！），于是 BitMover 公司怒了，要收回 Linux 社区的免费使用权。
 
-Linus可以向BitMover公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：
+Linus 可以向 BitMover 公司道个歉，保证以后严格管教弟兄们，嗯，这是不可能的。实际情况是这样的：
 
-Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了！牛是怎么定义的呢？大家可以体会一下。
+Linus 花了两周时间自己用 C 写了一个分布式版本控制系统，这就是 Git！一个月之内，Linux 系统的源码已经由 Git 管理了！牛是怎么定义的呢？大家可以体会一下。
 
-Git迅速成为最流行的分布式版本控制系统，尤其是2008年，GitHub网站上线了，它为开源项目免费提供Git存储，无数开源项目开始迁移至GitHub，包括jQuery，PHP，Ruby等等。
+Git 迅速成为最流行的分布式版本控制系统，尤其是 2008 年，GitHub 网站上线了，它为开源项目免费提供 Git 存储，无数开源项目开始迁移至 GitHub，包括 jQuery，PHP，Ruby 等等。
 
-历史就是这么偶然，如果不是当年BitMover公司威胁Linux社区，可能现在我们就没有免费而超级好用的Git了。
+历史就是这么偶然，如果不是当年 BitMover 公司威胁 Linux 社区，可能现在我们就没有免费而超级好用的 Git 了。
 
-## 安装和配置git
+## 安装和配置 git
 
 ```shell
 sudo apt-get install git
@@ -33,28 +33,28 @@ git config --global user.name "Your Name"
 git config --global user.email "email@example.com"
 ```
 
-## 常用git命令
+## 常用 git 命令
 
 ### git clone
 
-如何git clone带有子模块的Github仓库？
+如何 git clone 带有子模块的 Github 仓库？
 ```shell
 git clone --recurse-submodules https://github.com/yourname/yourproject.git
 ```
 
-如何git clone仓库的特定分支？
+如何 git clone 仓库的特定分支？
 ```shell
 git clone -b master https://github.com/yourname/yourproject.git
 ```
 
 ### git remote
 
-如何修改remote的地址？
+如何修改 remote 的地址？
 ```shell
 git remote set-url origin git@github.com:yourname/yourproject.git
 ```
 
-如何添加remote的地址？
+如何添加 remote 的地址？
 ```shell
 git submodule add -b master https://github.com/othername/otherproject.git
 ```
@@ -62,22 +62,22 @@ git submodule add -b master https://github.com/othername/otherproject.git
 
 ### git branch
 
-如何查看当前所处git分支？
+如何查看当前所处 git 分支？
 ```shell
 git branch -a
 ```
 
-如何从当前所处git分支切换到新分支？
+如何从当前所处 git 分支切换到新分支？
 ```shell
 git checkout -b new branch
 ```
 
 
-## 常用git场景
+## 常用 git 场景
 
 ### 场景一
 
-假如你现在有一个本地项目，需要使用`git`进行版本管理，此时你想把项目上传到`github`，那么你就可以使用采用以下几步
+假如你现在有一个本地项目，需要使用 `git` 进行版本管理，此时你想把项目上传到 `github`，那么你就可以使用采用以下几步
 
 
 #### 1. 在 GitHub 上创建一个新的仓库
@@ -93,7 +93,7 @@ git checkout -b new branch
 #### 2. 在本地设置 Git
 -  打开终端或命令行界面。
 
--  进入您的项目文件夹，使用cd命令切换到项目目录。、
+-  进入您的项目文件夹，使用 cd 命令切换到项目目录。、
 
 -  运行以下命令来初始化本地 Git 仓库 
 ```shell
@@ -112,7 +112,7 @@ git remote add origin https://github.com/yourname/yourproject.git
 ```
 
 #### 4. 添加文件到本地仓库
-- 使用git add命令将要提交的文件添加到暂存区。例如，若要添加所有文件，可以运行
+- 使用 git add 命令将要提交的文件添加到暂存区。例如，若要添加所有文件，可以运行
 ```shell
 git add .                 # 不要漏了这个.
 ```
@@ -132,7 +132,7 @@ git push origin master
 完成以上步骤后，您的本地项目就会被上传到 GitHub，并开始进行版本管理。您可以在 GitHub 仓库页面上看到您的上传的文件和提交历史。
 
 ::: info 提示
-如果您之前已经将文件添加到.gitignore中排除版本控制，则需要先从.gitignore中移除这些文件，才能将它们添加到本地仓库中。
+如果您之前已经将文件添加到.gitignore 中排除版本控制，则需要先从.gitignore 中移除这些文件，才能将它们添加到本地仓库中。
 :::
 
 
@@ -156,7 +156,7 @@ git checkout -b bug-fix
 将 bug-fix 替换为一个描述性的分支名称。
 
 ::: tip 提示
-[大厂的Git代码管理规范是怎样的？](https://mp.weixin.qq.com/s/LWQolvFQQndBhFQ2lP2vhQ)
+[大厂的 Git 代码管理规范是怎样的？](https://mp.weixin.qq.com/s/LWQolvFQQndBhFQ2lP2vhQ)
 :::
 
 #### 3.应用修复 
@@ -193,6 +193,6 @@ git push origin bug-fix
 提交代码是为开源社区做贡献的重要方式
 :::
 
-<p style="font-size:30px ;font-weight: bolder">References</p>
+<p style="font-size:30px ;font-weight: bolder"> References </p>
 
-- [廖雪峰：Git的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
+- [廖雪峰：Git 的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)

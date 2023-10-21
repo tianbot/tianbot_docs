@@ -1,4 +1,4 @@
-# ROS基础功能
+# ROS 基础功能
 
 ## **启动相关文件**
 
@@ -23,12 +23,12 @@ roslaunch tianbot_bringup lidar.launch
 roslaunch tianbot_bringup rgbd_camera.launch
 ```
 
-**启动USB摄像头**
+**启动 USB 摄像头**
 ```shell
 roslaunch tianbot_bringup usb_cam.launch
 ```
 
-**启动GPS (if applicable)**
+**启动 GPS (if applicable)**
 ```shell
 roslaunch tianbot_bringup gps.launch
 ```
