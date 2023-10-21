@@ -153,6 +153,33 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: 'ROS2GO资料使用说明', link: '/manual/ros2go/ros/chapter3' },
                   { text: '其他ROS学习资料', link: '/manual/ros2go/ros/chapter4' },
                   { text: 'ROS中的多机通信', link: '/manual/ros2go/ros/multi_machine_communicate' },
+                  {
+                    text: '常见传感器的驱动和使用',
+                    collapsed: true,
+                    items: [
+                      {
+                        text: '摄像头',
+                        collapsed: true,
+                        items: [
+                          { text: 'USB 摄像头', link: '/manual/ros2go/ros/sensor/camera/chapter1' },
+                          { text: '奥比中光 Astra', link: '/manual/ros2go/ros/sensor/camera/chapter2' },
+                        ],
+                      },
+                      {
+                        text: '激光雷达',
+                        collapsed: true,
+                        items: [
+                          { text: 'YDLIDAR', link: '/manual/ros2go/ros/sensor/lidar/chapter1' },
+                          { text: 'RPLIDAR', link: '/manual/ros2go/ros/sensor/lidar/chapter2' },
+                          { text: 'HOKUYO', link: '/manual/ros2go/ros/sensor/lidar/chapter3' },
+                          { text: 'Turtlebot3 lidar', link: '/manual/ros2go/ros/sensor/lidar/chapter4' },
+                          { text: 'Velodyne', link: '/manual/ros2go/ros/sensor/lidar/chapter5' },
+                          { text: 'Osight', link: '/manual/ros2go/ros/sensor/lidar/chapter6' },
+                          { text: 'livox mid-360', link: '/manual/ros2go/ros/sensor/lidar/chapter7' },
+                        ],
+                      },
+                    ],
+                  },
                 ],
               },
               { text: '常见问题', link: '/manual/ros2go/question' },
