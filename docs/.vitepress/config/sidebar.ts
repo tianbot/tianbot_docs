@@ -299,6 +299,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'move_base框架分析', link: '/manual/tianbot_mini/guide/navigation/chapter1' },
                     ],
                   },
+                  {
+                    text: '多机器人联动',
+                    collapsed: true,
+                    items: [
+                      { text: '配置WIFI环境', link: '/manual/tianbot_mini/guide/swarm/chapter1' },
+                      { text: '第二台机器人多机模式的配置', link: '/manual/tianbot_mini/guide/swarm/chapter2' },
+                      { text: '两台机器人的联动', link: '/manual/tianbot_mini/guide/swarm/chapter3' },
+                      { text: '仿真与实体之间的联动', link: '/manual/tianbot_mini/guide/swarm/chapter4' },
+                    ],
+                  },
                   { text: '机器人集群', link: '/manual/tianbot_mini/guide/chapter3' },
                   {
                     text: '更多功能应用',
