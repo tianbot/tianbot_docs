@@ -14,4 +14,6 @@ roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
 
 ### 3.如何魔改
 
-## TODO
+::: tip 提示
+可以参看仿真实例中的：[Tianracer仿真实例部分](/simulation/wheel_robot/ackermann/chapter1.md)
+:::
