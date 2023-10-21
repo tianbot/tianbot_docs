@@ -1,4 +1,4 @@
-# HTML机器人的GUI搭建
+# HTML 机器人的 GUI 搭建
 
 **视频地址**
 
@@ -13,22 +13,22 @@
 2.控制机器人运动
 
 ## 步骤
-新建一个文件夹并用VSCODE打开
+新建一个文件夹并用 VSCODE 打开
 
 ![](https://img.kancloud.cn/bd/d8/bdd89e31c5c3678273024eb1c5595d39_964x815.png)
 
-在vscode中新建一个app.html历程
+在 vscode 中新建一个 app.html 历程
 
 代码如下：
 
 ![](https://img.kancloud.cn/60/c7/60c7fe1878d52b04daa9a4a47432d179_1346x353.png)
 
-此时双击文件下中的app.html
+此时双击文件下中的 app.html
 
 ![](https://img.kancloud.cn/8c/9e/8c9e25b25565b19d136bb1f03ba37be7_955x324.png)
 ![](https://img.kancloud.cn/5b/65/5b65e430070d8d7bec0c094f3c5d0d7d_1920x833.png)
 
-将app.html中的按键增加功能
+将 app.html 中的按键增加功能
 
 ![](https://img.kancloud.cn/42/f5/42f5530a393aa603300681af014e7567_1118x574.png)
 
@@ -42,9 +42,9 @@
 
 ![](https://img.kancloud.cn/84/e9/84e9d9fa100a23642fab2b5b755307e0_1920x1080.png)
 
-启动MINI，连接MINI的热点，这里的IP地址为`192.168.1.1`
+启动 MINI，连接 MINI 的热点，这里的 IP 地址为`192.168.1.1`
 
-此时在浏览器按下F12就进入了控制台界面，刷新网页会出现ws opened 的界面出现
+此时在浏览器按下 F12 就进入了控制台界面，刷新网页会出现 ws opened 的界面出现
 
 代码改为
 

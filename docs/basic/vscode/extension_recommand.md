@@ -1,3 +1,3 @@
-# VScode中推荐安装的插件 
+# VScode 中推荐安装的插件 
 
 ## TODO

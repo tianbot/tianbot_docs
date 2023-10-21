@@ -14,20 +14,20 @@
 ## 正文：
 
 订阅者是如何编辑出来的
-### 1.去ROS WIKI里复制接收者的代码
+### 1.去 ROS WIKI 里复制接收者的代码
 
 - http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
 
 ![](https://img.kancloud.cn/b8/ef/b8efb4c4889bf8f2aebad19118b228ee_1084x814.png)
 
-Python有严格的空格，请直接取掉行号直接复制到创建好的listener.py中：
+Python 有严格的空格，请直接取掉行号直接复制到创建好的 listener.py 中：
 
 启动小车，成功连接一车，运行
 ```shell
 roslaunch tianbot_mini bringup.launch
 ```
 
-在listener.py对应的文件夹内打开终端输入
+在 listener.py 对应的文件夹内打开终端输入
 ```shell
 python listener.py
 ```
@@ -37,7 +37,7 @@ python listener.py
 ![](https://img.kancloud.cn/2c/02/2c0249ea4199277ed9c763943a281dc1_509x169.png)
 
 
-再看一下上节课提到的/chatter话题
+再看一下上节课提到的/chatter 话题
 
 ![](https://img.kancloud.cn/49/7f/497fbcb8931b0bceaa0ff2d4f7bc9819_558x109.png)
 
@@ -49,19 +49,19 @@ python listener.py
 
 可以看到都收到了信息
 
-我们把listener.py里的话题名字`/chatter`改为`/tianbot_mini/info`
+我们把 listener.py 里的话题名字`/chatter`改为`/tianbot_mini/info`
 
 ![](https://img.kancloud.cn/f4/4a/f44ad42264b10ee0e48bc07aa062e93c_835x487.png)
 
 ![](https://img.kancloud.cn/26/46/264655067f2c2fc549d016a3582ea1b5_941x526.png)
 
-在观察info的话题类型
+在观察 info 的话题类型
 
 `rostopic type/tianbot_mini/info`
 
 话题类型为`std_msgs/String`
 
-我们再去上一节观察/chatter的话题类型
+我们再去上一节观察/chatter 的话题类型
 
 话题类型为`std_msgs/String`
 

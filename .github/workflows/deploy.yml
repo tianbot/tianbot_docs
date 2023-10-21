@@ -12,9 +12,9 @@ on:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
     runs-on: self-hosted
     # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
     permissions:

@@ -2,7 +2,7 @@
 
 ## 简介
 
-tianracer_gazebo是一个基于阿克曼底盘的仿真实例，在初始ROS2GO环境中，你只需要一行命令即可运行
+tianracer_gazebo 是一个基于阿克曼底盘的仿真实例，在初始 ROS2GO 环境中，你只需要一行命令即可运行
 
 ```shell
 roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch

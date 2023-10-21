@@ -9,15 +9,15 @@
 
 ## 概要：
 
-围绕`rostopic`、`roslaunch`、`rosrun` 进行，介绍话题的订阅和接收，查看话题内容，节点与话题的关系，运行turtlesim
+围绕`rostopic`、`roslaunch`、`rosrun` 进行，介绍话题的订阅和接收，查看话题内容，节点与话题的关系，运行 turtlesim
 
 ## 正文：
 
 ### 1. 发布者与接收者
 
-Topic是主题，是发布者（publisher）和接受者（subscriber）用来通讯的数据总线。
+Topic 是主题，是发布者（publisher）和接受者（subscriber）用来通讯的数据总线。
 
-按照快速入门成功连接Tianbot_mini机器人后，打开终端，运行
+按照快速入门成功连接 Tianbot_mini 机器人后，打开终端，运行
 
 ```shell
 roslaunch tianbot_mini bringup.launch
@@ -75,11 +75,11 @@ rostopic echo /tianbot_mini/led
 
 我们再深究一下，**Topic**是主题，是发布者（`publisher`）和接受者（`subscriber`）用来通讯的数据总线。到底是谁在进行通讯？
 
-通讯的个体叫做节点，是独立可执行的C++或Python文件，是代码与实际功能的解耦。
+通讯的个体叫做节点，是独立可执行的 C++ 或 Python 文件，是代码与实际功能的解耦。
 
-机器人的启动需要很多节点.
+机器人的启动需要很多节点。
 
-我们在刚开始运行`roslaunch tianbot_mini bringup.launch`，Launch文件可一次运行多个节点，使用`roslauch`运行`.launch`文件。
+我们在刚开始运行`roslaunch tianbot_mini bringup.launch`，Launch 文件可一次运行多个节点，使用`roslauch`运行`.launch`文件。
 
 具体使用用法为
 ```shell
@@ -89,11 +89,11 @@ roslaunch [package] [filename.launch]
 ### 3. Turtlesim
 
 ::: info 注意
-1. 使用roslaunch运行.launch文件，一次启动多个节点无需打开节点管理器roscore
-2. 使用rosrun单独启动一个节点，首先需要打开节点管理器roscore
+1. 使用 roslaunch 运行.launch 文件，一次启动多个节点无需打开节点管理器 roscore
+2. 使用 rosrun 单独启动一个节点，首先需要打开节点管理器 roscore
 :::
 
-我们用`rosrun`单独运行一个节点，我们采用仿真turtlesim
+我们用`rosrun`单独运行一个节点，我们采用仿真 turtlesim
 
 打开节点管理器 roscore
 

@@ -15,9 +15,9 @@
 
 是发布者也是订阅者
 
-前面的章节，得到机器人里程计信息，并在rviz中可视化
+前面的章节，得到机器人里程计信息，并在 rviz 中可视化
 
-Odom的消息类型
+Odom 的消息类型
 
 ```shell
 rostopic type /tianbot_mini/odom
@@ -25,23 +25,23 @@ rostopic type /tianbot_mini/odom
 
 为 Nav_msgs/Odometry
 
-怎么直接观察Nav_msgs/Odometry里面的消息内容呢
+怎么直接观察 Nav_msgs/Odometry 里面的消息内容呢
 
-使用rosmsg_show
+使用 rosmsg_show
 
 ```shell
 rosmsg show nav_msgs/Odometry
 ```
 
-我们知道了话题名字，话题类型，话题信息，现在就可以先写出一个里程计的subscriber出来
+我们知道了话题名字，话题类型，话题信息，现在就可以先写出一个里程计的 subscriber 出来
 
-复制上节课listener的代码，把话题三要素改为如下图
+复制上节课 listener 的代码，把话题三要素改为如下图
 
 
 
-在_sub_odom.py的文件夹下打开终端
+在_sub_odom.py 的文件夹下打开终端
 
-我们还要能控制车去做运动，之前章节我们控制车转圈的节点是cmd_vel,这两节一直强调话题三要素，我们先看一下cmd_vel相关话题信息
+我们还要能控制车去做运动，之前章节我们控制车转圈的节点是 cmd_vel，这两节一直强调话题三要素，我们先看一下 cmd_vel 相关话题信息
 ```shell
 rostopic type /tianbot_mini/cmd_vel
 ```
@@ -54,7 +54,7 @@ geometry_msgs/Twist
 rosmag show geometry_msgs/Twist
 ```
 
-我们的思路是利用刚才_sub_odom.py里写的话题订阅信息，把发布的代码写进去，实现cmd_vel节点发布信息，Odometry里程计节点订阅接受信息，形成一个闭环，完成机器人的倔强
+我们的思路是利用刚才_sub_odom.py 里写的话题订阅信息，把发布的代码写进去，实现 cmd_vel 节点发布信息，Odometry 里程计节点订阅接受信息，形成一个闭环，完成机器人的倔强
 
 把代码改为
 
@@ -94,10 +94,10 @@ if __name__== '__main__' :
 
 ![](https://img.kancloud.cn/9d/e6/9de631dcfafcedb4bc03bc695a31f735_1035x774.png)
 
-此时在juejiang_tianbot.py对应的文件夹下
+此时在 juejiang_tianbot.py 对应的文件夹下
 运行
 
 ```shell
 python juejiang_tianbot.py
 ```
-此时机器人可能会小范围抖动，是由于PID的原因，属于正常现象
+此时机器人可能会小范围抖动，是由于 PID 的原因，属于正常现象

@@ -11,7 +11,7 @@
 
 代码仓库：https://github.com/lbhwyy/nwpu_course.git
 
-## 1.rmtt无人机仿真
+## 1.rmtt 无人机仿真
 
 ### 启动无人机仿真环境
 
@@ -30,7 +30,7 @@ rostopic list
 ```shell
 rqt
 ```
-使用`tf_tree`工具查看tf变换关系、`image_view`工具查看图像数据
+使用 `tf_tree` 工具查看 tf 变换关系、`image_view` 工具查看图像数据
 
 ### 启动键盘控制节点，无人机红色杆为飞机正方向
 ```shell
@@ -38,9 +38,9 @@ source study_ws/devel/setup.bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
 
-## 2.mini小车仿真
+## 2.mini 小车仿真
 
-### 启动小车gazebo仿真环境
+### 启动小车 gazebo 仿真环境
 ```shell
 source study_ws/devel/setup.bash
 roslaunch tianbot_mini simulation.launch 
@@ -55,7 +55,7 @@ rostopic list
 ```shell
 rqt
 ```
-使用tf_tree工具查看tf变换关系、image_view工具查看图像数据
+使用 tf_tree 工具查看 tf 变换关系、image_view 工具查看图像数据
 
 ### 启动键盘控制节点
 ```shell
@@ -75,7 +75,7 @@ roslaunch hector_quadrotor_demo outdoor_flight_gazebo.launch
 source study_ws/devel/setup.bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py 
 ```
-按下t键使飞机飞起，以避免开启跟随节点后，飞机与小车相撞
+按下 t 键使飞机飞起，以避免开启跟随节点后，飞机与小车相撞
 
 ### 开启跟随节点
 ```shell
@@ -83,7 +83,7 @@ source study_ws/devel/setup.bash
 rosrun hector_quadrotor_demo turtle_tf2_listener.py
 ```
 
-## 4.小车跟随rmtt无人机（避障）
+## 4.小车跟随 rmtt 无人机（避障）
 
 ### 启动仿真环境
 ```shell
@@ -98,28 +98,28 @@ roslaunch tianbot_nav navigation_demo.launch
 ```
 
 ### 启动键盘遥控节点
-​按下键盘上的`t`即可起飞，`b`即可降落
+​按下键盘上的 `t` 即可起飞，`b` 即可降落
 ```shell
 source study_ws/devel/setup.bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 ```
-### 启动tianbot_mini跟踪无人机节点
+### 启动 tianbot_mini 跟踪无人机节点
 
 ```shell
 source study_ws/devel/setup.bash
 rosrun hector_quadrotor_demo mini_track_drone.py
 ```
 
-将rviz中camera的话题修改为`/front_cam/camera/image`即可
+将 rviz 中 camera 的话题修改为 `/front_cam/camera/image` 即可
 
-## 5.rmtt无人机跟踪小车二维码
+## 5.rmtt 无人机跟踪小车二维码
 
 ### 启动仿真环境
 ```shell
 source study_ws/devel/setup.bash
 roslaunch hector_quadrotor_demo outdoor_flight_gazebo.launch 
 ```
-### 启动tianbot_mini键盘控制节点
+### 启动 tianbot_mini 键盘控制节点
 
 ```shell
 source study_ws/devel/setup.bash
@@ -133,21 +133,21 @@ source study_ws/devel/setup.bash
 roslaunch rmtt_apriltag detection.launch 
 ```
 
-### 启动无人机跟踪tianbot_mini节点
+### 启动无人机跟踪 tianbot_mini 节点
 
 ```shell
 source study_ws/devel/setup.bash
 roslaunch rmtt_tracker rmtt_tag_tracker.launch 
 ```
-### 查看TF树
+### 查看 TF 树
 ```shell
 rosrun rqt_tf_tree rqt_tf_tree 
 ```
 
-### 监测/cmd_vel话题
+### 监测/cmd_vel 话题
 ```shell
 rostopic echo /cmd_vel 
 ```
 ::: tip 提示
-在运行无人机跟踪小车二维码仿真时，需要将rmtt无人机的摄像头画面，对准mini小车上的二维码图片，以激活跟踪节点，这里比较关键。
+在运行无人机跟踪小车二维码仿真时，需要将 rmtt 无人机的摄像头画面，对准 mini 小车上的二维码图片，以激活跟踪节点，这里比较关键。
 :::
