@@ -39,9 +39,32 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               link: '/simulation/wheel_robot/index',
               collapsed: true,
               items: [
-                { text: 'Turtlebot仿真实例', link: '/simulation/wheel_robot/diff/chapter1' },
-                { text: 'Turtlebot3仿真实例', link: '/simulation/wheel_robot/diff/chapter2' },
-                { text: 'Husky仿真实例', link: '/simulation/wheel_robot/diff/chapter3' },
+                {
+                  text: '差速模型',
+                  link: '/simulation/wheel_robot/diff/index',
+                  collapsed: true,
+                  items: [
+                    { text: 'Turtlebot仿真实例', link: '/simulation/wheel_robot/diff/chapter1' },
+                    { text: 'Turtlebot3仿真实例', link: '/simulation/wheel_robot/diff/chapter2' },
+                    { text: 'Husky仿真实例', link: '/simulation/wheel_robot/diff/chapter3' },
+                  ],
+                },
+                {
+                  text: '阿克曼模型',
+                  link: '/simulation/wheel_robot/ackermann/index',
+                  collapsed: true,
+                  items: [
+                    { text: 'Tianracer系列仿真实例', link: '/simulation/wheel_robot/ackermann/chapter1' },
+                  ],
+                },
+                {
+                  text: '全向模型',
+                  link: '/simulation/wheel_robot/omni/index',
+                  collapsed: true,
+                  items: [
+                    { text: 'TOM系列仿真实例', link: '/simulation/wheel_robot/omni/chapter1' },
+                  ],
+                },
               ],
             },
             {
@@ -66,7 +89,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               ],
             },
             { text: '无人机仿真实例', link: '/simulation/drone/index' },
-            { text: '集群仿真仿真实例', link: '/simulation/swarm/index' },
+            {
+              text: '集群仿真仿真实例',
+              link: '/simulation/swarm/index',
+              collapsed: true,
+              items: [
+                { text: 'abc_swarm集群仿真实例', link: '/simulation/swarm/chapter1' },
+                { text: '智能无人系统仿真环境', link: '/simulation/swarm/chapter2' },
+              ],
+            },
             { text: '传感器仿真实例', link: '/simulation/sensor/index' },
             ],
         },
