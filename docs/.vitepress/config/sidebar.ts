@@ -110,7 +110,26 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '传感器标定开发指南', link: '/advanced/sensor_calib/index' },
               { text: '计算机视觉开发指南', link: '/advanced/cv/index' },
               { text: '运动控制开发指南', link: '/advanced/motion_control/index' },
-              { text: '激光SLAM开发指南', link: '/advanced/lidar_slam/index' },
+              {
+                text: '激光SLAM开发指南',
+                collapsed: true,
+                link: `/advanced/lidar_slam/`,
+                items: [
+                  { text: '几种2D SLAM算法简单对比', link: '/advanced/lidar_slam/chapter1' },
+                  {
+                    text: '基于优化',
+                    collapsed: true,
+                    items: [
+                      { text: 'Cartographer算法', link: '/advanced/lidar_slam/optimization_based/chapter1' },
+                      { text: 'Hector SLAM演示例程', link: '/advanced/lidar_slam/optimization_based/chapter2' },
+                      { text: 'A-LOAM演示例程', link: '/advanced/lidar_slam/optimization_based/chapter3' },
+                      { text: 'LIO-SAM演示例程', link: '/advanced/lidar_slam/optimization_based/chapter4' },
+                      { text: 'LVI-SAM演示例程', link: '/advanced/lidar_slam/optimization_based/chapter5' },
+                      { text: 'R3LIVE 演示例程', link: '/advanced/lidar_slam/optimization_based/chapter6' },
+                    ],
+                  },
+                ],
+              },
               { text: '视觉SLAM开发指南', link: '/advanced/visual_slam/index' },
             ],
         },
@@ -134,7 +153,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   {
                     text: '设备兼容',
                     collapsed: true,
-                    link: '/manual/ros2go/applicable/index',
+                    link: '/manual/ros2go/applicable/',
                     items: [
                       { text: '兼容的电脑型号', link: '/manual/ros2go/applicable/chapter1' },
                       { text: '兼容的网卡型号', link: '/manual/ros2go/applicable/chapter2' },
@@ -178,6 +197,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                           { text: 'livox mid-360', link: '/manual/ros2go/ros/sensor/lidar/chapter7' },
                         ],
                       },
+                    ],
+                  },
+                  {
+                    text: 'Navigation2',
+                    collapsed: true,
+                    link: `/manual/ros2go/ros/navigation/`,
+                    items: [
+                      { text: 'Nav2的安装', link: '/manual/ros2go/ros/navigation/chapter1' },
+                      { text: 'TurtleBot3仿真', link: '/manual/ros2go/ros/navigation/chapter2' },
                     ],
                   },
                 ],
