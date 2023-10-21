@@ -325,6 +325,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'TTS语音播报', link: '/manual/tianbot_mini/more_application/chapter8' },
                     ],
                   },
+                  { text: '固件更新', link: '/manual/tianbot_mini/guide/chapter5' },
+                  { text: '致谢', link: '/manual/tianbot_mini/guide/chapter6' },
                 ],
               },
               { text: '更新日志', link: '/manual/tianbot_mini/changelog' },
