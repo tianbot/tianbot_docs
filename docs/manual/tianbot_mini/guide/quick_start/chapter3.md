@@ -14,13 +14,13 @@
 
 ## 正文：
 
-本文使用 ROS 编程以话题的方式是机器人的灯带被点亮
-### 1.去 ROS WIKI 里复制发布者的模板改为点亮灯带的发布者
+本文使用ROS编程以话题的方式是机器人的灯带被点亮
+### 1.去ROS WIKI里复制发布者的模板改为点亮灯带的发布者
 
 - http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
 
 ::: info 提示
-Python 有严格的空格，请直接取掉行号直接复制到创建好的 talker.py 中：
+Python有严格的空格，请直接取掉行号直接复制到创建好的talker.py中：
 :::
 
 ```python
@@ -48,13 +48,13 @@ if __name__ == '__main__':
 
 ![](https://img.kancloud.cn/82/be/82be8eb2439e2b4446b25a2b6874ca1d_773x420.png)
 
-启动小车，成功连接 MINI，运行
+启动小车，成功连接MINI，运行
 
 ```shell
 roslaunch tianbot_mini bringup.launch
 ```
 
-在 talker.py 对应的文件夹内打开终端输入
+在talker.py对应的文件夹内打开终端输入
 ```shell
 python talker.py
 ```
@@ -69,7 +69,7 @@ python talker.py
 rostopic echo /chatter
 ```
 
-运行之后，在终端下发送 hello world ,同时将 hello world 发送到一个叫 chatter 的话题里，发送的消息是什么内容，是什么类型呢？
+运行之后，在终端下发送hello world ,同时将hello world发送到一个叫chatter的话题里，发送的消息是什么内容，是什么类型呢？
 
 `rostopic list -v` 看到所有被发布的话题和被订阅的话题
 
@@ -77,7 +77,7 @@ rostopic echo /chatter
 
 具体内容是`hello world`
 
-控制机器人 led 灯的话题是`subscribed topics`的最后一个`/tianbot_mini/led`
+控制机器人led灯的话题是`subscribed topics`的最后一个`/tianbot_mini/led`
 
 消息类型`[std_msgs/colorRGBA]`
 
@@ -93,7 +93,7 @@ rostopic pub /tianbot_mini/led std_msg
 
 ![](https://img.kancloud.cn/50/33/50338edc0f56b19fdf0cd8264c159f50_715x73.png)
 
-此时我们把 talker.py 里面对应话题/chatter 的话题名、消息类型、消息内容改为/tianbot_mini/led 对应的的就可以点灯了
+此时我们把talker.py里面对应话题/chatter 的话题名、消息类型、消息内容改为/tianbot_mini/led对应的的就可以点灯了
 
 ```python
 #!/usr/bin/env python
@@ -124,8 +124,8 @@ if __name__ == '__main__':
 
 ![](https://img.kancloud.cn/62/2d/622d80a6f03e49efc4c59900f593abf2_875x464.png)
 
-### 2.ROS 编程基础三要素
+### 2.ROS编程基础三要素
 
-- 话题名`chatter`改为`tianbot_mini/led`，话题发消息
+- 话题名`chatter`改为`tianbot_mini/led`， 话题发消息
 - 把所有的`string`全部变为`ColorRGBA` ，话题消息类型
-- 消息内容`hello world`改为 RGBA 的对象，消息内容
+- 消息内容`hello world`改为RGBA的对象 ，消息内容

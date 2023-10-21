@@ -1,3 +1,3 @@
-# VScode 中 Python 开发环境的配置 
+# VScode中Python开发环境的配置 
 
 ## TODO

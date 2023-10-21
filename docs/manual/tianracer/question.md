@@ -1,24 +1,24 @@
 # 常见问题
 
-### cartographer 建图导航说明
+### cartographer建图导航说明
 
-Cartographer 建图功能需要与远程计算机配合 (配合 ROS2GO 或已顺利配置 Cartographer 系统环境的 workstation)
+Cartographer建图功能需要与远程计算机配合(配合ROS2GO或已顺利配置Cartographer系统环境的workstation)
 功能运行时设备分工如下：
 
-TIANRACER 平台负责采集传感器数据 (LDS、IMU 等)
-远程计算机负责启动 Cartographer 建图算法，并以图形化方式呈现地图 (RVIZ)
+TIANRACER平台负责采集传感器数据(LDS、IMU等)
+远程计算机负责启动Cartographer建图算法，并以图形化方式呈现地图(RVIZ)
 在选择场地或场地布局时，跑道不要太单调，可以随机放一些障碍物，否则不能确定在地图上的位置。
-cartographer 地图保存`rosrun map_server map_saver --occ 51 --free 49 -f test_carto_map`在当前目录下会生成`test_carto_map.yaml`和`test_carto_map.pgm`
+cartographer地图保存`rosrun map_server map_saver --occ 51 --free 49 -f test_carto_map`在当前目录下会生成`test_carto_map.yaml`和`test_carto_map.pgm`
 
 ### 设置转向舵机的中点
 
-在运行 RACECAR 的过程中如果发现小车运行速度过快，过慢，舵机异响等问题，可以按照下面步骤进行设置。
-运行速度可以在相同的启动文件`tianracer_navigation/launch/includes/tianbot_move_base.launch.xml`通过修改“baseSpeed”设置，你可以尝试不同的速度运行。“baseangle”是调整伺服的中间点这些修改应该在你的车载主控上。
-注意：这里修改的速度在启动`tianbot_move_base.launch.xml`后并不会让小车开始运动，只有给定目标地点，路径规划开始后，小车将会以设定的 baseSpeed 速度运动（确保 ESC 电源开关处于打开状态）。
+在运行RACECAR的过程中如果发现小车运行速度过快，过慢，舵机异响等问题，可以按照下面步骤进行设置。
+运行速度可以在相同的启动文件`tianracer_navigation/launch/includes/tianbot_move_base.launch.xml`通过修改 “baseSpeed” 设置，你可以尝试不同的速度运行。“baseangle”是调整伺服的中间点这些修改应该在你的车载主控上。
+注意： 这里修改的速度在启动`tianbot_move_base.launch.xml`后并不会让小车开始运动，只有给定目标地点，路径规划开始后，小车将会以设定的baseSpeed速度运动（确保ESC电源开关处于打开状态）。
 
 ### 编辑地图
 
-我们在导航的时候，地图应该做一些修改，因为需要闭合边缘并添加一条终点线，而闭合边缘的映射可能不完整。需要手动做一些修改，让边缘变成连续，我们可以使用 GIMP 这个软件进行地图的编辑，该软件在 ROS2GO 中已预置。
+我们在导航的时候，地图应该做一些修改，因为需要闭合边缘并添加一条终点线，而闭合边缘的映射可能不完整。需要手动做一些修改，让边缘变成连续，我们可以使用GIMP 这个软件进行地图的编辑，该软件在ROS2GO中已预置。
 
 ### 遥控器无法使用
 

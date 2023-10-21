@@ -1,3 +1,3 @@
-# tianrover 使用手册
+# tianrover使用手册
 
 ## TODO

@@ -1,14 +1,14 @@
-# 激光 SLAM 开发指南
+# 激光SLAM开发指南
 
-## LOAM 系列
+## LOAM系列
 
 ### Lego-LOAM
 
 ### LIO-SAM
 
-## Fast-LIO 系列
+## Fast-LIO系列
 
-## 多传感器融合 SLAM
+## 多传感器融合SLAM
 
 ### LIV-SAM
 

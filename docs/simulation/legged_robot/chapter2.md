@@ -1,8 +1,8 @@
 # spotmicro 仿真实例
 
-## **spotmicro 介绍**
+## **spotmicro介绍**
 
-Spotmicro 是由 [Deok-yeon Kim](https://www.thingiverse.com/KDY0523/about) 设计并发布在 [Thingiverse](https://www.thingiverse.com/thing:3445283) 上。虽然 spotmicro 外观与 spotmini 非常相似，但是其造价成本却远低于 spotmini，这是因为 spotmicro 内部的电子元器件大多数都是常见电子原件，而外壳等机械部分也多数采用了 3D 打印的方式，这些 3D 打印部分源文件均可在开源库中找到。价格相对优惠、机器狗各种细节完全开源，这都是 spotmicro 受到广泛欢迎的重要原因。此仿真例程，可以展现 spotmicro 作为足式机器人具备了良好通过性。
+Spotmicro是由[Deok-yeon Kim](https://www.thingiverse.com/KDY0523/about)设计并发布在[Thingiverse](https://www.thingiverse.com/thing:3445283)上。虽然spotmicro外观与spotmini非常相似，但是其造价成本却远低于spotmini，这是因为spotmicro内部的电子元器件大多数都是常见电子原件，而外壳等机械部分也多数采用了3D打印的方式，这些3D打印部分源文件均可在开源库中找到。价格相对优惠、机器狗各种细节完全开源，这都是spotmicro受到广泛欢迎的重要原因。此仿真例程，可以展现spotmicro作为足式机器人具备了良好通过性。
 
 `官方网页`
 
@@ -19,8 +19,8 @@ Spotmicro 是由 [Deok-yeon Kim](https://www.thingiverse.com/KDY0523/about) 设�
 论文：
 - Sen, Muhammed Arif & Bakircioglu, Veli & Kalyoncu, Mete. (2017). Inverse Kinematic Analysis Of A Quadruped Robot. International Journal of Scientific & Technology Research. 6.
 
-## **spotmicro gazebo 仿真演示**
-* 打开终端，输入以下命令，启动 gazebo 仿真环境
+## **spotmicro gazebo仿真演示**
+* 打开终端，输入以下命令，启动gazebo仿真环境
 
 ```
 roslaunch notspot run_robot_gazebo.launch
