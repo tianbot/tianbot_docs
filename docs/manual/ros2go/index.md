@@ -12,7 +12,7 @@
 包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准。
 :::
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109251636820.webp)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310241233148.jpg)
 
 ## 产品开箱
 
