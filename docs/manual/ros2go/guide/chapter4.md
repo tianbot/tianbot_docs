@@ -13,12 +13,12 @@
 
 ## 系统更新介绍
 
-ROS2GO随身系统，自从2018年11月11日推出到现在历数三年变化：
+ROS2GO随身系统，自从2018年11月11日推出到现在历数五年变化：
 
 ### 软件上更新迭代
 
-- 系统Ubuntu16.04+ROS Kinetic到Ubuntu18.04+ROS Melodic
-- 内核从Linux 4.4.0-Linux 5.13.0
+- 系统Ubuntu16.04+ROS Kinetic到Ubuntu18.04+ROS Melodic，再到ubuntu20.04+ROS Noetic
+- 内核从Linux 4.4.0 -> Linux 5.13.0 -> Linux 6.3.12
 - 系统更新36次
 - 用户级增量备份恢复Timeshift
 - 系统级原厂快照恢复ros2go_recovery
@@ -56,46 +56,68 @@ ROS2GO系统升级，简单来说只需要4步：
 
 ### 1.固件下载
 
-1. Ubuntu 20.04+ROS Noetic
-2. Ubuntu18.04+ ROS Melodic
-固件下载地址在技术支持企业微信群联系群主，支持IDM、迅雷等多线程下载工具
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201554838.png)
+下载最新固件
 
 ::: tip 提示
-- Windows下推荐直接下载和使用复制链接，使用迅雷等工具下载
-- linux下推荐使用`curl`和`wget`工具进行下载
+固件下载地址请在在ROS2GO技术支持企业微信群联系群主
+:::
+
+1. Ubuntu 20.04+ROS Noetic
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271626988.png)
+
+2. Ubuntu18.04+ ROS Melodic
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271628220.png)
+
+::: tip 提示
+下载方式：使用[百度网盘客户端](https://pan.baidu.com/download#)下载，如需加速下载，可以自行在拼多多搜索`百度网盘会员1天`
 :::
 
 ### 2.完整性校验
 
-下载最新固件
+在Windows上使用`git bash`进行校验
+
+::: tip 提示
+如果在Windows上没有安装`git bash`客户端，请先[安装git客户端](https://git-scm.com/download/win)
+:::
+
+`使用鼠标单击右键`(Windows11,右键选择显示更多选项)，并按住`Shift`键，然后点击`Open git Bash Here`，会以当前文件夹为工作目录打开git bash客户端
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271657439.png)
+
+然后输入如下命令
+
+```bash
+md5sum *   
+```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071352213.webp)
 
-使用如下命令进行数据校验
-```bash
-    md5sum *
-```
+1. 下载完后检查文件的md5值和md5sum.txt中记录的是否一致
+2. 如果无误再将解压后`firmware`下所有文件复制到`ROS2GO_DATA`下的`/ros2go_ota/firmware`文件夹中
+3. 确保`/ros2go_ota/firmware`下没有其他文件，如果有可以删除或者移动到其他位置
 
-下载完后检查文件的md5值和md5sum.txt中记录的是否一致，如果无误将firmware下所有文件复制到ROS2GO_DATA下/ros2go_ota/firmware中(确保底下没有其他文件，如果有可以删除或者移动到其他地方)，本步骤在windows、ubuntu下都可以操作。
-
+::: tip 提示
 如果空间不够，可以先将如下资料移出, 至其他位置， 升级完成后再移回即可
 - `0x01-基础类.iso`
 - `0x02-会议讲座.iso`
 - `0x03-视频课程.iso`
 - `0x04-古月推荐.iso`
 - `0x05-张瑞雷推荐.iso`
+:::
 
-
+此时你的`ROS2GO_DATA/ros2go_ota/firmware`目录应如下图所示
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071350446.webp)
 
 ### 3.进入恢复系统
-进入Puppy Rescue OS独立恢复系统下，选择C，全量OTA，输入yes，进度条走完即可自助更新升级ROS2GO到我们发布的任意系统。
+重启电脑，在引导界面选择`Puppy Rescue OS`进入，如发现无法进入图形界面，请参考[文章](/manual/ros2go/guide/chapter3#从virtualbox启动)使用 Virtual Box 虚拟机继续进行以下操作
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
+
+进入Puppy Rescue OS独立恢复系统下，选择C，全量OTA，输入yes，进度条走完即可自主更新升级ROS2GO到我们发布的任意系统。
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
-
-
 
 ### 4.升级成功
 
@@ -118,6 +140,6 @@ ROS2GO系统升级，简单来说只需要4步：
 ::: tip 预先准备
 1. 电脑 + Windows10及以上
 2. ROS2GO * 1
-3. ToDesk (远程桌面)
-4. ROS2GO 最新固件 
+3. [ToDesk](https://www.todesk.com/download.html) (远程桌面)
+4. ROS2GO [最新固件](/manual/ros2go/guide/chapter4#_1-固件下载)
 :::
