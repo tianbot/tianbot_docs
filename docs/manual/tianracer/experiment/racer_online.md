@@ -1,5 +1,7 @@
 # 比赛一 F1TENTH线上仿真赛
 
+最新内容请点击[这里](/competition/f1tenth_online/)
+
 ## 【比赛目标】
 
 - 参照2021ROS暑期学校F1TENTH线上仿真赛，可自行组织学生完成线上比赛，学生自行进行调参，以跑3圈所用时间为竞技标准
@@ -28,6 +30,5 @@ source devel/setup.bash
 ```shell
 roslaunch tianracer_navigation simulator_wall_following.launch
 ```
-
 
 这是我们的案例，师生可以此为参考进行比赛，目标是跑完三圈用时最短，可选用wall_following进行调参，或使用实验三介绍的纯跟踪算法，也可使用TEB局部规划器，或其他方法，方法不限。

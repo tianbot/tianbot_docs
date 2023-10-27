@@ -102,6 +102,11 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ],
         },
     ],
+    '/competition/': [
+        { text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
+        { text: 'F1TENTH 线上仿真赛', link: '/competition/f1tenth_online/' },
+        { text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' },
+    ],
     '/advanced/': [
         {
             text: '拓展提升',
@@ -284,8 +289,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '实验六 自主导航', link: '/manual/tianracer/experiment/chapter6' },
                   { text: '实验七 多点导航', link: '/manual/tianracer/experiment/chapter7' },
                   { text: '实验八 深度学习与视觉导航', link: '/manual/tianracer/experiment/chapter8'},
-                  { text: '线上挑战赛', link: '/manual/tianracer/experiment/racer_offline' },
-                  { text: '线下挑战赛', link: '/manual/tianracer/experiment/racer_online' },
+                  { text: '线上挑战赛', link: '/manual/tianracer/experiment/racer_online' },
+                  { text: '线下挑战赛', link: '/manual/tianracer/experiment/racer_offline' },
                 ],
               },
               {
