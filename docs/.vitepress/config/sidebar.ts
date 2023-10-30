@@ -104,7 +104,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     ],
     '/competition/': [
         { text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
-        { text: 'F1TENTH 线上仿真赛', link: '/competition/f1tenth_online/' },
+        { 
+          text: 'F1TENTH 线上仿真赛', 
+          collapsed: true,
+          items: [
+            { text: '比赛规则', link: '/competition/f1tenth_online/contest-rules' },
+            { text: '参赛手册', link: '/competition/f1tenth_online/contest-handbook' },
+            { text: '环境搭建', link: '/competition/f1tenth_online/test-and-submit' },
+            { text: '相关问题', link: '/competition/f1tenth_online/question-and-video' }  
+          ],
+        },
         { text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' },
     ],
     '/advanced/': [
@@ -291,13 +300,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '实验八 深度学习与视觉导航', link: '/manual/tianracer/experiment/chapter8'},
                   { text: '线上挑战赛', link: '/manual/tianracer/experiment/racer_online' },
                   { text: '线下挑战赛', link: '/manual/tianracer/experiment/racer_offline' },
-                ],
-              },
-              {
-                text: '仿真模拟',
-                collapsed: true,
-                items: [
-                  { text: 'Tianracer F1TENTH仿真', link: '/manual/tianracer/simulation/chapter1' },
                 ],
               },
               { text: '常见问题', link: '/manual/tianracer/question' },

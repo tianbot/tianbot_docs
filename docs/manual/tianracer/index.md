@@ -124,15 +124,6 @@ ROS端的底层驱动预置于配套的运算平台，代码开源，包含
 
 - [Tianracer实验](/manual/tianracer/experiment/)
 
-## F1TENTH仿真
+## F1TENTH 线上仿真赛
 
-- [F1TENTH_simulation](/manual/tianracer/simulation/chapter1)
-
-## 拓展提升
-
-- [参数调整开发指南](/advanced/params_config/)
-- [传感器标定开发指南](/advanced/sensor_calib/)
-- [计算机视觉开发指南](/advanced/cv/)
-- [运动控制开发指南](/advanced/motion_control/)
-- [激光SLAM开发指南](/advanced/lidar_slam/)
-- [视觉SLAM开发指南](/advanced/visual_slam/)
+- [F1TENTH_simulation](/competition/f1tenth_online/)
