@@ -1,6 +1,6 @@
 # 如何恢复 {#how-to-recover}
 
-## 系统恢复介绍
+## 系统恢复介绍 {#brief-of-recover-system}
 
 早期ROS2GO支持USB HDD和Live CD两种运行模式。Live CD模式下根分区文件系统不可修改，好处是这种模式系统怎么都玩不坏，但缺点就是系统重启后所有改动都会丢失；而USB HDD模式与一般OS无异，所有操作都会保留，但是不慎误操作搞坏文件系统，想要恢复就只能联系客服寄回重置。
 
@@ -16,7 +16,7 @@
 - 系统级原厂快照恢复`ros2go_recovery`
 - 文件系统级全量`OTA`
 
-## 恢复步骤
+## 恢复步骤 {#recovery-steps}
 
 ::: danger 注意
 请注意在使用系统恢复会抹除所有文件，在尝试恢复之前请确保重要文件已经备份，恢复是基于文件系统恢复，如果删除或者损坏了文件系统，如：格式化分区、rm-rf等破坏彻底的，则该恢复模式无法适用。
@@ -26,7 +26,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
 
-### 恢复方式选择
+### 恢复方式选择 {#choose-recovery-mode}
 
 - A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup-by-timeshift#bios-load-recover)
 
@@ -38,7 +38,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901810.webp)
 
-### 特殊情况
+### 特殊情况 {#special-cases}
 
 这种情况是在尝试过`A -Timeshift` ，`B ros2go_recovery`恢复失败之后，再进行尝试的方法，
 
@@ -56,7 +56,7 @@ Puppy Rescue OS独立恢复系统内核比较旧，某些电脑比较新，可�
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311334811.webp)
 
-### ROS2GO系统恢复工具
+### ROS2GO系统恢复工具 {#ros2go-recovery-tool}
 
 [恢复工具下载](https://pan.baidu.com/e/1OJHoi_Z3KXnSi_4zCzFSpQ)
 

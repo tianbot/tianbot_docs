@@ -1,4 +1,4 @@
-# 如何升级
+# 如何升级 {#how-to-upgrade}
 
 ::: danger 注意
 系统固件升级会丢失数据，在操作前请备份好数据，未备份导致个人数据丢失，天之博特不承担任何责任。
@@ -11,11 +11,11 @@
 如果不确定可以在售后群中进行确认，其他版本升级可以联系淘宝客服。
 :::
 
-## 系统更新介绍
+## 系统更新介绍 {#system-update-introduction}
 
 ROS2GO随身系统，自从2018年11月11日推出到现在历数五年变化：
 
-### 软件上更新迭代
+### 软件上更新迭代 {#software-update-iteration}
 
 - 系统Ubuntu16.04+ROS Kinetic到Ubuntu18.04+ROS Melodic，再到ubuntu20.04+ROS Noetic
 - 内核从Linux 4.4.0 -> Linux 5.13.0 -> Linux 6.3.12
@@ -24,7 +24,7 @@ ROS2GO随身系统，自从2018年11月11日推出到现在历数五年变化：
 - 系统级原厂快照恢复ros2go_recovery
 - 文件系统级全量OTA
 
-### 硬件上新增支持
+### 硬件上新增支持 {#hardware-add-support}
 
 - 新增AMD ZEN3架构CPU支持
 - 根分区文件系统采用zstd压缩算法，IO性能更佳
@@ -50,7 +50,7 @@ ROS2GO系统升级，简单来说只需要4步：
 3. 在启动项中选择`Boot Puppy Rescue OS`
 4. 选择`C` 全量`OTA`方式开始升级，进度条走完即可升级成功
 
-## 步骤详解
+## 步骤详解 {#step-details}
 
 请根据如下步骤逐步进行
 
@@ -74,7 +74,7 @@ ROS2GO系统升级，简单来说只需要4步：
 下载方式：使用[百度网盘客户端](https://pan.baidu.com/download#)下载，如需加速下载，可以自行在拼多多搜索`百度网盘会员1天`
 :::
 
-### 2.完整性校验
+### 2.完整性校验 {#2.integrity-verification}
 
 在Windows上使用`git bash`进行校验
 
@@ -110,7 +110,7 @@ md5sum *
 此时你的`ROS2GO_DATA/ros2go_ota/firmware`目录应如下图所示
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071350446.webp)
 
-### 3.进入恢复系统
+### 3.进入恢复系统 {#3.into-recovery-system}
 重启电脑，在引导界面选择`Puppy Rescue OS`进入，如发现无法进入图形界面，请参考[文章](/ros2go/guide/how-to-recover#from-virtualbox-start)使用 Virtual Box 虚拟机继续进行以下操作
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
@@ -119,7 +119,7 @@ md5sum *
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
 
-### 4.升级成功
+### 4.升级成功 {#4.upgrade-success}
 
 - 遇到Do you wish to run this program? 输入`yes`，然后按下Enter键即可
 - 遇到Press ENTER key to save session....的选项，选择`NO SAVE`，然后按下Enter键即可
@@ -130,10 +130,10 @@ md5sum *
 
 ::: info
 一般情况下，一次就可以了，但运气不好的话得2遍甚至3遍。
-如果2~3次之后，仍然无法正常启动，建议重新下载更新固件再尝试。
+`如果2~3次之后，仍然无法正常启动，建议重新下载更新固件再尝试`。
 :::
 
-### 5. 远程协助
+### 5. 远程协助 {#5.remote-assistance}
 
 如果升级过程中遇到难以解决的问题，淘宝联系客服并提供订单号，技术人员会远程协助你。
 

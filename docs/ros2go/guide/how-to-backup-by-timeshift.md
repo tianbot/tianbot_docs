@@ -18,13 +18,13 @@
 
 在ROS2GO中，所有密码均为ros
 
-### 查看当前备份
+### 查看当前备份 {#see-current-backup}
 
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221617818.png)
 
 
-### 备份格式
+### 备份格式 {#backup-format}
 
 由于ROS2GO的/目录是基于btrfs文件系统，所以可以看到，快照类型为BTRFS类型
 
@@ -35,28 +35,28 @@ BTRFS与RSYNC格式快照的存储方式不同，前者必须保存在btrfs格�
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221618116.png)
 
 
-### 创建定时任务
+### 创建定时任务 {#create-timed-task}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221620844.png)
 
 
-### 创建备份
+### 创建备份 {#create-backup}
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221623614.png)
 
 
-### 备份成功
+### 备份成功 {#backup-success}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221627857.png)
 
 
-### 恢复到某一个备份
+### 恢复到某一个备份 {#restore-to-a-backup}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221638656.png)
 
 
 ## 终端命令行使用 {#terminal-command-line-use}
 
-### 查看当前所有备份
+### 查看当前所有备份 {#see-all-backup}
 
 - 命令
 ```bash
@@ -94,7 +94,7 @@ Num     Name                 Tags  Description
 
 ```
 
-### 创建快照
+### 创建快照 {#creat-snapshot}
 
 - 命令
 ```shell
@@ -117,7 +117,7 @@ Tagged snapshot '2023-10-09_21-29-26': ondemand
 ------------------------------------------------------------------------------
 ```
 
-**确认快创建状态**
+### 确认快创建状态 {#confirm-snapshot-status}
 
 ```bash
 (.ros2) tianbot@ros2go:~$ sudo timeshift --list
@@ -158,7 +158,7 @@ Num     Name                 Tags  Description
 - 手动创建  ：O      
 - 描述信息：test-backup 
 :::
-### 恢复到某个快照
+### 恢复到某个快照 {#recover-to-a-snapshot}
 
 此处以刚才保存的快照`2023-10-09_21-29-26`为例，对应着刚才保存的备份`test-backup`
 - 命令
@@ -227,7 +227,7 @@ Snapshot will become active after system is rebooted.    ## 根据提示，恢�
 - 恢复完成后需要重启系统
 :::
 
-### 其他命令 
+### 其他命令 {#other-command}
 
 常用命令举例
 
@@ -266,15 +266,15 @@ sudo timeshift --help
 - 键盘的上下方向键调整选项
 - 选择完成后，按下Enter键确认
 :::
-### 如何进入快照恢复界面
+### 如何进入快照恢复界面 {#how-to-enter-the-snapshot-recovery-interface}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310092215261.jpeg)
 
-### 如何选择恢复的快照
+### 如何选择恢复的快照 {#how-to-choose-the-snapshot-to-restore}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310092217838.jpeg)
 
-### 如何选择恢复的快照内核版本
+### 如何选择恢复的快照内核版本 {#how-to-choose-the-kernel-version-of-the-snapshot}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310092220448.jpeg)
 

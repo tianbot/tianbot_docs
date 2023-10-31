@@ -217,7 +217,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   {
                     text: 'Navigation2',
                     collapsed: true,
-                    link: `/ros2go/ros/navigation/`,
+                    link: `/ros2go/navigation/`,
                     items: [
                       { text: 'Nav2的安装', link: '/ros2go/navigation/nav2-install' },
                       { text: 'TurtleBot3仿真', link: '/ros2go/navigation/turtlebot3-nav2-sample' },
