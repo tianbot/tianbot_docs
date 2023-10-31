@@ -36,7 +36,7 @@ roslaunch tianbot_mini teleop.launch
 rostopic list
 ```
 
-![](https://img.kancloud.cn/d5/a4/d5a420f298e1107ce1a1bdeab62935ef_319x232.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311612382.webp)
 
 添加键盘遥控，并没有新增新的话题，但小车为什么还能移动？
 
@@ -44,7 +44,7 @@ rostopic list
 
 我们使用rostopic echo 分别监听各个话题，同时键盘遥控小车，发现cmd_vel话题随键盘控制发出了信息，上一小节我们使用`rostopic list -v`发现cmd_vel是subscribed topic,说明cmd_vel与小车运动相关。
 
-![](https://img.kancloud.cn/99/20/9920f5b4ed360da037c026e502b3677a_549x164.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311613340.webp)
 
 实际上，cmd_vel发布Twist信息，包含了机器人期望前进速度和转向速度。
 
@@ -64,7 +64,7 @@ Angular:
     Z:0.0
 ```
 
-![](https://img.kancloud.cn/1a/77/1a77ea87bf069638ec2b16f871e866f6_733x181.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311613914.webp)
 
 将angular的z改为0.8，就可看到Tianbot_mini开始转圈，我们就完成了rostopic pub 控制机器人移动
 ### 3.Rqt时机器人移动
@@ -74,7 +74,7 @@ Rqt图形化的方式使机器人运动起来
 
 rqt直接打开,按下图配置，z轴设为1.8，Tianbot_mini开始原地转圈。
 
-![](https://img.kancloud.cn/d8/4e/d84e11934dad8dc5ede6efd7fa940d84_601x482.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311613119.webp)
 
 ```shell
 rostopic echo /tianbot_mini/odom
@@ -94,5 +94,5 @@ base_laser:激光雷达的坐标系，与激光雷达的安装点有关
 
 按住小车走一下，观察里程计的变化
 
-![](https://img.kancloud.cn/2e/7a/2e7a6b7ba94bb8e818aa98043ae00217_727x483.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311614359.webp)
 

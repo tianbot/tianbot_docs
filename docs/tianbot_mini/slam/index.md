@@ -50,4 +50,4 @@ roslaunch tianbot_mini teleop.launch
 
 首先启用键盘控制节点控制Tianbot_mini移动完成对周围环境的建图，使用`Rviz`中粉红色的`2D Nav Goal`选一个点让mini移动到目标点处。
 
-![](https://img.kancloud.cn/d8/2b/d82b960b33a6db0ce5e5e1354fcd4941_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311358135.webp)

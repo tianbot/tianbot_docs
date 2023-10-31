@@ -1,11 +1,3 @@
-<!--
- * @Description: 
- * @version: 
- * @Author: sujit-168 
- * @Date: 2023-10-18 14:47:07
- * 
- * Copyright (c) 2023 by Tianbot , All Rights Reserved. 
--->
 # 增加IMU工具
 
 **视频地址**
@@ -44,6 +36,7 @@ sudo apt-get install ros-noetic-imu-tools
 ```shell
 rospack profile
 ```
-![](https://img.kancloud.cn/54/e7/54e72512c8665e2103b5021f83926753_1128x537.png)
 
-![](https://img.kancloud.cn/34/07/3407fb05da58c473c35cf4df26db2f7f_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311453279.webp)
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311453125.webp)

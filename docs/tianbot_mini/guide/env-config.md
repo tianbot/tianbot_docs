@@ -21,7 +21,7 @@ ROS2GO必须正常关机后才能拔出，直接拔出会损坏系统。
 1. 长按电源按钮3秒，蜂鸣器响起，激光雷达转动，系统状态灯黄灯闪烁，此时设备进入热点模式。
 2. 热点模式持续30秒，迷你机器人会创建TBMINI-XXXX热点，该热点未加密，我们使用电脑连接该热点，系统状态指示灯变为绿色。
 
-![](https://img.kancloud.cn/44/93/4493f767fd25dfc28fc2b4c05d7cada2_6290x3098.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311428190.png)
 
 ::: info 注意
 TBMINI-XXXX热点相当于2.4G频段，如果周边同频段比较多，可能会干扰。
@@ -40,6 +40,6 @@ TIANBOT MINI机器人长按关机键即可正常关机
 roslaunch tianbot_mini demo_slam.launch
 ```
 
-![](https://img.kancloud.cn/7a/cd/7acd3a7a4bd377be6ad53cccec3c53c3_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311421934.webp)
 
-![](https://img.kancloud.cn/25/91/25911a20c5ac9d5ef5eeb1ad22d74df1_2444x1702.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311421240.webp)

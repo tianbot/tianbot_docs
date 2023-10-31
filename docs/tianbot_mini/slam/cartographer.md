@@ -44,12 +44,11 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 ```
 :::
 
-
 安装包的位置，安装cartographer在src下
 
 补充工作空间和安装包：
 
-![](https://img.kancloud.cn/8e/02/8e023452491101d38070271de740ace8_956x302.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311521170.webp)
 
 在主文件夹下tianbot_mini_ws是工作空间，工作空间下src目录下的是安装包。
 工作空间（workspace）是一个存放工程开发相关文件的文件夹，里面包括有：
@@ -71,8 +70,7 @@ rospack profile
 ```shell
 rospack list | grep tbm_slam
 ```
-
-![](https://img.kancloud.cn/c7/09/c709908119671e6b60038cd1e634ba74_727x57.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311521084.webp)
 
 这样就安装成功。
 
@@ -96,19 +94,19 @@ roslaunch tbm_slam_cartographer slam_laser.launch
 
 此处可能会报错 ,原因是版本更替是因为雷达的话题名字错误
 
-![](https://img.kancloud.cn/4b/4e/4b4eb15b519d55f4592e250dd2f613ac_893x405.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311519015.webp)
 
 改过来后，可以手拿对周围的环境建图，速度要慢，走太快的话建图效果不好，纯激光。
 
 添加MarkerArray就可以看到轨迹：
 
-![](https://img.kancloud.cn/f7/10/f7106e74a311971b86fda6dc6edf7f58_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311522408.webp)
 
 轨迹是根据激光来算出来的，并没有融合IMU。
 
 复制slam_laser.launch并重命名lds_slam_laser.launch删掉cmd_vel和Move_base后同样可以移动，但删去TF变换就不行了，说明TF变换和话题一样很重要。
 
-![](https://img.kancloud.cn/a1/18/a1182f0dc76fe9bb891dac687c3c2b32_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311522704.webp)
 
 此时再启动打开RViz构建地图与之前slam_laser.launch效果相同。
 
@@ -142,16 +140,16 @@ Ifconfig找到IP地址，输入到APP中，点击Connnct
 
 有一个/imu的话题
 
-![](https://img.kancloud.cn/4a/41/4a41943f7e8f30a1e876eff1db34ca9d_671x114.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311523104.webp)
 
 成功连接之后 rostopic echo /imu 就可以看到数据
 只看一次的话 rostopic echo.imu -n1
 
-![](https://img.kancloud.cn/a4/e6/a4e6f01e8bff87fb803358a8fe55998f_737x480.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311523310.webp)
 
 直接打开rviz,增加imu，选择imu，就可以看到坐标系的变化
 
-![](https://img.kancloud.cn/c0/ea/c0ea429e18e2600bca307bb1d6870270_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311523973.webp)
 
 此时沿Z轴方向也就是上下移动小车，可观察到明显的大小变化。
 
@@ -160,15 +158,15 @@ Tracking_frame=’imu’
 
 Use_imu_date=true
 
-![](https://img.kancloud.cn/5e/2c/5e2c808c969662bf02c201650a65b3eb_1112x263.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311524704.webp)
 
-![](https://img.kancloud.cn/01/35/0135f6f46d69bf41e5a302994f19d4e7_748x172.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311524856.webp)
 
 复制lds_cartographer.launch为lds_cartographer_imu.launch
 
 配置文件lds_laser_imu.lua，话题对，TF要对，TF复制，laser改为imu，上边的arg name 也对应的复制粘贴
 
-![](https://img.kancloud.cn/6a/39/6a39310323c8e41d7aae372f9029d3ea_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311522704.webp)
 
 有IMU的存在效果会好一些
 
@@ -199,11 +197,11 @@ roslaunch tbm_slam_cartographer lds_cartographer_imu.launch
 注意：
 如果手机IMU未成功连接，会出现下图警告：
 
-![](https://img.kancloud.cn/c8/4e/c84e0e975d152e175b75142414b234ed_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311553179.webp)
 
 在确定手机端IMU已连接的情况下，可重启手机端IMU的APP
 此时先不固定手机，小车放置不动，仅移动手机就可看到地图的变化，说明IMU确实在工作。
 
-![](https://img.kancloud.cn/fc/3b/fc3bb33f06fc1b68f9abaa6f2e9485ed_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311553675.webp)
 
 此时将手机固定到MIMI的支架上，就可以移动建图。

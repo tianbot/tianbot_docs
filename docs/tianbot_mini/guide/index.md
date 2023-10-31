@@ -4,7 +4,7 @@
 
 在检查收到产品无误后，需要将两根短天线安装在迷你机器人上，将一根长天线安装在接收器上，如下图所示：
 
-![](https://img.kancloud.cn/44/93/4493f767fd25dfc28fc2b4c05d7cada2_6290x3098.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311428190.png)
 
 - 充电接口：5V充电器(推荐使用5V2A充电器)
 - 开关机：长按3秒，蜂鸣器响起，开机或者关机
@@ -40,7 +40,7 @@
 
 首先，同时按下配网按钮和开关机按钮，等待蜂鸣器发出响声，听到响声后仅松开电源键按钮，继续按住配网键按钮，等待系统状态指示灯由**红->蓝->紫**，此时小车进入自检模式。
 
-![](https://img.kancloud.cn/44/93/4493f767fd25dfc28fc2b4c05d7cada2_6290x3098.png){data-zoomable}
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311428190.png)
 
 ## 网页遥控
 

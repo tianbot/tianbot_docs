@@ -10,16 +10,16 @@
 ## Arduino Nano的使用
 首先选择单片机型号和串口号
 
-![](https://img.kancloud.cn/87/7f/877f7a58b9b122a2ced638ba478da316_395x129.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311431075.webp)
 
 点击工具，开发板选为Arduino Nano，选择Arduino所在的端口
 点击文件，实例，01basic，Blink
 
-![](https://img.kancloud.cn/16/7e/167e575474abb8d47dce444493858c3d_804x249.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311432421.webp)
 
 结合我们实际的电路板，我们需要把LED_BUILTIN改为4
 
-![](https://img.kancloud.cn/09/43/0943d5624d75cfab1aa594b6d2e04b84_785x235.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311432923.webp)
 
 就是通过输出高低电平控制灯的亮灭。
 
@@ -31,11 +31,11 @@
 
 新打开Arduino的示例程序，编辑如下：
 
-![](https://img.kancloud.cn/77/22/7722b850d9916391559f3504e1f3d66e_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311433461.webp)
 
 将板子连接电脑后打开串口监视器，一定要把底部的波特率改为115200
 
-![](https://img.kancloud.cn/67/d4/67d4551551c75edebaf41e3ce9a5726c_994x569.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311433745.webp)
 
 将MINI与Arduino连接起来，先将灯带的4线一端与MINI的同端口相连，再用杜邦线把灯带与Arduino的VCC，GND，TX，RX连接在一起。
 
@@ -47,7 +47,7 @@
 
 将程序改为如下，拔下四线端口，将程序烧进Arduino
 
-![](https://img.kancloud.cn/4e/0f/4e0f94114a3e5eb4ac8541272a67318b_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311433300.webp)
 
 此时第二颗灯就开始间歇性的亮灭。
 

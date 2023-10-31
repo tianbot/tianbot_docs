@@ -18,7 +18,7 @@
 
 - http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
 
-![](https://img.kancloud.cn/b8/ef/b8efb4c4889bf8f2aebad19118b228ee_1084x814.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311606478.webp)
 
 Python有严格的空格，请直接取掉行号直接复制到创建好的listener.py中：
 
@@ -34,16 +34,16 @@ python listener.py
 
 可以看到什么都没有
 
-![](https://img.kancloud.cn/2c/02/2c0249ea4199277ed9c763943a281dc1_509x169.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311607401.webp)
 
 
 再看一下上节课提到的/chatter话题
 
-![](https://img.kancloud.cn/49/7f/497fbcb8931b0bceaa0ff2d4f7bc9819_558x109.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311607920.webp)
 
 还是没有信息
 
-![](https://img.kancloud.cn/df/05/df05b674cbb95d8890f5a98985434df2_738x399.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311608098.webp)
 
 我们使用`rostopic pub`给他发布消息
 
@@ -51,9 +51,11 @@ python listener.py
 
 我们把listener.py里的话题名字`/chatter`改为`/tianbot_mini/info`
 
-![](https://img.kancloud.cn/f4/4a/f44ad42264b10ee0e48bc07aa062e93c_835x487.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311608215.webp)
 
-![](https://img.kancloud.cn/26/46/264655067f2c2fc549d016a3582ea1b5_941x526.png)
+修改如下图
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311609810.webp)
 
 在观察info的话题类型
 
@@ -77,4 +79,4 @@ python listener.py
 
 可以看到`listener`在打印`/tianbot_mini/info`的信息
 
-![](https://img.kancloud.cn/52/c1/52c19c24cfda1ee79fca390604d4b4d5_724x402.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311609799.webp)

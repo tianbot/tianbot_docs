@@ -33,7 +33,7 @@ rostopic pub /tianbot_mini/tts std_msgs/String "data: '今天和王老师学习�
 
 建立python文件，在对应的文件下打开
 
-![](https://img.kancloud.cn/08/8e/088efad4e3b314f9f856de7c0dd2e210_727x334.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311455673.webp)
 
 ```shell
 python tbm_asr_decode.py

@@ -1,6 +1,5 @@
 # 收货清单
 
-
 TIANBOT迷你机器人在发货之前已测试确保每一个都可以正常使用，开箱后请您检查产品及其配件完整以及运输过程中是否造成损坏，如有问题您及时联系客服，我们尽快为您处理。
 
 ## Tianbot mini收货清单
@@ -17,7 +16,7 @@ TIANBOT迷你机器人在发货之前已测试确保每一个都可以正常使�
 |4| Micro USB 数据线 | 1 | 具体型号不固定，以实物为准 |
 |5| ROS2GO随身系统 | 1 | ![](https://static.tianbot.com/product/20221215/895f7d17552d3f037af36e155ee80aeb.png) |  
 
-![](https://img.kancloud.cn/c1/e2/c1e21cbf765ba7dbeb432d4cfad5cde2_1240x535.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311355455.webp)
 
 产品迭代相关包清单可能变动以收到实物为准。
 

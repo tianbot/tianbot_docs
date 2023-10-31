@@ -46,8 +46,6 @@ if __name__ == '__main__':
         pass
 ```
 
-![](https://img.kancloud.cn/82/be/82be8eb2439e2b4446b25a2b6874ca1d_773x420.png)
-
 启动小车，成功连接MINI，运行
 
 ```shell
@@ -91,7 +89,7 @@ rostopic pub /tianbot_mini/led std_msg
 
 此处一直使用`Tab`键补齐
 
-![](https://img.kancloud.cn/50/33/50338edc0f56b19fdf0cd8264c159f50_715x73.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311604541.webp)
 
 此时我们把talker.py里面对应话题/chatter 的话题名、消息类型、消息内容改为/tianbot_mini/led对应的的就可以点灯了
 
@@ -121,8 +119,6 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException:
         pass
 ```
-
-![](https://img.kancloud.cn/62/2d/622d80a6f03e49efc4c59900f593abf2_875x464.png)
 
 ### 2.ROS编程基础三要素
 

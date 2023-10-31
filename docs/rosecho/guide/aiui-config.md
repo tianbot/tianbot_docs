@@ -100,7 +100,7 @@ adb push xxxxxxxx.jet /sdcard/AIUI/tts/xiaoyan.jet
 
 AIUI有安卓手机控制端，扫描下面二维码进行安装。
 
-![](https://img.kancloud.cn/5c/80/5c808b816e60eb6d1f3787d720208799_164x164.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311347937.webp)
 
 可以配置APPID等、选择场景、屏蔽后处理和串口功能等。`配置不正确会导致产品不能正常工作！`
 

@@ -51,6 +51,6 @@ python cvzone_hands.py
 ```
 就可以看到：
 
-![](https://img.kancloud.cn/db/36/db3692ee8737b36bb584f108361b8263_636x482.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311423029.webp)
 
 cvzone官方的代码似乎更新了，与视频中的代码存在差异，笔者在测试时发现单手可以，双手会发生闪退，此处需要自行把握。
