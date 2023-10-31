@@ -1,6 +1,6 @@
 # 比赛一 F1TENTH线上仿真赛
 
-最新内容请点击[这里](/competition/f1tenth_online/)
+`想要了解更多内容`，请点击[这里](/competition/f1tenth_online/)
 
 ## 【比赛目标】
 
