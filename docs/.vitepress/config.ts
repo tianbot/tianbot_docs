@@ -15,7 +15,7 @@ export default withMermaid(
       title: metaConfig.title,
       description: metaConfig.description,
       locales: metaConfig.locales, //多语言
-      cleanUrls: true,        // 开启纯净链接无html
+      // cleanUrls: true,        // 开启纯净链接无html
 
       //启用深色模式
       appearance:true,        // 默认浅色且开启切换
