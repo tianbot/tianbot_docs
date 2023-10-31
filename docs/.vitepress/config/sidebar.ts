@@ -401,14 +401,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: '🚁 ROBOMASTER TT文档',
             collapsed: true,
             items: [
-              { text: '注意事项', link: '/notice' },
               { text: '开箱说明', link: '/rmtt/list' },
               { text: '使用手册', link: '/rmtt/' },
               { text: '实验手册', link: '/rmtt/experiment/' },
               { text: '更新日志', link: '/rmtt/changelog' },
             ],
           },
-    
           {
             //分组标题6
             text: '📢 ROSECHO 文档',
