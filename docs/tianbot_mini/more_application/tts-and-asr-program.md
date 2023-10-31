@@ -13,7 +13,7 @@
 
 并修改话题名称
 
-![](https://img.kancloud.cn/d4/4b/d44b2d4e62587cd6063b5c856c1264ce_880x442.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311639760.webp)
 
 直接启动
 
@@ -29,6 +29,6 @@ roslaunch rosecho rosecho.launch
 
 在对应的文件夹下运行`python sub.py`
 
-![](https://img.kancloud.cn/47/50/47507c42fe00979c83c588bc51b27418_786x464.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311640624.webp)
 
 此时ROSECHO就可将说的话转化为文字
