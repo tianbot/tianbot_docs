@@ -10,9 +10,9 @@ ROS机器人集群的仿真与实践详解三：ROS入门无人机
 
 使用RMTT前，需要配置网络
 
-![](https://img.kancloud.cn/2f/92/2f92373de6a36cb573887f8d0ee1463d_1920x1440.jpg)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311337038.webp)
 
-将这个按钮拨到下面，此时开机电脑就能收到RMTT的WIFI信号，连接上后，配置RMTT连接到路由器的WIFI
+将这个按钮拨到下面，此时打开电脑WiFi，搜索以RMTT-XX开头的热点信号，将电脑WiFi连接至该热点后，即可执行如下命令配置RMTT连接到路由器的WIFI
 
 ```shell
 roscd rmtt_driver/scripts
@@ -24,7 +24,7 @@ roscd rmtt_driver/scripts
 
 `TianbotOffice`是笔者的路由器名字，`www.tianbot.com`是笔者的路由器密码，仅需改为你的就OK
 
-![](https://img.kancloud.cn/b7/d7/b7d75d0c3cabade9a2394d435c69b3f3_958x96.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311338112.webp)
 
 此时就已经配网成功，将按钮拨到上面，切换到路由模式，半分钟左右，飞机的扇叶就开始旋转，每当RMTT成功连接路由器后都会开启扇叶旋转
 查询RMTT的IP地址
@@ -36,36 +36,40 @@ roscd rmtt_driver/scripts
 
 ### 启动RMTT
 
+::: tip 提示
+在执行如下命令之前，请将所有已经打开的终端关闭，否则会引起IP错误导致的等待问题
+:::
+
+:::warning 注意
+`192.168.0.215` 就是`./rmtt_scan_ip.py`查询到的IP地址
+:::
+
 ```shell
 roslaunch rmtt_driver rmtt_bringup.launch drone_ip:=192.168.0.215
 ```
-![](https://img.kancloud.cn/e0/fe/e0fe3bc44a3701711a3eff939ffba5bc_734x484.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311339264.webp)
 
-`192.168.0.215` 就是`./rmtt_scan_ip.py`查询到的IP地址
-此时添加机器人的描述信息
-
-
+打开一个终端，输入如下命令即可启动rviz
 ```shell
 roslaunch rmtt_description rmtt_description.launch
 ```
-直接启动
-打开Rviz，新打开一个终端Rviz
-按照如图所示配置即可
 
-![](https://img.kancloud.cn/4f/a9/4fa98547e4280aeef98c4bb79ef4dd79_1920x1080.png)
+之后按照如图所示添加配置项，即可添加机器人的描述信息
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311340179.webp)
 
 观看RMTT发布的话题信息
 ```shell
 rostopic echo /tof_btm
 ```
 
-![](https://img.kancloud.cn/75/5a/755a67d632631bc73ae3ca2f8da7935f_740x477.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311341311.webp)
 
 ```shell
 rostopic echo /altitude
 ```
 
-![](https://img.kancloud.cn/93/70/9370d7be90402fa5738c13c5ca578dcd_594x395.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311341525.webp)
 
 ```shell
 rostopic hz /imagine
@@ -110,7 +114,7 @@ angular:
 rosservice list
 ```
 
-![](https://img.kancloud.cn/f9/dd/f9dd8bdc5a1dbe415904bf88a3d6512a_501x130.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311341457.webp)
 
 普通地图为`/set_downvision`,夜光地图为`/set_hdmap`
 
@@ -131,21 +135,21 @@ data是布尔型，将默认的False改为True
 rostopic pub /takeoff std_msgs/Empty
 ```
 
-![](https://img.kancloud.cn/3e/10/3e10ba76cbdbb6d3da9d204336bc4353_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311342040.webp)
 
 ### 不同情况下的TF树
 
 这是开启TF后的效果
 打开rqt观察一下TF树
 
-![](https://img.kancloud.cn/71/40/714045c94c298ed7c9bc9281f570a127_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343285.webp)
 
 当没有使用
 ```shell
 rosservice call /set_downvision "data: True"
 ```
 
-![](https://img.kancloud.cn/f7/70/f7706ae7f5754e00c9295fe29117a76d_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343654.webp)
 
 时TF树为
 我们还开始关联到world坐标系
@@ -156,7 +160,7 @@ rosrun tf static_transform_publisher 0 0 0 0 0 0 world /map 20
 
 此时的TF树为
 
-![](https://img.kancloud.cn/13/dd/13ddaafed06eb26ae8973a44b581c70c_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311344068.webp)
 
 三个TF树反应了不同坐标系下的TF关系，值得深思！
 

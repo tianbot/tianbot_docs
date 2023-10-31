@@ -44,7 +44,7 @@ rosrun tf static_transform_publisher 0 0 0 0 0 0 world tbmn_02/odom 20
 
 打开Rviz
 
-![](https://img.kancloud.cn/00/51/0051598e1cb2e21adf3cf8eefdeb4f00_1255x823.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311356045.webp)
 
 此时移动MINI，Rviz中的模型也会跟着移动（轮子要转，使用的是odom）
 

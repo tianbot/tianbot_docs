@@ -14,21 +14,23 @@
 ```shell
 roslaunch rosecho rosecho.launch
 ```
-![](https://img.kancloud.cn/ab/22/ab22416ef9ca19127f810fdb63e93db8_735x488.png)
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311555552.webp)
 
 如是则为启动成功
 
 看一下话题
 
-![](https://img.kancloud.cn/8e/82/8e82c874615abe03fd19b302d126a11b_732x487.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311555584.webp)
 
 运行`rosrun rosecho asr_echo.py`即可将说出的话打印到屏幕上
 
-![](https://img.kancloud.cn/16/97/16978d363950ff6fd8b5bf0b1945c5e6_950x181.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311556281.webp)
+
 
 还可以这样，打文字是智能音箱发出声音
 
-![](https://img.kancloud.cn/5f/00/5f007e853ebf64d05c4133d851688657_736x267.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311556113.webp)
 
 ::: info 提示
 多用Tab键补齐

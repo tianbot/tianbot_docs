@@ -1,7 +1,7 @@
 # Move_Base 框架分析
 
 ## Move_Base
-![](https://img.kancloud.cn/48/e6/48e6e3620e13dc386994d1208383882c_1194x553.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311621008.webp)
 
 右部：
 
@@ -22,18 +22,18 @@
 
 http://wiki.ros.org/costmap_2d
 
-![](https://img.kancloud.cn/c2/03/c203a95b8a7ed1ac57fd0ef84a1ad3b0_236x207.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311622004.webp)
 
 - 图片来源http://wiki.ros.org/costmap_2d
 
 上图中，四周的红色边界代表代价地图中的障碍物，蓝色单元格代表被机器人内接半径膨胀的障碍物，红色多边形代表机器人的足迹。*为了机器人避免碰撞，机器人的足迹不应与红色单元格相交，机器人的中心点不应与蓝色单元格相交
 
-![](https://img.kancloud.cn/9d/bb/9dbb64d6e6052656a154ea938a46c411_405x266.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311621545.webp)
 
 - 图片来源http://wiki.ros.org/costmap_2d*
 翻译过来，也就是：
 
-![](https://img.kancloud.cn/4e/53/4e53f5e294d2237a1a498bf8009e4963_1174x590.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311621301.webp)
 
 ## Global_planner
 
@@ -46,12 +46,12 @@ ROS官方导航功能包有Dijkstra和A*算法，默认Dijkstra
 Dijkstra广度优先，A深度优先，Dijkstra算法计算源点到其他所有点的最短路径长度，A关注点到点的最短路径(包括具体路径)，Dijkstra算法的实质是广度优先搜索，是一种发散式的搜索，所以空间复杂度和时间复杂度都比较高。对路径上的当前点，A*算法不但记录其到源点的代价，还计算当前点到目标点的期望代价，是一种启发式算法
 如图为Dijkstra广度优先
 
-![](https://img.kancloud.cn/97/45/97451dec269ee2469e06c3e152384197_398x282.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311622001.webp)
 
 图片来源http://wiki.ros.org/global_planner
 如图为A*深度优先
 
-![](https://img.kancloud.cn/b1/f3/b1f391e21df4a5caca8115ba1995e05b_398x282.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311622305.webp)
 
 图片来源http://wiki.ros.org/global_planner
 
@@ -71,11 +71,11 @@ DWA都是状态采样，先假设小车在什么位置，再根据这个位置�
 http://wiki.ros.org/amcl
 自适应蒙特卡洛定位，粒子滤波就是用了蒙特卡洛思想的方法，把粒子滤波用到定位上就叫做蒙特卡洛定位，粒子滤波包括初始化计算权重、重采样、状态转移
 
-![](https://img.kancloud.cn/d4/3f/d43f92ed070e0d434901e859f1c5c4d8_898x573.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311623859.webp)
 
-开了导航节点的tf关系图，从map开始通过amcl广播，Map和odom combined的关系，再由ekf节点拓展卡尔曼功能包转换到小车的底座，拓展卡尔曼滤波处理的是里程计数据，
+开了导航节点的tf关系图，从map开始通过amcl广播，Map和odom combined的关系，再由ekf节点拓展卡尔曼功能包转换到小车的底座，拓展卡尔曼滤波处理的是里程计数据
 
-![](https://img.kancloud.cn/e6/dc/e6dc905c5f39363fd66df0206b8c1b1a_1100x662.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311623395.webp)
 
 - 图片来源http://wiki.ros.org/amcl*
 

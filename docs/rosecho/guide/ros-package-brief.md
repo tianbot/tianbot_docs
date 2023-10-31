@@ -4,11 +4,11 @@
 
 源码：https://github.com/tianbot/rosecho
 
-![](https://img.kancloud.cn/23/99/239963ef111694511e02157421f5e82f_450x765.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311353466.webp)
 
 ## rosecho节点信息
 
-![](https://img.kancloud.cn/dc/37/dc37f55ac3efb54752e1be1976af092e_510x411.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311353818.webp)
 
 ### 话题
 

@@ -53,7 +53,7 @@ TIANBOT迷你机器人产品区别于传统ROS小车，创造性的去掉了传�
 
 ### 硬件架构
 
-![](https://img.kancloud.cn/42/71/42710ac125aa5a0906c59552f586712f_1642x534.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311412328.webp)
 
 底层TBM智能控制器，主要完成实时各种任务：
 
@@ -70,15 +70,15 @@ TIANBOT迷你机器人产品区别于传统ROS小车，创造性的去掉了传�
 
 - 单机模式（默认启动）
 
-![](https://img.kancloud.cn/72/5a/725a934a7fee3f109b1d961152d9c7d5_964x400.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311413611.webp)
 
 - 多机模式
 
-![](https://img.kancloud.cn/90/6d/906d039c34b7f33f98d630f541a56812_976x793.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311413754.webp)
 
 ### 软件架构
 
-![](https://img.kancloud.cn/08/aa/08aae4030a1e84b0c9a8f063b25609c6_1803x1062.jpg)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311414448.webp)
 
 保修政策
 

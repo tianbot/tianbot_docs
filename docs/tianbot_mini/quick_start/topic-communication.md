@@ -72,13 +72,13 @@ def callback(data) :
     tianbot_move_cmd = Twist()
 
     if data.pose.pose.orientation. w > -0.66:
-        tianbot_move_cmd.angular.z=0.8
+        tianbot_move_cmd.angular.z = 0.8
         pub.publish(tianbot_move_cmd)
 
     else:
-        if data.pose.pose.orientation.w<-0.76:
-            tianbot_move_cmd.angular.z=-0.8
-            pub . publish(tianbot_move_cmd)     #相定义的
+        if data.pose.pose.orientation.w < -0.76:
+            tianbot_move_cmd.angular.z = -0.8
+            pub.publish(tianbot_move_cmd)     #相定义的
 
 def listener() :
     rospy.init_node('listener', anonymous=True)
@@ -91,8 +91,6 @@ if __name__== '__main__' :
     listener()
 
 ```
-
-![](https://img.kancloud.cn/9d/e6/9de631dcfafcedb4bc03bc695a31f735_1035x774.png)
 
 此时在juejiang_tianbot.py对应的文件夹下
 运行

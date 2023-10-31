@@ -12,11 +12,11 @@ ROSECHO有多种配置网络的方式。如果在Ubuntu下配网，可以略过�
 
 用MicroUSB数据线将ROSECHO接入电脑，打开AIUI串口调试助手（无需安装）。如果您在`串口`下拉菜单中有多个设备，就需要在设备管理器中查看CP210X设备的端口号
 
-![](https://img.kancloud.cn/a6/aa/a6aade5f8439ff9c7ad794596a6bfc37_407x50.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311349508.webp)
 
 如图所示，这里选择串口为COM4，波特率为`115200`，点击打开。
 
-![](https://img.kancloud.cn/10/c1/10c1feb4b674a639bb9e398903ae1726_413x168.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311350134.webp)
 
 成功连接后，打开该按钮会变灰。然后点击WIFI配置，输入需要接入的网络SSID和密码。
 
@@ -26,7 +26,7 @@ ROSECHO有多种配置网络的方式。如果在Ubuntu下配网，可以略过�
 
 然后点击WIFI状态查询，此时在右边的控制台可以看到
 
-![](https://img.kancloud.cn/c3/db/c3db21981b1f2976cd461926e5ed68a0_543x37.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311350550.webp)
 
 这说明网络已经连接成功。
 ### 语音对话测试
@@ -55,7 +55,8 @@ cd ~/catkin_ws && catkin_make
 ### 启动ROSECHO
 
 用自带的`MicroUSB`线将`ROSECHO`与电脑连接。可以在终端中输入`lsusb`命令查看是否增加了一个`cp210x`的USB转串口设备以确定连接无误。
-![](https://img.kancloud.cn/2d/de/2dde8489603b852c767ad0bcf71741e4_724x38.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311351991.webp)
+
 启动ROSECHO的驱动节点
 ```shell
 roslaunch rosecho rosecho.launch
@@ -67,7 +68,7 @@ roslaunch rosecho rosecho.launch
 roslaunch rosecho rosecho.launch serial_port:=/dev/ttyUSB1
 ```
 启动成功后，屏幕会有如下显示
-![](https://img.kancloud.cn/63/7b/637bcc113889fde47899af9634eaaacc_450x96.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311351604.webp)
 
 ### 配置网络
 
@@ -84,7 +85,7 @@ rosservice call /rosecho/wifi_cfg "ssid: 'tianbot' password: 'www.tianbot.com'"
 语音交互功能首先需要进行语音识别。
 
 语音识别的结果是通过`/rosecho/asr`输出的，但是因为`python`对于`utf-8编码的中文`支持不好，通过`rostopic echo`查看结果不能显示中文字符（并不影响程序开发）。下图的内容实际是中文字符“`你好`”
-![](https://img.kancloud.cn/4b/13/4b13e335ef6b177b757e19b696f9bde9_357x37.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311352292.webp)
 
 所以需要执行打印语音识别结果在屏幕的程序
 ```shell
@@ -92,7 +93,7 @@ rosrun rosecho asr_echo.py
 ```
 
 运行结果如下
-![](https://img.kancloud.cn/fb/83/fb83c97bce55fc572509ed11f0e5c5d8_651x35.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311352853.webp)
 
 ### 答：查看回答返回结果
 

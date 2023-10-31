@@ -31,7 +31,7 @@
 
 将波特率设置为`115200`
 
-![](https://img.kancloud.cn/1e/ae/1eaec371f0065c06ce227d9faf126cd5_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311559662.webp)
 
 将距离数据转发到ROS话题
 
@@ -39,7 +39,7 @@
 
 将代码改为如下，加注释这一行
 
-![](https://img.kancloud.cn/43/8a/438ade574c9dbf644effc11dc7f14d02_1920x1080.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311559288.webp)
 
 此时可以将arduino连接到MINI上面
 
@@ -56,11 +56,11 @@ rostopic echo /tianbot_mini/cmd_rxd
 
 就可以看到MINI采集到的超声波距离
 
-![](https://img.kancloud.cn/61/f3/61f3b455f8d194293d0df26cb969b50a_729x351.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311559542.webp)
 
 写个这样的代码
 
-![](https://img.kancloud.cn/8a/fa/8afae1d3d0bc8f55f40752eff7a5301f_851x601.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311600767.webp)
 
 先启动小车
 ```shell
@@ -73,6 +73,6 @@ roslaunch tianbot_mini bringup.launch
 python 01_ping_data.py
 ```
 
-![](https://img.kancloud.cn/86/17/86170d3634a7fa5948fb15cfc25490cf_734x478.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311600547.webp)
 
 距离就开始显示，手放在超声波前就可以让小车实现跟随

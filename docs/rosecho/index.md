@@ -5,7 +5,7 @@
 - 为机器人增加语音交互功能就像增加激光雷达一样简单，即插即用，将“听”到的语音转换为文字，将想要“说”的文字转换为语音。
 - 专业团队进行驱动开发并且代码全部开源，还有持续不断更新的Demo程序。
 
-![](https://img.kancloud.cn/c5/ca/c5ca194aac9a32f874dce1ed8a289580_1000x1000.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311345768.webp)
 
 包装内容变更恕不另外单独通知，具体包装以收到货物为准。
 

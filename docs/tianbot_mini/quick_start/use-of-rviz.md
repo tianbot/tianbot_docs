@@ -32,13 +32,12 @@ rviz
 添加 `Add odometry`
 `Fixed Frame`选用`tianbot_mini/odom`，移动机器人，会有下图的效果。
 
-![](https://img.kancloud.cn/33/37/3337efbf099915e92e8e048bad00d8f1_1262x813.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311459127.webp)
 
 再添加机器人模型 `Add RoboModel`
 
-![](https://img.kancloud.cn/fa/e0/fae039c84d4a0ba7898f7e4183881180_513x466.png)
-
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311500581.webp)
 
 此处如果报错，请在robot_description处添加tianbot_mini
 
-![](https://img.kancloud.cn/2e/c2/2ec2bf44544cc3b9564f12bdb5158295_1266x881.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311500417.webp)

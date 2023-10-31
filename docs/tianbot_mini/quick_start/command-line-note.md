@@ -25,7 +25,7 @@ roslaunch tianbot_mini bringup.launch
 
 我们再来查看一下话题列表，再打开一个终端，运行`rostopic list`，会出现
 
-![](https://img.kancloud.cn/d5/a4/d5a420f298e1107ce1a1bdeab62935ef_319x232.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311618285.webp)
 
 此时出现的就是打开`tianbot_mini bringup.launch`文件所运行的所有主题，可是怎么把发布者和接受者的主题分开呢？
 
@@ -35,7 +35,7 @@ roslaunch tianbot_mini bringup.launch
 rostopic list -v
 ```
 
-![](https://img.kancloud.cn/da/92/da92eca017071793c0c26cc4d37c2ebe_625x345.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311618056.webp)
 
 发布者和接受者各自的主题就分别展现，它们有什么不同呢？
 
@@ -45,25 +45,25 @@ rostopic list -v
 rostopic echo /tianbot_mini/cmd_rxd
 ```
 
-![](https://img.kancloud.cn/27/ba/27baebd879146f5bb030416d262656a9_521x235.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311616375.webp)
 
 ```shell
 rostopic echo /tianbot_mini/info
 ```
 
-![](https://img.kancloud.cn/02/16/0216107806644832da16b7d54bb56a19_512x233.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311618916.webp)
 
 ```shell
 rostopic echo /tianbot_mini/cmd_vel
 ```
 
-![](https://img.kancloud.cn/10/36/10364b6d336a822c748d1dcca28b074e_485x90.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311617967.webp)
 
 ```shell
 rostopic echo /tianbot_mini/led
 ```
 
-![](https://img.kancloud.cn/34/0f/340f8fd4e6576361409f69bbf5db7e3b_474x82.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311617699.webp)
 
 可以看到属于`Published Topic`都出现信息，而接受者`Subscribed Topic`都没有信息产生。
 
@@ -101,4 +101,4 @@ roslaunch [package] [filename.launch]
 rosrun turtlesim turtlesim_node
 ```
 
-![](https://img.kancloud.cn/01/1c/011c39976e30083ad4f3ecdb68d94639_512x665.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311615474.webp)

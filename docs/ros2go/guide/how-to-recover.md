@@ -54,7 +54,7 @@ Puppy Rescue OS独立恢复系统内核比较旧，某些电脑比较新，可�
 
 从[这里](https://www.virtualbox.org/wiki/Downloads)下载并安装 `VirtualBox` 以及 `VirtualBox Extension Pack`
 
-![](https://img.kancloud.cn/49/72/49727e926b1eb50e351618aa21a115e3_2880x1498.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311334811.webp)
 
 ### ROS2GO系统恢复工具
 
