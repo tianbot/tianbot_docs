@@ -22,7 +22,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: '竞赛专项',
         items: [ 
             {text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
-            {text: 'F1TENTH 线上模拟赛', link: '/competition/f1tenth_online/' },
+            {text: 'F1TENTH 线上仿真赛', link: '/competition/f1tenth_online/' },
             {text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' }
         ]
     },

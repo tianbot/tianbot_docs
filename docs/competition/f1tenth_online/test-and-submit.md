@@ -65,6 +65,12 @@ tkinter
 pip3 install -r requirements.txt
 ```
 
+安装字体
+
+```shell
+sudo apt-get install fonts-dseg
+```
+
 ## 画面录制要求 {#video-requirements}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271339692.png)
