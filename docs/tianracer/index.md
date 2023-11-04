@@ -1,6 +1,6 @@
 # tianracer使用手册
 
-## 产品简介·
+## 产品简介
 
 ![产品图片](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)
 

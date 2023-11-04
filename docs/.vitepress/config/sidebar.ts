@@ -311,9 +311,21 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             //分组标题3
             text: '🚀 TIANROVER文档',
             collapsed: true,
+            link: '/tianrover/',
             items: [
               { text: '注意事项', link: '/tianrover/notice' },
-              { text: '使用手册', link: '/tianrover/' },
+              {
+                text: '使用手册',
+                collapsed: true,
+                items: [
+                  { text: '使用指引', link: '/tianrover/guide/' },
+                  { text: '软件环境配置', link: '/tianrover/guide/env-config' },
+                  { text: 'ROS基础功能', link: '/tianrover/guide/basic-feature' },
+                  { text: 'SLAM建图', link: '/tianrover/guide/slam' },
+                  { text: '自主导航', link: '/tianrover/guide/navigation' },
+                ],
+              },
+              { text: '常见问题', link: '/tianrover/question' },
               { text: '更新日志', link: '/tianrover/changelog' },
             ],
           },

@@ -43,7 +43,7 @@ pnpm run docs:build
 
 # License
 
-- Copyright © 2016 Tianbot
+- Copyright © 2023 Tianbot
 
 * Admin：JIT_SU
 
