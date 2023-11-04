@@ -296,3 +296,10 @@ source /opt/ros/melodic/setup.bash
 source /opt/ros/$ROS_DISTRO/setup.bash
 ```
 :::
+
+### 表格设定列宽，格内换行
+
+| <div style="width:190px">遥控器 </div>     |<div style="width:190px">拨码</div>   | 说明              |
+| :---: | :---: | :---: |
+| ![image-20231102155927812](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021559782.png) <br> 左拨码（左三档开关） | ![image-20231102160316813](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021603261.png) |                                                              |
+| ![image-20231102155957944](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021559366.png) <br> 右拨码（右三档开关） | ![image-20231102160328525](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021603813.png) | 当处于位置-1，为全向模式，可以控制火星车进行横平移运动。当处于位置-2（默认），阿克曼模式。当处于位置-3，切换到旋转模式，可以遥控控制火星车原地旋转。 |
