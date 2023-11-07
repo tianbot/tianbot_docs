@@ -1,6 +1,12 @@
 #  更新日志
 
-## v4.2.2 20230817
+## v4.3.0 20231031
+1. 内置drivers-linux-firmware_20220818, 支持 Intel/MTK/Realtek 等厂商的WIFI6网卡
+2. rtw89-dkms-1.0.2-3支持Realtek 8852AE, 8851BE, 8852BE, and 8852CE 等无线网卡
+3. 增加奥比中光、realsense、astra、velodyne的ROS2驱动
+4. ros2go_switch工具，由0.0.6更新至0.0.11版本，修复跳过不需要的workspace功能。
+
+## v4.2.3 20230817
 1. 修复23ROS暑期学校中ROS1下invalid ROS_IP问题
 2. 增加了tianracer_gazebo功能包，支持T110车型仿真
 3. 更新宇树科技simulate_unitree仿真
