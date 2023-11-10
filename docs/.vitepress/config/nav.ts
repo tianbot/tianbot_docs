@@ -26,6 +26,6 @@ export const nav: DefaultTheme.Config['nav'] = [
             {text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' }
         ]
     },
-    { text: '拓展提升', link: '/advanced/' },
+    { text: '进阶技能', link: '/advanced/' },
     { text: '关于我们', link: 'https://www.tianbot.com/page?id=4' },
 ];
