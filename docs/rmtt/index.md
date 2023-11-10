@@ -27,6 +27,7 @@ roscd rmtt_driver/scripts
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311338112.webp)
 
 此时就已经配网成功，将按钮拨到上面，切换到路由模式，半分钟左右，飞机的扇叶就开始旋转，每当RMTT成功连接路由器后都会开启扇叶旋转
+
 查询RMTT的IP地址
 
 ```shell
@@ -127,8 +128,11 @@ rosservice call /set_hdmap "data: True"
 ```
 
 data是布尔型，将默认的False改为True
+
 此时Rviz中的image的图像就变为下置摄像头，且基坐标系Fixed Frame多了map
+
 必须启用rosservice的地图，且起飞才能更改坐标系map
+
 起飞RMTT,将基坐标系改为map,
 
 ```shell
@@ -139,20 +143,20 @@ rostopic pub /takeoff std_msgs/Empty
 
 ### 不同情况下的TF树
 
-这是开启TF后的效果
-打开rqt观察一下TF树
+打开rqt观察TF树
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343285.webp)
-
-当没有使用
+当没有使用下述rosservice时TF树为
 ```shell
 rosservice call /set_downvision "data: True"
 ```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343654.webp)
 
-时TF树为
-我们还开始关联到world坐标系
+而调用该服务后，会发现增加了一个从base_link到map的TF变换
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343285.webp)
+
+同时我们可以发布一个静态变换，将map坐标系关联到world坐标系
 
 ```shell
 rosrun tf static_transform_publisher 0 0 0 0 0 0 world /map 20
@@ -164,7 +168,7 @@ rosrun tf static_transform_publisher 0 0 0 0 0 0 world /map 20
 
 三个TF树反应了不同坐标系下的TF关系，值得深思！
 
-::: warning
+::: warning 注意
 注意：如果涉及到多台机器人时，需要注意命名空间的问题
 :::
 
