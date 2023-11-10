@@ -10,6 +10,7 @@
 ### 多点导航真车应用
 
 在实际环境中实现多点导航
+
 1、启动真车
 ```shell
 roslaunch tianracer_bringup tianracer_bringup.launch
