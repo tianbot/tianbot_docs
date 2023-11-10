@@ -8,7 +8,7 @@ export const themeConfig: DefaultTheme.Config = {
     nav,        // 导航栏
     sidebar,    // 侧边栏
 
-    logo: "/logo.png",
+    logo: "/logo.ico",
 
     // 搜索配置（二选一）
     search: {

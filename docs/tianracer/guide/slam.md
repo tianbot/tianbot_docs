@@ -53,7 +53,7 @@ roslaunch tianracer_rviz view_mapping.launch
 
 ## 如何保存建立的地图
 
-地图默认保存在tianracer_slam/maps/目录下，名称为tianbot_office
+运行如下命令，则会将地图默认保存在tianracer_slam/maps/目录下，名称为tianbot_office
 
 ```shell
 roslaunch tianracer_slam map_save.launch

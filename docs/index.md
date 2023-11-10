@@ -11,7 +11,7 @@ hero:
     actions:
         - theme: brand
           text: 开始学习
-          link: /usage/
+          link: /usage
         - theme: alt
           text: Github
           link: https://github.com/tianbot
