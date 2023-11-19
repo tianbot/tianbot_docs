@@ -117,8 +117,9 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           collapsed: true,
           items: [
             { text: '比赛规则', link: '/competition/f1tenth_online/contest-rules' },
+            { text: '环境搭建', link: '/competition/f1tenth_online/env-config' },
             { text: '参赛手册', link: '/competition/f1tenth_online/contest-handbook' },
-            { text: '环境搭建', link: '/competition/f1tenth_online/test-and-submit' },
+            { text: '作品提交', link: '/competition/f1tenth_online/test-and-submit' },
             { text: '相关问题', link: '/competition/f1tenth_online/question-and-video' }  
           ],
         },

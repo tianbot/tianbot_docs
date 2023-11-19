@@ -6,6 +6,7 @@
 如需了解更多内容，请查看下列文档：
 
 - [比赛规则](./contest-rules)
+- [环境搭建](./env-config)
 - [参赛手册](./contest-handbook)
-- [环境搭建](./test-and-submit)
+- [作品提交](./test-and-submit)
 - [更多问题](./question-and-video)
