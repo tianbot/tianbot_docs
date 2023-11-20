@@ -30,7 +30,7 @@ rosrun tianracer_gazebo judge_system_node.py
 
 可参考以下内容自行安装
 
-## 安装Ubuntu 20.04 {#install-ubuntu-20-04}
+### 安装Ubuntu 20.04 {#install-ubuntu-20-04}
 
 安装操作系统这一步，建议大家安装双系统，这样能获得更好的使用体验。
 
@@ -52,7 +52,7 @@ rosrun tianracer_gazebo judge_system_node.py
 注意：安装过程中，如果出现错误，请先尝试百度解决。
 :::
 
-## 安装ROS Noetic {#install-ros-noetic}
+### 安装ROS Noetic {#install-ros-noetic}
 
 可以参考以下文章自行安装。
 
@@ -60,12 +60,12 @@ rosrun tianracer_gazebo judge_system_node.py
 - [Autolabor: ros安装教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/12-roskai-fa-gong-ju-an-zhuang/124-an-zhuang-ros.html)
 - [鱼香ROS: 一键安装](https://fishros.com/install/install1s/docs/index.html#/)
 
-## 安装比赛环境 {#install-race-env}
+### 安装比赛环境 {#install-race-env}
 
-### 1. 下载仿真系统源码 {#get-source-code}
+#### 1. 下载仿真系统源码 {#get-source-code}
 
 ```shell
-mkdir -p ~/catkin_ws/src && cd ~/catkin_ws/src
+mkdir -p ~/tianbot_ws/src && cd ~/tianbot_ws/src
 ```
 使用`git clone`命令下载仿真系统源码。
 ```shell
@@ -81,36 +81,36 @@ sudo apt-get install git
 
 2. 如果git clone时提示`速度过慢`或`Time out`，可以尝试使用如下命令：
 ```shell
-git clone https://ghproxy.com/https://github.com/tianbot/tianracer.git
+git clone https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
 ```
 :::
 
-### 2. 编译比赛工作空间 {#build-workspace}
+#### 2. 编译比赛工作空间 {#build-workspace}
 
 ```shell
-cd ~/catkin_ws/ && catkin_make
+cd ~/tianbot_ws/ && tianbot_make
 ```
 
-### 3. 安装依赖 {#install-dependencies}
+#### 3. 安装依赖 {#install-dependencies}
 设置工作空间环境变量
 ```shell
-source ~/catkin_ws/devel/setup.bash
+source ~/tianbot_ws/devel/setup.bash
 ```
 运行安装依赖脚本
 ```shell
 roscd tianracer_gazebo/scripts/ && ./env_config.sh 
 ```
 
-### 4. 配置环境变量 {#config-env}
+#### 4. 配置环境变量 {#config-env}
 
 ```shell
-echo "source ~/catkin_ws/devel/setup.bash" --extend >> ~/.bashrc
+echo "source ~/_ws/devel/setup.bash" --extend >> ~/.bashrc
 ```
 ::: info 提示
-这一步很重要，否则需要每次开启终端中使用`source ~/catkin_ws/devel/setup.bash`命令 来配置环境变量
+这一步很重要，否则需要每次开启终端中使用`source ~/tianbot_ws/devel/setup.bash`命令 来配置环境变量
 :::
 
-### 4. 启动仿真系统测试Demo {#launch-demo}
+#### 5. 启动仿真系统测试Demo {#launch-demo}
 
 运行如下代码，启动Gazebo仿真系统，并运行`tianracer`导航`Demo`
 ```shell

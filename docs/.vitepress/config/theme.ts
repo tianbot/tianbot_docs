@@ -60,8 +60,8 @@ export const themeConfig: DefaultTheme.Config = {
     //返回顶部文字修改(移动端)
     returnToTopLabel:'返回顶部',
 
-    //大纲显示2-3级标题
-    outline:[2,3],
+    //大纲显示2-4级标题
+    outline:[2,4],
     //大纲顶部标题
     outlineTitle:'当前页大纲',
 
