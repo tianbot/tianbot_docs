@@ -8,11 +8,12 @@
 
 ## 使用新版ROS2GO（开箱即用）{#noinstall-env-by-ros2go}
 
-运行如下代码，启动Gazebo仿真系统，并运行`tianracer`导航`Demo`
+### 比赛环境 
+新开启一个终端，运行如下代码，启动Gazebo仿真系统，并运行`tianracer`导航`Demo`
 ```shell
 roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
 ```
-运行如下代码，启动`Tianbot评分系统`
+新开启一个终端，运行如下代码，启动`Tianbot评分系统`
 ```shell
 rosrun tianracer_gazebo judge_system_node.py
 ```
@@ -26,9 +27,20 @@ rosrun tianracer_gazebo judge_system_node.py
 开启终端， 输入上述2行命令即可启动比赛环境，比赛过程中，请勿关闭上述两个命令行窗口
 :::
 
+### 视频录制环境
+
+我们在最新的ROS2GO环境已经内置了OBS Studio，可以`直接使用，无需安装`。
+
+::: tip 提示
+使用方法 
+1. 打开`OBS Studio`，新开一个终端中输入`obs`即可运行
+2. 参数配置可参考文章[录屏软件推荐：OBS Studio（免费软件）](https://zhuanlan.zhihu.com/p/116884610)进行软件配置，如`输出位置`，`输出分辨率`，`热键`等
+3. 录制步骤，可参考文章[电脑上高清录屏，如何用 OBS 轻松搞定？](http://www.obsproject.com.cn/obs/87.html)
+:::
+
 ## 不使用ROS2GO（自行安装）{#install-env-by-yourself}
 
-可参考以下内容自行安装
+可参考以下几步自行安装
 
 ### 安装Ubuntu 20.04 {#install-ubuntu-20-04}
 
@@ -112,14 +124,39 @@ echo "source ~/_ws/devel/setup.bash" --extend >> ~/.bashrc
 
 #### 5. 启动仿真系统测试Demo {#launch-demo}
 
-运行如下代码，启动Gazebo仿真系统，并运行`tianracer`导航`Demo`
+新开启一个终端，运行如下代码，启动Gazebo仿真系统，并运行`tianracer`导航`Demo`
 ```shell
 roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
 ```
-运行如下代码，启动`Tianbot评分系统`
+新开启一个终端，运行如下代码，启动`Tianbot评分系统`
 ```shell
 rosrun tianracer_gazebo judge_system_node.py
 ```
 经过拖拽窗口后可以达到下图所示效果，则环境`配置成功`
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
+
+### 安装录制环境
+
+`OBS Studio`（Open Broadcaster Software Studio）是一款开源的跨平台录制和直播软件，具有以下特点和相比其他软件的优势：
+
+- 免费且开源
+- 跨平台支持
+- 多种录制选项
+- 直播功能
+- 强大的配置选项
+- 插件支持
+- 社区支持
+- 低系统资源占用
+
+综合来说，OBS Studio的开源性、跨平台支持、丰富的功能和配置选项，以及庞大的用户社区，使其成为许多内容创作者、游戏玩家和直播者的首选录制和直播工具。
+
+#### 1. 安装OBS Studio {#install-obs}
+可以参考博客[在ubuntu上安装OBS Studio](https://blog.csdn.net/zhouzying/article/details/79991289)
+
+#### 2. 使用OBS Studio 录制 {#record-with-obs}
+::: info 使用方法 
+1. 打开`OBS Studio`，终端中输入
+2. 参数配置可参考文章[录屏软件推荐：OBS Studio（免费软件）](https://zhuanlan.zhihu.com/p/116884610)进行软件配置，如`输出位置`，`输出分辨率`，`热键`等
+3. 录制步骤，可参考文章[电脑上高清录屏，如何用 OBS 轻松搞定？](http://www.obsproject.com.cn/obs/87.html)
+:::

@@ -54,7 +54,8 @@ ls scripts/ | grep f1tenth_racer.py
 
 下面是比赛文件提交要求，请务必仔细阅读
 
-### 画面录制要求 {#video-requirements}
+### 视频录制 {#video-recording}
+#### 画面录制要求 {#video-requirements}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271339692.png)
 
@@ -64,24 +65,58 @@ ls scripts/ | grep f1tenth_racer.py
 
 2. 在启动测试之后，`请将手离开键盘，后台将会检测系统输入`，如果有其他输入，本次成绩`作废`。
 
-
-
-### 视频录制 {#video-recording}
+### 视频内容录制要求
 
 视频录制的要求和过程具体如下
 
 ::: tip 要求
-1. roslaunch tianracer_gazebo  demo_tianracer_teb_nav.launch，启动界面，将两个界面按照[图1](./test-and-submit#video-requirements)放置
+1. 使用`roslaunch tianracer_gazebo  demo_tianracer_teb_nav.launch`，启动`Gazebo`仿真界面，将两个界面按照[图1](./test-and-submit#video-requirements)放置
 2. 将你的代码按照[部署代码](./test-and-submit#how-to-run-code)的要求，放置在`tianracer_gazebo`的`scripts`文件夹下，并命名为`f1tenth_racer.py`即可
-3. 使用`rosrun tianracer_gazebo judge_system_node.py`启动测试系统
-4. 开始录屏，`将窗口按照要求摆放`
+3. 使用`rosrun tianracer_gazebo judge_system_node.py`，启动测试系统
+4. `将窗口按照要求摆放`，开始录屏
+
+>   注：视频格式为`.mp4`，推荐使用`OBS Studio`进行录制，细节可参考。
 5. `点击启动`，完成视频录制
 6. 将.mp4命名为`队名.mp4`，具体提交方式请以天之博特[TIANBOT bilibili平台账号](https://space.bilibili.com/451561151)相关规则视频说明或比赛答疑群的官方通知为准，提交后，请耐心等待测评结果
-::: 
+:::
+
+#### 
 
 ::: warning 注意
 在比赛过程中如有疑问，参赛队可在比赛答疑群中进行提问。
 :::
 
-### 代码提交 {#code-submission}
+### 作品提交 {#code-submission}
 
+在tianracer_gazebo/scripts/下，我们提供了一个作品提交的图形界面，你可以在其中上传你的代码，并提交到比赛方指定的`局域网服务器地址`。
+
+#### 如何运行
+
+新开一个终端，然后执行如下命令，即可运行
+
+```sh
+roscd tianracer_gazebo/scripts && python3 upload.py
+```
+
+::: info 提示
+如果运行时显示报错，无法找tianracer_gazebo/scripts目录，请先执行如下命令 `source` 工作空间，然后再尝试运行上面的命令
+```sh
+source ~/tianbot_ws/devel/setup.bash
+```
+:::
+
+#### 图形界面如何使用
+具体使用方法参考下图
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc9EE01D44C8E7198501BB83642776EC62.png)
+
+::: tip 提示
+在局域网服务器主机上，请预先执行如下命令，然后重新提交测试，否则会导致提交失败的问题
+```sh
+mkdir ~/Desktop/submit_works
+```
+然后修改用户名和密码即可，在自己的主机上进行测试
+:::
+
+::: info 提示
+注：Ubuntu22.04的主机则不支持
+:::
