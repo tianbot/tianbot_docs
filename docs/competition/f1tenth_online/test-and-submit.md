@@ -32,7 +32,7 @@
 部署代码过程中，只允许写自己的代码并将代码放在`tianracer_gazebo/scripts/`文件夹下
 
 ::: tip 提示
-举个例子，假设我将工作空间命名为`catkin_ws`，将我的`整个git仓库`放在了`catkin_ws/src`中进行编译，这时候会在其下`tianracer`路径中找到`tianracer_gazebo`文件夹，其中有一个`scripts`文件夹，你需要将自己的代码放在该文件夹下，命名为`f1tenth_racer.py`。
+举个例子，假设我将工作空间命名为`tianbot_ws`，将我的`整个git仓库`放在了`tianbot_ws/src`中进行编译，这时候会在其下`tianracer`路径中找到`tianracer_gazebo`文件夹，其中有一个`scripts`文件夹，你需要将自己基于模板示例修改的代码文件放在该文件夹下，命名为`f1tenth_racer.py`。
 :::
 
 然后检查文件位置是否正确，可以运行如下命令：
@@ -53,6 +53,10 @@ ls scripts/ | grep f1tenth_racer.py
 ## 作品提交 {#works-submission}
 
 下面是比赛文件提交要求，请务必仔细阅读
+
+1. `视频文件`：一个完整比赛时段屏幕录制的`.mp4`视频文件
+2. `代码压缩文件`：你在比赛时段`tianbot_ws/src`下的`tianracer`文件夹的.zip压缩文件，其中应包你参赛时所使用的代码文件
+3. `说明文档`：一个你对算法优化的技术报告，格式可以为`.pdf、.word`，这2种常用文本格式
 
 ### 视频录制 {#video-recording}
 #### 画面录制要求 {#video-requirements}
@@ -75,15 +79,9 @@ ls scripts/ | grep f1tenth_racer.py
 3. 使用`rosrun tianracer_gazebo judge_system_node.py`，启动测试系统
 4. `将窗口按照要求摆放`，开始录屏
 
->   注：视频格式为`.mp4`，推荐使用`OBS Studio`进行录制，细节可参考。
+>   注：视频格式为`.mp4`，推荐使用`OBS Studio`进行录制。
 5. `点击启动`，完成视频录制
 6. 将.mp4命名为`队名.mp4`，具体提交方式请以天之博特[TIANBOT bilibili平台账号](https://space.bilibili.com/451561151)相关规则视频说明或比赛答疑群的官方通知为准，提交后，请耐心等待测评结果
-:::
-
-#### 
-
-::: warning 注意
-在比赛过程中如有疑问，参赛队可在比赛答疑群中进行提问。
 :::
 
 ### 作品提交 {#code-submission}
@@ -114,7 +112,9 @@ source ~/tianbot_ws/devel/setup.bash
 ```sh
 mkdir ~/Desktop/submit_works
 ```
-然后修改用户名和密码即可，在自己的主机上进行测试
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231122171930476.png)
+
+点击`配置`按钮，然后根据提示，修改为服务器主机的登录用户名和密码即可，即可在自己的服务器主机上进行测试
 :::
 
 ::: info 提示
