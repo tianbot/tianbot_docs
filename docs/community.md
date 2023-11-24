@@ -3,7 +3,7 @@
 ## 微信公众号
 
 <div style="text-align: center; width: 700px">
-    <img alt="" src="public/wechat_qrcode.png" style="display: inline-block;" />
+    <img alt="" src="./public/wechat_qrcode.png" style="display: inline-block;" />
 </div>
 
 ## 微信群
