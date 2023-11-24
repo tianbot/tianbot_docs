@@ -112,18 +112,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     '/competition/': [
         { text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
         { 
-          text: 'F1TENTH 线上仿真赛', 
+          text: '无人车线上仿真赛', 
           link: '/competition/f1tenth_online/',
           collapsed: true,
           items: [
             { text: '比赛规则', link: '/competition/f1tenth_online/contest-rules' },
-            { text: '环境搭建', link: '/competition/f1tenth_online/env-config' },
-            { text: '参赛手册', link: '/competition/f1tenth_online/contest-handbook' },
-            { text: '作品提交', link: '/competition/f1tenth_online/test-and-submit' },
-            { text: '相关问题', link: '/competition/f1tenth_online/question-and-video' }  
+            {
+              text: '参赛手册',
+              collapsed: true,
+              items: [
+                { text: '环境搭建', link: '/competition/f1tenth_online/env-config' },
+                { text: '修改代码', link: '/competition/f1tenth_online/modify-code' },
+                { text: '运行测试', link: '/competition/f1tenth_online/run-and-test' },
+                { text: '作品提交', link: '/competition/f1tenth_online/submit-works' },
+              ],
+            },
+            { text: '视频教程及相关问题', link: '/competition/f1tenth_online/question-and-video' }  
           ],
         },
-        { text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' },
+        { text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' },
     ],
     '/advanced/': [
         {
