@@ -7,13 +7,13 @@ export const nav: DefaultTheme.Config['nav'] = [
     {
         text: '产品文档',
         items: [
-            { text: 'ROS2GO文档', link: '/ros2go/' },
-            { text: 'TOM系列文档', link: '/tianbot/' },
-            { text: 'Tianrover文档', link: '/tianrover/' },
-            { text: 'Tianracer文档', link: '/tianracer/' },
-            { text: 'Tianbot mini文档', link: '/tianbot_mini/' },
-            { text: 'Robomaster TT文档', link: '/rmtt/' },
-            { text: 'ROSECHO文档', link: '/rosecho/' },
+            { text: 'ROS2GO 文档', link: '/ros2go/' },
+            { text: 'TOM 系列文档', link: '/tianbot/' },
+            { text: 'Tianrover 文档', link: '/tianrover/' },
+            { text: 'Tianracer 文档', link: '/tianracer/' },
+            { text: 'Tianbot mini 文档', link: '/tianbot_mini/' },
+            { text: 'Robomaster TT 文档', link: '/rmtt/' },
+            { text: 'ROSECHO 文档', link: '/rosecho/' },
         ],
     },
     { text: '基础知识', link: '/basic/' },
@@ -22,8 +22,8 @@ export const nav: DefaultTheme.Config['nav'] = [
         text: '竞赛专项',
         items: [ 
             {text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
-            {text: 'F1TENTH 线上仿真赛', link: '/competition/f1tenth_online/' },
-            {text: 'F1TENTH 线下挑战赛', link: '/competition/f1tenth_offline/' }
+            {text: '无人车线上仿真赛', link: '/competition/f1tenth_online/' },
+            {text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' }
         ]
     },
     { text: '进阶技能', link: '/advanced/' },
