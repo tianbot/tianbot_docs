@@ -27,5 +27,12 @@ export const nav: DefaultTheme.Config['nav'] = [
         ]
     },
     { text: '进阶技能', link: '/advanced/' },
-    { text: '关于我们', link: 'https://www.tianbot.com/page?id=4' },
+    { 
+        text: '关于我们',
+        // link: 'https://www.tianbot.com/page?id=4',
+        items: [
+            { text: '联系我们', link: 'contact' },
+            { text: '我们的社群', link: 'community'}
+        ],
+    },
 ];
