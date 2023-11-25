@@ -63,7 +63,7 @@ source ~/tianbot_ws/devel/setup.bash
 ::: tip 提示
 在局域网服务器主机上，请预先执行如下命令，然后重新提交测试，否则会导致提交失败的问题
 ```sh
-mkdir ~/Desktop/submit_works
+mkdir ~/Desktop/
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231122171930476.png)
 

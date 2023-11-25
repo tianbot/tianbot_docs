@@ -87,7 +87,7 @@ mkdir -p ~/tianbot_ws/src && cd ~/tianbot_ws/src
 ```
 使用`git clone`命令下载仿真系统源码。
 ```shell
-git clone https://github.com/tianbot/tianracer.git
+git clone https://github.com/tianbot/tianracer.git -b dev
 ```
 
 ::: info 提示
@@ -99,7 +99,7 @@ sudo apt-get install git
 
 2. 如果 git clone 时提示`速度过慢`或`Time out`，可以尝试使用如下命令：
 ```shell
-git clone https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
+git clone https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git -b dev
 ```
 :::
 
