@@ -12,7 +12,9 @@
 - ROS Noetic
 - Gazebo 11
 
-## 使用新版 ROS2GO（开箱即用）{#noinstall-env-by-ros2go}
+## 使用新版 ROS2GO 随身系统（开箱即用）{#noinstall-env-by-ros2go}
+
+[如何购买 ROS2GO 随身系统](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4001-24162858428.1.52a159deQziaYp&id=683432188936&scene=taobao_shop)
 
 ### 比赛环境 
 新开启一个终端，运行如下代码，启动 Gazebo 仿真系统，并运行`tianracer`导航`Demo`
