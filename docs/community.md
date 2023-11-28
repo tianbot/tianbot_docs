@@ -2,16 +2,16 @@
 
 ## 微信公众号
 
-<div style="text-align: center; width: 700px">
-    <img alt="" src="./public/wechat_qrcode.png" style="display: inline-block;" />
+<div style="text-align: center; max-width: 100%; margin: 0 auto;">
+    <img alt="" src="./public/wechat_qrcode.png" style="max-width: 100%; height: auto; display: inline-block;" />
 </div>
 
 ## 微信群
 
 售后专用，方便快捷。
 
-<div style="text-align: center; width: 700px">
-    <img alt="" src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" style="display: inline-block;" />
+<div style="text-align: center; max-width: 100%; margin: 0 auto;">
+    <img alt="" src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" style="max-width: 100%; height: auto; display: inline-block;" />
 </div>
 
 ## QQ 交流群

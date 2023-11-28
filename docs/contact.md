@@ -13,7 +13,6 @@ aside: false
 * E-mail: sales@tianbot.com
 
 
-<div style="text-align: center; width: 1000px">
-    <img alt="" src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" style="display: inline-block;" />
+<div style="text-align: center; max-width: 100%; margin: 0 auto;">
+    <img alt="" src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" style="max-width: 100%; height: auto; display: inline-block;" />
 </div>
-
