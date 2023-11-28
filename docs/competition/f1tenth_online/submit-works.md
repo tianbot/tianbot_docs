@@ -46,8 +46,9 @@
 新开一个终端，然后执行如下命令，即可运行
 
 ```sh
-roscd tianracer_gazebo/scripts && python3 upload.py
+cd ~/tianbot_ws/src && python3 upload.py
 ```
+<!-- # roscd tianracer_gazebo/scripts && python3 upload.py -->
 
 ::: info 提示
 如果运行时显示报错，无法找 tianracer_gazebo/scripts 目录，请先执行如下命令 `source` 工作空间，然后再尝试运行上面的命令

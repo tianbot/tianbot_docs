@@ -39,7 +39,7 @@ rosrun tianracer_gazebo judge_system_node.py
 
 ::: tip 提示
 使用方法 
-1. 打开`OBS Studio`，新开一个终端中输入`obs`即可运行
+1. 打开`OBS Studio`，或新开一个终端输入`obs`即可运行
 2. 参数配置可参考文章[录屏软件推荐：OBS Studio（免费软件）](https://zhuanlan.zhihu.com/p/116884610)进行软件配置，如`输出位置`，`输出分辨率`，`热键`等
 3. 录制步骤，可参考文章[电脑上高清录屏，如何用 OBS 轻松搞定？](http://www.obsproject.com.cn/obs/87.html)
 :::
@@ -162,7 +162,7 @@ rosrun tianracer_gazebo judge_system_node.py
 
 #### 2. 使用 OBS Studio 录制 {#record-with-obs}
 ::: info 使用方法 
-1. 打开`OBS Studio`，终端中输入
+1. 打开`OBS Studio`，或新开一个终端输入`obs`即可运行
 2. 参数配置可参考文章[录屏软件推荐：OBS Studio（免费软件）](https://zhuanlan.zhihu.com/p/116884610)进行软件配置，如`输出位置`，`输出分辨率`，`热键`等
 3. 录制步骤，可参考文章[电脑上高清录屏，如何用 OBS 轻松搞定？](http://www.obsproject.com.cn/obs/87.html)
 :::
