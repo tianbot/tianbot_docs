@@ -110,7 +110,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         },
     ],
     '/competition/': [
-        { text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
+        { text: '空地协同线上仿真赛', link: '/competition/air_ground_synergy_online/' },
+        { text: '空地协同线下挑战赛', link: '/competition/air_ground_synergy_offline/' },
         { 
           text: '无人车线上仿真赛', 
           link: '/competition/f1tenth_online/',
