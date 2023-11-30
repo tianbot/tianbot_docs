@@ -20,11 +20,13 @@ export const nav: DefaultTheme.Config['nav'] = [
     { text: '仿真模拟', link: '/simulation/' },
     { 
         text: '竞赛专项',
-        items: [ 
-            {text: '空地协同比赛', link: '/competition/air_ground_synergy/' },
-            {text: '无人车线上仿真赛', link: '/competition/f1tenth_online/' },
-            {text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' }
-        ]
+        link: '/competition/',
+        // items: [ 
+        //     { text: '空地协同线上仿真赛', link: '/competition/air_ground_synergy_online/' },
+        //     { text: '空地协同线下挑战赛', link: '/competition/air_ground_synergy_offline/' },
+        //     { text: '无人车线上仿真赛', link: '/competition/f1tenth_online/' },
+        //     { text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' }
+        // ]
     },
     { text: '进阶技能', link: '/advanced/' },
     { 
