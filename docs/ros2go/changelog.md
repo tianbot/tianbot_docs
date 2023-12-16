@@ -1,5 +1,11 @@
 #  更新日志
 
+## v20231216
+1. xanmod 内核升级：`6.6.5 -> 6.6.7`
+2. hwe 内核升级：`5.15.0-89 -> 5.15.0-91`
+3. grub bootloader 升级：`2.0.6 -> 2.12RC1`
+4. ROS1 组件常规更新
+
 ## v4.3.0 20231031
 1. 内置drivers-linux-firmware_20220818, 支持 Intel/MTK/Realtek 等厂商的WIFI6网卡
 2. rtw89-dkms-1.0.2-3支持Realtek 8852AE, 8851BE, 8852BE, and 8852CE 等无线网卡
