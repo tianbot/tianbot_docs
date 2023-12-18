@@ -13,7 +13,7 @@ hero:
           text: 开始学习
           link: /usage
         - theme: alt
-          text: Github
+          text: GitHub
           link: https://github.com/tianbot
         - theme: sponsor
           text: Bilibili
@@ -21,36 +21,32 @@ hero:
 
 features:
   - icon: 💿
-    title: ROS2GO文档
-    details: 像ROS2GO的名字一样，随时随地带走自己工作环境，更加标准化开发和科研，经过简单几步很短时间就可以体验ROS的乐趣，而无需繁碎的环境配置，这就是ROS2GO...
+    title: ROS2GO
+    details: 轻松获取完整的 ROS 开发环境体验，秒级启动、随用随走、无需复杂环境配置、不伤宿主 Windows 系统、多维度恢复能力让小白也可无惧折腾...
     link: /ros2go/
-  - icon: 🐢
-    title: ROS机器人学习指南
-    details: ROS是一个功能强大、灵活多样的机器人软件框架，可以帮助开发者快速构建出各种类型的机器人应用。它的开放源代码特性也使得它可以不断发展壮大，并得到广泛的应用和支持...
-    link: /ros2go/ros/
   - icon: 🚚
-    title: TOM文档
+    title: TOM
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用USB、CAN、UART等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
     link: /tianbot/
   - icon: 🪐
-    title: Tianrover文档
+    title: Tianrover
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用USB、CAN、UART等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
     link: /tianrover/
   - icon: 🏁
-    title: Tianracer文档
+    title: Tianracer
     details: 使用Jetson Nano计算平台作为核心控制器的TianRacer-Dev无人车开发平台的使用说明，涉及基本功能、硬件、软件的相关信息...
     link: /tianracer/
   - icon: 🚗
-    title: Tianbot mini文档
+    title: Tianbot mini
     details: TIANBOT迷你机器人配备2D 激光雷达，集成差速运动控制系统，3步实现SLAM建图导航，从开机到建图导航仅需数秒钟，快速帮您学习和使用ROS机器人操作系统控制与构建智能机器人...
     link: /tianbot_mini/
   - icon: 🚁
-    title: Robomaster TT文档
+    title: Robomaster TT
     details: 大疆 RoboMaster TT，不仅可满足日常无人机教学、部分竞赛、演示等多种需求，也可搭配Tianbot mini机器人即可构成空地协同套装，让学生和老师更专注在空地协同和编队控制的学习上...
     link: /rmtt/
   - icon: 📢
-    title: ROSECHO文档
-    details: Tianbot ROSECHO，一款为了ROS机器人开发的中文语音交互模块，为你的移动机器人加上耳朵吧...
+    title: ROSECHO
+    details: 专为 ROS 机器人开发打造的语音交互模块，科大讯飞强力驱动，中英双语支持，来为你的移动机器人加上耳朵吧...
     link: /rosecho/
 ---
 
