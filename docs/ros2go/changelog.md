@@ -1,21 +1,21 @@
 #  更新日志
 
 ## v20231216
-1. xanmod 内核升级：`6.6.5 -> 6.6.7`
-2. hwe 内核升级：`5.15.0-89 -> 5.15.0-91`
+1. Xanmod 内核升级：`6.6.5 -> 6.6.7`
+2. Ubuntu HWE 内核升级：`5.15.0-89 -> 5.15.0-91`
 3. grub bootloader 升级：`2.0.6 -> 2.12RC1`
 4. ROS1 组件常规更新
 
 ## v20231031
-1. 内置drivers-linux-firmware_20220818, 支持 Intel/MTK/Realtek 等厂商的WIFI6网卡
-2. rtw89-dkms-1.0.2-3 支持Realtek 8852AE, 8851BE, 8852BE, 8852CE等无线网卡
-3. 增加奥比中光、realsense、astra、velodyne的ROS2驱动
+1. 内置 [drivers-linux-firmware_20220818](https://gitlab.com/q3aql/drivers-linux-firmware), 支持 Intel/MTK/Realtek 等厂商的WIFI6网卡
+2. `rtw89-dkms-1.0.2-3` 支持 Realtek 8852AE, 8851BE, 8852BE, 8852CE 等无线网卡
+3. 增加奥比中光、realsense、astra、velodyne 的 ROS2 驱动
 4. ros2go_switch: `0.0.6 -> 0.0.11`
 
 ## v20230817
-1. 修复20223 ROS暑期学校中ROS1下invalid ROS_IP问题
-2. 增加了tianracer_gazebo功能包，支持T110车型仿真
-3. 更新宇树科技simulate_unitree仿真
+1. 修复20223 ROS暑期学校中ROS1下 `ROS_IP` 异常问题
+2. 增加了 `tianracer_gazebo` 功能包，支持 T110 车型仿真
+3. 更新宇树科技 `simulate_unitree` 仿真
 
 ## v20230807
 1.  ROS1(noetic)、ROS2(humble) 增加了rosbridge_server功能包
@@ -58,11 +58,6 @@
 2. 根分区文件系统采用zstd压缩算法，IO性能更佳
 3. 异步在线碎片整理，减少卡顿
 4. 增强恢复功能，同时增加timeshift快照管理
-
-## v2.2.7 
-1. 常规升级
-2. 内核升级5.3--5.13
-3. 等等
 
 ## v20200425
 1. 修复了自动恢复的一些问题  
@@ -120,7 +115,7 @@
 2. 应用软件更新，VS Code更新至1.37.1  
 3. ROS系统更新  
 4. 打开笔记本的电量显示  
-5. 更新tianbot_racecar功能包与rf2o功能包。  
+5. 更新 `tianbot_racecar` 功能包与rf2o功能包。  
 6. 加入古月PROBOT功能包  
 7. 增加ROS2GO专属壁纸4张  
 8. 桌面增加ROS2GO用户手册的web链接快捷方式
@@ -128,16 +123,9 @@
   
 ## v20190506
 1. 系统更新  
-2. 应用软件更新，WPS更新至2019  
-3. 更新工作空间中一些源码。
-
- 
-## v0.5 
-1. 系统内核更新  
-2. 应用软件更新  
-3. 增加一些常用功能包  
-4. 更新tianbot_racecar功能包及其依赖至最新  
-5. 关闭unattended upgrade  
+2. 应用软件更新，WPS更新至2019 
+3. 更新 `tianbot_racecar` 功能包及其依赖至最新  
+4. 关闭 `unattended upgrade`
 
 ## v20181128
 1. 系统内核更新  
