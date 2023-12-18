@@ -103,6 +103,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               items: [
                 { text: 'abc_swarm 集群仿真实例', link: '/simulation/swarm/abc_swarm_for_mini_and_tello' },
                 { text: '智能无人系统仿真环境', link: '/simulation/swarm/smart_unmanned_system' },
+                { text: 'tianracer 集群仿真实例', link: '/simulation/swarm/swarm_for_tianracer' },
               ],
             },
             { text: '传感器仿真实例', link: '/simulation/index' },
@@ -168,7 +169,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     '/': [
         {
             //分组标题 1
-            text: '💿 ROS2GO 文档',
+            text: '💿 ROS2GO',
             collapsed: true,
             items: [
               { text: '开箱说明', link: '/ros2go/' },
@@ -247,7 +248,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 2
-            text: '🚚 TOM 文档',
+            text: '🚚 TOM',
             collapsed: true,
             link: '/tianbot/',
             items: [
@@ -286,7 +287,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 3
-            text: '🏁 TIANRACER 文档',
+            text: '🏁 TIANRACER',
             collapsed: true,
             link: '/tianracer/',
             items: [
@@ -325,7 +326,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 3
-            text: '🚀 TIANROVER 文档',
+            text: '🚀 TIANROVER',
             collapsed: true,
             link: '/tianrover/',
             items: [
@@ -347,7 +348,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 4
-            text: '🚗 TIANBOT MINI 文档',
+            text: '🚗 TIANBOT MINI',
             collapsed: true,
             link: '/tianbot_mini/',
             items: [
@@ -426,7 +427,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 5
-            text: '🚁 ROBOMASTER TT 文档',
+            text: '🚁 ROBOMASTER TT',
             collapsed: true,
             items: [
               { text: '开箱说明', link: '/rmtt/list' },
@@ -437,7 +438,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 6
-            text: '📢 ROSECHO 文档',
+            text: '📢 ROSECHO',
             collapsed: true,
             items: [
               { text: '开箱说明', link: '/rosecho/' },
@@ -458,7 +459,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 6
-            text: '🐝 机器人集群控制 文档',
+            text: '🐝 机器人集群控制',
             collapsed: true,
             items: [
               { text: '使用说明', link: '/swarm/' },
