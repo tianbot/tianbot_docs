@@ -24,15 +24,15 @@
 - https://answers.ros.org/question/349095/ros-on-multiple-machine-not-working-properly/#349098
 
 ## 如何进行多机通信
-这是最困扰大家的一个问题，我们用robot和ros2go来代表机器人上的电脑和远程操控的电脑。那么首先大家能够在robot和ros2go上能够相互ping通（相互ping通，保证是在同网段），也可以使用ssh成功从ros2go端登录到robot。
+这是最困扰大家的一个问题，我们用robot和 ROS2GO 来代表机器人上的电脑和远程操控的电脑。那么首先大家能够在robot和ros2go上能够相互ping通（相互ping通，保证是在同网段），也可以使用ssh成功从ros2go端登录到robot。
 
-多机通信大家一般都会知道在ros2go端将ROS_MASTER_URI设置为robot的ip，这样就可以成功的使用`rostopic list`看到话题列表。不过`rostopic echo /foobar`是看不到任何消息的（很大概率，也有例外，后面我们说明）。这个最主要的问题就是没有在robot上设置ROS_IP这个环境变量。
+多机通信大家一般都会知道在 ROS2GO 端将 ROS_MASTER_URI 设置为robot的ip，这样就可以成功的使用`rostopic list`看到话题列表。不过`rostopic echo /foobar`是看不到任何消息的（很大概率，也有例外，后面我们说明）。这个最主要的问题就是没有在robot上设置ROS_IP这个环境变量。
 
-类似的，如果ros2go端的ROS_IP没有设置正确，可能发生在RViz中能够看到传感器的数据，但是发布`2D Nav Goal`而机器人完全没反应的状况。总结一下，如果能看到话题列表而没有话题内容，就是因为通讯是没问题的可以在ROS Master上注册，但是上报地址错了导致后面无法进行点对点通信。
+类似的，如果 ROS2GO 端的 ROS_IP 没有设置正确，可能发生在RViz中能够看到传感器的数据，但是发布`2D Nav Goal`而机器人完全没反应的状况。总结一下，如果能看到话题列表而没有话题内容，就是因为通讯是没问题的可以在ROS Master上注册，但是上报地址错了导致后面无法进行点对点通信。
 
 ### 安全可靠
 
-全部用IP地址进行设置，`ROS_MASTER_URI`和`ROS_IP`都可以在`.bashrc`文件中设置。我们假设robot的IP地址为`192.168.1.100`，ros2go的ip地址为`192.168.1.111`，roscore在robot上启动（一般我们都是在robot上启动roscore）。
+全部用 IP 地址进行设置，`ROS_MASTER_URI`和`ROS_IP`都可以在`.bashrc`文件中设置。我们假设robot的IP地址为`192.168.1.100`，ros2go的ip地址为`192.168.1.111`，roscore在robot上启动（一般我们都是在robot上启动roscore）。
 
 那么在robot上
 ```shell
@@ -40,7 +40,7 @@ export ROS_MASTER_URI=http://192.168.1.100:11311
 export ROS_IP=192.168.1.100
 ```
 
-在ros2go上
+在 ROS2GO 上
 ```shell
 export ROS_MASTER_URI=http://192.168.1.100:11311
 export ROS_IP=192.168.1.111
