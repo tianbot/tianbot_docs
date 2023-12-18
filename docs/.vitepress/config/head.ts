@@ -1,5 +1,4 @@
-import type { HeadConfig } from "vitepress";
-import { metaConfig} from "./constants";
+import type {HeadConfig} from "vitepress";
 
 export const head: HeadConfig[] = [
     ['link',{ rel: 'icon', href: '/logo.ico'}],
