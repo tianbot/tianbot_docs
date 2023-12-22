@@ -27,7 +27,7 @@ git pull  # 更新代码到最新版本
 代码更新到最新版本之后需要重新编译，以确保系统稳定
 
 ```bash
-cd ~/tianbot_ws/src # src之前的路径需要根据你的实际情况修改
+cd ~/tianbot_ws # src之前的路径需要根据你的实际情况修改
 catkin_make # 进行编译，等待即可
 ```
 
