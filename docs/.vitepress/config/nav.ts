@@ -16,7 +16,14 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'ROSECHO', link: '/rosecho/' },
         ],
     },
-    { text: '基础知识', link: '/basic/' },
+    { 
+        text: '基础知识',
+        items: [
+            { text: '如何优雅的提问', link: '/basic/how_to_ask_for_help' },
+            { text: '工具使用中的技巧', link: '/basic/'},
+            { text: 'ROS 学习指南', link: '/basic/ros/ros1-vs-ros2'}
+        ]
+    },
     { text: '仿真模拟', link: '/simulation/' },
     { 
         text: '竞赛专项',

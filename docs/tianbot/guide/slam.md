@@ -33,7 +33,7 @@ roslaunch tianbot_slam tianbot_hector.launch
 :::
 
 ::: tip 说明
-而下面的操作过程则要在属于个人电脑（主机）的终端里完成，这是为什么呢？且听我娓娓道来这里需要引入一个概念，**多机通信**，那什么是多机通信呢？,点开[这里](/ros2go/ros/multi_machine_communicate.md)，你就能知道答案
+而下面的操作过程则要在属于个人电脑（主机）的终端里完成，这是为什么呢？且听我娓娓道来这里需要引入一个概念，**多机通信**，那什么是多机通信呢？,点开[这里](/basic/ros/multi_machine_communicate.md)，你就能知道答案
 :::
 
 3、打开Rviz观察地图
