@@ -10,23 +10,82 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         {
             text: '基础知识',
             items: [
-            { text: 'git 快速使用', link: '/basic/git' },
-            { text: 'linux 快速使用', link: '/basic/linux' },
-            { text: 'markdown 快速使用', link: '/basic/markdown' },
-            { text: 'Vi/Vim 快速使用', link: '/basic/vi_or_vim' },
-            { text: '如何用 Rustdesk 进行远程连接', link: '/basic/remote_connect'},
-            { text: '如何备份你的 linux 系统', link: '/basic/backup_linux' },
-            { 
-                text: 'VScode 中的开发环境配置',
+              { text: '如何优雅的提问', link: '/basic/how_to_ask_for_help' },
+              {
+                text: '工具使用中的技巧',
+                collapsed: true,
                 items: [
-                    { text: '拓展插件推荐安装', link: '/basic/vscode/extension_recommand' },
-                    { text: 'Python 开发环境的配置', link: '/basic/vscode/python' },
-                    { text: 'C/C++ 开发环境的配置', link: '/basic/vscode/c_or_c++' },
-                    ],
+                  { text: 'git 快速使用', link: '/basic/git' },
+                  { text: 'markdown 快速使用', link: '/basic/markdown' },
+                  { text: 'Vi/Vim 快速使用', link: '/basic/vi_or_vim' },
+                  { text: '如何用 Rustdesk 进行远程连接', link: '/basic/rustdesk'},
+                  { 
+                    text: 'linux 快速使用', 
+                    link: '/basic/linux/', 
                     collapsed: true,
-            },
-            { text: '如何优雅的提问', link: '/basic/how_to_ask_for_help' },
-            ],
+                    items: [
+                      { text: '如何备份你的 linux 系统', link: '/basic/linux/backup_linux' },
+                    ]
+                  },
+                  { 
+                    text: 'VScode 中的开发环境配置',
+                    collapsed: true,
+                    items: [
+                      { text: '拓展插件推荐安装', link: '/basic/vscode/extension_recommand' },
+                      { text: 'Python 开发环境的配置', link: '/basic/vscode/python' },
+                      { text: 'C/C++ 开发环境的配置', link: '/basic/vscode/c_or_c++' },
+                    ],  
+                  },
+                ]
+              },
+              {
+                text: 'ROS 学习指南',
+                collapsed: true,
+                items: [
+                  { text: '机器人学习路线建议', link: '/basic/ros/robotic-enginner-roadmap' },
+                  { text: 'ROS1 与 ROS2 的对比', link: '/basic/ros/ros1-vs-ros2' },
+                  { text: 'ROS2GO 资料使用说明', link: '/basic/ros/ros2go-data-brief' },
+                  // { text: '其他 ROS 学习资料', link: '/basic/ros/other-recommend' },
+                  { text: 'ROS 中的多机通信', link: '/basic/ros/multi_machine_communicate' },
+                  {
+                    text: '常见传感器的驱动和使用',
+                    collapsed: true,
+                    items: [
+                      {
+                        text: '摄像头',
+                        collapsed: true,
+                        items: [
+                          { text: 'USB 摄像头', link: '/basic/camera/mono-usb-camera' },
+                          { text: '奥比中光 Astra', link: '/basic/camera/rgbd-astra' },
+                        ],
+                      },
+                      {
+                        text: '激光雷达',
+                        collapsed: true,
+                        items: [
+                          { text: 'YDLIDAR', link: '/basic/lidar/2d-ydlidar' },
+                          { text: 'RPLIDAR', link: '/basic/lidar/2d-rplidar' },
+                          { text: 'HOKUYO', link: '/basic/lidar/2d-hokuyo' },
+                          { text: 'Turtlebot3 lidar', link: '/basic/lidar/2d-turtlebot3-lidar' },
+                          { text: 'Velodyne', link: '/basic/lidar/3d-velodyne' },
+                          { text: 'Osight', link: '/basic/lidar/2d-osight' },
+                          { text: 'livox mid-360', link: '/basic/lidar/3d-livox-mid360' },
+                        ],
+                      },
+                    ],
+                  },
+                  {
+                    text: 'Navigation2',
+                    collapsed: true,
+                    link: `/basic/navigation/`,
+                    items: [
+                      { text: 'Nav2 的安装', link: '/basic/navigation/nav2-install' },
+                      { text: 'TurtleBot3 仿真', link: '/basic/navigation/turtlebot3-nav2-sample' },
+                    ],
+                  },
+                ],
+              },  
+          ],  
         },
     ],
     '/simulation/': [
@@ -192,53 +251,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '兼容的网卡型号', link: '/ros2go/applicable/network-card' },
                   { text: '兼容的底盘型号', link: '/ros2go/applicable/robot-chassis' },
                   { text: '兼容的传感器型号', link: '/ros2go/applicable/sensor' },
-                ],
-              },
-              {
-                text: 'ROS 学习指南及小技巧串讲',
-                collapsed: true,
-                items: [
-                  { text: '机器人学习路线建议', link: '/ros2go/ros/robotic-enginner-roadmap' },
-                  { text: 'ROS1 与 ROS2 的对比', link: '/ros2go/ros/ros1-vs-ros2' },
-                  { text: 'ROS2GO 资料使用说明', link: '/ros2go/ros/ros2go-data-brief' },
-                  { text: '其他 ROS 学习资料', link: '/ros2go/ros/other-recommend' },
-                  { text: 'ROS 中的多机通信', link: '/ros2go/ros/multi_machine_communicate' },
-                  {
-                    text: '常见传感器的驱动和使用',
-                    collapsed: true,
-                    items: [
-                      {
-                        text: '摄像头',
-                        collapsed: true,
-                        items: [
-                          { text: 'USB 摄像头', link: '/ros2go/camera/mono-usb-camera' },
-                          { text: '奥比中光 Astra', link: '/ros2go/camera/rgbd-astra' },
-                        ],
-                      },
-                      {
-                        text: '激光雷达',
-                        collapsed: true,
-                        items: [
-                          { text: 'YDLIDAR', link: '/ros2go/lidar/2d-ydlidar' },
-                          { text: 'RPLIDAR', link: '/ros2go/lidar/2d-rplidar' },
-                          { text: 'HOKUYO', link: '/ros2go/lidar/2d-hokuyo' },
-                          { text: 'Turtlebot3 lidar', link: '/ros2go/lidar/2d-turtlebot3-lidar' },
-                          { text: 'Velodyne', link: '/ros2go/lidar/3d-velodyne' },
-                          { text: 'Osight', link: '/ros2go/lidar/2d-osight' },
-                          { text: 'livox mid-360', link: '/ros2go/lidar/3d-livox-mid360' },
-                        ],
-                      },
-                    ],
-                  },
-                  {
-                    text: 'Navigation2',
-                    collapsed: true,
-                    link: `/ros2go/navigation/`,
-                    items: [
-                      { text: 'Nav2 的安装', link: '/ros2go/navigation/nav2-install' },
-                      { text: 'TurtleBot3 仿真', link: '/ros2go/navigation/turtlebot3-nav2-sample' },
-                    ],
-                  },
                 ],
               },
               { text: '常见问题', link: '/ros2go/question' },
@@ -456,15 +468,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '更新日志', link: '/rosecho/changelog' },
             ],
           },
-          {
-            //分组标题 6
-            text: '🐝 机器人集群控制',
-            collapsed: true,
-            items: [
-              { text: '使用说明', link: '/swarm/' },
-              { text: 'abc_swarm', link: '/swarm/abc_swarm/' },
-              { text: '更新日志', link: '/swarm/changelog' },
-            ],
-          },
+          // {
+          //   //分组标题 6
+          //   text: '🐝 机器人集群控制',
+          //   collapsed: true,
+          //   items: [
+          //     { text: '使用说明', link: '/swarm/' },
+          //     { text: 'abc_swarm', link: '/swarm/abc_swarm/' },
+          //     { text: '更新日志', link: '/swarm/changelog' },
+          //   ],
+          // },
     ],
 }
