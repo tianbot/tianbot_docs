@@ -1,3 +1,4 @@
+import { text } from "stream/consumers";
 import type { DefaultTheme } from "vitepress";
 
 //导航栏
@@ -19,22 +20,33 @@ export const nav: DefaultTheme.Config['nav'] = [
     {   
         text: 'RoboMaster 产品专区',
         items: [                        
-            { text: '红外电子靶', link: '/robomaster/infrared_electronic_target'}
+            { text: '红外电子靶', link: '/robomaster/infrared_electronic_target'},
+            {
+                text: '实用文档',
+                items: [
+                    { text: '嵌入式小白的学习之路', link: 'https://tianbot.github.io/learning_RM_board_c/#/' }
+                ]
+            }
         ],
+        
     },
     { 
-        text: 'ROS 知识专栏',
+        text: '知识专栏',
         items: [
             { text: '如何优雅的提问', link: '/basic/how_to_ask_for_help' },
             { text: '工具使用中的技巧', link: '/basic/'},
-            { text: 'ROS 学习指南', link: '/basic/ros/ros1-vs-ros2'},
-            { text: 'ROS 仿真模拟', link: '/simulation/' },
-            { text: '机器人进阶技能', link: '/advanced/' },
+            {
+                text: '实用文档',
+                items: [
+                    { text: 'ROS 学习指南', link: '/basic/ros/ros1-vs-ros2'},
+                    { text: 'ROS 仿真模拟', link: '/simulation/' },
+                    { text: '机器人进阶技能', link: '/advanced/' },
+                ]
+            }
         ]
     },
     { 
         text: '竞赛专项',
-        // link: '/competition/',
         items: [ 
             { text: '空地协同线上仿真赛', link: '/competition/air_ground_synergy_online/' },
             { text: '空地协同线下挑战赛', link: '/competition/air_ground_synergy_offline/' },
