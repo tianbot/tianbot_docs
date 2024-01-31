@@ -48,33 +48,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   // { text: '其他 ROS 学习资料', link: '/basic/ros/other-recommend' },
                   { text: 'ROS 中的多机通信', link: '/basic/ros/multi_machine_communicate' },
                   {
-                    text: '常见传感器的驱动和使用',
-                    collapsed: true,
-                    items: [
-                      {
-                        text: '摄像头',
-                        collapsed: true,
-                        items: [
-                          { text: 'USB 摄像头', link: '/basic/camera/mono-usb-camera' },
-                          { text: '奥比中光 Astra', link: '/basic/camera/rgbd-astra' },
-                        ],
-                      },
-                      {
-                        text: '激光雷达',
-                        collapsed: true,
-                        items: [
-                          { text: 'YDLIDAR', link: '/basic/lidar/2d-ydlidar' },
-                          { text: 'RPLIDAR', link: '/basic/lidar/2d-rplidar' },
-                          { text: 'HOKUYO', link: '/basic/lidar/2d-hokuyo' },
-                          { text: 'Turtlebot3 lidar', link: '/basic/lidar/2d-turtlebot3-lidar' },
-                          { text: 'Velodyne', link: '/basic/lidar/3d-velodyne' },
-                          { text: 'Osight', link: '/basic/lidar/2d-osight' },
-                          { text: 'livox mid-360', link: '/basic/lidar/3d-livox-mid360' },
-                        ],
-                      },
-                    ],
-                  },
-                  {
                     text: 'Navigation2',
                     collapsed: true,
                     link: `/basic/navigation/`,
@@ -84,7 +57,34 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     ],
                   },
                 ],
-              },  
+              },
+              {
+                text: '常见传感器的驱动和使用',
+                collapsed: true,
+                items: [
+                  {
+                    text: '摄像头',
+                    collapsed: true,
+                    items: [
+                      { text: 'USB 摄像头', link: '/basic/camera/mono-usb-camera' },
+                      { text: '奥比中光 Astra', link: '/basic/camera/rgbd-astra' },
+                    ],
+                  },
+                  {
+                    text: '激光雷达',
+                    collapsed: true,
+                    items: [
+                      { text: 'YDLIDAR', link: '/basic/lidar/2d-ydlidar' },
+                      { text: 'RPLIDAR', link: '/basic/lidar/2d-rplidar' },
+                      { text: 'HOKUYO', link: '/basic/lidar/2d-hokuyo' },
+                      { text: 'Turtlebot3 lidar', link: '/basic/lidar/2d-turtlebot3-lidar' },
+                      { text: 'Velodyne', link: '/basic/lidar/3d-velodyne' },
+                      { text: 'Osight', link: '/basic/lidar/2d-osight' },
+                      { text: 'livox mid-360', link: '/basic/lidar/3d-livox-mid360' },
+                    ],
+                  },
+                ],
+              },
           ],  
         },
     ],
