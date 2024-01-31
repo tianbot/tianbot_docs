@@ -2,11 +2,14 @@
 
 // Ref: https://github.com/vuejs/vitepress/issues/854
 
+import { h } from 'vue'
+import Announcement from './Announcement.vue'
 import DefaultTheme from 'vitepress/theme';
 import { onMounted, watch, nextTick } from 'vue';
 import { useRoute } from 'vitepress';
 import mediumZoom from 'medium-zoom';
 
+import './Announcement.css'
 import './index.css';
 
 export default {
@@ -28,4 +31,10 @@ export default {
       () => nextTick(() => initZoom())
     );
   },
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+    //   'aside-outline-before': () => h(Announcement)
+      'layout-top': () => h(Announcement)
+    })
+  }
 };
