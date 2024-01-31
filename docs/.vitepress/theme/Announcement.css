@@ -22,17 +22,27 @@
     text-align:left;
 }
 
+#p3 {
+    color: rgb(154, 153, 187);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align:left;
+}
+
 :root {  
     --width-zt: 258px;  /* 公告总宽度 */
-    --width-bo: 80px;  /* 公告离地高度 */
+    --width-bo: 200px;  /* 公告离地高度 */
     --height-close: 40px;  /* 显示按钮的高度宽度 */
   }  
 
 /* 主体样式 */
 .popover {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: var(--width-zt); 
     position: fixed;
-    bottom: var(--width-bo); 
+    /* bottom: var(--width-bo);  */
     right: 20px;
     z-index: 22;
     box-sizing: border-box;
@@ -78,7 +88,7 @@
 
 /* 主体样式 */
 .header {
-    background-color: #5672cd;
+    background-color: #c4cce9;
     color: #fff;
     padding: 6px 4px;
     display: flex;
@@ -158,11 +168,11 @@ video {
 }  
   
 .button-author {  
-    background-color: #4CAF50;  
+    background-color: #4f9fe0;  
 }  
   
 .button-group {  
-    background-color: #f44336;  
+    background-color: #4f9fe0;  
 }  
   
 .button-author:hover,  

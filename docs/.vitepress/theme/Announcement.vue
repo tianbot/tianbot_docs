@@ -6,7 +6,7 @@
             <i class="el-icon" style="font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                     <path fill="currentColor" d="M288 128h608L736 384l160 256H288v320h-96V64h96v64z"></path>
                 </svg></i>
-            <span class="title">📢公告📢</span>
+            <span class="title">📢联系我们📢</span>
             <i class="el-icon close-icon" @click="toggleCloseIcon" style="font-size: 20px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
                     <path fill="currentColor" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm0 393.664L407.936 353.6a38.4 38.4 0 1 0-54.336 54.336L457.664 512 353.6 616.064a38.4 38.4 0 1 0 54.336 54.336L512 566.336 616.064 670.4a38.4 38.4 0 1 0 54.336-54.336L566.336 512 670.4 407.936a38.4 38.4 0 1 0-54.336-54.336L512 457.664z"></path>
                 </svg></i>
@@ -41,14 +41,22 @@
 export default {    
   data() {    
     return {    
-      showPopover: true,  
-      showCloseIcon: false    
+      // showPopover: true,  
+      // showCloseIcon: false    
+      showPopover: false,     // 改为 false
+      showCloseIcon: true     // 由于公告栏收起，关闭按钮默认显示
     };    
   },    
   methods: {    
     togglePopover() {    
       this.showPopover = !this.showPopover;  
       this.showCloseIcon = this.showPopover ? false : true;  
+      if (this.showPopover) {
+      // 公告栏展开时设置居中位置
+      this.$nextTick(() => {
+        this.$refs.popover.$el.style.transform = 'translate(-50%, -50%)';
+      });
+    }
     },  
     toggleCloseIcon() {  
       this.showPopover = false;  
