@@ -12,7 +12,7 @@
 
 ## 产品外观
 
-正面（24寸显示器需自配）
+正面（23.8寸显示器需自配）
 
 ![29c64bdd8a6db100324951c1ecf581d](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc29c64bdd8a6db100324951c1ecf581d.jpg)
 
@@ -44,6 +44,8 @@
 ## 产品使用
 
 ### 显示器安装
+
+**注：建议使用我们推荐的显示器（PHILIPS 243V7Q）,因显示器背部螺丝孔深度产品之间有差异**
 
 ![image-20240201131022634](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240201131022634.png)
 
