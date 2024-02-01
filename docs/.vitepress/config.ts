@@ -13,7 +13,7 @@ export default defineConfig({
     title: metaConfig.title,
     description: metaConfig.description,
     locales: metaConfig.locales, //多语言
-    // cleanUrls: true,        // 开启纯净链接无html
+    // cleanUrls: true,        // 开启纯净链接无 html
 
     //启用深色模式
     appearance: true,        // 默认浅色且开启切换
@@ -23,9 +23,9 @@ export default defineConfig({
 
     head,                   // <head>内标签配置
 
-    base: '/',              // 网站部署到github的vitepress这个仓库里
+    base: '/',              // 网站部署到 github 的 vitepress 这个仓库里
 
-    markdown: markdown,     // Markdown配置
+    markdown: markdown,     // Markdown 配置
     vue: {
         template: {
             compilerOptions: {
@@ -33,42 +33,54 @@ export default defineConfig({
             },
         },
     },
-    async buildEnd(siteConfig) {
-        const baseURL = 'https://docs.tianbot.com';
-
-        try {
-            let siteMapStr = '';
-            for (const page of siteConfig.pages) {
-                if (page === 'index.md') continue;
-                // 获取最后修改日期，基于git
-                const filePath = siteConfig.srcDir + '/' + page;
-                const date = new Date(
-                    parseInt(
-                        spawn.sync('git', ['log', '-1', '--format=%at', filePath]).stdout.toString('utf-8')
-                    ) * 1000
-                );
-
-                // <lastmod>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</lastmod> generate is not fomatter for google search console
-
-                siteMapStr += `
-            <url>
-              <loc>${baseURL}/${page.replace(/\.md$/, '.html')}</loc>
-              <lastmod>${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${("0" + date.getDate()).slice(-2)}</lastmod>
-            </url>
-          `;
-            }
-
-            const xmlStr = `<?xml version="1.0" encoding="UTF-8"?>
-            <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-            ${siteMapStr}
-            </urlset>
-          `;
-
-            fs.writeFileSync(`${siteConfig.outDir}/sitemap.xml`, xmlStr);
-        } catch (err) {
-            console.log('create sitemap.txt failed!', err);
-        }
+    sitemap: {
+        hostname: 'https://docs.tianbot.com',
+        transformItems: (items) => {
+            // add new items or modify/filter existing items
+            items.push({
+              url: '/extra-page',
+              changefreq: 'monthly',
+              priority: 0.8
+            })
+            return items
+          }
     },
+    // async buildEnd(siteConfig) {
+    //     const baseURL = 'https://docs.tianbot.com';
+
+    //     try {
+    //         let siteMapStr = '';
+    //         for (const page of siteConfig.pages) {
+    //             if (page === 'index.md') continue;
+    //             // 获取最后修改日期，基于 git
+    //             const filePath = siteConfig.srcDir + '/' + page;
+    //             const date = new Date(
+    //                 parseInt(
+    //                     spawn.sync('git', ['log', '-1', '--format=%at', filePath]).stdout.toString('utf-8')
+    //                 ) * 1000
+    //             );
+
+    //             // <lastmod>${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}</lastmod> generate is not fomatter for google search console
+
+    //             siteMapStr += `
+    //         <url>
+    //           <loc>${baseURL}/${page.replace(/\.md$/, '.html')}</loc>
+    //           <lastmod>${date.getFullYear()}-${("0" + (date.getMonth() + 1)).slice(-2)}-${("0" + date.getDate()).slice(-2)}</lastmod>
+    //         </url>
+    //       `;
+    //         }
+
+    //         const xmlStr = `<?xml version="1.0" encoding="UTF-8"?>
+    //         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    //         ${siteMapStr}
+    //         </urlset>
+    //       `;
+
+    //         fs.writeFileSync(`${siteConfig.outDir}/sitemap.xml`, xmlStr);
+    //     } catch (err) {
+    //         console.log('create sitemap.txt failed!', err);
+    //     }
+    // },
     themeConfig, // 主题配置
 });
 
