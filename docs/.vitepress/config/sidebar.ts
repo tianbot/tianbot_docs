@@ -68,6 +68,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     items: [
                       { text: 'USB 摄像头', link: '/basic/camera/mono-usb-camera' },
                       { text: '奥比中光 Astra', link: '/basic/camera/rgbd-astra' },
+                      { text: '英特尔 Realsense', link: '/basic/camera/rgbd-realsense'}
                     ],
                   },
                   {
