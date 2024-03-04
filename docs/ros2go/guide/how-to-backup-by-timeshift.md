@@ -1,22 +1,22 @@
 # 如何备份 {#how-to-backup}
 
-在Linux的世界里，备份功能就像是一把神秘的瑞士军刀，它不仅可以帮你修复破损的系统，还可以让你在与病毒怪兽的战斗中取得胜利。想象一下，如果没有备份功能，你的电脑可能会变成一个被病毒感染、文件丢失、数据崩溃的战场。而有了备份功能，你就像一个勇敢的战士，手握利剑，勇敢地面对各种危机。
+在 Linux 的世界里，备份功能就像是一把神秘的瑞士军刀，它不仅可以帮你修复破损的系统，还可以让你在与病毒怪兽的战斗中取得胜利。想象一下，如果没有备份功能，你的电脑可能会变成一个被病毒感染、文件丢失、数据崩溃的战场。而有了备份功能，你就像一个勇敢的战士，手握利剑，勇敢地面对各种危机。
 
-备份功能的重要性就好比是保险，它可以确保你在遇到突发状况时，不至于陷入绝望的境地。就像你在出门前会检查门窗是否锁好，以防小偷光顾一样，你需要定期备份重要文件，以防硬盘突然罢工。这样，你就可以安心地享受Linux带来的便捷和乐趣，而无需担心数据的丢失和损坏。
+备份功能的重要性就好比是保险，它可以确保你在遇到突发状况时，不至于陷入绝望的境地。就像你在出门前会检查门窗是否锁好，以防小偷光顾一样，你需要定期备份重要文件，以防硬盘突然罢工。这样，你就可以安心地享受 Linux 带来的便捷和乐趣，而无需担心数据的丢失和损坏。
 
-总之，在Linux上使用备份功能就像是给自己的心灵安装了一个安全阀，让你在这个充满挑战和机遇的世界里，始终保持从容和自信。所以，赶快行动起来，为你的Linux生活添上一把保护伞吧！
+总之，在 Linux 上使用备份功能就像是给自己的心灵安装了一个安全阀，让你在这个充满挑战和机遇的世界里，始终保持从容和自信。所以，赶快行动起来，为你的 Linux 生活添上一把保护伞吧！
 
-为了防止误操作，以防万一。我们强烈建议应该定期备份重要文件。在ROS2GO中，我们提供了基于Timeshift和btrfs文件系统的快速备份功能，你可以使用它来备份你的系统。
+为了防止误操作，以防万一。我们强烈建议应该定期备份重要文件。在 ROS2GO 中，我们提供了基于 Timeshift 和 btrfs 文件系统的快速备份功能，你可以使用它来备份你的系统。
 
 ## 软件可视化使用 {#software-visualization-use}
 
-### 打开Timeshift
+### 打开 Timeshift
 
 在所有应用中找到“Timeshift”应用，然后点击它。
 
-![引用https://www.cnblogs.com/Chary/p/14632238.html](https://img2020.cnblogs.com/blog/572188/202104/572188-20210408145355082-1195635871.png)
+![引用 https://www.cnblogs.com/Chary/p/14632238.html](https://img2020.cnblogs.com/blog/572188/202104/572188-20210408145355082-1195635871.png)
 
-在ROS2GO中，所有密码均为ros
+在 ROS2GO 中，所有密码均为 ros
 
 ### 查看当前备份 {#see-current-backup}
 
@@ -26,10 +26,10 @@
 
 ### 备份格式 {#backup-format}
 
-由于ROS2GO的/目录是基于btrfs文件系统，所以可以看到，快照类型为BTRFS类型
+由于 ROS2GO 的/目录是基于 btrfs 文件系统，所以可以看到，快照类型为 BTRFS 类型
 
 ::: danger 注意
-BTRFS与RSYNC格式快照的存储方式不同，前者必须保存在btrfs格式的分区上，后者则可保存在任意ext4分区上，所以ROS2GO的用户级增量备份恢复是基于/目录分区完好的基础上，一旦该分区损坏，则timeshift也无法正常和恢复，只能通过`B ros2go_recovery`或`C 全量OTA`的方式恢复至最新出厂模式了。
+BTRFS 与 RSYNC 格式快照的存储方式不同，前者必须保存在 btrfs 格式的分区上，后者则可保存在任意 ext4 分区上，所以 ROS2GO 的用户级增量备份恢复是基于/目录分区完好的基础上，一旦该分区损坏，则 timeshift 也无法正常和恢复，只能通过`B ros2go_recovery`或`C 全量OTA`的方式恢复至最新出厂模式了。
 :::
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202309221618116.png)
@@ -154,8 +154,8 @@ Num     Name                 Tags  Description
 ```
 
 ::: warning 提示
-- 快照名 ：2023-10-09_21-29-26      
-- 手动创建  ：O      
+- 快照名：2023-10-09_21-29-26      
+- 手动创建：O      
 - 描述信息：test-backup 
 :::
 ### 恢复到某个快照 {#recover-to-a-snapshot}
@@ -223,7 +223,7 @@ Snapshot will become active after system is rebooted.    ## 根据提示，恢�
 ```
 
 ::: warning 提示
-- Continue with restore? (y/n): y  此处需要输入y后，回车确认
+- Continue with restore? (y/n): y  此处需要输入 y 后，回车确认
 - 恢复完成后需要重启系统
 :::
 
@@ -260,11 +260,11 @@ sudo timeshift --help
 
 ## 引导界面恢复{#bios-load-recover}
 
-此方法适用于**ROS2GO启动界面正常**，但是误操作了系统文件，导致无法进入系统桌面的情况。
+此方法适用于**ROS2GO 启动界面正常**，但是误操作了系统文件，导致无法进入系统桌面的情况。
 
 ::: tip 提示
 - 键盘的上下方向键调整选项
-- 选择完成后，按下Enter键确认
+- 选择完成后，按下 Enter 键确认
 :::
 ### 如何进入快照恢复界面 {#how-to-enter-the-snapshot-recovery-interface}
 
@@ -286,4 +286,4 @@ sudo timeshift --help
 
 - [https://github.com/teejee2008/timeshift](https://github.com/teejee2008/timeshift)
 - [Timeshift – free and open source software for creating snapshots of the file system](https://linuxmasterclub.com/timeshift/)
-- [Abhishek Prakash：Backup and Restore Linux System Settings with Timeshift [Beginner's Guide]](https://itsfoss.com/backup-restore-linux-timeshift/)
+- [Abhishek Prakash: Backup and Restore Linux System Settings with Timeshift [Beginner's Guide]](https://itsfoss.com/backup-restore-linux-timeshift/)

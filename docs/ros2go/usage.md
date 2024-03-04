@@ -50,6 +50,19 @@
 
 ## 安装深度学习环境
 
+::: danger 注意
+安装 Nvidia 驱动有可能会`导致无法进入系统图形界面`，如果中招，请使用 Timeshift 快照恢复到安装 N 卡驱动前的一个版本，所以在操作前请 Timeshift 备份好数据，未备份或误操作导致文件系统损坏，个人数据丢失，天之博特不承担任何责任。
+:::
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=865330024&bvid=BV1h54y137QU&cid=1033265813&page=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+::: warning 提示
+在安装好深度学习环境之后，请先[使用 Timeshift 进行备份](https://docs.tianbot.com/ros2go/guide/how-to-backup-by-timeshift.html#create-backup)，由于 Nvidia 驱动更新频繁，所以请务必在安装好驱动进行备份，否则`某次不经意的系统更新就会导致 Nvidia 驱动崩溃`（内核版本不匹配），所以在安装 N 卡驱动后`不要轻易进行 Software Updater`，这会导致已安装的 N 卡驱动和 DL 环境无法正常使用。
+:::
+
 以强化学习为例，Gym 的 python 运行环境对依赖库的版本要求极严格，所以各种库版本冲突则是太正常不过了。
 
 - **N 卡驱动**：万事开头难，就是需要安装环境，如果你的笔记本有 Nvidia GPU，那么对你来说，在 ROS2GO 上装显卡驱动则是个技术活。
