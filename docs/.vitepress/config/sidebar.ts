@@ -414,6 +414,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: '两台机器人的联动', link: '/tianbot_mini/swarm/cooperate-of-two-robot' },
                       { text: '仿真与实体之间的联动', link: '/tianbot_mini/swarm/cooperate-of-sim2real' },
                       { text: 'tianbot mini 与 rmtt 的空地协同', link: '/tianbot_mini/swarm/swarm-of-mini-and-rmtt' },
+                      { text: 'mini 与 rmtt 的协同救援、物资递送任务', link: '/tianbot_mini/swarm/collaborative_rescue_and_material_delivery' },
                     ],
                   },
                   {

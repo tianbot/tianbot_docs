@@ -41,9 +41,9 @@ source $(ros2go_switch -v 2)
 ```shell
 mkdir -p humble_patch_ws/src
 
-# 将https://github.com/XXXXX/XXXX.git 替换为需要的功能包的 git 地址
+# 将https://github.com/YYYY/XXXX.git 替换为需要的功能包的 git 地址
 # -b ros2 替换为需要的分支
-git clone https://github.com/XXXXX/XXXX.git -b ros2 humble_patch_ws/src
+git clone https://github.com/YYYY/XXXXX.git -b ros2 humble_patch_ws/src/XXXX
 
 cd humble_patch_ws && colcon build --merge-install
 
