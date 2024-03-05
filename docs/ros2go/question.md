@@ -28,6 +28,39 @@ source $(ros2go_switch -v 2)
 
 使用`Ctrl+ 空格`切换输入法，当处于搜狗输入法下，按下`shift`键切换中英文输入
 
+## 如何在 ROS2GO 20.04 中安装 ros2 humble 的其他依赖包？ {#how-to-install-other-humble-dependencies-in-ros2go-20-04}
+
+不要直接使用`apt`安装，如下图所示：
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240305124006.png)
+
+正确的安装方式是：
+
+在（`该工作空间命名可自拟`）humble_patch_ws/src 目录下，git clone 拉取该功能包的源码到工作空间 src 文件夹中，编译后再 source 该工作空间，即正常可使用
+
+```shell
+mkdir -p humble_patch_ws/src
+
+# 将https://github.com/XXXXX/XXXX.git 替换为需要的功能包的 git 地址
+# -b ros2 替换为需要的分支
+git clone https://github.com/XXXXX/XXXX.git -b ros2 humble_patch_ws/src
+
+cd humble_patch_ws && colcon build --merge-install
+
+source humble_patch/install/setup.bash
+```
+
+之后即可正常使用 humble 版本下的该功能包
+
+::: tip 提示
+1. 每次需要用到该功能包时，都需要重新 `source humble_patch/install/setup.bash` 才能正常使用
+2. 如果想要在每次打开终端时自动 `source humble_patch/install/setup.bash`，可以考虑在 `~/.bashrc` 文件中
+`source $(ros2go_switch -v 2)`后面添加
+```shell
+source humble_patch/install/setup.bash --extend
+```
+:::
+
 ## 为什么看视频没声音
 
 首先你需要确定一下，
@@ -88,7 +121,7 @@ Ubuntu18.04+Melodic
 
 2, ROS2GO P128
 
-Ubuntu20.04+Noetic，Galactic，Humble（源码编译）
+Ubuntu20.04+Noetic，Humble（源码编译）
 
 总容量：128G（还可以定制更大容量）
 
