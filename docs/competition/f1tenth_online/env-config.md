@@ -108,7 +108,7 @@ git clone https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git -b
 #### 2. 编译比赛工作空间 {#build-workspace}
 
 ```shell
-cd ~/tianbot_ws/ && tianbot_make
+cd ~/tianbot_ws/ && catkin_make
 ```
 
 #### 3. 安装依赖 {#install-dependencies}
