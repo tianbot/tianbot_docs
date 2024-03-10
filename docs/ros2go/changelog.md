@@ -1,10 +1,17 @@
 #  更新日志
 
+## v20240309
+1. Xanmod 内核升级：`6.6.7 -> 6.7.9`
+2. Ubuntu HWE 内核升级：`5.15.0-91 -> 5.15.0-100`
+3. ROS 功能包常规更新
+4. 准备切换 Linux Mainline Kernel 6.8
+
+
 ## v20231216
 1. Xanmod 内核升级：`6.6.5 -> 6.6.7`
 2. Ubuntu HWE 内核升级：`5.15.0-89 -> 5.15.0-91`
 3. grub bootloader 升级：`2.0.6 -> 2.12RC1`
-4. ROS1 组件常规更新
+4. ROS 功能包常规更新
 
 ## v20231031
 1. 内置 [drivers-linux-firmware_20220818](https://gitlab.com/q3aql/drivers-linux-firmware), 支持 Intel/MTK/Realtek 等厂商的WIFI6网卡
