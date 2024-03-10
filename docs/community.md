@@ -36,4 +36,4 @@
 
 点击链接加入 QQ 频道【ROS2GO 交流群】：https://pd.qq.com/s/ff87jqozl
 
-![qqChannel](./public/QQchannel.jpg)
+![qq_guild_qrcode1710053909486](https://github.com/tianbot/tianbot_docs/assets/150599200/0b95e8c3-e8ef-4abc-8a0e-1f91f261c524)
