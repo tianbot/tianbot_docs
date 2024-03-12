@@ -144,7 +144,7 @@ rosrun tianracer_gazebo judge_system_node.py
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
 
-### 更新比赛环境
+### 更新比赛环境 {#update-racer-env}
 
 切换到仿真系统源码目录，运行如下命令：
 ```shell
