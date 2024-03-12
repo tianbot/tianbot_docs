@@ -124,7 +124,7 @@ roscd tianracer_gazebo/scripts/ && ./env_config.sh
 #### 4. 配置环境变量 {#config-env}
 
 ```shell
-echo "source ~/_ws/devel/setup.bash" --extend >> ~/.bashrc
+echo "source ~/tianbot_ws/devel/setup.bash" --extend >> ~/.bashrc
 ```
 ::: info 提示
 这一步很重要，否则需要每次开启终端中使用`source ~/tianbot_ws/devel/setup.bash`命令 来配置环境变量
@@ -143,6 +143,45 @@ rosrun tianracer_gazebo judge_system_node.py
 经过拖拽窗口后可以达到下图所示效果，则环境`配置成功`
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
+
+### 更新比赛环境
+
+切换到仿真系统源码目录，运行如下命令：
+```shell
+cd ~/tianbot_ws/src/tianracer 
+```
+
+使用`git pull`命令更新仿真系统源码。
+```shell
+git fetch && git pull
+```
+
+如果 `git fetch` 或 `git pull` 长时间无响应，可以尝试使用如下命令：
+```shell
+git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
+```
+
+其他操作细节参考
+
+```shell
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
+
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote -v
+origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (fetch)
+origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (push)
+
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git fetch
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 915 bytes | 915.00 KiB/s, done.
+From https://mirror.ghproxy.com/https://github.com/tianbot/tianracer
+   6e8e3f3..4524f75  dev        -> origin/dev
+   
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git pull
+Updating 6e8e3f3..4524f75
+Fast-forward
+```
 
 ### 安装录制环境
 
