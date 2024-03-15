@@ -51,7 +51,7 @@ roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
 #### 2. 启动导航任务 {#launch-navigation-task}
 
 ```shell
-rosrun tianracer_gazebo f1tenth_racer.py
+rosrun tianracer_gazebo f1tenth_racer.py __ns:=tianracer
 ```
 
 即可发现测试环境中的小车开始移动，表示代码已经可以运行。
@@ -67,7 +67,7 @@ rosrun tianracer_gazebo f1tenth_racer.py
 如何运行：
 
 ```shell
-rosrun  tianracer_gazebo multi_goals.py  
+rosrun  tianracer_gazebo multi_goals.py __ns:=tianracer
 ```
 
 2. `follow_the_gap.py`
@@ -77,7 +77,7 @@ rosrun  tianracer_gazebo multi_goals.py
 :::
 
 ```shell
-rosrun  tianracer_gazebo follow_the_gap.py 
+rosrun  tianracer_gazebo follow_the_gap.py __ns:=tianracer
 ```
 ::: danger 注意
 如果代码没有成功运行，小车没有移动，或者有其他报错，请检查自己代码是否写的有问题，尤其是`rospy`的发布和订阅。
