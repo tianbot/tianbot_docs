@@ -188,7 +188,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 { text: '作品提交', link: '/competition/f1tenth_online/submit-works' },
               ],
             },
-            { text: '视频教程及相关问题', link: '/competition/f1tenth_online/question-and-video' }  
+            // { text: '视频教程及相关问题', link: '/competition/f1tenth_online/question-and-video' }  
           ],
         },
         { text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' },
