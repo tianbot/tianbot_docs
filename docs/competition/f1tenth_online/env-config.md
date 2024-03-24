@@ -151,6 +151,8 @@ rosrun tianracer_gazebo judge_system_node.py
 cd ~/tianbot_ws/src/tianracer 
 ```
 
+#### 更新仿真系统源码 {#update-source-code}
+
 使用`git pull`命令更新仿真系统源码。
 ```shell
 git fetch && git pull
@@ -160,10 +162,44 @@ git fetch && git pull
 ```shell
 git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
 ```
+#### 确认当前分支 {#confirm-current-branch}
+
+使用`git branch`命令查看当前分支，确保当前分支为`dev`分支。
+   
+```shell
+git branch
+````
+
+输出结果
+
+```shell
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git branch
+* dev    # 可以看到当前分支为 dev
+```
+
+#### 切换分支  {#switch-branch}
+
+切换到`dev`分支，运行如下命令：
+```shell
+git switch dev
+```
+
+#### 检查是否需要更新 {#check-update}
+::: info 提示
+如需获取最新的仿真系统源码和特性，请切换到`dev`分支，并定期检查是否有新的更新。
+```shell
+git fetch && git status
+```
+:::
 
 其他操作细节参考
 
 ```shell
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+...........
+
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
 
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote -v
@@ -181,6 +217,10 @@ From https://mirror.ghproxy.com/https://github.com/tianbot/tianracer
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git pull
 Updating 6e8e3f3..4524f75
 Fast-forward
+
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git switch dev
+......
+Your branch is up to date with 'origin/dev'
 ```
 
 ### 安装录制环境
