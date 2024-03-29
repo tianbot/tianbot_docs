@@ -17,6 +17,10 @@
 修改代码时建议拷贝 1 份，进行修改，不建议在模板代码上直接修改。
 :::
 
+::: tip 提示
+关于代码模板的详细解释，此处不再赘述，无论是 `multi_goal.py` 还是 `follow_the_gap.py`，其速度控制消息均通过话题 `robot_name` + `/ackermann_cmd_stamped`进行下发，其消息类型 `ackermann_msgs` 中的[AckermannDriveStamped](https://docs.ros.org/en/jade/api/ackermann_msgs/html/msg/AckermannDriveStamped.html)
+:::
+
 运行如下命令，即可查看测试样例代码，关于[`vi`的使用](https://www.runoob.com/linux/linux-vim.html)，请自行学习。
 
 - multi_goals.py

@@ -12,6 +12,10 @@
 - ROS Noetic
 - Gazebo 11
 
+## 代码更新 {#code-update}
+
+参考 [代码更新](./update-upstream)
+
 ## 使用新版 ROS2GO 随身系统（开箱即用）{#noinstall-env-by-ros2go}
 
 [如何购买 ROS2GO 随身系统](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4001-24162858428.1.52a159deQziaYp&id=683432188936&scene=taobao_shop)
@@ -143,85 +147,6 @@ rosrun tianracer_gazebo judge_system_node.py
 经过拖拽窗口后可以达到下图所示效果，则环境`配置成功`
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
-
-### 更新比赛环境 {#update-racer-env}
-
-切换到仿真系统源码目录，运行如下命令：
-```shell
-cd ~/tianbot_ws/src/tianracer 
-```
-
-#### 更新仿真系统源码 {#update-source-code}
-
-使用`git pull`命令更新仿真系统源码。
-```shell
-git fetch && git pull
-```
-
-如果 `git fetch` 或 `git pull` 长时间无响应，可以尝试使用如下命令：
-```shell
-git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
-```
-#### 确认当前分支 {#confirm-current-branch}
-
-使用`git branch`命令查看当前分支，确保当前分支为`dev`分支。
-   
-```shell
-git branch
-````
-
-输出结果
-
-```shell
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git branch
-* dev    # 可以看到当前分支为 dev
-```
-
-#### 切换分支  {#switch-branch}
-
-切换到`dev`分支，运行如下命令：
-```shell
-git switch dev
-```
-
-#### 检查是否需要更新 {#check-update}
-::: info 提示
-如需获取最新的仿真系统源码和特性，请切换到`dev`分支，并定期检查是否有新的更新。
-```shell
-git fetch && git status
-```
-:::
-
-其他操作细节参考
-
-```shell
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git status
-On branch dev
-Your branch is up to date with 'origin/dev'.
-...........
-
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
-
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote -v
-origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (fetch)
-origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (push)
-
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git fetch
-remote: Enumerating objects: 1, done.
-remote: Counting objects: 100% (1/1), done.
-remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (1/1), 915 bytes | 915.00 KiB/s, done.
-From https://mirror.ghproxy.com/https://github.com/tianbot/tianracer
-   6e8e3f3..4524f75  dev        -> origin/dev
-   
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git pull
-Updating 6e8e3f3..4524f75
-Fast-forward
-
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git switch dev
-......
-Your branch is up to date with 'origin/dev'
-```
 
 ### 安装录制环境
 
