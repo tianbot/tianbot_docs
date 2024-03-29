@@ -183,6 +183,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               collapsed: true,
               items: [
                 { text: '环境搭建', link: '/competition/f1tenth_online/env-config' },
+                { text: '代码更新', link: '/competition/f1tenth_online/update-upstream' },
                 { text: '修改代码', link: '/competition/f1tenth_online/modify-code' },
                 { text: '运行测试', link: '/competition/f1tenth_online/run-and-test' },
                 { text: '作品提交', link: '/competition/f1tenth_online/submit-works' },

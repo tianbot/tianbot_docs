@@ -73,7 +73,6 @@ rosrun tianracer_gazebo judge_system_node.py
 开启终端，输入上述 2 行命令即可启动比赛环境，比赛过程中，请勿关闭上述两个命令行窗口，或执行其他操作
 :::
 
-
 ## 紧急制动 {#emergency-brake}
 
 ::: tip 提示
@@ -125,3 +124,7 @@ rosservice call /tianracer/emergency_brake
 ::: info 注意
 按钮按下顺序不可颠倒，否则会出现小车前轮歪向一侧，无法正常运动的情况
 :::
+
+## 常见问题 {#problem}
+
+如遇奇怪的问题，请关闭和结束已打开的所有终端，然后重新操作
