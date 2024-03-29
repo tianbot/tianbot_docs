@@ -148,6 +148,21 @@ rosrun tianracer_gazebo judge_system_node.py
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
 
+#### 6. 运行报错解决 {#run-error-solve}
+
+- 找不到 `python`
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240329171925.png)
+
+- 其他类似`could not find` ..的与`ros` 相关的报错
+
+```shell
+sudo apt install ros-noetic-ackermann-msgs ros-noetic-move-base \
+                ros-noetic-map-server  ros-noetic-amcl \
+                ros-noetic-ros-control ros-noetic-ros-controllers \
+                ros-noetic-teb-local-planner
+```
+
+
 ### 安装录制环境
 
 `OBS Studio`（Open Broadcaster Software Studio）是一款开源的跨平台录制和直播软件，具有以下特点和相比其他软件的优势：
