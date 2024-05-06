@@ -124,6 +124,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     { text: 'TOM 系列仿真实例', link: '/simulation/wheel_robot/omni/tom' },
                   ],
                 },
+                {
+                  text: '火星车模型',
+                  collapsed: true,
+                  items: [
+                    { text: 'Tianrover 系列仿真实例', link: '/simulation/wheel_robot/rover/tianrover' },
+                  ],
+                },
               ],
             },
             {
@@ -472,16 +479,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               },
               { text: '更新日志', link: '/rosecho/changelog' },
             ],
-          },
-          // {
-          //   //分组标题 6
-          //   text: '🐝 机器人集群控制',
-          //   collapsed: true,
-          //   items: [
-          //     { text: '使用说明', link: '/swarm/' },
-          //     { text: 'abc_swarm', link: '/swarm/abc_swarm/' },
-          //     { text: '更新日志', link: '/swarm/changelog' },
-          //   ],
-          // },
+          }
     ],
 }
