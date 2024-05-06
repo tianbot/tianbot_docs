@@ -437,6 +437,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '致谢', link: '/tianbot_mini/acknowledgement' },
                 ],
               },
+              { text: '常见问题', link: '/tianbot_mini/question' },
               { text: '更新日志', link: '/tianbot_mini/changelog' },
             ],
           },
