@@ -114,7 +114,7 @@ roslaunch tianracer_gazebo click_waypoint.launch filename:=spawn_pose
 使用方法
 
 ```bash
-roslaunch tianracer_gazebo click_waypoint.launch filename:=spawn_pose
+roslaunch tianracer_gazebo spawn_model.launch
 ```
 
 ### 初始位姿设定 {#initialpose_pub.launch}
@@ -175,5 +175,5 @@ rosrun  tianracer_gazebo change_rviz_name.py (新的机器的名称), # 比如 t
 其次，通过以下命令添加 tianracer 并启动对应的 rviz
 
 ```bash
-roslaunch tianracer_gazebo  spawn_with_rviz.launch robot_name:=tianracer_04 rviz_name:=tianracer_04 y_pos:=3
+roslaunch tianracer_gazebo spawn_with_rviz.launch robot_name:=tianracer_04 rviz_name:=tianracer_04 y_pos:=3
 ```
