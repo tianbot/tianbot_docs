@@ -8,7 +8,12 @@
 
 高速红外传感器的运用保障了急速响应，确保对弹丸移动轨迹的即时捕捉。多重减震技术有效抵御冲击力，确保设备在激烈比赛环境中的长时间稳定运行，无惧冲击。搭配先进的软件系统，支持弹道集中度统计、实时数据分析、日志记录、弹丸集中度分析以及区域分析等功能，为比赛提供全方位的数据支持。
 
+## 安装演示教程
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+    <iframe src="//player.bilibili.com/player.html?aid=1454258022&bvid=BV1Ui421k7yy&cid=1539634399&p=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 ## 产品外观
 
