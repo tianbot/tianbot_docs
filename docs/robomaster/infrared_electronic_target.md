@@ -1,6 +1,6 @@
 #  红外电子靶说明书
 
-我们推出了一款专为RoboMaster机甲大师赛设计的红外电子靶，致力于提供卓越的弹道检测功能。主要特色包括模拟靶子和装甲板进行高度精准的弹道集中度记录和打击位置定位。搭配先进的软件系统，支持弹道集中度统计、实时数据分析、日志记录、弹丸集中度分析以及区域分析等功能，为参赛选手提供全方位的数据支持。
+我们推出了一款专为 RoboMaster 机甲大师赛设计的红外电子靶，致力于提供卓越的弹道检测功能。主要特色包括模拟靶子和装甲板进行高度精准的弹道集中度记录和打击位置定位。搭配先进的软件系统，支持弹道集中度统计、实时数据分析、日志记录、弹丸集中度分析以及区域分析等功能，为参赛选手提供全方位的数据支持。
 
 靶子功能专注于弹道检测，通过高度精准的弹道集中度记录和打击位置定位，为参赛者提供了准确的比赛数据。靶子模块本身是静态的，确保了稳定的训练环境。
 
@@ -12,7 +12,7 @@
 
 ## 产品外观
 
-正面（23.8寸显示器需自配）
+正面（23.8 寸显示器需自配）
 
 ![29c64bdd8a6db100324951c1ecf581d](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc29c64bdd8a6db100324951c1ecf581d.jpg)
 
@@ -39,7 +39,7 @@
 |                       **检测物体直径**                       |                      **≥10 mm**                       |                         **平均电流**                         |       **≤400mA**        |
 |                         **靶面材料**                         |          **聚碳酸酯板（数倍钢化玻璃强度）**           |                                                              |                         |
 |                        **尺寸，重量**                        | **656mm x 426 mm x 184 mm，6.5Kg(裸机重，不含显示器)** |                                                              |                         |
-|                         **使用寿命**                         |               **≥20000次42mm弹丸冲击**                |                                                              |                         |
+|                         **使用寿命**                         |               **≥20000 次 42mm 弹丸冲击**                |                                                              |                         |
 
 ## 产品使用
 
@@ -49,7 +49,7 @@
 
 ![image-20240201131022634](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240201131022634.png)
 
-支架对准显示器背部螺丝孔，打入四个M4 x 30螺丝
+支架对准显示器背部螺丝孔，打入四个 M4 x 30 螺丝
 
 **注：显示器底部应和支架脚垫为同一侧！**
 
@@ -61,13 +61,16 @@
 
 ![image-20240201131850670](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240201131850670.png)
 
-分别以对角线的顺序打入四个M5 x 8螺丝
+分别以对角线的顺序打入四个 M5 x 8 螺丝
 
 ![image-20240201132421357](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240201132421357.png)
 
 即可安装完成
 
 ### 上位机软件安装
+
+- [红外电子靶上位机软件下载地址](https://pan.baidu.com/s/1rbRnHMdWaYQuedo5op_RcA?pwd=mcc9)
+
 
 **注：软件必须在全英文目录下安装！**
 
@@ -115,9 +118,9 @@
 
 ![127584FD769AE6A604496A5F4B6F51D8](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc127584FD769AE6A604496A5F4B6F51D8.png)
 
-#### 插入USB连接设备
+#### 插入 USB 连接设备
 
- 如图白色USB线
+ 如图白色 USB 线
 
 ![5103aaa9742ec3932a14ff0b3579c6a](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc5103aaa9742ec3932a14ff0b3579c6a.jpg)
 
@@ -133,7 +136,7 @@
 
 ### 打靶
 
-正常只显示一颗子弹数据，取消 【Single】 选项可持续记录高达三百次打击
+正常只显示一颗子弹数据，取消【Single】选项可持续记录高达三百次打击
 
 ![1705484945762](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc1705484945762.png)
 
@@ -149,9 +152,9 @@
 
 #### 多发数据显示
 
-取消 【Single】 选项后射击
+取消【Single】选项后射击
 
-**注：打靶超过300次可能会有延迟**
+**注：打靶超过 300 次可能会有延迟**
 
 ![1705485152773](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc1705485152773.png)
 
@@ -187,7 +190,7 @@
 
 ### 靶环模式
 
-靶环模式下可设置靶环数量，靶环范围2-20环
+靶环模式下可设置靶环数量，靶环范围 2-20 环
 
 可以选择绘制弹丸的种类：小弹丸，大弹丸
 
@@ -221,7 +224,7 @@
 
 #### 数据保存
 
-选择需要保存的玩家，点击【红外靶】，点击【保存】，数据将会保存在软件根目录的下，可使用excel软件（csv）打开编辑
+选择需要保存的玩家，点击【红外靶】，点击【保存】，数据将会保存在软件根目录的下，可使用 excel 软件（csv）打开编辑
 
 ![1705485623147](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc1705485623147.png)
 
@@ -237,6 +240,6 @@
 
 点击【红外靶】，点击【截图】，靶板数据将会保存在程序根目录下
 
-InfraredRayTarget\RM红外靶弹道记录
+InfraredRayTarget\RM 红外靶弹道记录
 
 ![1705485698637](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Doc1705485698637.png)
