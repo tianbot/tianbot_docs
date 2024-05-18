@@ -1,16 +1,168 @@
 # Tianracer 仿真实例
 
-## 简介 
+## 简介 {#brief}
 
 tianracer_gazebo 是一个基于阿克曼底盘的仿真实例，在 ROS2GO 环境中，只需要一行命令即可运行支持 TEB 单点路径规划的仿真环境。
 
-## 启动基础仿真环境
+## 说明 {#instruction}
+
+- 运行带有 demo_开头的`launch`文件，均不需要运行启动基础仿真环境的命令，直接运行即可
+
+## 启动基础仿真环境 {#start-sim}
 
 ```shell
 roslaunch tianracer_gazebo tianracer_bringup.launch
 ```
 
-## 启动带有 move_base+Teb_local_planner 仿真环境
+## SLAM 建图 {#slam}
+
+在启动基础仿真环境之后，可以使用 **Gmapping**和 **Cartographer**算法进行地图构建
+
+### Gmapping
+
+```bash
+roslaunch tianracer_slam tianracer_gmapping.launch
+```
+
+输出
+
+```bash
+... logging to /home/tianbot/.ros/log/4f4e5210-14fa-11ef-a363-c33b96dd6632/roslaunch-ros2go-428769.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://192.168.0.105:32771/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+ * /tianracer/slam_gmapping/angularUpdate: 0.2
+ * /tianracer/slam_gmapping/astep: 0.05
+ * /tianracer/slam_gmapping/base_frame: tianracer/base_fo...
+ * /tianracer/slam_gmapping/delta: 0.05
+ * /tianracer/slam_gmapping/iterations: 5
+ * /tianracer/slam_gmapping/kernelSize: 1
+ * /tianracer/slam_gmapping/lasamplerange: 0.005
+ * /tianracer/slam_gmapping/lasamplestep: 0.005
+ * /tianracer/slam_gmapping/linearUpdate: 0.25
+ * /tianracer/slam_gmapping/llsamplerange: 0.01
+ * /tianracer/slam_gmapping/llsamplestep: 0.01
+ * /tianracer/slam_gmapping/lsigma: 0.075
+ * /tianracer/slam_gmapping/lskip: 0
+ * /tianracer/slam_gmapping/lstep: 0.05
+ * /tianracer/slam_gmapping/map_update_interval: 0.5
+ * /tianracer/slam_gmapping/maxUrange: 20
+ * /tianracer/slam_gmapping/minimumScore: 200
+ * /tianracer/slam_gmapping/odom_frame: tianracer/odom
+ * /tianracer/slam_gmapping/ogain: 3.0
+ * /tianracer/slam_gmapping/particles: 30
+ * /tianracer/slam_gmapping/resampleThreshold: 0.5
+ * /tianracer/slam_gmapping/sigma: 0.05
+ * /tianracer/slam_gmapping/srr: 0.05
+ * /tianracer/slam_gmapping/srt: 0.05
+ * /tianracer/slam_gmapping/str: 0.05
+ * /tianracer/slam_gmapping/stt: 0.05
+ * /tianracer/slam_gmapping/temporalUpdate: -1
+ * /tianracer/slam_gmapping/xmax: 50.0
+ * /tianracer/slam_gmapping/xmin: -50.0
+ * /tianracer/slam_gmapping/ymax: 50.0
+ * /tianracer/slam_gmapping/ymin: -50.0
+
+NODES
+  /tianracer/
+    slam_gmapping (gmapping/slam_gmapping)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[tianracer/slam_gmapping-1]: started with pid [428803]
+[ INFO] [1716025113.627337380, 87.344000000]: Laser is mounted upwards.
+ -maxUrange 20 -maxUrange 9.99 -sigma     0.05 -kernelSize 1 -lstep 0.05 -lobsGain 3 -astep 0.05
+ -srr 0.05 -srt 0.05 -str 0.05 -stt 0.05
+ -linearUpdate 0.25 -angularUpdate 0.2 -resampleThreshold 0.5
+ -xmin -50 -xmax 50 -ymin -50 -ymax 50 -delta 0.05 -particles 30
+[ INFO] [1716025113.632751319, 87.350000000]: Initialization complete
+update frame 0
+update ld=0 ad=0
+Laser Pose= 0.0151926 0.094574 1.48488
+m_count 0
+Registering First Scan
+```
+
+### Cartographer
+
+由于**cartographer**对实机和仿真做了区分，所以与在实车使用不太一样，运行如下命令即可
+
+```bash
+roslaunch tianracer_slam gazebo_cartographer_2d.launch
+```
+
+输出
+
+```bash
+tianbot@ros2go:~$ roslaunch tianracer_slam gazebo_cartographer_2d.launch 
+... logging to /home/tianbot/.ros/log/4f4e5210-14fa-11ef-a363-c33b96dd6632/roslaunch-ros2go-433857.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://192.168.0.105:40313/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+ * /use_sim_time: True
+
+NODES
+  /tianracer/
+    cartographer_node (cartographer_ros/cartographer_node)
+    cartographer_occupancy_grid_node (cartographer_ros/cartographer_occupancy_grid_node)
+    map_to_ns_map (tf/static_transform_publisher)
+
+ROS_MASTER_URI=http://localhost:11311
+
+process[tianracer/map_to_ns_map-1]: started with pid [433880]
+process[tianracer/cartographer_node-2]: started with pid [433881]
+process[tianracer/cartographer_occupancy_grid_node-3]: started with pid [433887]
+[ INFO] [1716025306.555716899]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/home/tianbot/tianracer_ws/src/tianracer/tianracer_slam/param/2d_scan.lua' for '2d_scan.lua'.
+[ INFO] [1716025306.564308293]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1716025306.564349771]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/map_builder.lua' for 'map_builder.lua'.
+[ INFO] [1716025306.564411020]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+[ INFO] [1716025306.564436966]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/pose_graph.lua' for 'pose_graph.lua'.
+[ INFO] [1716025306.564893524]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder.lua' for 'trajectory_builder.lua'.
+[ INFO] [1716025306.564927277]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder.lua' for 'trajectory_builder.lua'.
+[ INFO] [1716025306.564988556]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder_2d.lua' for 'trajectory_builder_2d.lua'.
+[ INFO] [1716025306.565015645]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder_2d.lua' for 'trajectory_builder_2d.lua'.
+[ INFO] [1716025306.565282064]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder_3d.lua' for 'trajectory_builder_3d.lua'.
+[ INFO] [1716025306.565309986]: I0518 17:41:46.000000 433881 configuration_file_resolver.cc:41] Found '/opt/ros/noetic/share/cartographer/configuration_files/trajectory_builder_3d.lua' for 'trajectory_builder_3d.lua'.
+Retrieved robot name: 	tianracer
+```
+
+## 使用 TEB 导航+SLAM 建图方法 {#teb_slam}
+
+运行如下命令即可启动，无需再次启动基础仿真环境
+
+```bash
+roslaunch tianracer_gazebo demo_slam_teb.launch
+```
+
+然后再开启了上述某个`SLAM`建图方法
+
+## 保存地图 {#save_map}
+
+与实车不同，在`gazebo`运行时，保存地图的路径会在`tianracer_gazebo/maps`路径下
+
+```bash
+roslaunch tianracer_slam gazebo_map_save.launch 
+```
+
+## move_base+Teb_local_planner 单点导航
 
 ```shell
 roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch.py
