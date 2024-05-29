@@ -1,10 +1,10 @@
 # 软件环境配置
 
-## 连接网络
+## ssh 连接网络
 
-设置网络时不需要连接屏幕，我们直接使用一根 MicroUSB 线即可完成 Jetson Nano 的网络设置
+设置网络时不需要连接屏幕，我们直接使用一根 MicroUSB 线即可完成 Jetson 板卡的网络设置
 
-1. 通过 Jetson Nano 的通过 MicroUSB 接口连接到您的计算机
+1. 通过 Jetson 板卡的 MicroUSB 接口连接到您的计算机
 
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docce4345521d6a7f216307ec8abb7150a3.png)
@@ -21,12 +21,12 @@ ssh tianbot@192.168.55.1
 ![网络配置](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211514339.jpg)
 
 ::: tip 注意
-可以从图中看到，在终端输入`ssh tianbot@192.168.55.1`，然后输入密码`ros`，即可连接到 Jetson Nano。
+可以从图中看到，在终端输入`ssh tianbot@192.168.55.1`，然后输入密码`ros`，即可连接到 Jetson 板卡。
 
-此时的终端用户名从`tianbot@tianbot-ros2go`变成了`tianbot@tianbot-nano`，说明已经成功 ssh 连接到 Jetson Nano 上。
+此时的终端用户名从`tianbot@tianbot-ros2go`变成了`tianbot@tianbot-nano`，说明已经成功 ssh 连接到 Jetson 板卡上。
 :::
 
-3. 使用以下指令配置 Jetson Nano 网络连接
+4. 使用以下指令配置 Jetson 板卡网络连接
 ```shell
 sudo nmcli device wifi connect WIFI名称 password WIFI密码
 ```
@@ -44,18 +44,18 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 命令完成之后，再次查看小车的
 
-4. 命令正常执行后，使用`ifconfig`命令查看 Jetson Nano 的网络信息
+5. 命令正常执行后，使用`ifconfig`命令查看 Jetson 板卡的网络信息
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc69DE875C2A84405FC5D21C990BED9B53.png)
 
-从上图中可以看到，Tianracer 小屏上的 IP 地址为`192.168.0.34.129`，终端（`tianbot@tianbot-nano`）显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 nano 主控已成功连接局域网之下
+从上图中可以看到，Tianracer 小屏上的 IP 地址为`192.168.0.34.129`，终端（`tianbot@tianbot-nano`）显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 Jetson 板卡主控已成功连接局域网之下
 
-5. 如无意外，此时已成功的配置 TIANRACER 无人车连接到 WIFI 网络中，我们将 USB 断开连接。
+6. 如无意外，此时已成功的配置 TIANRACER 无人车连接到 WIFI 网络中，我们将 USB 断开连接。
 
-6. 重启 Jetson Nano，就可以在信息屏上看到关于 IP 地址、CPU、GPU、RAM 占用等信息。
+7. 重启 Jetson Nano，就可以在信息屏上看到关于 IP 地址、CPU、GPU、RAM 占用等信息。
 
 
-## 远程连接
+## 远程桌面连接
 
 ### VNC
 在开始远程连接前，请确保已经成功连接到 WIFI 网络。
@@ -68,19 +68,37 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 根据小屏显示的`IP`，新建一个终端，可以通过`ssh tianbot@IP`进入，注意`@`之后应该填写小屏显示的`IP`地址。
 
+#### T110
 ssh 进入后，运行如下命令，启动`VNC`服务
 ```shell
 ./vnc_server.sh
 ```
-
 然后通过[VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)进行连接
+
+#### T108
+
+连接到车载热点后，可通过[VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)进行连接
+
+- 默认 IP 为 `192.168.1.100`, 默认密码为`ros`
+- 如发现 ip 连接超时，可等待一分钟后重试。
 
 ### Rustdesk
 
 具体操作步骤请参考[如何使用 Rustdesk 进行远程连接](https://docs.tianbot.com/basic/rustdesk.html)
 
 ::: info 提示
-如整车出厂时，Jeston 板卡已接入`显卡虚拟欺骗器`，则整车已经安装了 `Rustdesk`，则可以直接使用。
+如 T108 整车出厂时，Jeston 板卡已接入`显卡虚拟欺骗器`，则整车已经安装了 `Rustdesk`，则可以直接使用。
+并且 T108 整车出厂时，通过连接车载路由，
+
+- 使用如下命令建立 ssh 远程连接即可，连接到车
+
+```shell
+ssh tianbot@192.168.1.100
+```
+- 也可通过`Rustdesk`连接到车
+
+`Rustdesk`默认出厂密码为 `Tianbot_2016`
+
 ::: 
 
 ## ROS 驱动配置
