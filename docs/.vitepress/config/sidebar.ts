@@ -341,6 +341,14 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '线下挑战赛', link: '/tianracer/experiment/racer_offline' },
                 ],
               },
+              {
+                text: '开发手册',
+                collapsed: true,
+                items:[
+                  {text: '使用MATLAB开发Tianracer', link: '/tianracer/development/matlab'},
+                ]
+
+              },
               { text: '常见问题', link: '/tianracer/question' },
               { text: '更新日志', link: '/tianracer/changelog' },
             ],
