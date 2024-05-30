@@ -73,8 +73,11 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530130251.png)
 
+::: info 提示
+使用车载路由时
 - 默认 IP 为 `192.168.1.100`, 默认密码为`ros`
 - 如发现 ip 连接超时，可等待一分钟后重试。
+:::
 
 ## ROS 驱动配置
 
