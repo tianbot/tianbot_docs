@@ -68,38 +68,11 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 根据小屏显示的`IP`，新建一个终端，可以通过`ssh tianbot@IP`进入，注意`@`之后应该填写小屏显示的`IP`地址。
 
-#### T110
 ssh 进入后，运行如下命令，启动`VNC`服务
 ```shell
 ./vnc_server.sh
 ```
 然后通过[VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)进行连接
-
-#### T108
-
-连接到车载热点后，可通过[VNC 客户端](https://www.realvnc.com/en/connect/download/viewer/)进行连接
-
-- 默认 IP 为 `192.168.1.100`, 默认密码为`ros`
-- 如发现 ip 连接超时，可等待一分钟后重试。
-
-### Rustdesk
-
-具体操作步骤请参考[如何使用 Rustdesk 进行远程连接](https://docs.tianbot.com/basic/rustdesk.html)
-
-::: info 提示
-如 T108 整车出厂时，Jeston 板卡已接入`显卡虚拟欺骗器`，则整车已经安装了 `Rustdesk`，则可以直接使用。
-并且 T108 整车出厂时，通过连接车载路由，
-
-- 使用如下命令建立 ssh 远程连接即可，连接到车
-
-```shell
-ssh tianbot@192.168.1.100
-```
-- 也可通过`Rustdesk`连接到车
-
-`Rustdesk`默认出厂密码为 `Tianbot_2016`
-
-::: 
 
 ## ROS 驱动配置
 
