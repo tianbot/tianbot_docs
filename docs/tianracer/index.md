@@ -87,7 +87,7 @@ ROS 端的底层驱动预置于配套的运算平台，代码开源，包含
 |:--:|:--:|:--:|:--:|
 |产品展示|![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)|![产品展示](https://static.tianbot.com/product/20220316/0270c2851da25e9e8ab5b8c05a5d9faa.png) | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)|
 |产品尺寸 | 850 x 480 x 220 mm | 608 x 327 x 213mm |380 x 210 x 195|
-|产品净重 | 15 kg | 7.1kg |<3.5kg|
+|产品净重 | 15 kg | 7.1kg |小于 3.5kg|
 |底盘结构 | 阿克曼结构 | 阿克曼结构 |阿克曼结构|
 |驱动方式 | 单无感无刷电机双差速器全时四驱 | 单无感无刷电机全时四驱 |单无感无刷电机全时四驱|
 |最大移动速度 | 11.1m/s max | 5m/s max, 0.1m/s min | 3.5m/s |
