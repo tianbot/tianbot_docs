@@ -2,7 +2,7 @@
 
 ## ssh 网络连接配置
 
-设置网络时不需要连接屏幕，我们直接使用一根 MicroUSB 线即可完成 Jetson 板卡的网络设置
+设置网络时不需要连接屏幕，我们可以使用一根 USB-to-Type-C 线即可完成 Jetson 板卡的网络设置
 
 1. 通过 Jetson 板卡的 `Type-C` 接口连接到您的计算机
 
@@ -49,10 +49,12 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 ## 远程桌面连接
 
-当将 Jeston 板卡连接到局域网热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
+- 方式一：当将 Jeston 板卡连接到局域网热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
+
+- 方式二：`T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。
 
 ::: info 提示
-因为 T108 整车出厂时自带车载路由，所以连接到车载热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
+使用车载路由连接时，
 1. 默认 AP 的 SSID 为`TBRC-108-XXXX`，连接密码为`www.tianbot.com`
 2. 路由器地址为`192.168.1.1`
 3. 在路由器网段中，Jeston 板卡的 以太网 IP 地址默认为`192.168.1.100`
