@@ -2,7 +2,7 @@
 
 ## 产品简介
 
-![产品图片](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530163104.png)
 
 Tianracer 面向教育、竞赛和科研的机器人是一种全功能的智能学习工具，适用于高年级的本科学生、科研人员和参与机器人竞赛的团队。无论是在课堂上还是实验室中，该机器人都能提供丰富的学习资源和实践机会，以推动创造力、合作能力和问题解决技巧的发展。
 
