@@ -86,26 +86,26 @@ ROS 端的底层驱动预置于配套的运算平台，代码开源，包含
 |产品型号|Tianracer T105|Tianracer T108|Tianracer T110|
 |:--:|:--:|:--:|:--:|
 |产品展示|![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)|![产品展示](https://static.tianbot.com/product/20220316/0270c2851da25e9e8ab5b8c05a5d9faa.png) | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)|
-|产品尺寸 | - | 608 x 327 x 213mm |380 x 210 x 195|
-|产品净重 | - | 7.1kg |<3.5kg|
-|底盘结构 | - | 阿克曼结构 |阿克曼结构|
-|驱动方式 | - | 单无感无刷电机全时四驱 |单无感无刷电机全时四驱|
-|最大移动速度 | - | 5m/s max, 0.1m/s min | 3.5m/s |
-|底盘参数 | - | 轴距：396mm，轮距：270mm，轮径：135mm | - |
-|运行时间 | - | 不小于 2 小时，以具体情况而定 |不小于 2 小时，以具体情况而定 |
-|供电电池 | - | 24V 动力锂电池 | 5000mAh 动力锂电池 |
-|充电适配器 | - | 25.2V 3A 锂电适配器 | 2s-4s 平衡充 |
-|是否防水防尘 | - | 防水、防尘 | 不防水、不防尘 | 
+|产品尺寸 | 850 x 480 x 220 mm | 608 x 327 x 213mm |380 x 210 x 195|
+|产品净重 | 15 kg | 7.1kg |<3.5kg|
+|底盘结构 | 阿克曼结构 | 阿克曼结构 |阿克曼结构|
+|驱动方式 | 单无感无刷电机双差速器全时四驱 | 单无感无刷电机全时四驱 |单无感无刷电机全时四驱|
+|最大移动速度 | 11.1m/s max | 5m/s max, 0.1m/s min | 3.5m/s |
+|底盘参数 | 轴距：650mm | 轴距：396mm，轮距：270mm，轮径：135mm | - |
+|运行时间 | 不小于 1.75 小时，以具体情况而定 | 不小于 2 小时，以具体情况而定 |不小于 2 小时，以具体情况而定 |
+|供电电池 | 14.8V/16Ah x 2 动力电池 | 24V 动力锂电池 | 5000mAh 动力锂电池 |
+|充电适配器 | 29.6v 锂电池适配器 | 25.2V 3A 锂电适配器 | 2s-4s 平衡充 |
+|是否防水防尘 | 防水、防尘 | 防水、防尘 | 不防水、不防尘 | 
 | | | 运算平台 | |
-|运算平台 | - | Jeston Xavier NX | Jeston Nano 4G |
+|运算平台 | Jeston TX2 系列 | Jeston Xavier NX | Jeston Nano 4G |
 | | | 控制平台 | |
-|主控芯片 | - | STM32F407VET6 |STM32F407VET6|
-|输入电压 | - | 5V |5V |
-|接口 | - | DBUS、UART、PWM | DBUS、UART、PWM|
+|主控芯片 | STM32F411  | STM32F407VET6 |STM32F407VET6|
+|输入电压 | 5V | 5V |5V |
+|接口 | CAN、DBUS、UART、PWM | DBUS、UART、PWM | DBUS、UART、PWM|
 | |  | 传感器 | |
-|激光雷达 | - | 傲视 Osight IE102-H | 思岚 Rpliadr A1  / 锐驰 richbeam Lakibeam1 |
-|深度相机 | - | Intel Realsense D455 | 单目 USB 摄像头 |
-|IMU| - | 6 轴 MPU6050 | 6 轴 MPU6050 | 
+|激光雷达 | RS-LIDAR-16 | 傲视 Osight IE102-H | 思岚 Rpliadr A1  / 锐驰 richbeam Lakibeam1 |
+|深度相机 | Intel Realsense 系列 或 ZED 系列 | Intel Realsense D455 | 单目 USB 摄像头 |
+|IMU| ICM20948 | 6 轴 MPU6050 | 6 轴 MPU6050 | 
 
 </details>
 
