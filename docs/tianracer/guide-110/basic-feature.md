@@ -19,13 +19,9 @@ roslaunch tianracer_rviz view_lidar.launch        # 查看雷达数据
 - 单线雷达
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240528165445830.png)
 
--  多线雷达，以 robosense RS16 为例（选配）
-
 ::: info 注意
 查看时话题需要对应
 :::
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240528170457935.png)
 
 ### USB 摄像头
 ```shell
@@ -45,13 +41,9 @@ roslaunch tianracer_bringup rgbd_camera.launch
 roslaunch tianracer_rviz view_image.launch        # 查看图像数据
 ```
 
-- 以 realsense d455 为例 (选配)
-
 ::: info 注意
 查看时话题需要对应
 :::
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240528170149258.png)
 
 ## 如何控制底盘运动
 
@@ -66,6 +58,7 @@ TIANRACER 使用遥控器 DT7 进行控制，DT7 是一款工作于 2.4GHz 频�
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211514356.jpg)
 
 - 向右拨电源开关，开启遥控器。向左拨电源开关，关闭遥控器。
+- 左侧拨码开关，扳上禁用遥控，使用 ROS 控制，扳中反之。
 - 遥控器开启时有提示音，开启后电源指示灯绿灯长亮并伴随蜂鸣器提示音。
 - 左手摇杆前进后退，右手摇杆转向，S1 模式控制设置
 
