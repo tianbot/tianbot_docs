@@ -315,14 +315,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '注意事项', link: '/tianracer/notice' },
               { text: '收货清单', link: '/tianracer/list' },
               {
-                text: '使用手册',
+                text: 'T108 使用手册',
                 collapsed: true,
                 items: [
-                  { text: '使用指引', link: '/tianracer/guide/' },
-                  { text: '软件环境配置', link: '/tianracer/guide/software-env-config' },
-                  { text: 'ROS 基础功能', link: '/tianracer/guide/basic-feature' },
-                  { text: 'SLAM 建图', link: '/tianracer/guide/slam' },
-                  { text: '自主导航', link: '/tianracer/guide/navigation' },
+                  { text: '使用指引', link: '/tianracer/guide-108/' },
+                  { text: '软件环境配置', link: '/tianracer/guide-108/software-env-config' },
+                  { text: 'ROS 基础功能', link: '/tianracer/guide-108/basic-feature' },
+                  { text: 'SLAM 建图', link: '/tianracer/guide-108/slam' },
+                  { text: '自主导航', link: '/tianracer/guide-108/navigation' },
+                ],
+              },
+              {
+                text: 'T110 使用手册',
+                collapsed: true,
+                items: [
+                  { text: '使用指引', link: '/tianracer/guide-110/' },
+                  { text: '软件环境配置', link: '/tianracer/guide-110/software-env-config' },
+                  { text: 'ROS 基础功能', link: '/tianracer/guide-110/basic-feature' },
+                  { text: 'SLAM 建图', link: '/tianracer/guide-110/slam' },
+                  { text: '自主导航', link: '/tianracer/guide-110/navigation' },
                 ],
               },
               {
@@ -345,7 +356,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 text: '开发手册',
                 collapsed: true,
                 items:[
-                  {text: '使用MATLAB开发Tianracer', link: '/tianracer/development/matlab'},
+                  {text: '使用 MATLAB 开发 Tianracer', link: '/tianracer/development/matlab'},
                 ]
 
               },
