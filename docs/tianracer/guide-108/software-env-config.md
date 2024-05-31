@@ -1,6 +1,6 @@
 # 软件环境配置
 
-## ssh 网络连接配置
+<!-- ## ssh 网络连接配置
 
 设置网络时不需要连接屏幕，我们可以使用一根 USB-to-Type-C 线即可完成 Jetson 板卡的网络设置
 
@@ -25,13 +25,13 @@ ssh tianbot@192.168.55.1
 
 4. 使用以下指令配置 Jetson 板卡网络连接
 ```shell
-sudo nmcli device wifi connect WIFI名称 password WIFI密码
+sudo nmcli device wifi connect WIFI 名称 password WIFI 密码
 ```
 
 ::: tip 举例如下
 假设现在需要让小车连接到名为`TianbotOffice-5G`的 WIFI 网络，密码为`www.tianbot.com`，
 
-则应该在终端 (`此处所说的终端仍然是指以tianbot@tianbot-nano为用户名的`) 输入以下指令：
+则应该在终端 (`此处所说的终端仍然是指以 tianbot@tianbot-nano 为用户名的`) 输入以下指令：
 
 ```shell
 ​​sudo nmcli device wifi connect TianbotOffice-5G password www.tianbot.com
@@ -45,13 +45,15 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 从终端（`tianbot@tianbot-nano`）中打印的信息中可以看到，显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 Jetson 板卡主控已成功连接局域网之下
 
-6. 如无意外，此时已成功的配置 `TIANRACER T108` 无人车的 Jeston 板卡 连接到 WIFI 网络中，我们将 USB 断开连接。
+6. 如无意外，此时已成功的配置 `TIANRACER T108` 无人车的 Jeston 板卡 连接到 WIFI 网络中，我们将 USB 断开连接。 -->
 
 ## 远程桌面连接
 
-- 方式一：当将 Jeston 板卡连接到局域网热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
+<!-- - 方式一：当将 Jeston 板卡连接到局域网热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
 
-- 方式二：`T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。
+- 方式二：`T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。 -->
+
+- `T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。
 
 ::: info 提示
 使用车载路由连接时，
