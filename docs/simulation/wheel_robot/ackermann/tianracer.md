@@ -2,17 +2,61 @@
 
 ## 简介 {#brief}
 
-tianracer_gazebo 是一个基于阿克曼底盘的仿真实例，在 ROS2GO 环境中，只需要一行命令即可运行支持 TEB 单点路径规划的仿真环境。
+tianracer_gazebo 是一个基于阿克曼底盘支持多机框架的仿真实例，在 ROS2GO 环境中，只需要一行命令即可运行支持 TEB 单点路径规划的仿真环境。
 
 ## 说明 {#instruction}
 
 - 运行带有 demo_开头的`launch`文件，均不需要运行启动基础仿真环境的命令，直接运行即可
+- 支持 `robot_name` 环境变量设置（默认 `robot_name` 为`tianracer`）
+- 支持 `world` 环境变量设置（默认 `robot_name` 为`tianracer_ractrack`）
 
 ## 启动基础仿真环境 {#start-sim}
 
 ```shell
 roslaunch tianracer_gazebo tianracer_bringup.launch
 ```
+
+## 启动 TEB 单点路径规划仿真环境 {#start-teb-waypoint-sim}
+
+```shell
+roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
+```
+
+### 通过命令行参数设置环境变量
+
+::: info 如何通过参数设置环境变量
+
+这里的 `tianracer_racetrack` 对应着实际的 `.world` 文件名，例如导入世界 `tianracer_gazebo/worlds/tianracer_racetrack.world`，就需要输入的参数为`tianracer_racetrack`
+
+- 设置 `world` 环境变量，指定仿真 `world` 环境文件
+```bash
+roslaunch tianracer_gazebo tianracer_bringup.launch world:=tianracer_racetrack
+```
+- 设置 `robot_name` 环境变量，指定仿真机器人名称，支持多机器人协同
+```bash
+roslaunch tianracer_gazebo tianracer_bringup.launch robot_name:=tianracer_01
+```
+:::
+
+### 通过系统环境变量设置环境变量
+
+::: info 通过命令行参数设置环境变量的方式适用于某个命令暂时性需要设置环境变量的情况，而有时需要在某个终端中暂时设定环境变量，可以通过`export`设置系统环境变量
+
+- 设置 `world` 环境变量，指定仿真 `world` 环境文件，
+```bash
+export TIANRACER_WORLD=racetrack_1  
+```
+与终端命令行参数一样，这里的 `racetrack_1` 对应着实际的 `.world` 文件名，例如导入世界 `tianracer_gazebo/worlds/racetrack_1.world`，就需要输入的参数为`racetrack_1`
+
+- 设置 `robot_name` 环境变量，指定仿真机器人名称，支持多机器人协同
+```bash
+export TIANRACER_NAME=tianracer_02
+```
+:::
+
+如果需要每个新的终端都默认设置好预定的环境变量，可以通过将上面的 `export` 命令逐个写入`~/.bashrc`文件中，然后在终端中执行`source ~/.bashrc`以更新当前终端中的系统环境变量
+
+
 
 ## SLAM 建图 {#slam}
 
