@@ -205,6 +205,13 @@ roslaunch tianracer_gazebo demo_slam_teb.launch
 ```bash
 roslaunch tianracer_slam gazebo_map_save.launch 
 ```
+::: tip 提示
+- 保存地图的路径会在`tianracer_gazebo/maps`路径下
+- 如需指定地图保存名称，请参照如下方式通过命令行参数指定地图名称
+```shell
+roslaunch tianracer_slam gazebo_map_save.launch map_file:=my_map
+```
+:::
 
 ## move_base+Teb_local_planner 单点导航
 
