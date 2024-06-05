@@ -16,12 +16,12 @@ RustDesk 是一款基于 Rust 编写的轻量级远程桌面控制软件，相�
 4. 支持多平台：RustDesk 支持 Windows，MacOS 和 Linux 等多种操作系统，而 VNC 只支持部分操作系统。
 5. 免费：RustDesk 是一款开源的软件，可以免费使用。
 
-### **硬件准备**
+### **硬件准备** {#preparation}
 
 - HDMI 虚拟负载 *1（必要）
 - 免驱 USB 网卡 *1（非必要）
 
-### **软件准备**
+### **软件准备** {#installation}
 
 根据自己使用的系统类型（Windows、Linux、MacOS 等）选择对应的二进制安装文件，[https://rustdesk.com/](https://rustdesk.com/)，并开启 IP 直连。
 
@@ -46,7 +46,7 @@ RustDesk 是一款基于 Rust 编写的轻量级远程桌面控制软件，相�
 
 保证控制端（笔记本、台式主机）与被控端（Jeston 系列、各类开发板）连接同一路由器，即处于同一网段下
 
-### **参数配置**
+### **参数配置** {#param-config}
 
 在了解了 Rustdesk 是什么后，接下来就开始开始配置 rustdesk 的使用环境，`rustdesk`默认安装时，并未开启`IP直连`，除此之外还需要设置连接密码（密码要求必须包含大小写字母、数字）方便连接，由`TIANBOT`出货的移动机器人平台`rustdesk`初始密码为`Tianbot_2016`
 
