@@ -276,7 +276,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '注意事项', link: '/tianbot/notice' },
               { text: '收货清单', link: '/tianbot/list' },
               {
-                text: '使用手册',
+                text: 'TOM06/08 系列使用手册',
                 collapsed: true,
                 items: [
                   { text: '使用指引', link: '/tianbot/guide/' },
@@ -284,6 +284,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: 'ROS 基础功能', link: '/tianbot/guide/basic-feature' },
                   { text: 'SLAM 建图', link: '/tianbot/guide/slam' },
                   { text: '自主导航', link: '/tianbot/guide/navigation' },
+                ],
+              },
+              {
+                text: 'TOM06s 系列使用手册',
+                collapsed: true,
+                items: [
+                  { text: '使用指引', link: '/tianbot/guide-06S/' },
+                  { text: '软件环境配置', link: '/tianbot/guide-06S/software-env-config' },
+                  { text: 'Tianbot_toolkit 工具使用', link: '/tianbot/guide-06S/tianbot_toolkit' },
+                  { text: '常见问题', link: '/tianbot/guide-06S/question' },
+                  { text: 'ROS 基础功能', link: '/tianbot/guide-06S/basic-feature' },
                 ],
               },
               {
