@@ -6,7 +6,7 @@
 本节的内容，将会省略一些基础的细节，以方便大家快速上手修改代码，涉及到的基础知识和技巧请自行学习（如`git`、`vi`等）。
 :::
 
-### 代码模板
+## 代码模板
 
 我们提供了基于比赛的代码模板，你可以基于下面的 2 个模板来改进出自己代码。
 
@@ -86,3 +86,60 @@ rosrun  tianracer_gazebo follow_the_gap.py __ns:=tianracer
 ::: danger 注意
 如果代码没有成功运行，小车没有移动，或者有其他报错，请检查自己代码是否写的有问题，尤其是`rospy`的发布和订阅。
 :::
+
+## 添加地图和目标点文件 {#add-map-and-goal-file}
+
+- 在正式比赛时，需要选手们自行建立用于导航使用的 `xxxx.pgm` 地图，和用于导航读取的`xxxx_points.yaml`目标点文件
+
+### 导航地图
+
+运行上述命令，会在 `tianracer_gazebo/maps` 文件夹下，保存 `test_indoor.yaml`和`test_indoor.pgm` 文件，这 2 个文件对应了 `test_indoor.world` 用于导航的 `map` 文件。
+
+- [如何建立导航地图](/simulation/wheel_robot/ackermann/tianracer#slam)
+- [如何保存地图](/simulation/wheel_robot/ackermann/tianracer#save_map)
+```shell
+roslaunch tianracer_slam gazebo_map_save.launch map_file:=test_indoor  
+```
+::: info 提示
+`test_indoor` 是`.world` 世界的名称，不同的`.world` 世界有不同的导航地图文件，如果是`racetrack_1.world`，则命令行参数为`map_file:=racetrack_1`
+:::
+
+保存地图后，不要着急退出，可以继续进行下一步创建导航目标点文件。
+
+### 导航目标点文件
+
+- 选手们需要自行建立用于导航使用的目标点文件，并将其保存在 `tianracer_gazebo/scripts/waypoint_race` 文件夹下
+
+- 假设文件名格式为 `test_indoor_points.yaml`，其中 `test_indoor` 代表赛道编号，`points` 代表目标点，`yaml` 代表文件格式
+
+在完成 SLAM 建图后，（`保证在 rviz 中可以正确看到地图时`），可以使用如下命令，在，来生成 `test_indoor_points.yaml` 来生成目标点文件，
+```shell
+roslaunch tianracer_gazebo click_waypoint.launch filename:=test_indoor_points
+```
+
+::: info 提示
+`test_indoor_points` 是对应`.world` 世界导航目标点的名称，不同的`.world` 世界有不同的导航目标点文件，如果是`racetrack_1.world`，则命令行参数为`filename:=racetrack_1_points`
+:::
+
+点击 `rviz` 界面上的 `2D Nav Goal` 按钮，逐个点击给点和箭头方向，完成后，使用`Ctrl+C` 保存退出即可，将会在`tianracer_gazebo/scripts/waypoint_race`路径下保存`test_indoor_points.yaml` 文件。
+
+
+::: info 提示
+`test_indoor_points.yaml` 文件内容格式如下
+:::
+
+```yaml
+waypoints:
+- frame_id: map
+  name: 15.974745750427246_1.1538954973220825
+  pose:
+    orientation:
+      w: 0.6858744244080031
+      x: 0.0
+      y: 0.0
+      z: -0.7277199144883906
+    position:
+      x: 15.974745750427246    # 目标点 x 坐标
+      y: 1.1538954973220825    # 目标点 y 坐标
+      z: 0.0
+```

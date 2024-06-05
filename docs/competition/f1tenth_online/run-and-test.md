@@ -57,20 +57,39 @@ ls scripts/ | grep f1tenth_racer.py
 
 ## 跑分测试 {#test-get-score}
 
+::: tip 注意
+为了确保在运行时，可以导入正确的地图，目标点文件，需要传入不同`.world`文件的名称进行使用
+:::
+
+假设这里使用`racetrack_1.world`作为需要运行的世界
+
+### 启动仿真系统 {#start-simulation-system}
+
 `新开启`一个终端，运行如下代码，启动 Gazebo 仿真系统，并运行`tianracer`导航`Demo`
 ```shell
-roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch
+roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch world:=racetrack_1
 ```
+这里传入了`world:=racetrack_1`作为参数
+
+### 启动裁判系统 {#start-judge-system}
 `新开启`一个终端，运行如下代码，启动`Tianbot评分系统`
+
+需要传入不同`.world`文件的名称作为系统环境变量进行使用，保证正确加载`world`和`导航地图`文件
 ```shell
-rosrun tianracer_gazebo judge_system_node.py
+# 此处传入不同`.world`文件的名称，这里以 racetrack_1.world 为例
+export TIANRACER_WORLD=racetrack_1   
 ```
+这里继续传入了`TIANRACER_WORLD=racetrack_1`作为系统环境变量，然后继续在该终端中运行如下代码，启动`Tianbot评分系统`，保证正确加载对应的导航目标点文件
+```shell
+rosrun tianracer_gazebo judge_system_node.py 
+```
+
 经过拖拽窗口，后可以达到下图所示效果，然后点击裁判系统中的`启动`按钮，等待系统加载，然后小车开始运行
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20231119223227225.png)
 
 ::: tip 提示
-开启终端，输入上述 2 行命令即可启动比赛环境，比赛过程中，请勿关闭上述两个命令行窗口，或执行其他操作
+开启终端，输入上述命令即可启动比赛环境，比赛过程中，请勿关闭上述两个命令行窗口，或执行其他操作
 :::
 
 ## 紧急制动 {#emergency-brake}
@@ -79,7 +98,7 @@ rosrun tianracer_gazebo judge_system_node.py
 当小车出现意外情况时，请及时按下键盘上的`刹车`按钮
 :::
 
-### 已启动裁判系统 {#start-judge-system}
+### 已启动裁判系统 {#start-on-judge-system}
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240327154451.png)
 
