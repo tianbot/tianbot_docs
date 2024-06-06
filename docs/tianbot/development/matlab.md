@@ -61,7 +61,7 @@ Initializing global node /matlab_global_node_15275 with NodeURI http://10.168.1.
 ![image-20240605173154473](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240605173154473.png)
 
 ::: tip 参考
-这里请参考[ROS 多机通信](../../basic/ros/multi_machine_communicate.md)。Tianracer 的底盘是已经正确配置过的，但是如果出现只能看到话题列表但不能通信等问题请仔细检查 ROS_MASTER_URI 和 ROS_IP 的 IP 配置。
+这里请参考[ROS 多机通信](../../basic/ros/multi_machine_communicate.md)。TOM 的底盘是已经正确配置过的，但是如果出现只能看到话题列表但不能通信等问题请仔细检查 ROS_MASTER_URI 和 ROS_IP 的 IP 配置。
 :::
 
 ### 查看话题
@@ -152,7 +152,7 @@ send(velPub,velMsg);
 
 ## 使用 Simulink 进行底盘控制
 
-Simulink 是 MATLAB 中的重要部分。下面我们展示如何在 Simulink 中控制 Tianracer 底盘。首先启动 Tianracer 底盘。
+Simulink 是 MATLAB 中的重要部分。下面我们展示如何在 Simulink 中控制 TOM 底盘。首先启动 TOM 底盘。
 
 ::: tip 参考
 本小节主要参考 MATLAB 官方文档[Get Started with ROS in Simulink](https://ww2.mathworks.cn/help/ros/ug/get-started-with-ros-in-simulink.html)
@@ -220,7 +220,7 @@ open_system('robotROSGetStartedExample');
 
 ![image-20240605182614776](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240605182614776.png)
 
-这里的`Sample Time`设置为 0.02，因为 Tianracer 底盘的 Odom 发布速度为 50hz，然后点击`确定`。
+这里的`Sample Time`设置为 0.02，因为 TOM 底盘的 Odom 发布速度为 50hz，然后点击`确定`。
 
 ![image-20240605182737478](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240605182737478.png)
 
