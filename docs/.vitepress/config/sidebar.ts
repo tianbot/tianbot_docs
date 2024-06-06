@@ -313,6 +313,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '实验九 人机交互 GUI', link: '/tianbot/experiment/10_human-computer-interaction-gui' },
                 ],
               },
+              {
+                text: '开发手册',
+                collapsed: true,
+                items:[
+                  {text: '使用 MATLAB 开发 TOM 系列', link: '/tianbot/development/matlab'},
+                ]
+              },
               { text: '常见问题', link: '/tianbot/question' },
               { text: '更新日志', link: '/tianbot/changelog' },
             ],
@@ -369,7 +376,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 items:[
                   {text: '使用 MATLAB 开发 Tianracer', link: '/tianracer/development/matlab'},
                 ]
-
               },
               { text: '常见问题', link: '/tianracer/question' },
               { text: '更新日志', link: '/tianracer/changelog' },
