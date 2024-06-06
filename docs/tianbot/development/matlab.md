@@ -216,7 +216,7 @@ open_system('robotROSGetStartedExample');
 
 ### 消息订阅模块配置
 
-消息发布模块完成后，我们继续设置消息订阅模块。双击模型中的`Subscribe1`模块，选择`/tianracer/odom`话题，修改 Topic 源为从 select from ROS Network，然后选择 odom 话题
+消息发布模块完成后，我们继续设置消息订阅模块。双击模型中的`Subscribe1`模块，选择`/tianbot_06/odom`话题，修改 Topic 源为从 select from ROS Network，然后选择 odom 话题
 
 ![image-20240605182614776](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240605182614776.png)
 
