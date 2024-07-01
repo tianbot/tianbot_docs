@@ -319,6 +319,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 items:[
                   {text: '使用 MATLAB 开发 TOM 系列', link: '/tianbot/development/matlab'},
+                  {text: 'TIANBOT 控制器参数配置说明', link: '/tianbot/development/firmware'},
                 ]
               },
               { text: '常见问题', link: '/tianbot/question' },
