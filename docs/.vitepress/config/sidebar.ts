@@ -291,8 +291,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 items: [
                   { text: '使用指引', link: '/tianbot/guide-06S/' },
-                  { text: '软件环境配置', link: '/tianbot/guide-06S/software-env-config' },
-                  { text: 'Tianbot_toolkit 工具使用', link: '/tianbot/guide-06S/tianbot_toolkit' },
+                  { text: '路由器和软件环境配置', link: '/tianbot/guide-06S/software-env-config' },
+                  { text: '小车网络和环境变量配置', link: '/tianbot/guide-06S/tianbot_toolkit' },
                   { text: '常见问题', link: '/tianbot/guide-06S/question' },
                   { text: 'ROS 基础功能', link: '/tianbot/guide-06S/basic-feature' },
                   { text: '简单集群控制', link: '/tianbot/guide-06S/basic_swarm_control' },
