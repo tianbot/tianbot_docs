@@ -11,6 +11,12 @@ rostopic echo /tianracer/imu                      # 查看IMU数据
 rostopic echo /tianracer/odom                     # 查看里程计数据
 ```
 
+**/tianracer/imu**
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240717150515403.png)
+
+**/tianracer/odom**
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240717150631853.png)
+
 ### 激光雷达
 ```shell
 roslaunch tianracer_bringup lidar.launch          # 单独驱动激光雷达
@@ -28,6 +34,8 @@ roslaunch tianracer_rviz view_lidar.launch        # 查看雷达数据
 roslaunch tianracer_bringup usb_cam.launch        # 单独驱动相机
 roslaunch tianracer_rviz view_image.launch        # 查看图像数据
 ```
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240717150943630.png)
 
 ### GPS（选配）
 ```shell
