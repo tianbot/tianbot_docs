@@ -47,6 +47,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: 'ROS2GO 资料使用说明', link: '/basic/ros/ros2go-data-brief' },
                   // { text: '其他 ROS 学习资料', link: '/basic/ros/other-recommend' },
                   { text: 'ROS 中的多机通信', link: '/basic/ros/multi_machine_communicate' },
+                  { text: 'ROS 中的多机时间同步方法', link: '/basic/ros/time_sync_in_multi_machine' },
                   {
                     text: 'Navigation2',
                     collapsed: true,
