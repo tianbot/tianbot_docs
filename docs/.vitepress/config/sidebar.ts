@@ -195,6 +195,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 { text: '修改代码', link: '/competition/f1tenth_online/modify-code' },
                 { text: '运行测试', link: '/competition/f1tenth_online/run-and-test' },
                 { text: '作品提交', link: '/competition/f1tenth_online/submit-works' },
+                { text: '1v1 对抗', link: '/competition/f1tenth_online/1v1-battle' },
               ],
             },
             // { text: '视频教程及相关问题', link: '/competition/f1tenth_online/question-and-video' }  
