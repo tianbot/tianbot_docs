@@ -17,11 +17,10 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 | 类型 | 明细 |
 | --- | --- |
 | 材质 | 合金 |
-| 容量 | 64G， 128G |
-| 接口 | USB3.0 |
+| 容量 | 128G |
+| 接口 | USB3.2 |
 | 启动方式 | 自主研发混合启动模式 |
-| 预装系统 | Ubuntu18.04+ ROS Melodic |
-|  | Ubuntu 20.04+ ROS Noetic， Galactic， Humble（源码编译） |
+| 预装系统 | Ubuntu 20.04+ ROS Noetic， Galactic， Humble（源码编译） |
 | 系统密码  |   ros |
 | 预装功能包 | TIANBOT、TIANRACER、Turtlebot、Movelt、Hector、Gmapping、OpenNI、Cartographer等 |
 | 预装软件 | VScode、Arduino、QQ、WPS、Sougou、Gimp等 |
