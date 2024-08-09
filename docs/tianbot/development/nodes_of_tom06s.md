@@ -24,6 +24,14 @@
 | cmd_vel | geometry_msgs/Twist | 机器人速度指令 |
 | leds | std_msgs/Int32MultiArray | LED 控制指令 |
 
+::: info 提示
+
+LED 控制指令详细内容可参考
+
+https://docs.tianbot.com/tianbot/guide-06S/basic-feature.html#leds
+
+:::
+
 ### Services
 
 | Name | Type | Description |
