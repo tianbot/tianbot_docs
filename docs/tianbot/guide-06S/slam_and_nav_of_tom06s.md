@@ -1,10 +1,10 @@
-# TOM06S的建图和导航
+# 建图和导航 {#SLAM-and-Nav}
 
 ::: info 注意
-本页仅对带有MS200激光雷达的TOM06S平台有效
+本页仅对带有 MS200 激光雷达的 TOM06S 平台有效
 :::
 
-## 建图{#SLAM}
+## 建图 {#SLAM}
 
 无需启动底盘，直接运行建图命令即可
 
@@ -27,7 +27,7 @@ roslaunch tianbot_slam tianbot_cartographer.launch
 roslaunch tianbot_slam tianbot_hector.launch
 ```
 
-## 查看地图{#VIEW_MAP}
+## 查看地图 {#map-view}
 
 建图过程中，可以使用 rviz 查看建图效果
 
@@ -37,7 +37,7 @@ roslaunch tianbot_rviz view_mapping.launch
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240909124038.png)
 
-## 保存地图{#SAVE_MAP}
+## 保存地图 {#map-save}
 
 建图完成后，保存地图，以便后续使用，地图默认保存在 tianbot_slam/maps/目录下，名称为 tianbot_office
 
@@ -46,11 +46,13 @@ roslaunch tianbot_slam map_save.launch
 ```
 
 ::: tip 提示
-可以通过 map_file 参数指定保存的地图名称，例如：
+可以通过 map_file 参数指定保存的地图名称，例如
+```shell
 roslaunch tianbot_slam map_save.launch map_file:=my_name
+```
 :::
 
-## 导航{#NAV}
+## 导航 {#nav}
 
 保存地图后，下列程序会使用默认地图`TianbotOffice`进行导航。
 ```shell
@@ -68,7 +70,7 @@ roslaunch tianbot_navigation tianbot_nav.launch map_file:=my_name
 roslaunch tianbot_rviz view_navigation.launch
 ```
 
-## 导航到指定位置{#NAV_TO}
+## 导航到指定位置 {#nav-to-goal}
 
 在 rviz 中，可以使用 `2D Pose Estimate` 手动设置机器人初始位姿，
 
