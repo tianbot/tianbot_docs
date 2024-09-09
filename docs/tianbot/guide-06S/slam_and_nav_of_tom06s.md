@@ -1,4 +1,4 @@
-# TOM06S (MS200) 的建图和导航 {#SLAM_and_NAV_of_TOM06S with MS200}
+# TOM06S (MS200) 的建图和导航
 
 ## 建图{#SLAM}
 
