@@ -298,6 +298,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '常见问题', link: '/tianbot/guide-06S/question' },
                   { text: 'ROS 基础功能', link: '/tianbot/guide-06S/basic-feature' },
                   { text: '简单集群控制', link: '/tianbot/guide-06S/basic_swarm_control' },
+                  { text: 'SLAM 建图和导航（MS200 版本）', link: '/tianbot/guide-06S/slam_and_nav_of_tom06s' },
                 ],
               },
               {
