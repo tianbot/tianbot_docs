@@ -1,4 +1,4 @@
-# 建图和导航 {#SLAM-and-Nav}
+# 建图和导航 {#slam_and_nav}
 
 ::: info 注意
 本页仅对带有 MS200 激光雷达的 TOM06S 平台有效
