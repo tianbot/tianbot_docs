@@ -1,5 +1,5 @@
 <h1>
-    <p align="center">Tianbot-Doc维护文档</p>
+    <p align="center">Tianbot-Doc 维护文档</p>
 </h1>
 
 > 所有文档编写都可以在目录（`docs/`）下进行
@@ -11,18 +11,18 @@
 
 # 如何运行本项目
 
-1. 安装node.js
+1. 安装 node.js
 
 - [Node.js 开发环境安装之 Linux](https://zhuanlan.zhihu.com/p/144885938)
 - [node-v18.17.0-linux-x64 下载链接](https://cdn.npmmirror.com/binaries/node/v18.17.0/node-v18.17.0-linux-x64.tar.xz)
 
-2. 安装pnpm
+2. 安装 pnpm
 
 ```shell
 npm install -g pnpm
 ```
 
-3. 安装node_modeules
+3. 安装 node_modeules
 
 ```shell
 pnpm install
@@ -40,21 +40,21 @@ pnpm run docs:build
 
 # PicGo + 图床
 
-1. Typora+PicGo+阿里云OSS搭建博客图床（超详细）
+1. Typora+PicGo+ 阿里云 OSS 搭建博客图床（超详细）
 
-- [Typora+PicGo+阿里云OSS搭建博客图床（超详细）](https://blog.csdn.net/muxuen/article/details/122441469)
-- [下载PicGo](https://github.com/Molunerfinn/PicGo/releases/download/v2.3.1-beta.4/PicGo-2.3.1-beta.4.AppImage)
+- [Typora+PicGo+ 阿里云 OSS 搭建博客图床（超详细）](https://blog.csdn.net/muxuen/article/details/122441469)
+- [下载 PicGo](https://github.com/Molunerfinn/PicGo/releases/download/v2.3.1-beta.4/PicGo-2.3.1-beta.4.AppImage)
 
-2. PicGo参数配置
+2. PicGo 参数配置
 
-- 在图床设置里面选择阿里云OSS，依照以下步骤填写信息
-- 设定Keyld：填写刚刚获得的AccessKeyID
-- 设定KeySecret：填写AccessKeyIDSecret
-- 设定储存空间名：填写bucket名称               例：tianbot-pic
-- 这里填写的是bucket名称，不是浏览器里的域名,    例：oss-cn-beijing
+- 在图床设置里面选择阿里云 OSS，依照以下步骤填写信息
+- 设定 Keyld：填写刚刚获得的 AccessKeyID
+- 设定 KeySecret：填写 AccessKeyIDSecret
+- 设定储存空间名：填写 bucket 名称               例：tianbot-pic
+- 这里填写的是 bucket 名称，不是浏览器里的域名，例：oss-cn-beijing
 - 确认存储区域：填写你的地域节点，注意复制的格式   例：tianbot-pic/Tianbot-Doc/
 - 指定存储路径：其实就是自定义一个文件夹的名字，以/结尾
-- 它会自动在你的bucket里面创建一个文件夹，并把图片上传进去
+- 它会自动在你的 bucket 里面创建一个文件夹，并把图片上传进去
 
 # 编写技巧
 
@@ -106,7 +106,6 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 │       │   │   ├── racer_offline.md
 │       │   │   └── racer_online.md
 │       │   ├── f1tenth_simulation.md
-│       │   ├── image.png
 │       │   └── index.md
 │       └── tianrover
 ├── node_modules
@@ -128,7 +127,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 当创建一个新的专栏时，如`git`学习指南
 应在`docs/git/`目录下创建一个名为`index.md`的文件，作为渲染网页时的该目录`（git/）`下的主页面
 
-## Markdown写作技巧（适用于本框架）
+## Markdown 写作技巧（适用于本框架）
 
 ## 下拉收缩
 <!-- tabs:start -->
@@ -152,9 +151,9 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 <!-- tabs:end -->
 
 
-> 原本`<details>`标签默认为折叠状态，如果希望默认为展开状态， 可以将`<details>`标签改为`<details open>`即可
+> 原本`<details>`标签默认为折叠状态，如果希望默认为展开状态，可以将`<details>`标签改为`<details open>`即可
 
-## md文件链接
+## md 文件链接
 
 <!-- tabs:start -->
 
@@ -168,7 +167,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 <!-- tabs:end -->
 
 
-## B站视频嵌入
+## B 站视频嵌入
 
 <!-- tabs:start -->
 
@@ -190,7 +189,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 <!-- tabs:end -->
 
 
-> B站视频链接，注意在链接`&page=1`后加上`&autoplay=0"`,以禁止自动播放
+> B 站视频链接，注意在链接`&page=1`后加上`&autoplay=0"`,以禁止自动播放
 
 ## 文章标题居中、粗体、大字
 
@@ -207,7 +206,7 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 ```
 <!-- tabs:end -->
 
-> 注意， 尽量不要使用`<h1></h1>`这样的html标签，会导致大纲中出现`Undefined`，建议使用的格式如下
+> 注意，尽量不要使用`<h1></h1>`这样的 html 标签，会导致大纲中出现`Undefined`，建议使用的格式如下
 > `<p style="font-size:30px ;font-weight: bolder ;  text-align:center"> Tianbot-Doc 使用说明 </p>`
 
 - https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight
@@ -218,45 +217,45 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 ### **效果**
 
 ::: info
-这是一条信息，info后面的文字可修改
+这是一条信息，info 后面的文字可修改
 :::
 
 ::: tip 说明
-这是一个提示，tip后面的文字可修改
+这是一个提示，tip 后面的文字可修改
 :::
 
 ::: warning 警告
-这是一条警告，warning后面的文字可修改
+这是一条警告，warning 后面的文字可修改
 :::
 
 ::: danger 危险
-这是一个危险警告，danger后面的文字可修改
+这是一个危险警告，danger 后面的文字可修改
 :::
 
 ::: details 点我查看
-这是一条详情，details后面的文字可修改
+这是一条详情，details 后面的文字可修改
 :::
 
 ### **Markdown 源代码**
 ```markdown
 ::: info
-这是一条信息，info后面的文字可修改
+这是一条信息，info 后面的文字可修改
 :::
 
 ::: tip 说明
-这是一个提示，tip后面的文字可修改
+这是一个提示，tip 后面的文字可修改
 :::
 
 ::: warning 警告
-这是一条警告，warning后面的文字可修改
+这是一条警告，warning 后面的文字可修改
 :::
 
 ::: danger 危险
-这是一个危险警告，danger后面的文字可修改
+这是一个危险警告，danger 后面的文字可修改
 :::
 
 ::: details 点我查看
-这是一条详情，details后面的文字可修改
+这是一条详情，details 后面的文字可修改
 :::
 ```
 <!-- tabs:end -->
@@ -271,13 +270,13 @@ tianbot@ros2go:~/tianbot-doc/Tianbot-vitepress$ tree -l
 
 <p style="font-size:30px ;font-weight: bolder">References and Acknowledgments</p>
 
-- [廖雪峰：Git的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
+- [廖雪峰：Git 的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
 
 ### **Markdown 源代码**
 ```markdown
 <p style="font-size:30px ;font-weight: bolder">References and Acknowledgments</p>
 
-- [廖雪峰：Git的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
+- [廖雪峰：Git 的诞生](https://www.liaoxuefeng.com/wiki/896043488029600/896202815778784)
 ```
 <!-- tabs:end -->
 
@@ -302,4 +301,4 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 | <div style="width:190px">遥控器 </div>     |<div style="width:190px">拨码</div>   | 说明              |
 | :---: | :---: | :---: |
 | ![image-20231102155927812](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021559782.png) <br> 左拨码（左三档开关） | ![image-20231102160316813](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021603261.png) |                                                              |
-| ![image-20231102155957944](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021559366.png) <br> 右拨码（右三档开关） | ![image-20231102160328525](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021603813.png) | 当处于位置-1，为全向模式，可以控制火星车进行横平移运动。当处于位置-2（默认），阿克曼模式。当处于位置-3，切换到旋转模式，可以遥控控制火星车原地旋转。 |
+| ![image-20231102155957944](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021559366.png) <br> 右拨码（右三档开关） | ![image-20231102160328525](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021603813.png) | 当处于位置 -1，为全向模式，可以控制火星车进行横平移运动。当处于位置 -2（默认），阿克曼模式。当处于位置 -3，切换到旋转模式，可以遥控控制火星车原地旋转。 |
