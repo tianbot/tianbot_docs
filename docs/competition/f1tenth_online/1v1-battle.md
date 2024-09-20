@@ -39,6 +39,61 @@
 
 双方选手需自带电脑，并提前安装好比赛所需软件，比赛开始前，裁判员会向选手介绍比赛规则和注意事项，并提醒选手在比赛过程中保持冷静，遵守比赛规则。
 
+::: tip 提示
+- 1v1 服务器主机，由赛事组织方提供配置一致，性能较好的主机
+- 红方客户端主机，选手自带
+- 蓝方客户端主机，选手自带
+:::
+
+### 在服务器主机上启动 1v1 环境 {#start-1v1-environment}
+
+`新开启`一个终端，运行如下代码，启动 Gazebo 仿真系统，并运行`tianracer`1v1 对抗`Demo`
+```shell
+roslaunch tianracer_gazebo demo_sim_two_tianracer.launch world:=racetrack_1
+```
+这里传入了`world:=racetrack_1`作为参数
+
+### 红蓝双方在客户端主机上启动裁判系统 {#start-judge-system}
+`新开启`一个终端，运行如下代码，启动`Tianbot评分系统`
+
+- 设置仿真世界名称
+需要传入不同`.world`文件的名称作为系统环境变量进行使用，保证正确加载`world`和`导航地图`文件
+```shell
+# 此处传入不同`.world`文件的名称，这里以 racetrack_1.world 为例
+export TIANRACER_WORLD=racetrack_1
+```
+这里继续传入了`TIANRACER_WORLD=racetrack_1`作为系统环境变量，然后继续在该终端中运行如下代码，启动`Tianbot评分系统`，保证正确加载对应的导航目标点文件
+
+- 设置控制的机器人名称
+  - 红方选手需要设置`TIANRACER_NAME=tianracer_01`
+  - 蓝方选手需要设置`TIANRACER_NAME=tianracer_02`
+
+
+即继续在当前在终端中运行如下代码，正确启动红蓝双方各自的`Tianbot评分系统`
+
+
+**红方选手设置**
+```shell
+export TIANRACER_WORLD=racetrack_1
+export TIANRACER_NAME=tianracer_01
+rosrun tianracer_gazebo judge_system_node.py 
+```
+
+**蓝方选手设置**
+```shell
+export TIANRACER_WORLD=racetrack_1
+export TIANRACER_NAME=tianracer_02
+rosrun tianracer_gazebo judge_system_node.py 
+```
+
+::: tip 警告
+开始比赛前，请确保红蓝双方选手都正确启动了各自的`Tianbot评分系统`，否则可能导致比赛无法正常进行
+1. 裁判系统无法正常启动、裁判系统无法正确计分
+2. 自己的小车无法正常运动，检查是否正确设置了`TIANRACER_NAME`，是否点击了`刹车`按钮
+3. `禁止`红蓝双方在比赛期间使用裁判系统上的`重置`按钮，否则可能导致比赛无法正常进行
+4. 如有需要重置比赛，`请先向当场裁判示意申请，由裁判同意确认后`，才可使用裁判系统上的`重置`按钮
+:::
+
 ### 多机通信 {#multi-machine-communication}
 
 1. 比赛开始前，红蓝双方选手需将自己的电脑连接到比赛场地中的组织方指定的无线网络（路由器），并确保网络连接稳定。
@@ -68,6 +123,20 @@ export ROS_IP=192.168.1.2                                # 设置为从机地址
 
 3. 配置完成后，允许向`tianracer_01/cmd_vel`及`tianracer_02/cmd_vel`发送控制指令，测试连通性
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241858758.webp)
+
+::: tip 提示
+如果遇到问题如下，请检查你的网络连接是否正常，ROS 主机地址和从机地址是否设置正确。
+
+```shell
+Unable to register with master node [http://localhost:11311]: master may not be running yet. Will keep trying.
+```
+
+在红蓝双方选手的电脑上分别运行以下命令，检查与 ROS_MASTER 的主机之间网络连接是否正常
+
+```shell
+ping 192.168.1.100  # 192.168.1.100 为 ROS_MASTER 的主机地址
+```
+:::
 
 ### 注意事项 {#attention}
 
