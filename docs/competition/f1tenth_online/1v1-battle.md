@@ -45,55 +45,6 @@
 - 蓝方客户端主机，选手自带
 :::
 
-### 在服务器主机上启动 1v1 环境 {#start-1v1-environment}
-
-`新开启`一个终端，运行如下代码，启动 Gazebo 仿真系统，并运行`tianracer`1v1 对抗`Demo`
-```shell
-roslaunch tianracer_gazebo demo_sim_two_tianracer.launch world:=racetrack_1
-```
-这里传入了`world:=racetrack_1`作为参数
-
-### 红蓝双方在客户端主机上启动裁判系统 {#start-judge-system}
-`新开启`一个终端，运行如下代码，启动`Tianbot评分系统`
-
-- 设置仿真世界名称
-需要传入不同`.world`文件的名称作为系统环境变量进行使用，保证正确加载`world`和`导航地图`文件
-```shell
-# 此处传入不同`.world`文件的名称，这里以 racetrack_1.world 为例
-export TIANRACER_WORLD=racetrack_1
-```
-这里继续传入了`TIANRACER_WORLD=racetrack_1`作为系统环境变量，然后继续在该终端中运行如下代码，启动`Tianbot评分系统`，保证正确加载对应的导航目标点文件
-
-- 设置控制的机器人名称
-  - 红方选手需要设置`TIANRACER_NAME=tianracer_01`
-  - 蓝方选手需要设置`TIANRACER_NAME=tianracer_02`
-
-
-即继续在当前在终端中运行如下代码，正确启动红蓝双方各自的`Tianbot评分系统`
-
-
-**红方选手设置**
-```shell
-export TIANRACER_WORLD=racetrack_1
-export TIANRACER_NAME=tianracer_01
-rosrun tianracer_gazebo judge_system_node.py 
-```
-
-**蓝方选手设置**
-```shell
-export TIANRACER_WORLD=racetrack_1
-export TIANRACER_NAME=tianracer_02
-rosrun tianracer_gazebo judge_system_node.py 
-```
-
-::: tip 警告
-开始比赛前，请确保红蓝双方选手都正确启动了各自的`Tianbot评分系统`，否则可能导致比赛无法正常进行
-1. 裁判系统无法正常启动、裁判系统无法正确计分
-2. 自己的小车无法正常运动，检查是否正确设置了`TIANRACER_NAME`，是否点击了`刹车`按钮
-3. `禁止`红蓝双方在比赛期间使用裁判系统上的`重置`按钮，否则可能导致比赛无法正常进行
-4. 如有需要重置比赛，`请先向当场裁判示意申请，由裁判同意确认后`，才可使用裁判系统上的`重置`按钮
-:::
-
 ### 多机通信 {#multi-machine-communication}
 
 1. 比赛开始前，红蓝双方选手需将自己的电脑连接到比赛场地中的组织方指定的无线网络（路由器），并确保网络连接稳定。
@@ -140,8 +91,75 @@ ping 192.168.1.100  # 192.168.1.100 为 ROS_MASTER 的主机地址
 
 ### 注意事项 {#attention}
 
+::: warning 注意
 1. 比赛过程中，选手需保持冷静，遵守比赛规则，避免与对方车辆发生碰撞。
 2. 比赛过程中，选手需保持电脑的无线网络连接稳定，避免网络中断导致比赛中断。
 3. 比赛结束后，选手需将自己的电脑连接到比赛场地中的无线网络，并确保网络连接稳定。
 4. 比赛过程中，选手不得使用任何作弊手段，一经发现，将取消比赛资格。
 5. 比赛过程中，选手不得干扰对方车辆，一经发现，将取消比赛资格。
+:::
+
+### 服务器主机启动 1v1 环境 {#start-1v1-environment}
+
+`新开启`一个终端，运行如下代码，启动 Gazebo 仿真系统，并运行`tianracer`1v1 对抗`Demo`
+```shell
+roslaunch tianracer_gazebo two_tianracer_bringup.launch world:=racetrack_1
+```
+这里传入了`world:=racetrack_1`作为参数
+
+### 客户端主机按需启动导航组件  {#start-navigation}
+
+::: tip 提示
+使用反应式方法的选手，可根据需要忽略本段内容
+:::
+
+`新开启`一个终端，运行如下代码，启动`navigation`导航组件
+
+**红方**
+```shell
+roslaunch tianracer_gazebo spawn_nav_rviz.launch robot_name:=tianracer_01 world:=racetrack_1
+```
+**蓝方**
+```shell
+roslaunch tianracer_gazebo spawn_nav_rviz.launch robot_name:=tianracer_02 world:=racetrack_1
+```
+
+### 客户端主机启动裁判系统 {#start-judge-system}
+
+`新开启`一个终端，运行如下代码，启动`Tianbot评分系统`
+
+- 设置仿真世界名称
+需要传入不同`.world`文件的名称作为系统环境变量进行使用，保证正确加载`world`和`导航地图`文件
+```shell
+# 此处传入不同`.world`文件的名称，这里以 racetrack_1.world 为例
+export TIANRACER_WORLD=racetrack_1
+```
+这里继续传入了`TIANRACER_WORLD=racetrack_1`作为系统环境变量，然后继续在该终端中运行如下代码，启动`Tianbot评分系统`，保证正确加载对应的导航目标点文件
+
+- 设置控制的机器人名称
+  - 红方选手需要设置`TIANRACER_NAME=tianracer_01`
+  - 蓝方选手需要设置`TIANRACER_NAME=tianracer_02`
+
+即继续在当前在终端中运行如下代码，正确启动红蓝双方各自的`Tianbot评分系统`
+
+**红方选手设置**
+```shell
+export TIANRACER_WORLD=racetrack_1
+export TIANRACER_NAME=tianracer_01
+rosrun tianracer_gazebo judge_system_node.py 
+```
+
+**蓝方选手设置**
+```shell
+export TIANRACER_WORLD=racetrack_1
+export TIANRACER_NAME=tianracer_02
+rosrun tianracer_gazebo judge_system_node.py 
+```
+
+::: tip 警告
+开始比赛前，请确保红蓝双方选手都正确启动了各自的`Tianbot评分系统`，否则可能导致比赛无法正常进行
+1. 裁判系统无法正常启动、裁判系统无法正确计分
+2. 自己的小车无法正常运动，检查是否正确设置了`TIANRACER_NAME`，是否点击了`刹车`按钮
+3. `禁止`红蓝双方在比赛期间使用裁判系统上的`重置`按钮，否则可能导致比赛无法正常进行
+4. 如有需要重置比赛，`请先向当场裁判示意申请，由裁判同意确认后`，才可使用裁判系统上的`重置`按钮
+:::
