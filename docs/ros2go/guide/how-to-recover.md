@@ -81,6 +81,12 @@ USB 设备，添加 ROS2GO
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555694.png)
 
 点击启动后，等待显示如下画面
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240923144544365.png)
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc17270740372157.png)
+
+点击启动后，等待显示如下画面
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240103155011818.png)
 
 此时，按下回车键，根据提示选择 Puppy Rescue OS 系统即可

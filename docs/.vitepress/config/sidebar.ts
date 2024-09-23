@@ -263,6 +263,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '兼容的网卡型号', link: '/ros2go/applicable/network-card' },
                   { text: '兼容的底盘型号', link: '/ros2go/applicable/robot-chassis' },
                   { text: '兼容的传感器型号', link: '/ros2go/applicable/sensor' },
+                  { text: '如何在 macOS 上使用', link: '/ros2go/applicable/use-on-macos' },
                 ],
               },
               { text: '常见问题', link: '/ros2go/question' },
