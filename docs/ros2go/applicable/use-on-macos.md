@@ -88,6 +88,18 @@ USB 设备，添加 ROS2GO
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc17270744583286.png)
 
+::: tip 提示
+如果需要修改网卡名称，可以使用如下命令，以 enp0s8 为例，eth1 为修改后的名称
+```shell
+sudo ip link set enp0s8 name eth1
+```
+:::
+
+### 如何移除虚拟桥接网卡
+
+详细步骤可以参考博客[在 Oracle VM VirtualBox 里删除虚拟网卡](https://blog.csdn.net/qq_37738231/article/details/126729728)
+
+
 ### 显示分辨率问题
 
 在菜单栏设备中选择插入插件 `Guest Additions.iso`
