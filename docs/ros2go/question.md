@@ -153,6 +153,10 @@ error: you need to load the kernel first
 sudo ntfsfix /dev/sda2  
 ```
 
+## 设置打不开，闪退
+
+早期版本 ROS2GO 缺少`pipewire`包，安装即可：`sudo apt install pipewire`，`v20241019`版本之后已修复这个问题
+
 ## 如何将系统安装到硬盘上
 
 理论上是完全可行的，但这属于**高危操作**，如果有时间可以自己折腾，天之博特公司不做任何技术支持保证。具体可以参考 CSDN 用户"静精进境"的文章[ROS2GO 与 WIN10 双系统安装](https://blog.csdn.net/fzx1443678836/article/details/88718959)。
