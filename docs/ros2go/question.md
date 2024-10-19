@@ -119,18 +119,7 @@ ROS2GO 是基于 linux 内核和 Ubuntu 打造，所以也是一样的。通常 
 
 - 观看方式：打开终端输入：`ros2go_video` 稍等几秒钟即可打开默认浏览器查看在线课程
 
-- 观看时限：从首次浏览在线课程开始算起，三月内有效
-
-## 串口设备 CP2102 驱动异常
-
-如果遇到 cp2102 无法找到驱动，或者使用该芯片的 U 转串设备工作异常，可以参考如下命令重新编译安装天之博特定制串口驱动后重新插拔对应设备即可，PS：千万别拔错
-
-```shell
-# 这一步可能会报错，不用理会
-sudo dkms remove cp210x/3.0 -k $(uname -r)
-sudo dkms install cp210x/3.0 -k $(uname -r)
-sudo modprobe cp210x
-```
+- 观看时限：**从首次浏览在线课程开始算起**，三月内有效
 
 ## 无法启动提示任意键继续
 
@@ -143,7 +132,7 @@ error: you need to load the kernel first
 ![image-20211208151355112](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112081513401.webp)
 这个提示一般都是没有关闭安全启动 Secure Boot，只需在 BIOS 中关闭掉即可正常启动
 
-## 进入 ROS2GO 后没有 WiFi?
+## 进入 ROS2GO 后没有 WiFi
 
 网卡型号实在太多了，同时厂家会定制奇怪型号的网卡，ROS2GO 无法保证所有网卡都支持，请查阅兼容列表中**网卡型号**支持，检查一下是否支持您的 WiFi 型号，如果无法识别网卡首先查看是否关闭 Secure Boot 或者更换内核启动查看是否可以正常驱动，如果还是无法正常驱动，可以试试以下方法
 
