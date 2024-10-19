@@ -1,6 +1,6 @@
-# ROS2GO 使用常见问题
+# 常见问题
 
-## 如何查看自己的 ROS2GO 版本？
+## 如何查看自己的 ROS2GO 版本
 
 打开终端后运行如下命令即可
 
@@ -8,7 +8,7 @@
 lsb_release -a
 ```
 
-## ROS2GO 的默认用户名和密码是什么？
+## 默认用户名和密码是什么
 
 - 用户名：`tianbot`
 - 密码：`ros` 
@@ -66,11 +66,6 @@ source humble_patch/install/setup.bash --extend
 
 请查看腾讯 QQ Linux 版官网说明进行操作：https://im.qq.com/linuxqq/support.html
 
-
-## 能用微信么
-
-截至目前（2024-03-10），腾讯官方并未发布微信公版 Linux 客户端，但你可以自行安装星火商店的这个 UOS 包：[微信 UOS Beta版](https://cdn4.cnxclm.com/uploads/2024/03/08/85uZHDjz_store.spark-app.wechat-linux-spark_2.2-real1.0.0.0_amd64.deb?attname=store.spark-app.wechat-linux-spark_2.2-real1.0.0.0_amd64.deb)
-
 ## 为什么看视频没声音
 
 首先你需要确定一下，
@@ -103,13 +98,13 @@ ROS2GO 是基于 linux 内核和 Ubuntu 打造，所以也是一样的。通常 
 使用软重启按键：`Ctrl + Alt + PrtScSysRq`，松开`PrtScSysRq`键，然后在按住`Ctrl+Alt`键之后，依次按下`r`,`e`,`i`,`s`,`u`,`b`。切换到 Windows，再关机 
 :::
 
-## ROS2GO 的三不要操作
+## ROS2GO 三不要操作
 
-> 很大一部分兼容性问题（99% 以上），主要是因为电脑与 Ubuntu 的兼容问题，这个问题可以善用搜索的方法，先在搜索引擎上搜索相关。
+> 很大一部分兼容性问题（99% 以上），主要是因为电脑与 Ubuntu 的兼容问题，这个问题可以善用搜索的方法，先在搜索引擎上搜索相关问题。
 
 1. 不要在使用中直接拔掉 ROS2GO
 2. 不要随意修改根（/）目录下的文件
-3. 不要轻易安装 NVIDIA 驱动，这可能会导致该 ROS2GO 的兼容性变差，无法在其他电脑上使用
+3. 不要轻易改动预置 NVIDIA 驱动
 
 ## 系统文件相关和软件版本
 
@@ -160,11 +155,6 @@ error: you need to load the kernel first
   - 台式机[EDUP 翼联千兆免驱动双频 USB 无线网卡](https://detail.tmall.com/item.htm?id=544565906232)
 
 3. ROS2GO 系统终端输入：`lspci | grep -i network` 将结果反馈给售后群，我们工程师会视情况给出解决建议
-
-
-## 能不能使用独立显卡、GPU 等等
-
-不推荐大家在 ROS2GO 中安装独显驱动，因为 ROS2GO 主要是便携开发，如果安装独显驱动，那么会导致插在另外一台电脑上无法显示画面，另一个问题是：linux 下的独显驱动都写的比较烂，安装起来很繁琐，也容易出现系统问题，导致系统不稳定，另外可以尝试使用 Timeshift 快照管理功能，在安装独显驱动前先对当前系统进行快照，安装出问题后可以直接恢复备份的快照。
 
 ## 无法访问原来的 Windows 下的硬盘
 
