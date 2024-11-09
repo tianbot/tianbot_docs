@@ -1,6 +1,11 @@
 #  更新日志
 
 ## v20241019
+1. 升级至 Ubuntu 20.04.6 LTS
+2. 加入[微信客户端](https://linux.weixin.qq.com/)
+3. 修复三指拖拽手势
+
+## v20241019
 
 > 注意：后续内核、固件（驱动）、ROS 功能包统一在 https://github.com/tianbot/tianbot_docs/releases 发布更新，不再另行通知。
 
