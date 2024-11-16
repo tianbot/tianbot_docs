@@ -1,7 +1,7 @@
-# ROS2GO 使用手册
+# 使用手册
 
 ## 产品介绍
-ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，基于Ubuntu的深度定制使得本产品无需对原有PC系统做任何改造，可以在绝大多数x86架构的PC、笔记本上快速启动，秒级进入ROS开发环境；无论是ROS初学者还是开发人员都能得到快速一致的ROS开发体验。
+ROS2GO 是由天之博特打造的一款开箱即用的便携式随身系统，基于 Ubuntu 的深度定制使得本产品无需对原有 PC 系统做任何改造，可以在绝大多数 x86 架构的 PC、笔记本上快速启动，秒级进入 ROS 开发环境。无论是 ROS 初学者还是开发人员都能得到快速一致的 ROS 开发体验。
 
 ::: info 提示
 如果您有以下需求，ROS2GO可能会帮助到您
@@ -19,13 +19,12 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 | 材质 | 合金 |
 | 容量 | 128G |
 | 接口 | USB3.2 |
-| 启动方式 | 自主研发混合启动模式 |
-| 预装系统 | Ubuntu 20.04+ ROS Noetic， Galactic， Humble（源码编译） |
-| 系统密码  |   ros |
+| 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble（源码编译） |
+| 默认用户 | `tianbot` |
+| 默认密码  | `ros` |
 | 预装功能包 | TIANBOT、TIANRACER、Turtlebot、Movelt、Hector、Gmapping、OpenNI、Cartographer等 |
 | 预装软件 | VScode、Arduino、QQ、WPS、Sougou、Gimp等 |
-| 支持硬件 | 激光雷达：傲视智绘、思岚、北阳、西克等 |
-|  | 深度相机：Intel RealSense、Asus、Astra、Kinect等 |
+| 支持硬件 | 1. 激光雷达：傲视智绘、思岚、北阳、西克等<br/>2. 深度相机：Intel RealSense、Asus、Astra、Kinect等 |
 
 
 ## 产品清单
@@ -42,16 +41,22 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310241233148.jpg)
 
 ## 保修政策
-自收到货物起算，保修期内客户正常使用，无擅自拆修、改装，出现非人为的性能故障，提供有效的购买证明、单据
+
+> 保修期自收到货物起算，期间客户正常使用，无擅自拆修、改装，出现非人为的性能故障。
+
 | 类型   |   时效  |
 | :---: | :---: |
-|  ROS2GO本体  |   365天  |
-|  系统重置  |  1次  |
-|  系统升级  |  1次  |
+|  `ROS2GO`盘体  |  `365`天  |
+|  系统重置  |  `1`次  |
+|  系统升级  |  `1`次  |
 
-1次免费系统重置代指U盘内系统不能正常启动，如需系统重置请联系客服，确认购买信息无误，寄回重置。
-1次免费系统升级代指ROS2GO系统更新，功能包升级，如需升级请联系客服，确认购买信息无误，寄回重置。
-升级日志请查看：[docs.tianbot.com/ros2go/changelog](/ros2go/changelog)
+> 注意：
+>
+> - 1次免费系统重置代指：系统不能正常启动，如需系统重置请联系客服，确认购买信息无误后，寄回重置。
+>
+> - 1次免费系统升级代指：系统大版本更新，功能包升级，如需升级请联系客服，确认购买信息无误后，寄回升级。
+>
+> - 保修申请须提供有效的购买证明、单据。
 
 ## 开箱视频
 
@@ -60,7 +65,8 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-## 使用文章：
+## 使用文章
+
 - [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)  
 - [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)  
 - [ROS2Go--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)   
