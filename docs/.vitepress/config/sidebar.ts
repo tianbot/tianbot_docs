@@ -241,8 +241,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: '💿 ROS2GO',
             collapsed: true,
             items: [
-              { text: '开箱说明', link: '/ros2go/' },
-              { text: '用法指引', link: '/ros2go/usage'},
               {
                 text: '使用手册',
                 collapsed: true,
