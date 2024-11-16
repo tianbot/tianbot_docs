@@ -1,11 +1,15 @@
 # 常见问题
 
-## 如何查看自己的 ROS2GO 版本
+## 如何查看自己的 ROS2GO 版本 {#how-to-check-ros2go-version}
 
-打开终端后运行如下命令即可
+> `v20241019`以后发布的版本已经内置`fastfetch`
+
+1. 下载安装`fastfetch`：https://github.com/tianbot/tianbot_docs/releases/download/fastfetch-latest/fastfetch-linux-amd64.deb
+
+2. 打开终端后运行如下命令即可
 
 ```shell
-lsb_release -a
+fastfetch -l none
 ```
 
 ## 默认用户名和密码是什么
