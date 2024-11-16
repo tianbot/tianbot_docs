@@ -28,6 +28,19 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 |  | 深度相机：Intel RealSense、Asus、Astra、Kinect等 |
 
 
+## 产品清单
+
+- ROS2GO 1 个
+- 使用说明 1 个
+- 挂绳 1 根
+
+::: tip 注意
+1. 收货后请您检查产品是否完整，如有问题可随时联系客服人员
+2. 包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准
+:::
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310241233148.jpg)
+
 ## 保修政策
 自收到货物起算，保修期内客户正常使用，无擅自拆修、改装，出现非人为的性能故障，提供有效的购买证明、单据
 | 类型   |   时效  |
@@ -35,26 +48,19 @@ ROS2GO是由天之博特打造的一款开箱即用的便携式随身系统，�
 |  ROS2GO本体  |   365天  |
 |  系统重置  |  1次  |
 |  系统升级  |  1次  |
+
 1次免费系统重置代指U盘内系统不能正常启动，如需系统重置请联系客服，确认购买信息无误，寄回重置。
 1次免费系统升级代指ROS2GO系统更新，功能包升级，如需升级请联系客服，确认购买信息无误，寄回重置。
 升级日志请查看：[docs.tianbot.com/ros2go/changelog](/ros2go/changelog)
 
-::: info 说明
-新版本ROS2GO有什么优点
-:::
+## 开箱视频
 
-- 手动恢复出厂系统
-- 自动增量式系统备份
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
-::: info 提示
-您也可以通过以下链接了解ROS2GO
-:::
-
-说明文档：[doc.tianbot.com](https://doc.tianbot.com)
-
-视频教程：[space.bilibili.com/451561151](https://space.bilibili.com/451561151/channel/collectiondetail?sid=426454)
-
-使用文章：
+## 使用文章：
 - [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)  
 - [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)  
 - [ROS2Go--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)   
