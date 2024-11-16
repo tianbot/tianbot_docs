@@ -240,7 +240,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             //分组标题 1
             text: '💿 ROS2GO',
             collapsed: true,
-            link: '/tianbot/guide/',
+            link: '/ros2go/guide/',
             items: [
               {
                 text: '使用手册',
