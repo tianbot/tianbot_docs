@@ -254,9 +254,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               },
               {
                 text: '设备兼容',
-                collapsed: true,
                 link: '/ros2go/applicable/',
-                ],
               },
               { text: '常见问题', link: '/ros2go/question' },
               { text: '更新日志', link: '/ros2go/changelog' },
