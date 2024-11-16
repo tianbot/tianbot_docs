@@ -1,10 +1,6 @@
 # 兼容的网卡型号
 
-> 我们通过直接对接上游固件，让 ROS2GO 拥有了**兼容市面上绝大多数网卡**的能力。
-
-## 上游固件源码：https://gitlab.com/kernel-firmware/linux-firmware
-
-## 自编译固件包：https://github.com/tianbot/tianbot_docs/releases/tag/f20241110
+> 我们通过直接对接[上游固件](https://gitlab.com/kernel-firmware/linux-firmware)，让 ROS2GO 拥有了**兼容市面上绝大多数网卡**的能力。
 
 ## 使用指南
 
