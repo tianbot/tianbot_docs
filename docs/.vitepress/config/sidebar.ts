@@ -256,8 +256,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 text: '设备兼容',
                 collapsed: true,
                 link: '/ros2go/applicable/',
-                items: [
-                  { text: 'Apple 笔记本虚拟机方案', link: '/ros2go/applicable/use-on-macos' },
                 ],
               },
               { text: '常见问题', link: '/ros2go/question' },
