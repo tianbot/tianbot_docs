@@ -259,11 +259,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 link: '/ros2go/applicable/',
                 items: [
-                  { text: '兼容的电脑型号', link: '/ros2go/applicable/computer' },
-                  { text: '兼容的网卡型号', link: '/ros2go/applicable/network-card' },
-                  { text: '兼容的底盘型号', link: '/ros2go/applicable/robot-chassis' },
-                  { text: '兼容的传感器型号', link: '/ros2go/applicable/sensor' },
-                  { text: '如何在 macOS 上使用', link: '/ros2go/applicable/use-on-macos' },
+                  { text: 'Apple 笔记本虚拟机方案', link: '/ros2go/applicable/use-on-macos' },
                 ],
               },
               { text: '常见问题', link: '/ros2go/question' },
