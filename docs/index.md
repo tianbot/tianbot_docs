@@ -20,10 +20,10 @@ hero:
           link: https://space.bilibili.com/451561151
 
 features:
-  - icon: 💿
+  - icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect x="40" y="40" width="120" height="120" rx="8" fill="#435B66"/><rect x="50" y="140" width="15" height="10" fill="#FFD700"/><rect x="70" y="140" width="15" height="10" fill="#FFD700"/><rect x="90" y="140" width="15" height="10" fill="#FFD700"/><rect x="110" y="140" width="15" height="10" fill="#FFD700"/><circle cx="140" cy="60" r="5" fill="#4CAF50"/><rect x="40" y="40" width="120" height="40" fill="#ffffff" opacity="0.05"/><text x="100" y="115" font-family="Arial" font-size="48" font-weight="bold" fill="#ffffee" text-anchor="middle">GO!</text></svg>
     title: ROS2GO
     details: 轻松获取完整的 ROS 开发环境体验，秒级启动、随用随走、无需复杂环境配置、不伤宿主 Windows 系统、多维度恢复能力让小白也可无惧折腾...
-    link: /ros2go/
+    link: /ros2go/guide/
   - icon: 🚚
     title: TOM
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用 USB、CAN、UART 等作为外部通信接口，可灵活使用打造自己独特的机器人方案...

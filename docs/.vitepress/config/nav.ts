@@ -3,7 +3,6 @@ import type { DefaultTheme } from "vitepress";
 
 //导航栏
 export const nav: DefaultTheme.Config['nav'] = [
-    { text: '首页', link: '/' },
     { text: '官网', link: 'https://www.tianbot.com' },
     {
         text: 'ROS 产品文档',
@@ -56,10 +55,6 @@ export const nav: DefaultTheme.Config['nav'] = [
     },
     { 
         text: '关于我们',
-        // link: 'https://www.tianbot.com/page?id=4',
-        items: [
-            { text: '联系我们', link: 'contact' },
-            { text: '我们的社群', link: 'community'}
-        ],
+        link: 'about',
     },
 ];
