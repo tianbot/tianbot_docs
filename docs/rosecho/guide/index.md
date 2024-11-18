@@ -150,7 +150,7 @@ rosrun rosecho demo.py
 
 快速进阶可以选择ROS2GO
 
-- [ROS2GO使用手册](/ros2go/)
+- [ROS2GO使用手册](/ros2go/guide/index)
 
 ### 状态机
 

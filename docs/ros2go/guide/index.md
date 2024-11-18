@@ -20,7 +20,7 @@ ROS2GO™ 是由天之博特打造的一款开箱即用的便携式 ROS 集成�
 - **定制驱动**：主流硬件（显卡声卡网卡等）支持，包括不限于Intel/AMD/NVIDIA/MTK/Qualcomm等
 - **无忧恢复**：内置多种[恢复方案](how-to-recover.md)，折腾无忧
 - **稳定维护**：积极更新上游[内核、固件、ROS 功能包](https://github.com/tianbot/tianbot_docs/releases)等
-- **强力售后**：[多渠道售后](/community)支持，保障您的使用体验
+- **强力售后**：[多渠道售后](/about)支持，保障您的使用体验
 
 
 ## 产品规格 {#specifications}
