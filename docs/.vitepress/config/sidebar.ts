@@ -238,33 +238,36 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     '/': [
         {
             //分组标题 1
-            text: '💿 ROS2GO',
-            collapsed: true,
-            link: '/ros2go/guide/',
+            text: 'ROS2GO',
+            collapsed: false,
             items: [
               {
                 text: '使用手册',
                 collapsed: true,
                 link: '/ros2go/guide/',
                 items: [
-                  { text: '如何启动', link: '/ros2go/guide/how-to-start' },
-                  { text: '如何备份', link: '/ros2go/guide/how-to-backup-by-timeshift' },
+                  { text: '如何启动', link: '/ros2go/guide/how-to-start', },
+                  { text: '如何备份', link: '/ros2go/guide/how-to-backup', },
                   { text: '如何恢复', link: '/ros2go/guide/how-to-recover' },
                   { text: '如何升级', link: '/ros2go/guide/how-to-update' },
                 ],
               },
               {
                 text: '设备兼容',
-                link: '/ros2go/applicable/',
+                collapsed: true,
+                link: '/ros2go/applicable',
+                items: [
+                  { text: 'Apple 笔记本(x86)', link: '/ros2go/applicable/macbook' },
+                ],
               },
-              { text: '常见问题', link: '/ros2go/question' },
+              { text: '常见问题', link: '/ros2go/faq' },
               { text: '更新日志', link: '/ros2go/changelog' },
             ],
           },
           {
             //分组标题 2
-            text: '🚚 TOM',
-            collapsed: true,
+            text: 'TOM',
+            collapsed: false,
             link: '/tianbot/',
             items: [
               { text: '注意事项', link: '/tianbot/notice' },
@@ -324,8 +327,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 3
-            text: '🏁 TIANRACER',
-            collapsed: true,
+            text: 'TIANRACER',
+            collapsed: false,
             link: '/tianracer/',
             items: [
               { text: '注意事项', link: '/tianracer/notice' },
@@ -381,8 +384,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 3
-            text: '🚀 TIANROVER',
-            collapsed: true,
+            text: 'TIANROVER',
+            collapsed: false,
             link: '/tianrover/',
             items: [
               { text: '注意事项', link: '/tianrover/notice' },
@@ -403,8 +406,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 4
-            text: '🚗 TIANBOT MINI',
-            collapsed: true,
+            text: 'TIANBOT MINI',
+            collapsed: false,
             link: '/tianbot_mini/',
             items: [
               { text: '注意事项', link: '/tianbot_mini/notice' },
@@ -541,8 +544,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 5
-            text: '🚁 ROBOMASTER TT',
-            collapsed: true,
+            text: 'ROBOMASTER TT',
+            collapsed: false,
             items: [
               { text: '开箱说明', link: '/rmtt/list' },
               { text: '使用手册', link: '/rmtt/' },
@@ -552,8 +555,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
           {
             //分组标题 6
-            text: '📢 ROSECHO',
-            collapsed: true,
+            text: 'ROSECHO',
+            collapsed: false,
             items: [
               { text: '开箱说明', link: '/rosecho/' },
               { text: '使用手册', link: '/rosecho/guide/' },
