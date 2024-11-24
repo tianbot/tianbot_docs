@@ -1,5 +1,9 @@
 #  更新日志
 
+## v20241124
+1. 内核升级至`k6.11.10`：有特别新设备需求的用户可以升级至[`6.12.1`](https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.1)版本
+2. NVIDIA&CUDA 驱动升级至[`560.35.05`](https://github.com/tianbot/tianbot_docs/releases/tag/n560.35.05)，兼容 Linux 6.12.x 内核
+
 ## v20241109
 1. 升级至 Ubuntu 20.04.6 LTS
 2. 加入[微信客户端](https://linux.weixin.qq.com/)
