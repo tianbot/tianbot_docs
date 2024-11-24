@@ -8,9 +8,11 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 ## 内核 {#kernel}
 
+> ⚠️ 文档可能落后于实际发布版本，请关注：https://github.com/tianbot/tianbot_docs/releases 页面以跟踪最新发布动态。
+
 ### 使用指南
 
-1. 下载最新内核包`截至2024/11/16`：https://github.com/tianbot/tianbot_docs/releases/download/k6.11.8/6.11.8-ros2go.zip
+1. 下载最新内核包`截至2024/11/16`：https://github.com/tianbot/tianbot_docs/releases/download/k6.11.10/6.11.10-ros2go.zip
 2. 解压：`unzip *-ros2go.zip`
 3. 进入解压后的目录安装：`sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
 4. 重启机器，enjoy！
@@ -34,6 +36,8 @@ journalctl -ek
 3. 您也可以到我们的 QQ 频道`晒机`板块，寻找可能与您同配置的机器解决方案
 
 ## 固件 {#firmware}
+
+> ⚠️ 文档可能落后于实际发布版本，请关注：https://github.com/tianbot/tianbot_docs/releases 页面以跟踪最新发布动态。
 
 ### 使用指南
 
