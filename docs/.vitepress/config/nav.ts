@@ -7,7 +7,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     {
         text: 'ROS 产品文档',
         items: [
-            { text: 'ROS2GO', link: '/ros2go/' },
+            { text: 'ROS2GO', link: '/ros2go/guide/' },
             { text: 'TOM', link: '/tianbot/' },
             { text: 'Tianrover', link: '/tianrover/' },
             { text: 'Tianracer', link: '/tianracer/' },
