@@ -232,6 +232,27 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 ],
               },
               { text: '视觉 SLAM 开发指南', link: '/advanced/visual_slam/index' },
+              {
+                text: 'CUDA 及开源项目相关',
+                collapsed: true,
+                link: `/advanced/applications/`,
+                items: [
+                  {
+                    text: 'CUDA 相关',
+                    collapsed: true,
+                    items: [
+                      { text: 'Isaacgym 的使用', link: '/advanced/applications/isaacgym_rl' },
+                    ],
+                  },
+                  {
+                    text: '开源项目 相关',
+                    collapsed: true,
+                    items: [
+                      { text: 'Fast-drone-250', link: '/advanced/applications/fast-drone-250' },
+                    ],
+                  },
+                ],
+              },
             ],
         },
     ],
@@ -573,6 +594,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               },
               { text: '更新日志', link: '/rosecho/changelog' },
             ],
-          }
+          },
     ],
 }
