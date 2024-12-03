@@ -12,7 +12,7 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 ### 使用指南
 
-1. 下载最新内核包`截至2024/11/16`：https://github.com/tianbot/tianbot_docs/releases/download/k6.11.10/6.11.10-ros2go.zip
+1. 下载最新内核包`截至2024/11/16`：https://github.com/tianbot/tianbot_docs/releases/download/k6.11.9/6.11.9-ros2go.zip
 2. 解压：`unzip *-ros2go.zip`
 3. 进入解压后的目录安装：`sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
 4. 重启机器，enjoy！
