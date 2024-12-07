@@ -1,7 +1,11 @@
 #  更新日志
 
+## v20241207
+1. 内核升级至`k6.12.2`，不再维护`k6.11.x`，解决机械革命机型内置键盘无法识别的问题：https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.2
+2. 固件驱动升级至`f20241207`，全面支持 Intel 2 代 Ultra Xe2 显卡以及 Intel 的部分新发 WiFi7 网卡：https://github.com/tianbot/tianbot_docs/releases/tag/f20241207
+
 ## v20241124
-1. 内核升级至`k6.11.10`：有特别新设备需求的用户可以升级至[`6.12.1`](https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.1)版本
+1. 内核升级至`k6.11.9`：有特别新设备需求的用户可以升级至[`6.12.1`](https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.1)版本
 2. NVIDIA&CUDA 驱动升级至[`560.35.05`](https://github.com/tianbot/tianbot_docs/releases/tag/n560.35.05)，兼容 Linux 6.12.x 内核
 
 ## v20241109
@@ -11,7 +15,7 @@
 
 ## v20241019
 
-> 注意：后续内核、固件（驱动）、ROS 功能包统一在 https://github.com/tianbot/tianbot_docs/releases 发布更新，不再另行通知。
+> 注意：后续内核、固件（驱动）、ROS 功能包统一在 https://github.com/tianbot/tianbot_docs/releases 发布更新，无重大变更不再另行通知。
 
 1. 内核版本升级至`k6.11.4`
 2. 固件版本升级至`f20241017`
