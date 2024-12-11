@@ -61,10 +61,23 @@ gmapping 建图效果：
 
 ### Cartographer 建图
 
-启动 tianracer_cartographer 节点，用 Cartographer 进行建图，并保存地图
+由于 `cartographer` 运行需要占用大量计算资源，故没有在实车上直接安装`cartographer`，在 ROS2GO 上内置了`cartographer`，所以建议使用 ROS2GO 配合多机通信进行建图
+
+::: tip 实车与 ROS2GO [多机通信](/basic/ros/multi_machine_communicate.md)运行 `cartographer`
+
+1. 电脑启动 `ROS2GO`
+2. 使用 ssh 连上车，`roslaunch` 启动 `tianracer_bringup` 驱动
+3. `ROS2GO` 端配置 `ROS_MASTER_URI` 和 `ROS_IP` 环境变量后，在配置好环境变量的终端里，继续运行 
+
 ```shell
-roslaunch tianracer_slam tianracer_cartographer.launch
+roslaunch tianracer_slam tianracer_cartographer.launch 
 ```
+
+4. 同样在配置好环境变量的终端里，运行 `roslaunch tianracer_rviz view_mapping.launch` 查看当前的建图情况
+
+5. 保存地图（此时可以在车上启动终端保存地图）
+:::
+
 cartographer 建图效果：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740232.png)
@@ -82,3 +95,12 @@ hector_slam 建图效果如下：
 激光雷达消息结构
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202110212122606.webp)
+
+
+### 如何保存建立的地图
+
+运行如下命令，则会将地图默认保存在 tianracer_slam/maps/目录下，名称为 tianbot_office
+
+```shell
+roslaunch tianracer_slam map_save.launch
+```
