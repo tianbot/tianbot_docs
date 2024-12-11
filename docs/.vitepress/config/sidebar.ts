@@ -278,7 +278,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 link: '/ros2go/applicable',
                 items: [
-                  { text: 'Apple 笔记本(x86)', link: '/ros2go/applicable/macbook' },
+                  { text: 'Apple 笔记本 (x86)', link: '/ros2go/applicable/macbook' },
                 ],
               },
               { text: '常见问题', link: '/ros2go/faq' },
@@ -571,6 +571,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               { text: '开箱说明', link: '/rmtt/list' },
               { text: '使用手册', link: '/rmtt/' },
               { text: '实验手册', link: '/rmtt/experiment/' },
+              { text: '常见问题', link: '/rmtt/faq'},
               { text: '更新日志', link: '/rmtt/changelog' },
             ],
           },
