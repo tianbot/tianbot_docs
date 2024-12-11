@@ -2,6 +2,10 @@
 
 首次收到 Robomaster TT 使用套装后，请务必先在 ROS2GO 中按照以下步骤进行代码更新：
 
+::: warning
+下述所有操作均在 ROS2GO 中进行，请确保 ROS2GO 正常启动
+:::
+
 ### 更新代码
 
 ```bash
@@ -16,7 +20,6 @@ fatal: unable to access 'https://mirror.ghproxy.com/https://github.com/tianbot/r
 
 可以尝试使用国内加速源，具体方法如下：
 ::: info 提示
-
 
 下述操作均在`tianbot@ros2go:~/tianbot_ws/src/rmtt_ros$`终端目录下进行
 
@@ -141,40 +144,53 @@ roslaunch rmtt_description rmtt_description.launch
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311340179.webp)
 
-观看 RMTT 发布的话题信息
+### 观看 RMTT 发布的话题信息
+
+#### 查看 TOF 传感器数据 (测量距正前方障碍物距离)
 ```shell
 rostopic echo /tof_btm
 ```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311341311.webp)
 
+#### 查看海拔高度数据（单位 m）
 ```shell
 rostopic echo /altitude
 ```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311341525.webp)
 
-```shell
-rostopic hz /imagine
-```
+#### 查看图像数据
 
 ```shell
-rostopic hz /imu_data
+rostopic echo /image_raw/compressed      # 压缩图像数据
+rostopic echo /image_raw                 # 原始图像数据
+```
+
+#### 查看 IMU 数据
+```shell
+rostopic echo /imu_data
+```
+
+#### 查看电量数据
+```shell
+rostopic echo /battery
 ```
 
 在此延伸，使用`rostopic list -v`，观察更多的话题信息
 
 
-飞机起飞
+#### 飞机起飞
 ```shell
 rostopic pub /takeoff std_msgs/Empty
 ```
-飞机降落
 
+#### 飞机降落
 ```shell
 rostopic pub /land std_msgs/Empty
 ```
 
+### 使用 Twist 消息控制飞机移动
 ```shell
 rostopic pub -r 10 /cmd_vel geometry_msgs/Twist "linear:
   x: 0.1
@@ -187,6 +203,118 @@ angular:
 ```
 然后用 Tab 键补齐，就可以控制 RMTT 的移动
 
+::: tip 提示
+Rmtt 无人机起飞、降落、左转、右转、前进、后退、左移、右移对应的数据内容：
+
+| 指令 | Twist 消息内容 |
+|------|----------------|
+| 起飞 | 发布一个空的 Empty 消息到'takeoff'话题 |
+| 降落 | 发布一个空的 Empty 消息到'land'话题 |
+| 左转 | `twist.angular.z = -turn` |
+| 右转 | `twist.angular.z = turn` |
+| 前进 | `twist.linear.x = speed` |
+| 后退 | `twist.linear.x = -speed` |
+| 左移 | `twist.linear.y = speed` |
+| 右移 | `twist.linear.y = -speed` |
+
+具体来说，Twist 消息的各个字段含义如下：
+
+- `twist.linear.x`: 线性速度在 x 轴方向上的分量。
+- `twist.linear.y`: 线性速度在 y 轴方向上的分量。
+- `twist.linear.z`: 线性速度在 z 轴方向上的分量。
+- `twist.angular.x`: 角速度在 x 轴方向上的分量。
+- `twist.angular.y`: 角速度在 y 轴方向上的分量。
+- `twist.angular.z`: 角速度在 z 轴方向上的分量。
+
+在代码中，`speed`和`turn`参数分别控制了前进、后退、左移、右移和左转、右转的速度。
+:::
+
+### 使用 RoboMaster SDK 命令控制
+
+::: tip 提示
+如果希望使用 RoboMaster SDK 中提供的 SDK 命令控制飞机，而不是 Twist 消息控制飞机。
+- [TELLO SDK 使用说明](https://dl-cdn.ryzerobotics.com/downloads/tello/0301/Tello+SDK+%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf)
+:::
+
+需要修改 `rmtt_driver/launch/rmtt_bringup.launch` 文件的内容，将 `<arg name ="enable_sdk_cmd"` 设置为 `true`
+
+可以通过以下命令打开文件，并修改内容
+```bash
+source tianbot_ws/devel/setup.bash
+roscd rmtt_ros/.. && gedit rmtt_driver/launch/rmtt_bringup.launch 
+```
+
+```xml
+<?xml version="1.0"?>
+
+<launch>
+    <arg name ="drone_name" default="$(optenv RMTT_NAMESPACE /)" />
+    <arg name ="drone_ip" default="$(optenv RMTT_DRONE_IP 192.168.10.1)" />
+    <arg name ="local_ip" default="$(optenv RMTT_LOCAL_IP)" />
+    <arg name ="drone_port" default="8889" />
+    <arg name ="local_port" default="8890" />
+    <arg name ="video_port" default="11111" />
+    <arg name ="sdk_logger_level" default="ERROR" />
+    <arg name ="enable_sdk_cmd" default="true" />
+    <arg name ="fast_mode" default="true" />
+    <group ns="$(arg drone_name)">
+        <node pkg="rmtt_core_dev" name="rmtt_driver" type="rmtt_node.py" output="screen">
+            <param name="drone_ip" type="string" value="$(arg drone_ip)" />
+            <param unless="$(eval local_ip=='')" name="local_ip" type="string" value="$(arg local_ip)" />
+            <param name="drone_port" type="string" value="$(arg drone_port)" />
+            <param name="local_port" type="string" value="$(arg local_port)" />
+            <param name="video_port" type="string" value="$(arg video_port)" />
+            <param name="enable_camera" type="bool" value="true" />
+            <param name="sdk_logger_level" type="string" value="$(arg sdk_logger_level)" />
+            <param name="enable_sdk_cmd" type="bool" value="$(arg enable_sdk_cmd)" />
+            <param name="fast_mode" type="bool" value="$(arg fast_mode)" />
+        </node>
+    </group>
+</launch>
+```
+
+修改完成后，重新启动 `roslaunch rmtt_driver rmtt_bringup.launch drone_ip:=xxx.xxx.xxx.xxx` 文件即可
+
+#### SDK 控制实例
+
+::: tip 提示
+这样启动后会有一个 `topic` 叫 `sdk_cmd`，类型是 `string`，就可以按照 TT 的明文 sdk 发控制命令
+:::
+- [TELLO SDK 使用说明](https://dl-cdn.ryzerobotics.com/downloads/tello/0301/Tello+SDK+%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf)
+
+**tello_control_with_sdk.py**
+```python
+import rospy
+from std_msgs.msg import String
+
+command_list = []  # 全局变量，存储待执行的命令
+is_finished = False  # 标志位，表示命令是否执行完毕
+
+def tello_command():
+    """
+    顺序执行 tello 命令
+    """
+    pub = rospy.Publisher('sdk_cmd', String, queue_size=10)   # 确保  <arg name ="enable_sdk_cmd" default="true" /> 在 rmtt_bingup.launch 中已设置
+    rate = rospy.Rate(10)  # 10Hz
+    global command_list, is_finished
+
+    while not rospy.is_shutdown() and (command_list or not is_finished):
+        if command_list:
+            command = command_list.pop(0)  # 取出列表第一个命令并删除
+            pub.publish(command)
+            rate.sleep()
+        else:
+            is_finished = True  # 设置标志位，表示命令执行完毕
+
+if __name__ == '__main__':
+    rospy.init_node('tello_commander', anonymous=True)
+
+    # tello 明文 SDK 控制命令：https://dl-cdn.ryzerobotics.com/downloads/tello/0301/Tello+SDK+%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf
+    # 初始化命令列表，可以根据需要修改
+    command_list = ['takeoff', 'forward 50', 'turn left 90', 'land']
+
+    tello_command()
+```
 
 ### 使用 Map 坐标系
 
@@ -201,10 +329,15 @@ rosservice list
 
 普通地图为`/set_downvision`,夜光地图为`/set_hdmap`
 
+#### 调用下视摄像头服务
 ```shell
 rosservice call /set_downvision "data: True"
 ```
+::: tip 提示
+注意下视摄像头和前视摄像头不能同时启用，只能启用一个
+:::
 
+#### 调用视觉地图相对定位服务
 ```shell
 rosservice call /set_hdmap "data: True"
 ```
@@ -225,6 +358,7 @@ rostopic pub /takeoff std_msgs/Empty
 
 ### 不同情况下的 TF 树
 
+#### 调用下视摄像头服务前
 打开 rqt 观察 TF 树
 
 当没有使用下述 rosservice 时 TF 树为
@@ -234,10 +368,12 @@ rosservice call /set_downvision "data: True"
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343654.webp)
 
-而调用该服务后，会发现增加了一个从 base_link 到 map 的 TF 变换
+#### 调用视觉地图相对定位服务后
+而调用`视觉地图相对定位服务`后，会发现增加了一个从 base_link 到 map 的 TF 变换
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310311343285.webp)
 
+#### 添加 world 到 map 静态变换
 同时我们可以发布一个静态变换，将 map 坐标系关联到 world 坐标系
 
 ```shell
