@@ -21,9 +21,23 @@ roslaunch tianracer_slam tianracer_gmapping.launch
 
 - cartographer
 
+由于 `cartographer` 运行需要占用大量计算资源，故没有在实车上直接安装`cartographer`，在 ROS2GO 上内置了`cartographer`，所以建议使用 ROS2GO 配合多机通信进行建图
+
+::: tip 实车与 ROS2GO [多机通信](/basic/ros/multi_machine_communicate.md)运行 `cartographer`
+
+1. 电脑启动 `ROS2GO`
+2. 使用 ssh 连上车，`roslaunch` 启动 `tianracer_bringup` 驱动
+3. `ROS2GO` 端配置 `ROS_MASTER_URI` 和 `ROS_IP` 环境变量后，在配置好环境变量的终端里，继续运行 
+
 ```shell
 roslaunch tianracer_slam tianracer_cartographer.launch 
 ```
+
+4. 同样在配置好环境变量的终端里，运行 `roslaunch tianracer_rviz view_mapping.launch` 查看当前的建图情况
+
+5. 保存地图（此时可以在车上启动终端保存地图）
+:::
+
 - Hector SLAM
 ```shell
 roslaunch tianracer_slam tianracer_hector.launch
