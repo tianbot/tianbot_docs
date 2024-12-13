@@ -126,8 +126,8 @@ rostopic list
 双击该脚本，并填入如下代码
 
 ```matlab
-% 创建发布者
-velPub = rospublisher('/tianbot_06/cmd_vel','geometry_msgs/Twist'); # 该话题要与接收端话题保持一致
+% 创建发布者，该话题要与接收端话题保持一致
+velPub = rospublisher('/tianbot_06/cmd_vel','geometry_msgs/Twist');
 % 创建ackermann消息
 velMsg = rosmessage(velPub);
 % 设置速度和转向
@@ -141,6 +141,14 @@ send(velPub,velMsg);
 完成后如下图
 
 ![image-20240605175949619](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240605175949619.png)
+
+::: tip 注意
+如果在 `Matlab` 中运行上述代码，
+- 小车没有动，请检查 `Matlab` 端设置的`ROS_MASTER_URI`和`ROS_IP`是否配置正确。
+- 在小车端开启新终端运行`rostopic hz /tianbot_06/cmd_vel'`，显示`no new message`
+发现小车端没有收到速度消息，请检查是否正确关闭了 Windows 防火墙。
+- `关闭防火墙后`，请在小车端新开一个终端运行`roswtf`检查节点连通性
+:::
 
 ### 执行脚本
 
