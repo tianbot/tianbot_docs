@@ -78,6 +78,15 @@ velMsg.SteeringAngle = 0.5;
 send(velPub,velMsg);
 ```
 对于没有Tianracer底盘的用户，可以在Gazebo仿真环境中进行测试。
+
+::: tip 注意
+如果在Matlab中运行上述代码，
+- 小车没有动，请检查Matlab端设置的`ROS_MASTER_URI`和`ROS_IP`是否配置正确。
+- 在小车端开启新终端运行`rostopic hz /tianracer/ackermann_cmd`，显示`no new message`
+发现小车端没有收到速度消息，请检查是否正确关闭了Windows防火墙。
+- 关闭防火墙后，请在小车端新开一个终端运行`roswtf`检查节点连通性
+:::
+
 ::: info Gazebo仿真环境中的Tianracer底盘控制
 为了避免在仿真和真实底盘切换过程中发生意外，在Gazebo仿真环境中，Tianracer的底盘控制话题为‘/tianracer/ackermann_cmd_stamped’，消息类型为‘ackermann_msgs/AckermannDriveStamped’，因此需要控制仿真环境中的Tianracer需要做相应修改。
 :::
