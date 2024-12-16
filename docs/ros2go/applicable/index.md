@@ -8,11 +8,9 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 ## 内核 {#kernel}
 
-> ⚠️ 文档可能落后于实际发布版本，请关注：https://github.com/tianbot/tianbot_docs/releases 页面以跟踪最新发布动态。
-
 ### 使用指南
 
-1. 下载最新内核包`截至2024/12/12`：https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.4
+1. 下载最新内核包：https://github.com/tianbot/tianbot_docs/releases?q=kernel&expanded=true
 2. 解压：`unzip *-ros2go.zip`
 3. 进入解压后的目录安装：`sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
 4. 重启机器，enjoy！
@@ -37,13 +35,11 @@ journalctl -ek
 
 ## 固件 {#firmware}
 
-> ⚠️ 文档可能落后于实际发布版本，请关注：https://github.com/tianbot/tianbot_docs/releases 页面以跟踪最新发布动态。
-
 ### 使用指南
 
 > 注：早期版本`v20241019之前`可能有一些过时的包，需要先卸载：`sudo apt purge -y drivers-linux-firmware 2>/dev/null && sudo apt purge -y linux-firmware 2>/dev/null` 
 
-1. 下载固件包`截至2024/12/12`：https://github.com/tianbot/tianbot_docs/releases/tag/f20241210
+1. 下载固件包：https://github.com/tianbot/tianbot_docs/releases?q=firmware&expanded=true
 2. 安装：`sudo dpkg -i linux-firmware-upstream*.deb`
 3. 重启机器，enjoy！
 
