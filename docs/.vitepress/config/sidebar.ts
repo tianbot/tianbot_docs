@@ -568,7 +568,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             text: 'ROBOMASTER TT',
             collapsed: false,
             items: [
-              { text: '开箱说明', link: '/rmtt/list' },
               { text: '使用手册', link: '/rmtt/' },
               { text: '实验手册', link: '/rmtt/experiment/' },
               { text: '常见问题', link: '/rmtt/faq'},
