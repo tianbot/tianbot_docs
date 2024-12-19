@@ -1,12 +1,21 @@
 #  Robomaster TT 使用手册
 
+## 获取 License 授权
+::: tip 请注意
+注：本页内容仅支持在 `TIANBOT`官方售出的空地协同套装中使用，由于渠道问题，在使用[rmtt_ros](https://github.com/tianbot/rmtt_ros)软件驱动服务前，需要联系 Tianbot 官方购买`软件服务使用授权License`，否则将无法正常使用。
+:::
+
+::: danger 注意
+ros2go 中的全部服务中不包含 `RMTT` 的`软件服务使用授权 License`
+:::
+
 首次收到 Robomaster TT 使用套装后，请务必先在 ROS2GO 中按照以下步骤进行代码更新：
 
 ::: warning
 下述所有操作均在 ROS2GO 中进行，请确保 ROS2GO 正常启动
 :::
 
-### 更新代码
+## 更新代码
 
 ```bash
 roscd rmtt_ros/..
