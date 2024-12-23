@@ -150,6 +150,15 @@ error: you need to load the kernel first
 
 3. ROS2GO 系统终端输入：`lspci | grep -i network` 将结果反馈给售后群，我们工程师会视情况给出解决建议
 
+4. 使用手机 USB 网络共享功能，本条经测试苹果和安卓手机都是可以使用的，具体方法如下：
+
+- 安卓端
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20241223152024.png)
+- 苹果端
+苹果手机可以通过 USB 共享网络给电脑使用，打开设置功能，开启蜂窝网络，打开个人热点 (未开启蜂窝网络该功能不可用)，将 USB 数据线与电脑进行连接，选择允许其他人加入，根据提示选择 USB 共享网络，此时电脑即可正常上网;
+
+5. 从 [tianbot_docs/releases](https://github.com/tianbot/tianbot_docs/releases) 下载日期最新的`Linux firmware for ROS2GO`固件包，解压后使用`sudo dpkg -i`命令安装`.deb`安装包
+
 ## 无法访问原来的 Windows 下的硬盘 {#cannot-access-windows-disk}
 
 这是一个使用双系统时常见的问题，最常见的原因是没有关闭 Windows 的快速启动，这样 Windows 并不是完全正常的关闭，了解问题可参考这个[链接](https://askubuntu.com/questions/145902/unable-to-mount-windows-ntfs-filesystem-due-to-hibernation)，修复此类问题：Error mounting /dev/sda2，使用命令
