@@ -8,6 +8,13 @@
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240715151243.png)
 :::
 
+## 小车参数配置演示说明
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=113564874446807&bvid=BV1TYzqYWEkm&cid=27089243777&page=1&autoplay=0" frameborder="no" scrolling="no" 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
 ### 连接到工具 AP 热点
 
 将`tianbot toolkit`工具，接入`TOM06s`上位机的`USB`口，等待`5s`后，重新扫描当前可连接的`wifi`，连接到`TIANBOT-577DA0`热点
@@ -44,7 +51,7 @@
 - `ROS_IP`
 
 同时也需要给机器人所发出的话题加上命名空间
-- `TIANBOT_NAME`    (机器人的命名空间)
+- `TIANBOT_NAME`(机器人的命名空间)
 
 #### 配置机器人联网信息
 
@@ -68,7 +75,21 @@
 
 - 修改`ROS`环境变量信息，填入需要连接的`ROBOT NAME`和`ROS MASTER URI`，然后点击配置机器人信息即可，等待 5s 作用，配置成功后，小车会发出滴滴滴的声音
 
-  ![image-20240604102918335](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604102918335.png)
+::: info 注意
+举个例子，假设小车此时 IP 为 `10.168.1.202`，使用者的笔记本电脑 IP 为 `10.168.1.200`, 在小车与电脑正确接入到同一局域网网络下，可以有以下 3 种配置方式，通常我们会使用前两种方式
+
+| 小车中 ROS_MASTER_URI 中的 IP 字段 | 小车中自动配置的 ROS_IP |     说明备注            |
+| :---:| :---:|:---:|
+| 10.168.1.200     | 10.168.1.202    |  需要使用者笔记本电脑启动 roscore，作为 ROS_MASTER_URI 主机，小车作为从机  |
+| 10.168.1.202     | 10.168.1.202    |  以小车的自身作为 ROS_MASTER_URI，使用者的笔记本电脑为从机  |
+| localhost        | 127.0.0.1       |  以小车本地回环 localhost 作为 ROS_MASTER_URI，此时小车与使用者的笔记本电脑无法进行多机通信  |
+:::
+
+::: warning 注意
+在填入`ROS_MASTER_URI`时，不需要加上`http://`开头和`:11311`的结尾，仅需要填入`你希望的ROS_MASTER的主机IP`地址即可，如下图中在输入框中仅需填入`10.168.1.200`
+:::
+
+![image-20240604102918335](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604102918335.png)
 
 ### 查看确认配置信息
 
