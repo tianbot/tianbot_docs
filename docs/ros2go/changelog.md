@@ -4,10 +4,10 @@
 
 > 具体见腾讯文档：https://docs.qq.com/doc/DQ0tKS1VFbUVsbm9u
 
-1.解决 AMD 集显机型屏幕局部花屏、窗口撕裂的问题
-2.修复联想部分新机型 Fn 快捷键调整亮度或者合盖可能导致的死机问题
-3.增加 BORE (Burst-Oriented Response Enhancer) 调度器
-4.支持控制拯救者 logo 灯开关（Fn + L）触发
+1. 解决 AMD 集显机型屏幕局部花屏、窗口撕裂的问题
+2. 修复联想部分新机型 Fn 快捷键调整亮度或者合盖可能导致的死机问题
+3. 增加 BORE (Burst-Oriented Response Enhancer) 调度器
+4. 支持控制拯救者 logo 灯开关（Fn + L）触发
 
 ## v20241207
 1. 内核升级至`k6.12.2`，不再维护`k6.11.x`，解决机械革命机型内置键盘无法识别的问题：https://github.com/tianbot/tianbot_docs/releases/tag/k6.12.2
