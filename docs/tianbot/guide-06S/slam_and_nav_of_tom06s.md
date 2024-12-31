@@ -56,7 +56,7 @@ roslaunch tianbot_slam map_save.launch map_file:=my_name
 
 保存地图后，下列程序会使用默认地图`TianbotOffice`进行导航。
 ```shell
-roslaunch tianbot_navigation tianbot_nav.launch
+roslaunch tianbot_navigation tianbot_nav.launch local_planner:=teb
 ```
 
 ::: tip 提示
@@ -67,7 +67,7 @@ roslaunch tianbot_navigation tianbot_nav.launch map_file:=my_name
 在 rviz 中，可以测试导航效果
 
 ```shell
-roslaunch tianbot_rviz view_navigation.launch
+roslaunch tianbot_rviz view_teb_planner.launch    # 使用teb planner
 ```
 
 ## 导航到指定位置 {#nav-to-goal}
