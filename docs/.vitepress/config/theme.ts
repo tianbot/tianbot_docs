@@ -49,8 +49,8 @@ export const themeConfig: DefaultTheme.Config = {
     //页脚
 
     footer: {
-        message: 'Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en/">CC-BY-SA-4.0</a> License.',
-        copyright: 'Copyright © 2023 天之博特 备案号：<a href="https://beian.miit.gov.cn/">苏ICP备18008740号</a>',
+        message: `Released under the <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en/">CC-BY-SA-4.0</a> License`,
+        copyright: `Copyright © 2019-${new Date().getFullYear()} 天之博特 备案号：<a href="https://beian.miit.gov.cn/">苏ICP备18008740号</a>`,
     },
 
     //侧边栏文字更改(移动端)
