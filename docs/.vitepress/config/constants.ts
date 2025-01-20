@@ -2,7 +2,7 @@ const site = 'https://docs.tianbot.com';
 
 export const metaConfig = {
     lang: 'zh-CN',
-    title: " Tianbot",
+    title: "Tianbot",
     description: "快跟我一起快乐的学习ROS机器人",
     titleTemplate: "Docs",
     site,

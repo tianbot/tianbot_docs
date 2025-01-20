@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-    name: Tianbot-Doc
-    text: 天之博特
+    name: Tianbot Docs
+    text: 
     tagline: 快跟我一起快乐的学习 ROS 机器人
     image: 
-        src: /logo.ico
-        alt: Tianbot-Doc
+        src: /logo.png
+        alt: Tianbot-Docs
     actions:
         - theme: brand
           text: 开始学习
