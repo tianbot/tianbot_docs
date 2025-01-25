@@ -34,6 +34,9 @@ cd Sophus && git checkout a621ff
 mkdir build install && cd build
 cmake -DCMAKE_INSTALL_PREFIX=../install .. && make -j4 && make install
 ```
+
+- 如遇报错`/Sophus/sophus/so2.cpp:32:26: error: lvalue required as left operand of assignment`，参考博客[Ubuntu 安装 Sophus 报错：so2.cpp：error lvalue required as left operand of assignment.](https://www.cnblogs.com/yutian-blogs/p/13508021.html)
+
 - 手动设置依赖项路径
 
 修改`~/fast_ws/src/FAST-LIVO2/CMakeLists.txt`中 `Sophus` 的路径，第 103~104 行修改为如下
