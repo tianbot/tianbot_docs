@@ -228,6 +228,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'LIO-SAM 演示例程', link: '/advanced/lidar_slam/lio-sam' },
                       { text: 'LVI-SAM 演示例程', link: '/advanced/lidar_slam/liv-sam' },
                       { text: 'R3LIVE 演示例程', link: '/advanced/lidar_slam/r3live' },
+                      { text: 'FAST-LIVO2 演示例程', link: '/advanced/lidar_slam/fast-livo2' },
                     ],
                   },
                 ],
