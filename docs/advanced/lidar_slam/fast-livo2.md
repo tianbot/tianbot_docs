@@ -2,7 +2,7 @@
 
 ![](https://mirror.ghproxy.com/https://github.com/hku-mars/FAST-LIVO2/raw/main/pics/Framework.png)
 
-`FAST-LVIO2`于 2025 年 1 月 23 日开发源代码，感谢郑博的工作，`FAST-LIVO2` 是一种高效、准确的 激光 - 惯性 - 视觉融合定位和测绘系统，在严重恶化的环境中表现出实时 3D 重建和机载机器人定位的巨大潜力。
+`FAST-LVIO2`于 2025 年 1 月 23 日开放源代码，感谢郑博的工作，`FAST-LIVO2` 是一种高效、准确的 激光 - 惯性 - 视觉融合定位和测绘系统，在严重恶化的环境中表现出具备实时 3D 重建和机载机器人定位的巨大潜力。
 
 ## 相关链接
 - [代码地址](https://github.com/hku-mars/FAST-LIVO2)
