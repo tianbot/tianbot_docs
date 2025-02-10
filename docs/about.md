@@ -2,7 +2,7 @@
 
 ## 销售咨询
 
-E-mail: sales@tianbot.com
+E-mail: zhaojunjie@tianbot.com
 
 微信：[WeChat](https://work.weixin.qq.com/kf/kefu/qrcode?kfcode=kfc023b1f66e23716fd)
 
