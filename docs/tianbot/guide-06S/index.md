@@ -22,3 +22,9 @@
 ::: info 注意
 更换的 3 节电池在电压上差值上不超过 0.1V
 :::
+
+### 乐迪 T8S 遥控器
+
+T8S 是乐迪公司研发的一款无线遥控器，兼容多款多尺寸接收机，采用美国 TI CC2500 无线芯片，是 Open TX 三倍的传输速率。采用 AT9S 同样的 FHSS 扩频算法，67 信道伪随机序列跳频，具有优越的抗多径干扰和抗同波段干扰能力，稳定遥控距离空中 2000 米。
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doct8s_of_tom06s.png)
