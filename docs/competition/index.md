@@ -6,6 +6,6 @@
 
 ## 竞赛咨询与产品购买
 
-联系电话：15398021743
+联系电话：13689205983
 
-联系邮箱：sales@tianbot.com
+联系邮箱：zhaojunjie@tianbot.com
