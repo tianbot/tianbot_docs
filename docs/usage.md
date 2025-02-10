@@ -16,6 +16,6 @@
 或者 [WeChat](https://work.weixin.qq.com/kf/kefu/qrcode?kfcode=kfc023b1f66e23716fd) 联系我。
 
 * Admin：Tianbot
-* E-mail: sales@tianbot.com
+* E-mail: zhaojunjie@tianbot.com
 
 ![](https://work.weixin.qq.com/kf/kefu/qrcode?kfcode=kfc023b1f66e23716fd)

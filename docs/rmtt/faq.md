@@ -8,7 +8,7 @@ PLEASE CONTACT TIANBOT FOR TECH SUPPORT.
 WEBSITE: www.tianbot.com
 TELE: +86-25-66046936
 ```
-1. 如果 rmtt 是直接从 `Tianbot` 这买的话，可将购买的附订单号和序列号，发邮件到 sales@tianbot.com，有专人处理
+1. 如果 rmtt 是直接从 `Tianbot` 这买的话，可将购买的附订单号和序列号，发邮件到 zhaojunjie@tianbot.com，有专人处理
 2. 在 ROS2GO 上进行如下更新代码的操作后再尝试运行 `rmtt_bringup.launch`
 
 请确已正确更新了驱动，并确保设备已连接到电脑。
