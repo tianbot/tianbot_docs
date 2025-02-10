@@ -14,7 +14,7 @@
         <div class="body content">
             <p class="p_margin" id="p3">👇竞赛咨询👇---👇产品购买👇</p>
             <!-- <img src="https://img.cdn.sugarat.top/mdImg/MTYxNTAxODc2NTIxMA==615018765210" style=""> -->
-            <p class="p_margin" id="p3">联系电话：15398021743<br />联系邮箱：sales@tianbot.com</p>
+            <p class="p_margin" id="p3">联系电话：13689205983<br />联系邮箱：zhaojunjie@tianbot.com</p>
             <div class="button-container">
                 <a href="https://tianbot.taobao.com/" target="_blank" class="el-button el-button--primary button-author">
                     <span>查看店铺</span>
