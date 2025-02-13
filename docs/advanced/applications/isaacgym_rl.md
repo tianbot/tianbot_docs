@@ -1,5 +1,11 @@
 # isaacgym RL {isaacgym-rl}
 
+::: tip 提示
+
+Isaac Gym 已经被归档，开发人员仍然可以下载并继续使用它，但`nvidia`官方不再支持它。请考虑使用 `ISAAC LAB`，这是一个开放源的轻巧和性能优化的应用程序，用于在 `ISAAC SIM` 平台上构建的机器人学习。
+:::
+
+-  [Isaac Gym](https://developer.nvidia.com/isaac-gym)
 
 ## 下载 isaacgym {isaacgym-download}
 

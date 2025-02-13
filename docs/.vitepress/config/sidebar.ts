@@ -244,6 +244,8 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     collapsed: true,
                     items: [
                       { text: 'Isaacgym 的使用', link: '/advanced/applications/isaacgym_rl' },
+                      { text: 'Isaac Sim 4.2 的安装使用', link: '/advanced/applications/isaacsim420_lab141_install' },
+                      { text: 'Isaac Sim 4.5 的安装使用', link: '/advanced/applications/isaacsim450_lab200_install' },
                     ],
                   },
                   {
