@@ -243,6 +243,72 @@ Loading user config located at: '/home/tianbot/isaacsim_ws/isaac-sim-standalone@
 [0.279s] [ext: omni.client.lib-1.0.0] startup
 ...............
 ```
+
+虽然可以正常运行，但是发现会停留在`[INFO]: Starting the simulation. This may take a few seconds. Please wait...处`
+```bash
+Loading user config located at: '/home/tianbot/isaacsim_ws/isaac-sim-standalone@4.5.0/kit/data/Kit/Isaac-Sim/4.5/user.config.json'`这一步，无法继续运行下去。
+
+[2025-02-14 13:40:59,479][ogn_registration][INFO] - Registering Python Node Types from omni.physxfabric at /home/tianbot/isaacsim_ws/isaac-sim-standalone@4.5.0/extsPhysics/omni.physx.fabric in omni.physx.fabric
+[2025-02-14 13:40:59,479][ogn_registration][INFO] - ========================================================================================================================
+[2025-02-14 13:40:59,480][ogn_registration][INFO] - No dependency on omni.graph, therefore no nodes to register in omni.physx.fabric
+[2025-02-14 13:40:59,480][ogn_registration][INFO] - ...None found, no registration to do
+[2025-02-14 13:40:59,480][ogn_registration][INFO] - ...Skipping: No OmniGraph presence in the module omni.physxfabric - No nodes in this module, do not remember it
+[2025-02-14 13:40:59,480][ogn_registration][INFO] - Destroying registration record for omni.physx.fabric
+[2025-02-14 13:40:59,481][ogn_registration][INFO] - OGN register omni.physx.fabric-106.5.7 took 2095135.000000
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.008333333333333333
+	Rendering step-size   : 0.016666666666666666
+	Environment step-size : 0.016666666666666666
+[INFO]: Time taken for scene creation : 1.854712 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 4096
+	Environment spacing   : 5.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+```
+
+这时由于需要连接 ominiverse 下载`IsaacSim Asset`资产文件，所以会卡在`[INFO]: Starting the simulation. This may take a few seconds. Please wait...`处，无法继续运行下去。
+
+## 修改 IsaacSim Asset 加载路径
+
+所以为了解决这个问题，需要修改`Isaac Lab`中的`IsaacSim Asset`的加载路径。
+
+需要修改文件
+
+**~/isaacsim_ws/IsaacLab-2.0.0/source/isaaclab/isaaclab/utils/assets.py**
+```py
+# 将
+NUCLEUS_ASSET_ROOT_DIR = carb.settings.get_settings().get("/persistent/isaac/asset_root/cloud")
+
+#修改为
+NUCLEUS_ASSET_ROOT_DIR = "/home/tianbot/Downloads/Assets/IsaacSim/Assets/Isaac/4.5"
+
+# 下面照旧即可
+"""Path to the root directory on the Nucleus Server."""
+
+NVIDIA_NUCLEUS_DIR = f"{NUCLEUS_ASSET_ROOT_DIR}/NVIDIA"
+"""Path to the root directory on the NVIDIA Nucleus Server."""
+
+ISAAC_NUCLEUS_DIR = f"{NUCLEUS_ASSET_ROOT_DIR}/Isaac"
+"""Path to the ``Isaac`` directory on the NVIDIA Nucleus Server."""
+
+ISAACLAB_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/IsaacLab"
+"""Path to the ``Isaac/IsaacLab`` directory on the NVIDIA Nucleus Server."""
+```
+
+修改并保存后，重新运行，发现可以流畅的玩耍了。
+```bash
+(.ros2) tianbot@ros2go:~/isaacsim_ws/IsaacLab-2.0.0$ python3 scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Ant-v0`
+```
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docant_v0.png)
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docant_v1.png)
+
 ## 常见问题 {#common-problems}
 
 ### PYTHONPATH 问题
