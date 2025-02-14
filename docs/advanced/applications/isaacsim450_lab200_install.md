@@ -27,7 +27,19 @@
 
 - 从 isaac sim 官网下载 `isaac sim 4.5.0`和 `asset` 资产文件 [https://docs.isaacsim.omniverse.nvidia.com/latest/installation/download.html](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/download.html)
 
+### 下载 isaac sim Asset {#download-isaacsim-asset}
+- [Issac sim 4.2.0 Asset 资产下载]()
 
+下载完成后按照如下路径解压，合并 3 个资产文件，便于后续使用
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docasset.png)
+
+最后完成的 Asset 路径和目录结构如下
+
+```bash
+(.ros2) tianbot@ros2go:~/Downloads/Assets/IsaacSim/Assets/Isaac/4.5$ ls
+Isaac  NVIDIA
+```
 
 ### 下载 zip 安装包 {#download-zip-package}
 
