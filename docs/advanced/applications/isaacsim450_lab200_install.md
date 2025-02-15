@@ -13,15 +13,26 @@
 
 - [硬件配置要求](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/requirements.html#system-requirements)
 
-
+## 运行兼容性检查
 可以使用`Isaac Sim Compatibility Checker`工具检查是否满足 Isaac Sim 的硬件配置要求
+
+```bash
+# 下载 isaac sim 4.5.0 的兼容性检查工具
+curl -LJO https://download.isaacsim.omniverse.nvidia.com/isaac-sim-comp-check%404.5.0-rc.6%2Brelease.675.f1cca148.gl.linux-x86_64.release.zip
+
+# 解压 isaac sim 4.5.0 的兼容性检查工具
+unzip -d ~/isaacsim_ws/isaac-sim-comp-check@4.5.0 isaac-sim-comp-check%404.5.0-rc.6%2Brelease.675.f1cca148.gl.linux-x86_64.release.zip
+
+# 运行 isaac sim 4.5.0 的兼容性检查工具
+cd ~/isaacsim_ws/isaac-sim-comp-check@4.5.0 && ./omni.isaac.sim.compatibility_check.sh
+```
 
 ![](https://docs.isaacsim.omniverse.nvidia.com/latest/_images/isaac_sim_compatibility_checker.png)
 
 ## 相关文档
 
-- [Isaac Sim Documentation 4.5.0](https://docs.isaacsim.omniverse.nvidia.com/4.2.0/index.html)
-- [Isaac Lab Documentation 2.0.0 ](https://isaac-sim.github.io/IsaacLab/v1.4.1/index.html)
+- [Isaac Sim Documentation 4.5.0](https://docs.isaacsim.omniverse.nvidia.com/4.5.0/index.html)
+- [Isaac Lab Documentation 2.0.0 ](https://isaac-sim.github.io/IsaacLab/v2.0.0/index.html)
 
 ## 安装下载 {#install}
 
@@ -329,3 +340,8 @@ ISAACLAB_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/IsaacLab"
 
 - [No module named ‘omni.isaac’](https://github.com/isaac-sim/IsaacLab/issues/516#issuecomment-2406737955)
 - 可以参考[[Bug Report] ModuleNotFoundError:No module named 'omni.isaac.kit‘ ; Had tried the issue #103 Solution #516](https://github.com/isaac-sim/IsaacLab/issues/516)
+
+## Reference:
+
+- [Isaac Sim 官方文档](https://docs.isaacsim.omniverse.nvidia.com/4.5.0/index.html)
+- [Isaac Lab GitHub 仓库](https://github.com/isaac-sim/IsaacLab)
