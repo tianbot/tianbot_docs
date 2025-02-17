@@ -1,6 +1,16 @@
 /* .vitepress/theme/index.css */
 /* Ref: https://bddxg.top/article/note/vitepress%E4%BC%98%E5%8C%96/%E7%82%B9%E5%87%BB%E5%9B%BE%E7%89%87%E6%94%BE%E5%A4%A7.html */
 
+/* 灰度模式：在特殊纪念日时使用 */       
+/* html {
+  filter: grayscale(95%);
+  -webkit-filter: grayscale(95%);
+  -moz-filter: grayscale(95%);
+  -ms-filter: grayscale(95%);
+  -o-filter: grayscale(95%);
+  filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=.95);
+} */
+
 /* click midium image */
 .medium-zoom-overlay {
     z-index: 20;
@@ -71,4 +81,57 @@ p code {
 /* herf style fixed */
 .vp-doc a {
   text-decoration:underline
+}
+
+/* docs/.vitepress/theme/global.css */
+/* 优化超宽屏阅读体验 */
+@media (min-width: 1600px) {
+  .VPDoc {
+    padding: 32px 0 0 !important;
+  }
+}
+@media (min-width: 1440px) {
+  .VPSidebar {
+    padding-left: 40px !important;       /* 侧边栏左侧留白增加 */
+    width: 280px !important;             /* 侧边栏宽度固定为 260px */
+    transition: width .3s ease;       /* 增加过渡效果 */
+  }
+  .VPNavBar .title {
+    padding-left: 10px !important;       /* 导航标题左缩进微调 */
+    width: 230px !important;             /* 标题区域宽度缩小 */
+  }
+  .VPContent.has-sidebar {
+    padding-left: 280px !important;      /* 主内容区左侧留出侧边栏空间 */
+    padding-right: 5vw !important;       /* 右侧响应式留白 */
+  }
+  .VPNavBar .curtain {
+    width: 100% !important;
+  }
+  .VPNavBar .content {
+    padding-left: 240px !important;
+    padding-right: 0px !important;
+  }
+}
+@media (min-width: 960px) {
+  .VPDoc {
+    padding: 32px 0 0 !important;
+  }
+  .VPNavBar .content {
+    padding-left: 280px !important;
+    padding-right: 0px !important;
+  }
+}
+.VPNavBar {
+  padding-right: 20px !important;       /* 导航栏右侧留白 */
+}
+.VPNavBar .container {
+  margin: unset;                        /* 移除容器外边距 */
+  max-width: unset;                     /* 取消最大宽度限制 */
+}
+.VPDoc.has-aside .content-container {
+  max-width: 100% !important;           /* 取消内容区最大宽度限制 */
+}
+.aside {
+  max-width: 200px !important;          /* 右侧目录宽度限制为 200px */
+  padding-left: 0 !important;           /* 移除目录左侧内边距 */
 }
