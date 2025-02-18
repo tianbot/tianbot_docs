@@ -303,12 +303,10 @@ Loading user config located at: '/home/tianbot/isaacsim_ws/isaac-sim-standalone@
 需要修改文件
 
 **~/isaacsim_ws/IsaacLab-2.0.0/source/isaaclab/isaaclab/utils/assets.py**
-```py
-# 将
-NUCLEUS_ASSET_ROOT_DIR = carb.settings.get_settings().get("/persistent/isaac/asset_root/cloud")
-
-#修改为
-NUCLEUS_ASSET_ROOT_DIR = "/home/tianbot/Downloads/Assets/IsaacSim/Assets/Isaac/4.5"
+```diff 
+# 修改为
+- NUCLEUS_ASSET_ROOT_DIR = carb.settings.get_settings().get("/persistent/isaac/asset_root/cloud")
++ NUCLEUS_ASSET_ROOT_DIR = "/home/tianbot/Downloads/Assets/IsaacSim/Assets/Isaac/4.5" # your IsaacSim Asset path
 
 # 下面照旧即可
 """Path to the root directory on the Nucleus Server."""
