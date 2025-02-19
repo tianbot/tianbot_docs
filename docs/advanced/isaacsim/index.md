@@ -7,7 +7,6 @@
 <a id="核心优势对比"></a>
 ## 🏆 核心优势对比
 ## 主流机器人仿真引擎对比
-## 主流机器人仿真引擎对比（修正版）
 
 | 对比维度           | NVIDIA Isaac Sim 2023.1          | Gazebo 11              | Isaac Gym 2022.3       | MuJoCo 2.3.6         | Genesis 0.2.1         |
 |--------------------|----------------------------------|------------------------|------------------------|----------------------|-----------------------|
@@ -25,6 +24,13 @@
 | **启动命令示例**   | `./isaac-sim.sh --ext-folder ~/exts` | `gazebo worlds/empty.world` | `python train.py task=Cartpole` | `import mujoco` | `genesis-sim --env GraspingCube` |
 | **优势**           | 物理 + 渲染双高精度               | 社区资源丰富           | 超大规模并行           | 物理精度最高         | 快速 RL 训练循环         |
 | **局限**           | 硬件要求高                      | 性能受限               | 场景简化               | 扩展性差            | 物理保真度一般        |
+
+本文对比数据通过分析以下资源整理获得：
+- [NVIDIA Isaac Sim 官方文档](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
+- [Gazebo 开源项目](https://gazebosim.org/home)
+- [Nvidia Isaac Gym](https://developer.nvidia.com/isaac-gym)
+- [Genesis GitHub 仓库](https://github.com/Genesis-Embodied-AI/Genesis) 
+- [MuJoCo Guthub 仓库](https://github.com/google-deepmind/mujoco)
 
 ## 前期准备
 
