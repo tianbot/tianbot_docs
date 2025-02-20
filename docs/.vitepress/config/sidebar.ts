@@ -248,6 +248,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'Isaac Sim 4.5 的安装使用', link: '/advanced/applications/isaacsim450_lab200_install' },
                       { text: 'Isaac Sim 快速应用指南', link: '/advanced/isaacsim/'},
                       { text: 'Isaac Sim 与 ROS2 的快速应用', link: '/advanced/isaacsim/with_ros2'},
+                      { text: 'Isaac Sim 与 Isaac Lab 的推荐项目', link: '/advanced/isaacsim/nice_project_with_isaaclab'},
                     ],
                   },
                   {
