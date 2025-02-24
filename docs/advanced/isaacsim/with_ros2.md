@@ -1,5 +1,9 @@
 # Isaac Sim 作为 Gazebo 替代方案的 ROS2 快速应用指南
 
+::: warning 注意
+本篇内容基于 Isaac Sim 4.5.0 版本。
+:::
+
 ## Ros Bridge Extensions
 
 默认情况下启用 `ROS2 Bridge`。如果您正在运行 `isaac-sim.sh`，并希望两个 `ROS2 Bridge` 或切换到自动加载 `ROS2 Bridge`，请使用以下步骤：
