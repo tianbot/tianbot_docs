@@ -249,6 +249,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'Isaac Sim 快速应用指南', link: '/advanced/isaacsim/'},
                       { text: 'Isaac Sim 与 ROS2 的快速应用', link: '/advanced/isaacsim/with_ros2'},
                       { text: 'Isaac Sim 与 Isaac Lab 的推荐项目', link: '/advanced/isaacsim/nice_project_with_isaaclab'},
+                      { text: 'Isaac Lab 中的 URDF 模型导入与处理', link: '/advanced/isaacsim/urdf_with_isaaclab'},
                     ],
                   },
                   {
