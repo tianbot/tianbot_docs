@@ -10,6 +10,8 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 ### 使用指南
 
+> ⚠️NVIDIA显卡用户，需要额外安装搭配的驱动，具体见：https://github.com/tianbot/tianbot_docs/releases?q=cuda&expanded=true
+
 1. 下载最新内核包：https://github.com/tianbot/tianbot_docs/releases?q=kernel&expanded=true
 2. 解压：`unzip *-ros2go.zip`
 3. 进入解压后的目录安装：`sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
