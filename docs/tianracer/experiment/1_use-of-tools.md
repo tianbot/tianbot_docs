@@ -17,7 +17,7 @@
 启动进入BIOS在启动项中选择TIANBOT ROS2GO
 正常启动，开始ROS2GO之旅
 
-详情查看：ROS2GO如何启动
+详情查看：[ROS2GO如何启动](../../ros2go/guide/how-to-start.md)
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740536.webp)
 
