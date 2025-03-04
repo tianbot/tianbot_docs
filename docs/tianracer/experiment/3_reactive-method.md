@@ -106,8 +106,13 @@ tianracer 功能包中没有单独部署该避障算法节点，而是将全部�
 仿真实现：
 我们试着用 python 的 matplot 实现一下仿真，在 tianracer_test 功能包下运行 `simulator_pure_pursuit.py` 文件：
 ```bash
-roscd tianracer_test && python3 simulator_pure_pursuit.py
+roscd tianracer_test && chmod +x simulator_pure_pursuit.py && rosrun tianracer_test simulator_pure_pursuit.py __ns:=tianracer_02
 ```
+
+```bash
+rosrun tianracer_test simulator_pure_pursuit.py __ns:=tianracer # tianracer为此时的机器人名字空间
+```
+
 ```bash
 rosrun tianracer_navigation ackermann_convert_drive.py __ns:=tianracer  # tianracer为此时的机器人名字空间
 ```
