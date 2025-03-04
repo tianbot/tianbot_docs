@@ -23,6 +23,22 @@ roslaunch tianracer_navigation simulator_wall_following.launch
 
 方法详解：https://linklab-uva.github.io/autonomousracing/assets/files/assgn4-print.pdf
 
+::: warning 注意
+以下内容仅适用于 25-03-03 后出货的平台
+:::
+
+```bash
+rosrun tianracer_navigation wall_following.py __ns:=tianracer  # tianracer为此时的机器人名字空间
+```
+
+```bash
+rosrun tianracer_navigation ackermann_convert_drive.py __ns:=tianracer  # tianracer为此时的机器人名字空间
+```
+
+::: warning 注意
+由于`wall_following.py`中的默认`speed`设置为`3`，所以只允许在空旷的场地进行测试，禁止在狭窄的室内场景中进行测试，极容易发生碰撞危险，请谨慎使用，同时非常熟悉如何使用配套[遥控器切换的遥控模式](./index.md#dt7)，以避免发生危险
+:::
+
 ### Follow the Gap 避障算法
 
 在本实验中，您将实现一种用于避障的反应式算法，该算法的 python 代码总共只有 120 行左右。
@@ -40,8 +56,24 @@ roslaunch f1tenth_simulator simulator.launch
 
 启动避障节点：
 ```bash
-roslaunch tianracer_navigation simulator_f1_nav.launch
+roslaunch tianracer_navigation simulator_wall_following.launch
 ```
+
+::: warning 注意
+以下内容仅适用于 25-03-03 后出货的平台
+:::
+
+```bash
+rosrun tianracer_gazebo follow_the_gap.py __ns:=tianracer  # tianracer为此时的机器人名字空间
+```
+
+```bash
+rosrun tianracer_navigation ackermann_convert_drive.py __ns:=tianracer  # tianracer为此时的机器人名字空间
+```
+
+::: warning 注意
+由于`follow_the_gap.py`中的默认`speed`设置为`1.7`，所以只允许在空旷的场地进行测试，禁止在狭窄的室内场景中进行测试，极容易发生碰撞危险，请谨慎使用，同时非常熟悉如何使用配套[遥控器切换的遥控模式](./index.md#dt7)，以避免发生危险
+:::
 
 ::: info 提示
 tianracer 功能包中没有单独部署该避障算法节点，而是将全部算法集成在 L1_controller 节点中，建议参考以下链接，自己动手按照 wall_follow.py 的部署方法尝试一下 Follow The Gap 避障算法
@@ -67,26 +99,23 @@ tianracer 功能包中没有单独部署该避障算法节点，而是将全部�
 计算转向角 streering angle 并操纵车辆转向运动；
 更新车辆状态
 
+::: warning 注意
+以下内容仅适用于 25-03-03 后出货的平台
+:::
 
 仿真实现：
-我们试着用 python 的 matplot 实现一下仿真，在 tianracer_test 功能包下运行 pure_pursuit.py 文件：
+我们试着用 python 的 matplot 实现一下仿真，在 tianracer_test 功能包下运行 `simulator_pure_pursuit.py` 文件：
 ```bash
-python pure_pursuit.py
+roscd tianracer_test && python3 simulator_pure_pursuit.py
+```
+```bash
+rosrun tianracer_navigation ackermann_convert_drive.py __ns:=tianracer  # tianracer为此时的机器人名字空间
 ```
 
-仿真结果如图：
+::: warning 注意
+由于`simulator_pure_pursuit.py`中的默认`speed`设置为`0.5~1.5`，所以只允许在空旷的场地进行测试，禁止在狭窄的室内场景中进行测试，极容易发生碰撞危险，请谨慎使用，同时非常熟悉如何使用配套[遥控器切换的遥控模式](./index.md#dt7)，以避免发生危险
+:::
 
-F1TENTH 仿真实现：
-接下来再将该算法应用在 F1TENTH simulator 仿真场景中，让小车沿着规划出的轨迹走
-启动仿真环境：
-```shell
-roslaunch f1tenth_simulator simulator.launch
-```
-启动算法节点：
-
-```shell
-rosrun tianracer_navigation pure_pursuit
-```
 在 rviz 仿真中观察效果，发现小车在追踪前方持续变化的红点向前走。可在源码中调节小车速度并进行学习
 
 参考论文：《implement of the pure pursuit path tracking algorithm》https://www.ri.cmu.edu/pub_files/pub3/coulter_r_craig_1992_1/coulter_r_craig_1992_1.pdf
