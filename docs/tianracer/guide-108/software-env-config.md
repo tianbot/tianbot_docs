@@ -62,6 +62,31 @@ sudo nmcli device wifi connect WIFI 名称 password WIFI 密码
 3. 在路由器网段中，Jeston 板卡的 以太网 IP 地址默认为`192.168.1.100`
 :::
 
+## 远程连接
+
+### ssh 远程连接
+
+```bash
+ssh tianbot@192.168.1.100
+```
+
+- 登录密码为`ros`
+
+此时设备用户名已经变为 tianbot
+
+### Rustdesk
+
+在输入框中填写IP地址`192.168.1.100`，点击 connect 连接
+
+![image-20240604153155155](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604153155155.png)
+
+输入密码为`Tianbot_2016`，点击 OK
+![image-20240604153305404](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604153305404.png)
+
+成功登录后，点击全屏
+
+- 具体连接方法和详细步骤，可参考[Rustdesk 连接教程](/basic/rustdesk.html)
+
 ### VNC
 在开始远程连接前，请确保已经成功连接到 WIFI 网络。
 
@@ -77,7 +102,7 @@ sudo nmcli device wifi connect WIFI 名称 password WIFI 密码
 
 ::: info 提示
 使用车载路由时
-- 默认 IP 为 `192.168.1.100`, 默认密码为`ros`
+- 默认 IP 为 `192.168.1.100`, 默认密码为`Tianbot_2016`
 - 如发现 ip 连接超时，可等待一分钟后重试。
 :::
 
