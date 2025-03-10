@@ -19,7 +19,7 @@
                 <a href="https://tianbot.taobao.com/" target="_blank" class="el-button el-button--primary button-author">
                     <span>查看店铺</span>
                 </a>
-                <a href="http://docs.tianbot.com/community.html" target="_blank" class="el-button el-button--success button-group">  
+                <a href="https://docs.tianbot.com/about.html" target="_blank" class="el-button el-button--success button-group">  
                     <span>加群交流</span>
                 </a>
             </div>
