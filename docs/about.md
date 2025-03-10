@@ -4,10 +4,9 @@
 
 E-mail: zhaojunjie@tianbot.com
 
-微信：[WeChat](https://work.weixin.qq.com/kf/kefu/qrcode?kfcode=kfc023b1f66e23716fd)
-
+企业微信
 <div align="left">
-    <img src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" width="300" alt="销售咨询二维码" />
+    <img src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docwork_wexin_zhao.jpg" width="300" alt="销售咨询二维码" />
 </div>
 
 ## 微信公众号
@@ -21,7 +20,7 @@ E-mail: zhaojunjie@tianbot.com
 售后专用，方便快捷。
 
 <div align="left">
-    <img src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc75C1681E802D554A61F2EA32A918D9EF.jpg" width="300" alt="微信群二维码" />
+    <img src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docwork_weixin_nan.jpg" width="300" alt="微信群二维码" />
 </div>
 
 ## QQ 交流群
