@@ -321,6 +321,17 @@ ISAACLAB_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/IsaacLab"
 """Path to the ``Isaac/IsaacLab`` directory on the NVIDIA Nucleus Server."""
 ```
 
+**~/isaac-sim-standalone@4.5.0/exts/isaacsim.asset.browser/cache/isaacsim.asset.browser.cache.json**
+
+```diff
+      - "url": "/home/tianbot/Downloads/Assets/IsaacSim/Assets/Isaac/4.5/Isaac/Robots",
+      + "url": "https://omniverse-content-production.s3-us-west-2.amazonaws.com/Assets/Isaac/4.5/Isaac/Robots",
+```
+
+**~/home/tianbot/isaacsim_ws/isaac-sim-standalone@4.5.0/exts/isaacsim.asset.browser/config/extension.toml**
+
+其中的`asset_root`修改方法类似，不再赘述。
+
 修改并保存后，重新运行，发现可以流畅的玩耍了。
 ```bash
 (.ros2) tianbot@ros2go:~/isaacsim_ws/IsaacLab-2.0.0$ python3 scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Ant-v0`
@@ -332,6 +343,17 @@ ISAACLAB_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/IsaacLab"
 
 ## 常见问题 {#common-problems}
 
+### isaacsim.asset.browser/cache 问题
+
+- 开始下载
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docisaac_download_cache.png)
+
+- 下载成功
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docisaac_download_cache_success.png)
+
+- 重启 isaac sim
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docisaac%20sim%204.5.0.png)
 ### PYTHONPATH 问题
 
 #### 1. `ModuleNotFoundError: No module named 'isaacsim'`
