@@ -40,6 +40,8 @@ export const nav: DefaultTheme.Config['nav'] = [
                     { text: 'ROS 学习指南', link: '/basic/ros/ros1-vs-ros2'},
                     { text: 'ROS 仿真模拟', link: '/simulation/' },
                     { text: '机器人进阶技能', link: '/advanced/' },
+                    { text: '社区热门开源项目相关', link: '/advanced/applications/'},
+                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'}
                 ]
             }
         ]

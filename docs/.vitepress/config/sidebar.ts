@@ -235,30 +235,25 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               },
               { text: '视觉 SLAM 开发指南', link: '/advanced/visual_slam/index' },
               {
-                text: 'CUDA 及开源项目相关',
+                text: '开源项目 相关',
                 collapsed: true,
                 link: `/advanced/applications/`,
                 items: [
-                  {
-                    text: 'CUDA 相关',
-                    collapsed: true,
-                    items: [
-                      { text: 'Isaacgym 的使用', link: '/advanced/applications/isaacgym_rl' },
-                      { text: 'Isaac Sim 4.2 的安装使用', link: '/advanced/applications/isaacsim420_lab141_install' },
-                      { text: 'Isaac Sim 4.5 的安装使用', link: '/advanced/applications/isaacsim450_lab200_install' },
-                      { text: 'Isaac Sim 快速应用指南', link: '/advanced/isaacsim/'},
-                      { text: 'Isaac Sim 与 ROS2 的快速应用', link: '/advanced/isaacsim/with_ros2'},
-                      { text: 'Isaac Sim 与 Isaac Lab 的推荐项目', link: '/advanced/isaacsim/nice_project_with_isaaclab'},
-                      { text: 'Isaac Lab 中的 URDF 模型导入与处理', link: '/advanced/isaacsim/urdf_with_isaaclab'},
-                    ],
-                  },
-                  {
-                    text: '开源项目 相关',
-                    collapsed: true,
-                    items: [
-                      { text: 'Fast-drone-250', link: '/advanced/applications/fast-drone-250' },
-                    ],
-                  },
+                  { text: 'Fast-drone-250 安装', link: '/advanced/applications/fast-drone-250' },
+                ],
+              },
+              {
+                text: 'Nvidia Isaac 生态相关',
+                collapsed: true,
+                link: `/advanced/isaac/`,
+                items: [
+                  { text: 'Isaacgym 的使用', link: '/advanced/isaac/isaacgym_rl' },
+                  { text: 'Isaac Sim 4.2 的安装使用', link: '/advanced/isaac/isaacsim420_lab141_install' },
+                  { text: 'Isaac Sim 4.5 的安装使用', link: '/advanced/isaac/isaacsim450_lab200_install' },
+                  { text: 'Isaac Sim 快速应用指南', link: '/advanced/isaac/'},
+                  { text: 'Isaac Sim 与 ROS2 的快速应用', link: '/advanced/isaac/with_ros2'},
+                  { text: 'Isaac Sim 与 Isaac Lab 的推荐项目', link: '/advanced/isaac/nice_project_with_isaaclab'},
+                  { text: 'Isaac Lab 中的 URDF 模型导入与处理', link: '/advanced/isaac/urdf_with_isaaclab'},
                 ],
               },
             ],
