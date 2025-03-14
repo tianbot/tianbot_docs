@@ -18,4 +18,4 @@
 
 ## 安装
 
-剩余步骤可参考 [isaacsim450_lab200_install.md](isaacsim450_lab200_install.md)
+剩余步骤可参考 [install Isaac Sim 4.5.0 + Isaac Lab 2.0.0](isaacsim450_lab200_install.md)中的流程，大体是相同的，只是需要下载的 isaac sim 的版本不同，以及 isaac sim 的 asset 资产文件不同。
