@@ -97,6 +97,28 @@ export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json   #segment fault
 cd ~/isaacgym_ws/isaacgym/python/example  && python joint_monkey.py
 ```
 
+## 推荐项目 {recommend-project}
+
+| 项目类型  | 效果 |  项目地址  | 项目描述  |
+|---|---|---| --- |
+| 四足机器人 |   | [LocomotionWithNP3O](https://github.com/zeonsunlightyu/LocomotionWithNP3O) | unitree Go2 机器人使用由 isaacgym 训练的 N-P3O 算法和 HIM 相似策略学习运动 |  
+| 人形机器人 | ![](https://github.com/roboterax/humanoid-gym/blob/main/images/demo.gif) | [humanoid-gym](https://github.com/roboterax/humanoid-gym) | Humanoid-Gym 是一个基于 Nvidia Isaac Gym 的易于使用的强化学习（RL）框架，旨在训练仿人机器人的运动技能，强调从模拟到真实世界环境的零误差转移、集成了从 Isaac Gym 到 Mujoco 的 sim2sim 框架 |
+| 轮足机械臂机器人 | ![](https://github.com/aCodeDog/legged-robots-manipulation/blob/master/loco_manipulation_gym/resources/pictures/go2_arx.gif)  | [legged-robots-manipulation](https://github.com/aCodeDog/legged-robots-manipulation) | 一个用于轮足式、集成机械臂的强化学习实例 |
+| 模仿学习 | ![](https://github.com/mit-biomimetics/fld/blob/main/fld.png) | [fld](https://github.com/mit-biomimetics/fld/)  | 提供了基于频域转换 FLD 下的动作模仿与映射的方法 | 
+
+## 优秀学习案例 {good-learning-project}
+
+### 西湖大学 WindyLab 的知乎文章
+- [强化学习环境 ISAAC GYM 初步入门](https://zhuanlan.zhihu.com/p/540728060)
+- [【强化学习】强化学习环境 ISAAC GYM（二）- 再探索（Docker + 4090）](https://zhuanlan.zhihu.com/p/607132488)
+- [强化学习环境 ISAAC GYM 入门（三）](https://zhuanlan.zhihu.com/p/679988736)
+
+### 华北舵狗王的 RL 学习系列知乎文章
+- [RL 学习系列 1：狗王 5 天带你上手 IsaccGym 一脸懵逼](https://zhuanlan.zhihu.com/p/709389496)
+- [RL 学习系列 2：狗王 5 天带你上手 IsaccGym 随便改改](https://zhuanlan.zhihu.com/p/709503281)
+- [RL 学习系列 3：狗王 5 天带你上手 IsaccGym 借鉴开源](https://zhuanlan.zhihu.com/p/709809881)
+- [RL 学习系列 4：狗王 5 天带你上手 IsaccGym 牛刀小试](https://zhuanlan.zhihu.com/p/710329304)
+- [RL 学习系列 5：狗王 5 天带你上手 IsaccGym 道阻且长](https://zhuanlan.zhihu.com/p/710493110)
 
 ## 常见问题 {common-problems}
 
