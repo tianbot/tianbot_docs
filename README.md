@@ -28,12 +28,15 @@ pnpm install
 ```shell
 pnpm run docs:dev
 ```
-# Contact
 
 5. 编译语法检查
 ```shell
 pnpm run docs:build
 ```
+
+# 如何贡献
+
+- [贡献指南](./Contribute.md)
 
 # 特别鸣谢
 
