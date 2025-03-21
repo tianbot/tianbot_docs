@@ -1,5 +1,7 @@
 # 从 Isaac Lab 1.4.0 到 Isaac Lab 2.0.0 的 API 变化和迁移指南
 
+- [migration guide](https://isaac-sim.github.io/IsaacLab/main/source/refs/migration.html)
+
 根据官方模板`IsaacLabExtensionTemplate`的更新日志，以及`IsaacLabExtensionTemplate`的[源码]()，可以发现在提交[(#46)](https://github.com/isaac-sim/IsaacLabExtensionTemplate/commit/14cd53e562f549b6a37780c75394d030e5ff5e06) 中，可以看到从 Isaac Lab 1.4.0 到 Isaac Lab 2.0 相应配置项和 API 接口 变更过程：
 
 - [Updates Extension Template for Isaac Lab 2.0 (#46)](https://github.com/isaac-sim/IsaacLabExtensionTemplate/commit/14cd53e562f549b6a37780c75394d030e5ff5e06) 
