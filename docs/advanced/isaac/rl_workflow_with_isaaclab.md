@@ -68,7 +68,7 @@
 - [视频封装器](https://isaac-sim.github.io/IsaacLab/main/source/how-to/wrap_rl_env.html#wrapper-for-recording-videos)
 - [RL 库封装器](https://isaac-sim.github.io/IsaacLab/main/source/how-to/wrap_rl_env.html#wrapper-for-learning-frameworks)
 
-大多数 RL 库期望它们自己的环境接口变体。这意味着每个库所需的数据类型是不同的。Isaac Lab 提供了自己的封装器，将环境转换为用户希望使用的 RL 库所期望的接口。这些封装器在 Isaac Lab utils wrapper module 中进行说明。
+大多数 RL 库期望它们自己的环境接口变体。这意味着每个库所需的数据类型是不同的。Isaac Lab 提供了自己的封装器，将环境转换为用户希望使用的 RL 库所期望的接口。这些封装器在 [Isaac Lab utils wrapper module](https://isaac-sim.github.io/IsaacLab/main/source/how-to/wrap_rl_env.html) 中进行说明。
 
 查看 [完整列表](https://gymnasium.farama.org/api/wrappers/#gymnasium.Wrapper) 的其他封装器 API。有关这些封装器如何工作的更多信息，请参阅 包装环境 文档。
 
