@@ -245,12 +245,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               {
                 text: 'Nvidia Isaac 生态相关',
                 collapsed: true,
-                link: `/advanced/isaac/`,
                 items: [
                   {
                     text: 'RL 训练环境安装',
                     collapsed: true,
-                    link: `/advanced/isaac/`,
                     items: [
                       { text: 'Isaacgym 的使用', link: '/advanced/isaac/isaacgym_rl' },
                       { text: 'Isaac Sim 4.2 的安装使用', link: '/advanced/isaac/isaacsim420_lab141_install' },
@@ -269,7 +267,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   {
                     text: '用 Isaac Lab 2.0.0 进行 RL 训练',
                     collapsed: true,
-                    link: `/advanced/isaac/`,
                     items: [
                       { text: ' 👍Isaac Sim 与 Isaac Lab 的推荐项目 👍', link: '/advanced/isaac/nice_project_with_isaaclab'},
                       { text: 'Isaac Lab 中的 URDF 模型导入与处理', link: '/advanced/isaac/urdf_with_isaaclab'},
@@ -277,6 +274,23 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: '⭐基于 Isaac Lab 的 RL 观测量、动作和 Reward 的设置与调整⭐', link: '/advanced/isaac/rl_train_with_isaaclab' },
                       { text: '✨RL Policy 的 Sim2real 与策略部署✨', link: '/advanced/isaac/rl_sim2sim' },
                       { text: ' 💫IsaaLab 1.4.0 到 Isaac Lab 2.0.0 的迁移指南 💫', link: '/advanced/isaac/version_migration_of_isaaclab' },
+                    ]
+                  },
+                  {
+                    text: '优秀项目运行复现',
+                    collapsed: true,
+                    items: [
+                      { text: '用 isaacgym 复现 legged_gym', link: '/advanced/isaac/isaacgym_legged_gym'},
+                      { text: '用 isaacgym 复现 FLD', link: '/advanced/isaac/isaacgym_fld.md'},
+                      { text: '用 isaacgym 复现 humanoid-gym', link: '/advanced/isaac/isaacgym_humanoid-gym'},
+                      { text: '用 isaacgym 复现 legged-robots-manipulation', link: '/advanced/isaac/isaacgym_legged-robots-manipulation'},
+                      { text: '用 isaacgym 复现 LocomotionWithNP3O_raw', link: '/advanced/isaac/isaacgym_locomotion_with_N3PO' },
+                      { text: '用 isaacgym 复现 LocomotionWithNP3O-master-tinymal4', link: '/advanced/isaac/isaacgym_locomotion_with_N3PO_tinymal4' },
+                      { text: '用 isaacsim 复现 ASAP', link: '/advanced/isaac/isaacsim_ASAP' },
+                      { text: '用 isaacsim 复现 NavRL', link: '/advanced/isaac/isaacsim_NavRL' },
+                      { text: '用 isaacsim 复现 RLRoverLab', link: '/advanced/isaac/isaacsim_RLRoverLab' },
+                      { text: '用 isaacsim 复现 robot_lab', link: '/advanced/isaac/isaacsim_robot_lab' },
+                      { text: '用 isaacsim 复现 isaacLab.manipulation', link: '/advanced/isaac/isaacsim_isaacLab.manipulation' },
                     ]
                   },
                 ],
