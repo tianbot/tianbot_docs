@@ -1,12 +1,17 @@
 # 用 isaacgym 复现 legged_gym 项目
 
+## 项目简介
+`legged_gym`是一个基于 NVIDIA Isaac Gym 的强化学习环境，主要用于训练四足机器人（特别是 ANYmal）在崎岖地形上的运动技能。**向项目原作者致谢！**
+- 项目地址：[legged_gym](https://github.com/leggedrobotics/legged_gym)
+- 项目文档：[legged_gym](https://leggedrobotics.github.io/legged_gym/)
+
 ::: warning 注意
 下文中的操作在 ROS2GO 512G ISAAC 特别定制版本中有效，不再另行通知。使用 Isaac gym 的方式是基于`/home/tianbot/.isaacgym` 这一 Python3.8 环境安装的，所以
 请勿随意删除 `~/.isaacgym`及`~/isaacgym_ws` 的任意出厂内置文件，否则可能会造成原本内置好的 `isaacgym` 训练环境崩溃！！！！！！
 :::
 
 ::: info 提示
-如果希望在终端中直接使用 Isaac Sim，首先需要执行以下命令，无需自己重新再配置环境：
+如果希望在终端中直接使用 Isaac Gym，首先需要执行以下命令，无需自己重新再配置环境：
 ```bash
 source ~/.isaac_env_toolkit && isaac_gym_env
 ```
@@ -14,7 +19,7 @@ source ~/.isaac_env_toolkit && isaac_gym_env
 
 ## 切换到.isaacgym 虚拟环境
 
-如果希望在终端中直接使用 Isaac Sim，首先需要执行以下命令，无需自己重新再配置环境，无需 pip install 安装此项目：
+如果希望在终端中直接使用 Isaac Gym，首先需要执行以下命令，无需自己重新再配置环境，无需 pip install 安装此项目：
 ```bash
 source ~/.isaac_env_toolkit && isaac_gym_env
 ```
@@ -39,6 +44,10 @@ pip list # 查看当前 pip 下已安装的模块
 :::
 
 ## 训练策略
+
+::: warning 注意
+运行下述操作时，无需自己重新再配置环境，无需 `pip install -e` 安装此项目：
+:::
 
 ```bash
 cd ~/isaacgym_ws/src/legged_gym
