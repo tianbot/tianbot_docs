@@ -4,6 +4,18 @@
 本篇内容基于 Isaac Sim 4.5.0 版本。
 :::
 
+::: warning 注意
+在 ROS2GO 512G 特别定制版本中，使用 Isaac Sim 的方式是基于`/home/tianbot/isaacsim_ws/isaac-sim-standalone@4.5.0/kit/python` 这一 Python3.10 环境安装的，所以
+请勿随意删除 `isaacsim_ws` 中的任意出厂内置文件，否则可能会造成原本内置好的 `Isaac Sim 4.5.0 + Isaaclab 2.0.0` 环境崩溃！！！！！！
+:::
+
+::: info 提示
+如果希望在终端中直接使用 Isaac Sim，首先需要执行以下命令，无需自己重新再配置环境：
+```bash
+source ~/.isaac_env_toolkit && isaac_sim_env
+```
+:::
+
 <a id="核心优势对比"></a>
 ## 🏆 核心优势对比
 ## 主流机器人仿真引擎对比
