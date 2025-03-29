@@ -4,7 +4,8 @@
 
 legged-robots-manipulation 是一个用于（轮式）腿式机器人的 loco-manipulation 存储库。代码基于 legged_gym 构建。**向项目原作者致谢！**
 
-项目页面：[wheel-legged-loco-manipulation](https://acodedog.github.io/wheel-legged-loco-manipulation/) (IROS Oral 2024)
+- 项目页面：[wheel-legged-loco-manipulation](https://acodedog.github.io/wheel-legged-loco-manipulation/) (IROS Oral 2024)
+- 项目地址：[https://github.com/aCodeDog/legged-robots-manipulation](https://github.com/aCodeDog/legged-robots-manipulation)
 
 当前存储库包含 `airbot`、`go2_arx`、`b2w_z1`、`aliengo_z1` 和 `b2w`。当前存储库是该论文的部分实现。由于各种原因，该存储库仍在建设中，并将在不久的将来发布 issac lab 版本和基于视觉的版本。
 
@@ -74,7 +75,7 @@ python loco_manipulation_gym/scripts/train.py --task=airbot  --rl_device=cuda:0
 cd ~/isaacgym_ws/src/legged-robots-manipulation
 python loco_manipulation_gym/scripts/play.py --task=b2w --rl_device=cuda:0
 ```
-
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacgym_legged-robots-manipulation_play_b2w.png)
 ### airbot 
 ```bash
 cd ~/isaacgym_ws/src/legged-robots-manipulation
