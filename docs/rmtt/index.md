@@ -267,7 +267,7 @@ roscd rmtt_ros/.. && gedit rmtt_driver/launch/rmtt_bringup.launch
     <arg name ="enable_sdk_cmd" default="true" />
     <arg name ="fast_mode" default="true" />
     <group ns="$(arg drone_name)">
-        <node pkg="rmtt_core_dev" name="rmtt_driver" type="rmtt_node.py" output="screen">
+        <node pkg="rmtt_driver" name="rmtt_driver" type="rmtt_node.py" output="screen">
             <param name="drone_ip" type="string" value="$(arg drone_ip)" />
             <param unless="$(eval local_ip=='')" name="local_ip" type="string" value="$(arg local_ip)" />
             <param name="drone_port" type="string" value="$(arg drone_port)" />
