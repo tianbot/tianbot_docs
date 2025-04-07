@@ -50,6 +50,16 @@
 
 Puppy Rescue OS 独立恢复系统内核比较旧，某些电脑比较新，可能会进不了这个恢复系统，如果遇到这种情况，可以更换台电脑尝试，也可以在虚拟机下操作，虚拟机操作步骤如下：
 
+::: tip 提示
+
+`Virtual Box 7.0.14`之后的新版本，只能安装到只有管理员或系统帐户才能安装的路径中，以防止将`VirtualBox` 安装到普通用户能够写入或重命名内容（文件/目录）的目录中。这也包括父目录。因此，如果希望安装到C盘以外的其他位置，可以下载我们提供的老版本`Virtualbox 7.0.10`备份。
+
+通过网盘分享的文件：`RO2GO的OTA升级演示视频及Virtual Box 7.0.10工具下载`
+链接: https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016 提取码: 2016 
+--来自百度网盘超级会员v2的分享
+
+:::
+
 1. 下载安装 VirtualBox 及下述中的几个文件
 
 从[这里](https://www.virtualbox.org/wiki/Downloads)下载并安装 `VirtualBox` 以及 `VirtualBox Extension Pack`
