@@ -116,6 +116,13 @@ nothing to commit, working tree clean
 
 ### 下载固件升级的配套软件
 
+::: tip 提示
+为了避免版本不兼容的问题，可以下载存档版本
+通过网盘分享的文件：`RoboMaster TT 激活升级`
+链接: https://pan.baidu.com/s/1RTxOFo7t1miaY-ZUznbiQA?pwd=2016 提取码: 2016 
+--来自百度网盘超级会员v2的分享
+:::
+
 1.下载固件升级的配套软件
 
 - [RoboMaster Assistant 下载](https://www.robomaster.com/zh-CN/products/components/detail/4643)
