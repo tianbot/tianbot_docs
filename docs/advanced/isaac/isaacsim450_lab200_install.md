@@ -36,6 +36,14 @@ cd ~/isaacsim_ws/isaac-sim-comp-check@4.5.0 && ./omni.isaac.sim.compatibility_ch
 
 ## 安装下载 {#install}
 
+::: tip 提示
+
+通过网盘分享的文件：`Isaacsim4.5.0、IsaacLab 2.0.0` 及相应资产文件
+链接: https://pan.baidu.com/s/17GFbrs5O1yG9R67C8FwnlA?pwd=2016 提取码: 2016 
+--来自百度网盘超级会员v2的分享
+
+:::
+
 - 从 isaac sim 官网下载 `isaac sim 4.5.0`和 `asset` 资产文件 [https://docs.isaacsim.omniverse.nvidia.com/latest/installation/download.html](https://docs.isaacsim.omniverse.nvidia.com/latest/installation/download.html)
 
 ### 下载 isaac sim Asset {#download-isaacsim-asset}
