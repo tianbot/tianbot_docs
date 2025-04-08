@@ -68,7 +68,7 @@ cd ~/isaacgym_ws/src/LocomotionWithNP3O_fixed
 python3 train.py --task=go2N3poHim --num_env=1024 --headless # set env num
 ```
 
-:::
+::: info 提示
 可用的任务有：
 - go2N3poHim
 - Tinymal
