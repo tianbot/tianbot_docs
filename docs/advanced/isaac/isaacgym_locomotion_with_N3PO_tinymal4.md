@@ -91,7 +91,7 @@ python3 simple_play.py --task=go2N3poHim
 
 ```bash
 cd ~/isaacgym_ws/src/LocomotionWithNP3O_fixed
-python3 sim2sim.py --task=go2N3poHim
+python3 sim2sim.py
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacgym_LocomotionWithNP3O_fixed_sim.png)
 
