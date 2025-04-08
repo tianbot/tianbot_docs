@@ -76,6 +76,8 @@ source ~/.isaac_env_toolkit && isaac_sim_env
 ```
 
 ```bash
+cd ~/isaacsim_ws/src/ASAP
+
 python3 humanoidverse/train_agent.py \
 +simulator=isaacsim \
 +exp=motion_tracking \
@@ -103,6 +105,7 @@ robot.asset.self_collisions=0
 使用 tesnorboard 查看训练日志
 
 ```bash
+cd ~/isaacsim_ws/src/ASAP
 tensorboard --logdir=logs
 ```
 
@@ -110,6 +113,7 @@ tensorboard --logdir=logs
 ## 策略演示
 
 ```bash
+cd ~/isaacsim_ws/src/ASAP
 python3 humanoidverse/eval_agent.py +checkpoint=logs/MotionTracking/20250326_184455-MotionTracking_CR7-motion_tracking-g1_29dof_anneal_23dof/model_10000.pt
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_asap_eval.png)

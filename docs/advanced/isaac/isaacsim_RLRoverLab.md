@@ -69,6 +69,7 @@ source ~/.isaac_env_toolkit && isaac_sim_env
 
 ### AAURoverEnv-v0
 ```bash
+cd ~/isaacsim_ws/src/RLRoverLab
 cd examples/02_train
 python3 train.py --task="AAURoverEnv-v0" --num_envs=128
 ```
@@ -80,6 +81,7 @@ Using pre-trained agent
 ## 策略评估
 
 ```bash
+cd ~/isaacsim_ws/src/RLRoverLab
 cd examples/03_inference_pretrained
 python3 eval.py --task="AAURoverEnv-v0" --num_envs=128
 ```
@@ -93,6 +95,7 @@ python3 eval.py --task="AAURoverEnv-v0" --num_envs=128
 该命令暂时不可用
 
 ```bash
+cd ~/isaacsim_ws/src/RLRoverLab
 cd examples/03_inference_pretrained
 python record.py --task="AAURoverEnv-v0" --num_envs=16
 ```
