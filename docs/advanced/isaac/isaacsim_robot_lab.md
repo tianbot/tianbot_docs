@@ -64,6 +64,7 @@ source ~/.isaac_env_toolkit && isaac_sim_env
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-A1-v0 --headless
 ```
 
@@ -71,6 +72,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-A1-v0
 ```
 
@@ -78,6 +80,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-Go2-v0 --headless
 ```
 
@@ -85,6 +88,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-Go2-v0
 ```
 
@@ -92,6 +96,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-B2-v0 --headless
 ```
 
@@ -99,6 +104,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-B2-v0
 ```
 
@@ -106,6 +112,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Anymal-D-v0 --headless
 ```
 
@@ -113,6 +120,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Anymal
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Anymal-D-v0
 ```
 
@@ -122,6 +130,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Anymal-
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-Go2W-v0 --headless
 ```
 
@@ -129,6 +138,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-Go2W-v0
 ```
 
@@ -136,6 +146,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-B2W-v0 --headless
 ```
 
@@ -143,6 +154,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-B2W-v0
 ```
 
@@ -154,6 +166,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-GR1T1-v0 --headless
 ```
 
@@ -161,6 +174,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-GR1T1-v0
 ```
 
@@ -170,6 +184,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-G
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-GR1T2-v0 --headless
 ```
 
@@ -177,6 +192,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-GR1T2-v0
 ```
 
@@ -184,6 +200,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-FFTAI-G
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-H1-v0 --headless
 ```
 
@@ -191,6 +208,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-H1-v0
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_robot_lab_unitree_h1_play.png)
@@ -199,6 +217,7 @@ python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitree-G1-v0 --headless
 ```
 
@@ -206,6 +225,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Rough-Unitre
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Rough-Unitree-G1-v0
 ```
 
@@ -217,11 +237,13 @@ The code for AMP training refers to [AMP_for_hardware](https://github.com/Alesco
 
 ```bash
 # Retarget motion files
+cd ~/isaacsim_ws/src/robot_lab
 python3 source/robot_lab/robot_lab/third_party/amp_utils/scripts/retarget_kp_motions.py
 ```
 
 ```bash
 # Replay AMP data
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/amp/replay_amp_data.py --task RobotLab-Isaac-Velocity-Flat-Amp-Unitree-A1-v0
 ```
 
@@ -229,6 +251,7 @@ python3 scripts/rsl_rl/amp/replay_amp_data.py --task RobotLab-Isaac-Velocity-Fla
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/amp/train.py --task RobotLab-Isaac-Velocity-Flat-Amp-Unitree-A1-v0 --headless
 ```
 
@@ -236,6 +259,7 @@ python3 scripts/rsl_rl/amp/train.py --task RobotLab-Isaac-Velocity-Flat-Amp-Unit
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/amp/play.py --task RobotLab-Isaac-Velocity-Flat-Amp-Unitree-A1-v0
 ```
 
@@ -249,6 +273,7 @@ python3 scripts/rsl_rl/amp/play.py --task RobotLab-Isaac-Velocity-Flat-Amp-Unitr
 
 ```bash
 # Train
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Flat-HandStand-Unitree-A1-v0 --headless
 ```
 
@@ -256,6 +281,7 @@ python3 scripts/rsl_rl/base/train.py --task RobotLab-Isaac-Velocity-Flat-HandSta
 
 ```bash
 # Play
+cd ~/isaacsim_ws/src/robot_lab
 python3 scripts/rsl_rl/base/play.py --task RobotLab-Isaac-Velocity-Flat-HandStand-Unitree-A1-v0
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_robot_lab_handstand_unitree_a1_play.png)

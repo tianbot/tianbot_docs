@@ -63,16 +63,19 @@ source ~/.isaac_env_toolkit && isaac_sim_env
 
 4.1 RobotArm
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/train.py --task Template-Isaac-Reach-Kinova-v0 --num_envs 4096 --headless
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_manipulation_ur10_train.png)
 
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/train.py --task Template-Isaac-Reach-Franka-v0 --num_envs 4096 --headless
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_manipulation_ur10_train.png)
 
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/train.py --task Template-Isaac-Reach-UR10-v0 --num_envs 4096 --headless
 ```
 
@@ -80,6 +83,7 @@ python3 scripts/rsl_rl/train.py --task Template-Isaac-Reach-UR10-v0 --num_envs 4
 
 4.2 Dextrous Hand
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/train.py --task Template-Isaac-Repose-Cube-Allegro-v0 --num_envs 4096 --headless
 ```
 
@@ -89,24 +93,28 @@ python3 scripts/rsl_rl/train.py --task Template-Isaac-Repose-Cube-Allegro-v0 --n
 
 5.1 RobotArm
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/play.py --task Template-Isaac-Reach-Kinova-Play-v0 --num_envs 16
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_manipulation_kinova_play.png)
 
 ```bash
 # You can also use train.py if you dont need to add some additional configs.
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/play.py --task Template-Isaac-Reach-Franka-Play-v0 --num_envs 16
 ```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_manipulation_franka_play.png)
 
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/play.py --task Template-Isaac-Reach-UR10-v0 --num_envs 16
 ```
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/isaacsim_manipulation_ur10_play.png)
 
 5.2 Dextrous Hand
 ```bash
+cd ~/isaacsim_ws/src/isaacLab.manipulation/
 python3 scripts/rsl_rl/play.py --task Template-Isaac-Repose-Cube-Allegro-Play-v0 --num_envs 16
 ```
 
