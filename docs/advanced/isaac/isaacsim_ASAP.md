@@ -68,6 +68,13 @@ pip3 list # 查看当前 pip 下已安装的模块
 
 基于 isaacsim 4.5.0 + isaaclab 2.0.0 进行训练
 
+以下命令需要在 `~/isaacsim_ws/src/ASAP` 目录下执行
+
+```bash
+cd ~/isaacsim_ws/src/ASAP
+source ~/.isaac_env_toolkit && isaac_sim_env
+```
+
 ```bash
 python3 humanoidverse/train_agent.py \
 +simulator=isaacsim \
