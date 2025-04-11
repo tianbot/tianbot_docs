@@ -1,5 +1,32 @@
 # Tianracer 仿真实例
 
+::: info 提示
+
+下述内容只在tianracer代码的dev分支上有效，使用之前请确保已经切换的正确的代码分支
+
+确认当前分支
+
+使用`git branch`命令查看当前分支，确保当前分支为`dev`分支。
+   
+```shell
+git branch
+````
+
+输出结果
+
+```shell
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git branch
+* dev    # 可以看到当前分支为 dev
+```
+
+切换分支
+
+切换到`dev`分支，运行如下命令：
+```shell
+git switch dev
+```
+:::
+
 ## 简介 {#brief}
 
 tianracer_gazebo 是一个基于阿克曼底盘支持多机框架的仿真实例，在 ROS2GO 环境中，只需要一行命令即可运行支持 TEB 单点路径规划的仿真环境。
