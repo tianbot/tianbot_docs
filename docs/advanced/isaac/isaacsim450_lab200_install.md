@@ -101,7 +101,7 @@ export ISAACSIM_PYTHON_EXE="${ISAACSIM_PATH}/python.sh"
 ### 创建 `isaac sim` 在 `isaac lab` 中的链接 {#link-isaacsim}
 
 ```bash
-cd isaacsim_ws/IsaacLab-2.0.0/ && ln -s ~/isaacsim_ws/isaac-sim-standalone4.5.0 _isaac_sim
+cd isaacsim_ws/IsaacLab-2.0.0/ && ln -s ~/isaacsim_ws/isaac-sim-standalone@4.5.0 _isaac_sim
 ```
 
 ### 此时开启 Isaac Sim {#start-isaacsim}
