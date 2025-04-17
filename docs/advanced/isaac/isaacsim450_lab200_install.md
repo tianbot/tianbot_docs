@@ -342,7 +342,7 @@ ISAACLAB_NUCLEUS_DIR = f"{ISAAC_NUCLEUS_DIR}/IsaacLab"
 
 修改并保存后，重新运行，发现可以流畅的玩耍了。
 ```bash
-(.ros2) tianbot@ros2go:~/isaacsim_ws/IsaacLab-2.0.0$ python3 scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Ant-v0`
+(.ros2) tianbot@ros2go:~/isaacsim_ws/IsaacLab-2.0.0$ python3 scripts/reinforcement_learning/rsl_rl/train.py --task=Isaac-Ant-v0
 ```
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docant_v0.png)
