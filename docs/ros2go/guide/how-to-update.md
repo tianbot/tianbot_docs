@@ -54,6 +54,10 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 请根据如下步骤逐步进行
 
+首先请浏览查看 `OTA 全流程` 的演示视频**如何使用 VirtualBox 来完成 ROS2GO 的 OTA 固件升级.mp4**, 然后继续后续步骤
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docros2go-ota-with-virtual.png)
+
 ### 1.固件下载 {#1.firmware-download}
 
 下载最新固件
@@ -95,8 +99,10 @@ md5sum *
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071352213.webp)
 
 1. 下载完后检查文件的 md5 值和 md5sum.txt 中记录的是否一致
-2. 如果无误再将解压后`firmware`下所有文件复制到`ROS2GO_DATA`下的`/ros2go_ota/firmware`文件夹中
+~~2. 如果无误再将解压后`firmware`下所有文件复制到`ROS2GO_DATA`下的`/ros2go_ota/firmware`文件夹中~~
+2. 如果无误再将解压后`ros2go_ota`下所有文件复制到`ROS2GO_DATA`下，覆盖分区下的同名 ros2go_ota 目录
 3. 确保`/ros2go_ota/firmware`下没有其他文件，如果有可以删除或者移动到其他位置
+
 
 ::: tip 提示
 如果空间不够，可以先将如下资料移出，至其他位置，升级完成后再移回即可
@@ -105,13 +111,14 @@ md5sum *
 - `0x03-视频课程.iso`
 - `0x04-古月推荐.iso`
 - `0x05-张瑞雷推荐.iso`
+- 其他大文件
 :::
 
 此时你的`ROS2GO_DATA/ros2go_ota/firmware`目录应如下图所示
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071350446.webp)
 
 ### 3.进入恢复系统 {#3.into-recovery-system}
-重启电脑，在引导界面选择`Puppy Rescue OS`进入，如发现无法进入图形界面，请参考[文章](/ros2go/guide/how-to-recover#from-virtualbox-start)使用 Virtual Box 虚拟机继续进行以下操作
+重启电脑，切换至 Windows 系统，然后参考[文章](/ros2go/guide/how-to-recover#from-virtualbox-start)使用 Virtual Box 虚拟机启动部分，然后再继续进行以下操作
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
 
