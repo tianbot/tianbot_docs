@@ -38,25 +38,21 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901810.webp)
 
-### 特殊情况 {#special-cases}
-
-这种情况是在尝试过`A -Timeshift` ，`B ros2go_recovery`恢复失败之后，再进行尝试的方法，
-
 ### 从 VirtualBox 启动 {#from-virtualbox-start}
 
 ::: warning 有问题再尝试
 上面方法进不去恢复系统，再尝试这个办法
 :::
 
-Puppy Rescue OS 独立恢复系统内核比较旧，某些电脑比较新，可能会进不了这个恢复系统，如果遇到这种情况，可以更换台电脑尝试，也可以在虚拟机下操作，虚拟机操作步骤如下：
+Puppy Rescue OS 独立恢复系统内核比较旧，某些电脑比较新，可能会进不了这个恢复系统，如果遇到这种情况，切换到 Windows 后在 `Virtual box` 虚拟机下操作，虚拟机操作步骤如下：
 
 ::: tip 提示
 
-`Virtual Box 7.0.14`之后的新版本，只能安装到只有管理员或系统帐户才能安装的路径中，以防止将`VirtualBox` 安装到普通用户能够写入或重命名内容（文件/目录）的目录中。这也包括父目录。因此，如果希望安装到C盘以外的其他位置，可以下载我们提供的老版本`Virtualbox 7.0.10`备份。
+`Virtual Box 7.0.14`之后的新版本，只能安装到只有管理员或系统帐户才能安装的路径中，以防止将`VirtualBox` 安装到普通用户能够写入或重命名内容（文件/目录）的目录中。这也包括父目录。因此，如果希望安装到 C 盘以外的其他位置，可以下载我们提供的老版本`Virtualbox 7.0.10`备份。
 
 通过网盘分享的文件：`RO2GO的OTA升级演示视频及Virtual Box 7.0.10工具下载`
-链接: https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016 提取码: 2016 
---来自百度网盘超级会员v2的分享
+链接：https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016 提取码：2016 
+--来自百度网盘超级会员 v2 的分享
 
 :::
 
@@ -101,4 +97,12 @@ USB 设备，添加 ROS2GO
 
 此时，按下回车键，根据提示选择 Puppy Rescue OS 系统即可
 
-后续其他与[升级步骤](/ros2go/guide/how-to-update#%E5%8D%87%E7%BA%A7%E7%AE%80%E8%BF%B0)进行相同操作即可。
+进入 Puppy Rescue OS 独立恢复系统下，根据需要，选择对应选项，然后输入 yes，等待进度条走完后重启电脑即可。
+
+- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup#bios-load-recover)
+
+- B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击`B-RECOVERY`选项即可。
+
+- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/ros2go/guide/how-to-update#update-brief)
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
