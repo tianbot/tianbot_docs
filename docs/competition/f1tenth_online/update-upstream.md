@@ -46,7 +46,7 @@ git fetch && git pull
 
 如果 `git fetch` 或 `git pull` 长时间无响应，可以尝试使用如下命令：
 ```shell
-git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
+git remote set-url origin https://ghfast.top/https://github.com/tianbot/tianracer.git
 ```
 
 ## 恢复本地修改 {#restore-local-modification}
@@ -91,15 +91,15 @@ Your branch is up to date with 'origin/dev'.
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://ghfast.top/https://github.com/tianbot/tianracer.git
 
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote -v
-origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (fetch)
-origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (push)
+origin  https://ghfast.top/https://github.com/tianbot/tianracer.git (fetch)
+origin  https://ghfast.top/https://github.com/tianbot/tianracer.git (push)
 
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git fetch
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (1/1), 915 bytes | 915.00 KiB/s, done.
-From https://mirror.ghproxy.com/https://github.com/tianbot/tianracer
+From https://ghfast.top/https://github.com/tianbot/tianracer
    6e8e3f3..4524f75  dev        -> origin/dev
    
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git pull
