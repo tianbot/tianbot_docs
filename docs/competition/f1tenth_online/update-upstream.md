@@ -88,7 +88,7 @@ On branch dev
 Your branch is up to date with 'origin/dev'.
 ...........
 
-tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git
+tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote set-url origin https://ghfast.top/https://github.com/tianbot/tianracer.git
 
 tianbot@ros2go:~/tianracer_ws/src/tianracer$ git remote -v
 origin  https://mirror.ghproxy.com/https://github.com/tianbot/tianracer.git (fetch)
