@@ -70,16 +70,17 @@ roslaunch tianracer_navigation tianracer_teb_nav.launch use_rviz:=true
 3、启动目标点生成工具
 
 ```shell
-roslaunch tianracer_gazebo click_waypoints.launch
+roslaunch tianracer_gazebo click_waypoint.launch filename:=test_points   # 设置路径点保存文件名为test_points
 ```
 使用`2D Nav Goal`工具，逐个点击地图上的点，以生成多个导航目标点，使用`Ctrl + C`保存
 
-默认状态下，生成的目标点文件位于`tianracer_gazebo/scripts/waypoint_race/points.yaml`中
+默认状态下，生成的目标点文件位于`tianracer_gazebo/scripts/waypoint_race/test_points.yaml`中
 
 4、启动基于剩余路径点控制预发布策略
 
 ```shell
-rosrun tianracer_gazebo multi_goals_rc3.py
+export TIANRACER_WORLD=test   # 设置环境变量使得multi_goals_rc3.py能够正确读取test_points.yaml文件, 注意不要拼写错误
+rosrun tianracer_gazebo multi_goals_rc3.py __ns:=tianracer
 ```
 
 完整流程参考
@@ -100,13 +101,17 @@ roslaunch tianracer_bringup tianracer_bringup.launch
 
 2、启动导航
 ```shell
-roslaunch tianracer_navigation tianracer_teb_nav.launch use_rviz:=true
+roslaunch tianracer_navigation tianracer_teb_nav.launch
+```
+
+```shell
+ roslaunch tianracer_rviz view_teb_planner.launch
 ```
 
 3、启动目标点生成工具
 
 ```shell
-roslaunch tianracer_navigation click_waypoint.launch
+roslaunch tianracer_gazebo click_waypoint.launch filename:=test_points   # 设置路径点保存文件名为test_points
 ```
 
 <details>
@@ -156,11 +161,12 @@ done
 
 使用`2D Nav Goal`工具，逐个点击地图上的点，以生成多个导航目标点，使用`Ctrl+ C`保存
 
-默认状态下，生成的目标点文件位于`tianracer_gazebo/scripts/waypoint_race/points.yaml`中
+默认状态下，生成的目标点文件位于`tianracer_gazebo/scripts/waypoint_race/test_points.yaml`中
 
 4、启动基于剩余路径点控制预发布策略
 
 ```shell
+export TIANRACER_WORLD=test   # 设置环境变量使得multi_goals_rc3.py能够正确读取test_points.yaml文件, 注意不要拼写错误
 rosrun tianracer_gazebo multi_goals_rc3.py __ns:=tianracer  # tianracer为此时的机器人名字空间
 ```
 
