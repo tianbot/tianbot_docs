@@ -48,11 +48,11 @@ Puppy Rescue OS 独立恢复系统内核比较旧，某些电脑比较新，可�
 
 ::: tip 提示
 
-`Virtual Box 7.0.14`之后的新版本，只能安装到只有管理员或系统帐户才能安装的路径中，以防止将`VirtualBox` 安装到普通用户能够写入或重命名内容（文件/目录）的目录中。这也包括父目录。因此，如果希望安装到 C 盘以外的其他位置，可以下载我们提供的老版本`Virtualbox 7.0.10`备份。
+Virtual Box 一定注意要安装官网最新版本：https://www.virtualbox.org
 
-通过网盘分享的文件：`RO2GO的OTA升级演示视频及Virtual Box 7.0.10工具下载`
-链接：https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016 提取码：2016 
---来自百度网盘超级会员 v2 的分享
+`RO2GO的OTA升级演示视频及恢复镜像下载`
+
+链接：https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016
 
 :::
 
