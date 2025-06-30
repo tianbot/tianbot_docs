@@ -24,7 +24,7 @@ git fetch && git pull -r
 如果遇到网络连接超时的问题
 
 ```shell
-fatal: unable to access 'https://mirror.ghproxy.com/https://github.com/tianbot/rmtt_ros.git/': Failed to connect to mirror.ghproxy.com port 443: Connection timed out
+fatal: unable to access 'https://github.com/tianbot/rmtt_ros.git/': Failed to connect to mirror.ghproxy.com port 443: Connection timed out
 ```
 
 可以尝试使用国内加速源，具体方法如下：
@@ -34,7 +34,7 @@ fatal: unable to access 'https://mirror.ghproxy.com/https://github.com/tianbot/r
 
 1. 修改本地远端仓库地址
 ```shell
-git remote set-url origin https://mirror.ghproxy.com/https://github.com/tianbot/rmtt_ros.git
+git remote set-url origin https://ghfast.top/https://github.com/tianbot/rmtt_ros.git
 ```
 
 2. 查看远端仓库地址是否修改成功
@@ -43,8 +43,8 @@ git remote -v
 ```
 输出如下
 ```shell
-origin	https://mirror.ghproxy.com/https://github.com/tianbot/rmtt_ros.git (fetch)
-origin	https://mirror.ghproxy.com/https://github.com/tianbot/rmtt_ros.git (push)
+origin	https://ghfast.top/https://github.com/tianbot/rmtt_ros.git (fetch)
+origin	https://ghfast.top/https://github.com/tianbot/rmtt_ros.git (push)
 ```
 
 3. 获取远端的所有修改
@@ -59,7 +59,7 @@ remote: Counting objects: 100% (9/9), done.
 remote: Compressing objects: 100% (1/1), done.
 remote: Total 5 (delta 4), reused 5 (delta 4), pack-reused 0
 Unpacking objects: 100% (5/5), 10.03 KiB | 214.00 KiB/s, done.
-From https://mirror.ghproxy.com/https://github.com/tianbot/rmtt_ros
+From https://ghfast.top/https://github.com/tianbot/rmtt_ros
    f19c46c..f7169e1  main       -> origin/main
 ```
 
