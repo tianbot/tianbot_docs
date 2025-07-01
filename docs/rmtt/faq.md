@@ -196,6 +196,7 @@ nothing to commit, working tree clean
 将手机连接到以 RMTT-XX 开头的 WiFi 热点上，打开 Tello 软件
 
 如果看到提示`需要 激活 RMTT，则点击激活` 
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/rmtt/rmtt_extension_activate.jpg)
 
 #### 固件升级
 
