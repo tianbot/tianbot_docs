@@ -10,7 +10,7 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 为了方便大家下载最新发布的内核、固件、显卡驱动等，我们为`ros2go-utils`特别增加了**Github附件检测&镜像加速下载功能**，安装很简单：
 
-`pip install https://github.com/tianbot/tianbot_docs/releases/download/u1.0.1/ros2go_utils-1.0.1-cp38-cp38-linux_x86_64.whl`
+`pip install https://gh.xxooo.cf/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.1/ros2go_utils-1.0.1-cp38-cp38-linux_x86_64.whl`
 
 后续更新`ros2go-utils`方法：
 
