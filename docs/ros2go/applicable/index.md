@@ -6,13 +6,24 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 为了解决这个难题，我们完全放弃了 Ubuntu 官方落后的内核、固件❎，转而通过**魔改内核、直接对接上游固件**的方式✅，使得 ROS2GO 拥有了🔨**兼容市面上绝大多数设备**的能力。但仍然无法做到十全十美，如果您在使用中发现不兼容的设备，请及时通过 QQ 群、频道、微信群等反馈，我们开发人员会第一时间处理。若少数不兼容的设备短时间无法解决，我们也希望您能够理解♥️。
 
+## ROS2GO Utils {#ros2go-utils}
+
+为了方便大家下载最新发布的内核、固件、显卡驱动等，我们为`ros2go-utils`特别增加了**Github附件检测&镜像加速下载功能**，安装很简单：
+
+`pip install https://github.com/tianbot/tianbot_docs/releases/download/u1.0.1/ros2go_utils-1.0.1-cp38-cp38-linux_x86_64.whl`
+
+后续更新`ros2go-utils`方法：
+
+1. 下载：`ros2go-github-download latest u`
+2. 安装：`pip install ros2go_utils-*-cp38-cp38-linux_x86_64.whl`
+
 ## 内核 {#kernel}
 
 ### 使用指南
 
-> ⚠️NVIDIA显卡用户，需要额外安装搭配的驱动，具体见：https://github.com/tianbot/tianbot_docs/releases?q=nvidia&expanded=true
+> ⚠️NVIDIA显卡用户，需要额外安装搭配的驱动，使用`ros2go-github-download latest n`即可下载最新发布的驱动包，按照说明安装即可
 
-1. 下载最新内核包：https://github.com/tianbot/tianbot_docs/releases?q=linux&expanded=true
+1. 下载最新内核包：`ros2go-github-download latest k`
 2. 解压：`unzip *-ros2go.zip`
 3. 进入解压后的目录安装：`sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
 4. 重启机器，enjoy！
@@ -41,7 +52,7 @@ journalctl -ek
 
 > 注：早期版本`v20241019之前`可能有一些过时的包，需要先卸载：`sudo apt purge -y drivers-linux-firmware 2>/dev/null && sudo apt purge -y linux-firmware 2>/dev/null` 
 
-1. 下载固件包：https://github.com/tianbot/tianbot_docs/releases?q=firmware&expanded=true
+1. 下载固件包：`ros2go-github-download latest f`
 2. 安装：`sudo dpkg -i linux-firmware-upstream*.deb`
 3. 重启机器，enjoy！
 
