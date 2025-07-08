@@ -9,7 +9,28 @@
 ros2go 中的全部服务中不包含 `RMTT` 的`软件服务使用授权 License`
 :::
 
-首次收到 Robomaster TT 使用套装后，请务必先在 ROS2GO 中按照以下步骤进行代码更新：
+首次收到 Robomaster TT 使用套装后，需要使用tello App对Robomaster TT进行设备检查
+
+- 检查飞机及传感器和启动飞行是否正常
+- 检查拓展模块是否升级和激活
+
+- [Tello App - 下载中心 - DJI 大疆创新](https://www.dji.com/cn/downloads/djiapp/tello)
+
+在手机或平板上安装 tello APP
+
+#### 激活 RMTT
+
+将这个按钮拨到下面，此时开机电脑就能收到 RMTT 的 WIFI 信号，
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20241211135053.png)
+
+将手机连接到以 RMTT-XX 开头的 WiFi 热点上，打开 Tello 软件
+
+如果看到提示`需要 激活 RMTT，则点击激活` 
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/rmtt/rmtt_extension_activate.jpg)
+
+
+在开始使用之前，请务必先在 ROS2GO 中按照以下步骤进行代码更新：
 
 ::: warning
 下述所有操作均在 ROS2GO 中进行，请确保 ROS2GO 正常启动
