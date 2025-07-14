@@ -382,6 +382,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   {text: '使用 MATLAB 开发 TOM 系列', link: '/tianbot/development/matlab'},
                   {text: 'TIANBOT 控制器参数配置说明', link: '/tianbot/development/firmware'},
                   {text: 'TOM06S 中的节点说明', link: '/tianbot/development/nodes_of_tom06s'},
+                  {text: 'Nokov 动捕将 VRPN 流发布到 ROS1 广播中', link: '/tianbot/development/vrpn_client_ros_with_nokov'}
                 ]
               },
               { text: '常见问题', link: '/tianbot/question' },
