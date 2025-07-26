@@ -12,6 +12,8 @@ Linux 系统的硬件兼容性是一个长期存在且十分棘手的问题，�
 
 `pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.2/ros2go_utils-1.0.2-cp38-cp38-linux_x86_64.whl`
 
+如果发现终端有 SSL Timeout 之类的报错，可以先用浏览器把`whl`包下载到本地再安装
+
 后续更新`ros2go-utils`方法：
 
 1. 下载：`ros2go-github-download latest u`
