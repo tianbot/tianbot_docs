@@ -7,7 +7,7 @@
 
 ## 【实验内容】
 
-### 多点导航真车应用
+### 多点导航真车应用基于launch文件
 
 在实际环境中实现多点导航
 
@@ -51,7 +51,7 @@ roslaunch f1tenth_simulator simulator.launch
 roslaunch tianracer_competition tianracer_multi_goal.launch
 ```
 
-### 基于剩余路径点的预发布策略（仅适用于 24-08-08 后出货的平台）
+### RVIZ选点+基于剩余路径点的预发布策略 (仅适用于 24-08-08 后出货的平台) {#rviz__waypoints_and_teb_canal}
 
 ::: tip 提示
 下述操作需要在实车上进行
@@ -64,7 +64,7 @@ roslaunch tianracer_bringup tianracer_bringup.launch
 
 2、启动导航
 ```shell
-roslaunch tianracer_navigation tianracer_teb_nav.launch use_rviz:=true
+roslaunch tianracer_navigation tianracer_teb_nav.launch use_rviz:=true map_file:=xxxxx     # xxxxx为保存地图时的文件名称
 ```
 
 3、启动目标点生成工具
@@ -101,7 +101,7 @@ roslaunch tianracer_bringup tianracer_bringup.launch
 
 2、启动导航
 ```shell
-roslaunch tianracer_navigation tianracer_teb_nav.launch
+roslaunch tianracer_navigation tianracer_teb_nav.launch use_rviz:=true map_file:=xxxxx     # xxxxx为保存地图时的文件名称
 ```
 
 ```shell
