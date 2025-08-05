@@ -48,7 +48,7 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc69DE875C2A84405FC5D21C990BED9B53.png)
 
-从上图中可以看到，Tianracer 小屏上的 IP 地址为`192.168.0.34.129`，终端（`tianbot@tianbot-nano`）显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 Jetson 板卡主控已成功连接局域网之下
+从上图中可以看到，Tianracer 小屏上的 IP 地址为`192.168.0.129`，终端（`tianbot@tianbot-nano`）显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 Jetson 板卡主控已成功连接局域网之下
 
 6. 如无意外，此时已成功的配置 TIANRACER 无人车连接到 WIFI 网络中，我们将 USB 断开连接。
 
@@ -56,6 +56,19 @@ sudo nmcli device wifi connect WIFI名称 password WIFI密码
 
 
 ## 远程桌面连接
+
+### Rustdesk
+
+在输入框中，填写Tianracer 小屏上的 看到的IP地址`192.168.0.129`，点击 connect 连接
+
+![image-20240604153155155](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604153155155.png)
+
+输入密码为`Tianbot_2016`，点击 OK
+![image-20240604153305404](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604153305404.png)
+
+成功登录后，点击全屏
+
+- 具体连接方法和详细步骤，可参考[Rustdesk 连接教程](/basic/rustdesk.html)
 
 ### VNC
 在开始远程连接前，请确保已经成功连接到 WIFI 网络。
