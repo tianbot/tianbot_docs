@@ -11,26 +11,6 @@
 如果不确定可以在售后群中进行确认，其他版本升级可以联系淘宝客服。
 :::
 
-## 系统更新介绍 {#system-update-introduction}
-
-ROS2GO 随身系统，自从 2018 年 11 月 11 日推出到现在历数五年变化：
-
-### 软件上更新迭代 {#software-update-iteration}
-
-- 系统 Ubuntu16.04+ROS Kinetic 到 Ubuntu18.04+ROS Melodic，再到 ubuntu20.04+ROS Noetic
-- 内核从 Linux 4.4.0 -> Linux 5.13.0 -> Linux 6.3.12
-- 系统更新 36 次
-- 用户级增量备份恢复 Timeshift
-- 系统级原厂快照恢复 ros2go_recovery
-- 文件系统级全量 OTA
-
-### 硬件上新增支持 {#hardware-add-support}
-
-- 新增 AMD ZEN3 架构 CPU 支持
-- 根分区文件系统采用 zstd 压缩算法，IO 性能更佳
-- 异步在线碎片整理，减少卡顿
-- 增强恢复功能，同时增加 timeshift 快照管理
-
 为了更方便的使用和安全，我们一直在更新迭代，本章节主要讲解系统全量 OTA 更新功能，本功能支持在线自助更新系统，我们也会不定期发布最新系统固件。
 
 ::: danger 数据无价
@@ -134,11 +114,6 @@ md5sum *
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071413754.webp)
 
 如果重启之后无法进入系统，请不要焦虑，请按照流程再更新一次。
-
-::: info
-一般情况下，一次就可以了，但运气不好的话得 2 遍甚至 3 遍。
-`如果2~3次之后，仍然无法正常启动，建议重新下载更新固件再尝试`。
-:::
 
 ### 5. 远程协助 {#5.remote-assistance}
 
