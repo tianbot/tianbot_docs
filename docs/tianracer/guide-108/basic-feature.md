@@ -74,6 +74,21 @@ TIANRACER 使用遥控器 DT7 进行控制，DT7 是一款工作于 2.4GHz 频�
 
 **终端话题发布**
 
+#### Ackerman消息直接控制
+```shell
+rostopic pub /tianracer/ackermann_cmd ackermann_msgs/AckermannDrive "{steering_angle: 1.57, steering_angle_velocity: 0.0, speed: 0.1, acceleration: 0.0,  jerk: 0.0}" -r 10
+```
+
+::: info
+- `-r`这个数值最小为1, 如果希望速度控制平滑，该数据>=10
+:::
+
+对于主要在二维空间（xoy 平面）内运动的平台，可以使用 ackermann_msgs/AckermannDrive 消息类型，可以通过
+- speed 控制油门
+- steering_angle 控制转向（弧度值）
+
+#### Twist消息间接控制
+
 ```shell
 rostopic pub /tianracer/cmd_vel geometry_msgs/Twist "linear:
   x: 0.1
@@ -89,10 +104,9 @@ angular:
 - linear.x 控制前后
 - angular.z 控制旋转
 
-**键盘控制**
+**话题转换**
 ```shell
-rosrun teleop_twist_keyboard teleop_twist_keyboard.py
-
+rosrun tianracer_navigation cmd_vel_to_ackermann_drive.py
 ```
 
 ::: info 提示
