@@ -125,6 +125,10 @@ angular:
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/tianracer/cmd_vel
 ```
 3. 然后即可根据终端提示，使用键盘给出控制信号控制小车运动，如需退出，按下 Ctrl+C 退出程序。
+4. 如遇报错`Cannot find teleop_twist_keyboard...`，需要在车上运行如下命令安装对应功能包，再进行尝试
+```bash
+sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard -y
+```
 :::
 
 **rqt 发布**
