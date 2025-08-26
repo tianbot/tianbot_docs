@@ -325,14 +325,14 @@ def tello_command():
     顺序执行 tello 命令
     """
     pub = rospy.Publisher('sdk_cmd', String, queue_size=10)   # 确保  <arg name ="enable_sdk_cmd" default="true" /> 在 rmtt_bingup.launch 中已设置
-    rate = rospy.Rate(10)  # 10Hz
+    rate = rospy.Rate(1)        # 设置期望发布频率为 1 Hz
     global command_list, is_finished
 
     while not rospy.is_shutdown() and (command_list or not is_finished):
         if command_list:
             command = command_list.pop(0)  # 取出列表第一个命令并删除
             pub.publish(command)
-            rate.sleep()
+            rate.sleep()                   # 自动计算达到目标频率所需的剩余时间
         else:
             is_finished = True  # 设置标志位，表示命令执行完毕
 
