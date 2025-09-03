@@ -223,7 +223,7 @@ rostopic pub /land std_msgs/Empty
 ### 使用 Twist 消息控制飞机移动
 ```shell
 rostopic pub -r 10 /cmd_vel geometry_msgs/Twist "linear:
-  x: 0.1
+  x: 0.3
   y: 0.0
   z: 0.0
 angular:
@@ -325,7 +325,7 @@ def tello_command():
     顺序执行 tello 命令
     """
     pub = rospy.Publisher('sdk_cmd', String, queue_size=10)   # 确保  <arg name ="enable_sdk_cmd" default="true" /> 在 rmtt_bingup.launch 中已设置
-    rate = rospy.Rate(1)        # 设置期望发布频率为 1 Hz
+    rate = rospy.Rate(0.1)        # 设置期望发布频率为 0.1 Hz
     global command_list, is_finished
 
     while not rospy.is_shutdown() and (command_list or not is_finished):
@@ -341,7 +341,7 @@ if __name__ == '__main__':
 
     # tello 明文 SDK 控制命令：https://dl-cdn.ryzerobotics.com/downloads/tello/0301/Tello+SDK+%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf
     # 初始化命令列表，可以根据需要修改
-    command_list = ['takeoff', 'forward 50', 'turn left 90', 'land']
+    command_list = ['command', 'takeoff', 'forward 50', 'left 25', 'land']
 
     tello_command()
 ```
