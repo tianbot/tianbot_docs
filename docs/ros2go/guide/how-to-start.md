@@ -5,9 +5,12 @@
 从 ROS2GO 中启动系统，简单来说只需要 3 步：
 
 ::: tip 提示
-1. 关闭安全启动 Secure Boot
-2. 关闭独显直连（如果有）
+1. 在 Windows 系统中关闭 BitLocker 加密，否则直接关闭 Secure Boot 后会无法启动 Windows 系统
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/ros2go/bitlocker.png)
+2. 关闭安全启动 Secure Boot
 3. 关闭快速启动（如果有）
+4. 调整 UEFI 启动项，选择 ROS2GO (带有 ROS2GO 字样的启动项)
+:::
 后再尝试以下步骤
 :::
 
