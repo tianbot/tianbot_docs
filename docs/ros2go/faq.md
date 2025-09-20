@@ -1,58 +1,66 @@
-# 常见问题
+# ROS2GO 常见问题
 
-## 如何查看自己的 ROS2GO 版本 {#how-to-check-ros2go-version}
+## 如何查看 ROS2GO 版本 {#how-to-check-ros2go-version}
 
-> `v20241019`以后发布的版本已经内置`fastfetch`
+::: tip 版本检测
+v20241019 以后的版本已内置 `fastfetch` 工具。
+:::
 
-1. 下载安装`fastfetch`：https://github.com/tianbot/tianbot_docs/releases/download/fastfetch-latest/fastfetch-linux-amd64.deb
+### 安装 fastfetch
 
-2. 打开终端后运行如下命令即可
+1. 下载安装包：[fastfetch-linux-amd64.deb](https://github.com/tianbot/tianbot_docs/releases/download/fastfetch-latest/fastfetch-linux-amd64.deb)
 
-```shell
+2. 在终端中运行：
+```bash
 fastfetch -l none
 ```
 
-## 默认用户名和密码是什么 {#what-is-the-default-username-and-password}
+## 默认用户名和密码 {#default-credentials}
 
-- 用户名：`tianbot`
-- 密码：`ros` 
+- **用户名**：`tianbot`
+- **密码**：`ros` 
 
 
-## 如何切换 ROS1/2 运行环境 {#how-to-switch-ros1-ros2}
+## ROS1/ROS2 环境切换 {#how-to-switch-ros1-ros2}
 
-切换到 ROS1：
-```shell
-source $(ros2go_switch -v 1) 
-```
-切换到 ROS2：
-```shell
-source $(ros2go_switch -v 2) 
+### 切换到 ROS1
+```bash
+source $(ros2go_switch -v 1)
 ```
 
-## 如何切换中英文输入法 {#how-to-switch-chinese-english-input-method}
+### 切换到 ROS2
+```bash
+source $(ros2go_switch -v 2)
+```
 
-使用`Ctrl+ 空格`切换输入法，当处于搜狗输入法下，按下`shift`键切换中英文输入
+## 中英文输入法切换 {#input-method-switch}
 
-## 如何安装 ros2 humble 的其他依赖包？ {#how-to-install-other-humble-dependencies}
+使用 `Ctrl + 空格` 切换输入法，在搜狗输入法下按 `Shift` 键切换中英文输入。
 
-不要直接使用`apt`安装，如下图所示：
+## ROS2 Humble 依赖包安装 {#how-to-install-humble-dependencies}
+
+::: warning 重要提示
+不要直接使用 `apt` 安装 ROS2 Humble 依赖包，应使用源码编译方式。
+:::
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240305124006.png)
 
-正确的安装方式是：
+### 正确安装方式
 
-在（`该工作空间命名可自拟`）humble_patch_ws/src 目录下，git clone 拉取该功能包的源码到工作空间 src 文件夹中，编译后再 source 该工作空间，即正常可使用
+在 `humble_patch_ws/src` 目录下使用 git 拉取功能包源码，编译后 source 该工作空间：
 
-```shell
+```bash
+# 创建工作空间
 mkdir -p humble_patch_ws/src
 
-# 将https://github.com/YYYY/XXXX.git 替换为需要的功能包的 git 地址
-# -b ros2 替换为需要的分支
+# 克隆功能包（替换为实际需要的功能包地址和分支）
 git clone https://github.com/YYYY/XXXXX.git -b ros2 humble_patch_ws/src/XXXX
 
+# 编译
 cd humble_patch_ws && colcon build --merge-install
 
-source humble_patch/install/setup.bash
+# 激活环境
+source humble_patch_ws/install/setup.bash
 ```
 
 之后即可正常使用 humble 版本下的该功能包
@@ -115,8 +123,7 @@ ROS2GO 是基于 linux 内核和 Ubuntu 打造，所以也是一样的。通常 
 
 | 版本       | 操作系统及版本                | ROS 版本          | 总容量 | 系统占用说明                                       |
 |------------|-------------------------------|-------------------|--------|---------------------------------------------------|
-| P64 | Ubuntu 18.04 + Melodic        | Melodic           | 64GB    | 资料盘 10GB，根分区空余约 40GB         |
-| P128| Ubuntu 20.04 + Noetic，Humble | Noetic，Humble    | 128GB   | 资料盘 10GB，根分区空余约 100GB `可定制更大容量` |
+| P128| Ubuntu 20.04 + Noetic + Humble | Noetic + Humble    | 128GB   | 资料盘 10GB，根分区空余约 100GB `可定制更大容量` |
 
 ## 配套课程相关
 

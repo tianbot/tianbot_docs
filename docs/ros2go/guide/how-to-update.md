@@ -6,7 +6,7 @@
 
 ::: warning 提示
 使用全量 OTA 更新功能的前提是：
-- 目前使用的是 Ubuntu 18.04、Ubuntu20.04 版本的 ROS2GO，并且可以正常进入 Puppy Rescue OS 独立恢复系统
+- 目前使用的是 Ubuntu 20.04 版本的 ROS2GO，并且可以正常进入 Puppy Rescue OS 独立恢复系统
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240304111832.png)
 如果不确定可以在售后群中进行确认，其他版本升级可以联系淘宝客服。
 :::
@@ -46,13 +46,9 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 固件下载地址请在在 ROS2GO 技术支持企业微信群联系群主
 :::
 
-1. Ubuntu 20.04+ROS Noetic
+1. Ubuntu 20.04 + ROS Noetic + ROS2 Humble
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271626988.png)
-
-2. Ubuntu18.04+ ROS Melodic
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271628220.png)
 
 ::: tip 提示
 下载方式：使用[百度网盘客户端](https://pan.baidu.com/download#)下载，如需加速下载，可以自行在拼多多搜索`百度网盘会员1天`
