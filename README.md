@@ -1,54 +1,77 @@
-<h1>
-    <p align="center">Tianbot-Doc维护文档</p>
-</h1>
+# Tianbot-Doc 维护文档
 
-> 所有文档编写都可以在目录（`docs/`）下进行
+天之博特产品使用手册和ROS开发者指南文档站点。
 
+## 快速开始
 
-# 如何运行本项目
-
-1. 安装node.js
-
-- [Node.js 开发环境安装之 Linux](https://zhuanlan.zhihu.com/p/144885938)
-- [node-v18.17.0-linux-x64 下载链接](https://cdn.npmmirror.com/binaries/node/v18.17.0/node-v18.17.0-linux-x64.tar.xz)
-
-2. 安装pnpm
-
-```shell
-npm install -g pnpm
-```
-
-3. 安装node_modeules
-
-```shell
+```bash
+# 安装依赖
 pnpm install
-```
 
-4. 本地运行预览
-```shell
+# 开发预览
 pnpm run docs:dev
-```
 
-5. 编译语法检查
-```shell
+# 构建
 pnpm run docs:build
 ```
 
-# 如何贡献
+## 贡献指南
 
-- [贡献指南](./Contribute.md)
+### 目录结构
+所有文档编写在 `docs/` 目录下进行，按产品分类组织：
+- `ros2go/` - ROS2GO 随身系统
+- `tianracer/` - TianRacer 自主赛车
+- `tianbot/` - TianBot 机器人平台
+- `basic/` - ROS 基础概念
+- `advanced/` - 高级主题
 
-# 特别鸣谢
+### 图床配置
+使用 PicGo + 阿里云 OSS：
+- 设定 Keyld：AccessKeyID
+- 设定 KeySecret：AccessKeySecret
+- 储存空间名：tianbot-pic
+- 存储区域：oss-cn-beijing
+- 存储路径：tianbot-pic/Tianbot-Doc/
 
-- [vuejs/vitepress](https://github.com/vuejs/vitepress)
-- [vitejs/vite](https://github.com/vitejs/vite) （参考主页美化）
-- ......
+### Markdown 语法
 
-# License
+**提示框：**
+```markdown
+::: tip 提示
+内容
+:::
 
-- Copyright © 2023 Tianbot
+::: warning 警告
+内容
+:::
 
-* Admin：JIT_SU
+::: danger 危险
+内容
+:::
+```
 
-* E-mail: sujie@tianbot.com
+**B站视频嵌入：**
+```markdown
+<div style="position: relative; padding-bottom: 56.25%; height: 0;">
+  <iframe src="//player.bilibili.com/player.html?aid=xxx&bvid=xxx&autoplay=0"
+    frameborder="no" scrolling="no"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+```
 
+**代码组：**
+```markdown
+::: code-group
+```sh [ROS1]
+command for ros1
+```
+```sh [ROS2]
+command for ros2
+```
+:::
+```
+
+## License
+
+Copyright © 2025 Tianbot
+Admin: JIT_SU <sujie@tianbot.com>
