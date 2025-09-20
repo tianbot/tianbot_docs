@@ -4,14 +4,32 @@
 
 从 ROS2GO 中启动系统，简单来说只需要 3 步：
 
-::: tip 提示
-1. 在 Windows 系统中关闭 BitLocker 加密，否则直接关闭 Secure Boot 后会无法启动 Windows 系统
+::: danger Windows 用户重要警告
+**关于 BitLocker 加密的重要说明**
+
+在 Windows 系统中，如果您的系统开启了 BitLocker 磁盘加密功能，请务必在修改 BIOS 设置（如关闭 Secure Boot）之前先关闭 BitLocker 功能！
+
+**BitLocker 的缺陷与风险：**
+- 当您关闭 Secure Boot 或修改其他 BIOS 安全设置后，再次启动 Windows 时系统会要求输入 BitLocker 恢复密钥
+- 许多用户并不知道这个恢复密钥保存在哪里，甚至从未记录过
+- 微软官网的在线密钥备份服务并不可靠，经常出现无法找到密钥的情况
+- 一旦无法提供正确的恢复密钥，您将无法进入 Windows 系统，可能导致数据丢失
+- **显著拖慢磁盘读写性能**：BitLocker 加密会消耗系统资源进行实时加解密，明显降低磁盘 I/O 性能
+
+**如何检查和关闭 BitLocker：**
+1. 在 Windows 搜索栏输入"BitLocker"并打开"管理 BitLocker"
+2. 如果看到驱动器显示"BitLocker 已启用"，请点击"关闭 BitLocker"
+3. 等待解密过程完成（可能需要较长时间）
+4. 确认所有驱动器都显示"BitLocker 已关闭"后，再进行下一步操作
+
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/ros2go/bitlocker.png)
+:::
+
+::: tip 启动步骤
+1. **首先关闭 BitLocker 加密**（见上述重要警告）
 2. 关闭安全启动 Secure Boot
 3. 关闭快速启动（如果有）
 4. 调整 UEFI 启动项，选择 ROS2GO (带有 ROS2GO 字样的启动项)
-:::
-后再尝试以下步骤
 :::
 
 1. 将 ROS2GO 插入 USB3.0 端口
