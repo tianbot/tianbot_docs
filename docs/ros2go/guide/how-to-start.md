@@ -106,11 +106,11 @@ ROS2GO 随身系统最新版本只支持 UEFI 的方式进行引导启动，如�
 这个一般没有影响，也不用关闭，当然有兴趣可以试试
 启动项详解
 
-目前最新版的 ROS2GO 系统为 Ubuntu18.04+ROS Melodic，进入到启动项后如图所示
+目前最新版的 ROS2GO 系统为 Ubuntu 20.04 + ROS Noetic + ROS2 Humble，进入到启动项后如图所示
 
 **Ubuntu**
 
-如您选择 Ubuntu 选项，默认启动 Ubuntu18.04 内核为 Linux 5.13 版本，如果正常启动，网卡正常识别，那么您直接使用即可
+如您选择 Ubuntu 选项，默认启动 Ubuntu 20.04，如果正常启动，网卡正常识别，那么您直接使用即可
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241903118.webp)
 

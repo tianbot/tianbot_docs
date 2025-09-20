@@ -1,40 +1,41 @@
 ## 产品介绍 {#introduction}
 
-ROS2GO™ 是由天之博特打造的一款开箱即用的便携式 ROS 集成开发系统。本产品基于 Ubuntu 深度定制（内核、固件、显卡驱动等），无需对原有系统做任何改动即可以在绝大多数 x86 架构的 PC、笔记本上快速启动，为初学者、开发或科研人员提供方便好用的 ROS 开发环境。
+ROS2GO™ 是由天之博特打造的便携式 ROS 集成开发系统。基于 Ubuntu 深度定制（包括内核、固件、显卡驱动等），无需对原有系统做任何改动，即可在绝大多数 x86 架构的 PC、笔记本上快速启动，为初学者、开发人员和科研人员提供便捷的 ROS 开发环境。
 
-::: tip 📢 如果您有以下需求，ROS2GO 可能会帮到您
-:::
-
+::: tip 适用场景
+ROS2GO 适用于以下用户群体：
 - 想快速了解 ROS 的初学者
-- 需要统一标准开发环境的工程师
-- 需要统一便捷教学环境的高校实验室、培训机构
-- 需要统一产品出厂标配的资料环境
-- 需要统一比赛开发环境RUMA、智能车等比赛
+- 需要统一开发环境的工程师
+- 需要统一教学环境的高校实验室、培训机构
+- 需要统一产品出厂配置的资料环境
+- 需要统一比赛开发环境的 RUMA、智能车等比赛
+:::
 
 
 ## 产品特点 {#features}
 
 - **开箱即用**：无需安装，插入电脑即可[启动](how-to-start.md#start-steps)
 - **轻量便携**：体积小巧，重量轻，可随身携带
-- **定制内核**：BBRv3, Multi-generational LRU, Intel&AMD P-state driver, CachyOS patches, AUFS support, zstd v1.56, Btrfs transparent compression, etc.
-- **定制驱动**：主流硬件（显卡声卡网卡等）支持，包括不限于Intel/AMD/NVIDIA/MTK/Qualcomm等
-- **无忧恢复**：内置多种[恢复方案](how-to-recover.md)，折腾无忧
-- **稳定维护**：积极更新上游[内核、固件、ROS 功能包](https://github.com/tianbot/tianbot_docs/releases)等
-- **强力售后**：[多渠道售后](/about)支持，保障您的使用体验
+- **定制内核**：集成 BBRv3、Multi-generational LRU、Intel/AMD P-state 驱动、CachyOS 补丁、AUFS 支持、zstd v1.56、Btrfs 透明压缩等先进特性
+- **定制驱动**：支持主流硬件（显卡、声卡、网卡等），包括 Intel/AMD/NVIDIA/MTK/Qualcomm 等厂商产品
+- **无忧恢复**：内置多种[恢复方案](how-to-recover.md)，确保系统稳定性
+- **稳定维护**：积极更新上游[内核、固件、ROS 功能包](https://github.com/tianbot/tianbot_docs/releases)，保持系统新颖
+- **专业售后**：[多渠道售后](/about)支持，保障您的使用体验
 
 
 ## 产品规格 {#specifications}
-| 类型 | 明细 |
+
+| 项目 | 详情 |
 | --- | --- |
 | 材质 | 合金 |
-| 容量 | 128G |
-| 接口 | USB3.2 |
+| 容量 | 128GB |
+| 接口 | USB 3.2 |
 | 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble（源码编译） |
 | 默认用户 | `tianbot` |
-| 默认密码  | `ros` |
-| 预装功能包 | TIANBOT、TIANRACER、Turtlebot、Movelt、Hector、Gmapping、OpenNI、Cartographer等 |
-| 预装软件 | VScode、Arduino、QQ、WPS、Sougou、Gimp等 |
-| 支持硬件 | 1. 激光雷达：傲视智绘、思岚、北阳、西克等<br/>2. 深度相机：Intel RealSense、Asus、Astra、Kinect等 |
+| 默认密码 | `ros` |
+| 预装功能包 | TIANBOT、TIANRACER、Turtlebot、MoveIt、Hector、Gmapping、OpenNI、Cartographer 等 |
+| 预装软件 | VS Code、Arduino、QQ、WPS、搜狗输入法、GIMP 等 |
+| 支持硬件 | **激光雷达**：傲视智绘、思岚、北阳、西克 等<br/>**深度相机**：Intel RealSense、Asus、Astra、Kinect 等 |
 
 
 ## 产品清单 {#package}
