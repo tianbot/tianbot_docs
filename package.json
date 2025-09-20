@@ -5,18 +5,18 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@types/node": "^22.9.0",
-    "cross-spawn": "^7.0.5",
-    "fast-glob": "^3.3.2",
+    "@types/node": "^24.5.2",
+    "cross-spawn": "^7.0.6",
+    "fast-glob": "^3.3.3",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "markdown-it-footnote": "^4.0.0",
     "markdown-it-mathjax3": "^4.3.2",
     "medium-zoom": "^1.1.0",
-    "search-insights": "^2.17.2",
-    "vite": "^5.4.11",
-    "vitepress": "1.5.0",
-    "vue": "^3.5.13"
+    "search-insights": "^2.17.3",
+    "vite": "^7.1.6",
+    "vitepress": "1.6.4",
+    "vue": "^3.5.21"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
