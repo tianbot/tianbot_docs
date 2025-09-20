@@ -4,3 +4,4 @@ dist
 cache
 node_modules
 *.zip
+.idea/
