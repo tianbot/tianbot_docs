@@ -35,12 +35,16 @@ pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs
 ### 更新方法
 
 ```bash
-# 1. 下载最新版本
+# 1. 下载最新版本（推荐）
 ros2go-github-download latest u
 
 # 2. 安装
 pip install ros2go_utils-*-cp38-cp38-linux_x86_64.whl
 ```
+
+::: tip 💡 如果没有 ros2go-utils 工具
+可以直接下载安装包：[下载链接](https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.4/ros2go_utils-1.0.4-cp38-cp38-linux_x86_64.whl)
+:::
 
 ## 内核升级 {#kernel}
 

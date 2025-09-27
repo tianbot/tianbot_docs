@@ -1,5 +1,63 @@
 #  更新日志
 
+> 📝 **说明**: 从 v20241019 开始，内核、固件、ROS 功能包等组件更新统一在 [GitHub Releases](https://github.com/tianbot/tianbot_docs/releases) 发布，可独立升级。
+
+## 最新组件版本 {#latest-components}
+
+::: tip 💡 便捷更新
+- 推荐使用 `ros2go-utils` 工具一键下载更新组件
+- 也可以从 [GitHub Releases](https://github.com/tianbot/tianbot_docs/releases) 手动下载
+:::
+
+### 🛠️ 使用 ros2go-utils 更新组件
+
+**安装 ros2go-utils（如果还没有）：**
+```bash
+pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.4/ros2go_utils-1.0.4-cp38-cp38-linux_x86_64.whl
+```
+
+**更新各组件：**
+```bash
+# 更新内核
+ros2go-github-download latest k
+# 更新固件驱动
+ros2go-github-download latest f
+# 更新 NVIDIA 驱动
+ros2go-github-download latest n
+# 更新 ros2go-utils 工具本身
+ros2go-github-download latest u
+```
+
+---
+
+### 🔧 ROS2GO 工具包
+- **最新版本**: `u1.0.4` (2023-09-20)
+- **主要改进**: 降低依赖要求，提升兼容性
+- **安装方式**: `pip install ros2go_utils-1.0.4-cp38-cp38-linux_x86_64.whl`
+
+### ⚙️ Linux 内核
+- **最新版本**: `k6.16.8` (2023-09-20)
+- **支持**: 最新硬件兼容性，解决机械革命等新机型兼容性问题
+- **要求**: 需要 NVIDIA 驱动 >= 580.76.05
+- **更新方式**: `ros2go-github-download latest k`
+- **手动安装**: `unzip *-ros2go.zip && sudo dpkg -i linux-image-*ros2go*.deb linux-headers-*ros2go*.deb`
+
+### 🖥️ NVIDIA 驱动
+- **最新版本**: `n580.76.05` (2023-08-16)
+- **支持**: 所有 NVIDIA 显卡（包括最新 50 系显卡）
+- **兼容**: 与 k6.16.x 内核完全兼容
+- **更新方式**: `ros2go-github-download latest n`
+
+### 📡 Linux 固件
+- **最新版本**: `f20241207`
+- **支持**: Intel Xe2 显卡、WiFi7 网卡等最新硬件
+- **更新方式**: `ros2go-github-download latest f`
+- **手动安装**: `sudo dpkg -i linux-firmware-upstream_*_all.deb`
+
+---
+
+## 系统版本更新日志 {#system-versions}
+
 ## v20250614
 
 1. 内核升级至`k6.15.1`
