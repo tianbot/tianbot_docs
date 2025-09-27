@@ -24,11 +24,12 @@ Linux 系统的硬件兼容性一直是个复杂问题。通常情况下：
 ### 安装方法
 
 ```bash
-pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.2/ros2go_utils-1.0.2-cp38-cp38-linux_x86_64.whl
+pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.4/ros2go_utils-1.0.4-cp38-cp38-linux_x86_64.whl
 ```
 
 ::: tip 网络问题
-如果遇到 SSL Timeout 等网络错误，可以先用浏览器下载 `.whl` 包到本地再安装。
+如果遇到 SSL Timeout 等网络错误，可以先用浏览器下载 `.whl` 包到本地再安装：
+[下载链接](https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs/releases/download/u1.0.4/ros2go_utils-1.0.4-cp38-cp38-linux_x86_64.whl)
 :::
 
 ### 更新方法

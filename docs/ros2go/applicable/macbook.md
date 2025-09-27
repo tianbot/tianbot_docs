@@ -1,7 +1,7 @@
 # Apple 笔记本（虚拟机方案）
 
 ::: tip 💡
-1. 本文档仅适用于 Intel x86 ✅架构的 Apple 笔记本，M* 系列芯片的机型暂不支持😭
+1. 本文档仅适用于 Intel x86_64 ✅架构的 Apple 笔记本，M* 系列芯片的机型暂不支持😭
 2. 未配备 T2 芯片的机型（2015年中前发售✅），可以尝试直接从 ROS2GO 启动😄
 :::
 
@@ -109,7 +109,7 @@ sudo ip link set enp0s8 name eth1
 
 在菜单栏设备中选择插入插件 `Guest Additions.iso`
 
-安转完后需要重启电脑，此时屏幕可以自适应
+安装完后需要重启电脑，此时屏幕可以自适应
 
 - [Install Guest Additions on macOS](https://github.com/geerlingguy/macos-virtualbox-vm/issues/79)
 

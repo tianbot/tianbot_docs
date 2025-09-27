@@ -1,44 +1,65 @@
-# 如何启动 {#how-to-start}
+# 快速启动指南 {#how-to-start}
 
-## 启动步骤 {#start-steps}
+## 🚀 三步启动 ROS2GO {#start-steps}
 
-从 ROS2GO 中启动系统，简单来说只需要 3 步：
-
-::: danger Windows 用户重要警告
-**关于 BitLocker 加密的重要说明**
-
-在 Windows 系统中，如果您的系统开启了 BitLocker 磁盘加密功能，请务必在修改 BIOS 设置（如关闭 Secure Boot）之前先关闭 BitLocker 功能！
-
-**BitLocker 的缺陷与风险：**
-- 当您关闭 Secure Boot 或修改其他 BIOS 安全设置后，再次启动 Windows 时系统会要求输入 BitLocker 恢复密钥
-- 许多用户并不知道这个恢复密钥保存在哪里，甚至从未记录过
-- 微软官网的在线密钥备份服务并不可靠，经常出现无法找到密钥的情况
-- 一旦无法提供正确的恢复密钥，您将无法进入 Windows 系统，可能导致数据丢失
-- **显著拖慢磁盘读写性能**：BitLocker 加密会消耗系统资源进行实时加解密，明显降低磁盘 I/O 性能
-
-**如何检查和关闭 BitLocker：**
-1. 在 Windows 搜索栏输入"BitLocker"并打开"管理 BitLocker"
-2. 如果看到驱动器显示"BitLocker 已启用"，请点击"关闭 BitLocker"
-3. 等待解密过程完成（可能需要较长时间）
-4. 确认所有驱动器都显示"BitLocker 已关闭"后，再进行下一步操作
-
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/ros2go/bitlocker.png)
+::: tip 💡 开始之前
+**如果您是电脑新手，建议先观看我们的[开箱视频](../guide/index.md#unboxing)了解基本操作**
 :::
 
-::: tip 启动步骤
-1. **首先关闭 BitLocker 加密**（见上述重要警告）
-2. 关闭安全启动 Secure Boot
-3. 关闭快速启动（如果有）
-4. 调整 UEFI 启动项，选择 ROS2GO (带有 ROS2GO 字样的启动项)
+### 第一步：准备工作（⚠️ 重要）
+
+::: danger ⚠️ Windows 用户必读
+**如果您的电脑开启了 BitLocker 加密，请务必先关闭再继续！**
+
+**为什么要关闭 BitLocker？**
+- 修改 BIOS 设置后，Windows 会要求输入恢复密钥
+- 很多用户不知道密钥在哪里，可能导致无法进入 Windows
+- BitLocker 还会拖慢电脑运行速度
+
+**如何检查和关闭：**
+1. 按 `Win + R`，输入 `control` 打开控制面板
+2. 搜索"BitLocker"并打开"管理 BitLocker"
+3. 如果看到"BitLocker 已启用"，点击"关闭 BitLocker"
+4. 等待解密完成（可能需要1-2小时）
+
+![BitLocker设置](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/ros2go/bitlocker.png)
 :::
 
-1. 将 ROS2GO 插入 USB3.0 端口
+### 第二步：调整电脑设置
 
-2. 在`启动项`中选择 TIANBOT ROS2GO
+**需要修改的设置：**
+1. **关闭安全启动（Secure Boot）** - 允许从 USB 启动系统
+2. **关闭快速启动** - 避免启动冲突（可选）
 
-3. 正常启动，开始 ROS2GO 之旅
+::: details 💡 不知道怎么进入 BIOS？点击查看
+不同品牌电脑的方法：
+- **联想**：开机时按 F2 或 Fn+F2
+- **华硕**：开机时按 F2 或 Del
+- **惠普**：开机时按 F10 或 Esc
+- **戴尔**：开机时按 F2 或 F12
+- **小米**：开机时按 F2
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241902600.webp)
+如果不确定，可以搜索："您的电脑品牌 + 进入BIOS"
+:::
+
+### 第三步：启动 ROS2GO
+
+1. **插入 ROS2GO**：将 ROS2GO 插入 USB 3.0 接口（蓝色接口）
+2. **选择启动项**：重启电脑，按启动菜单键，选择带有"ROS2GO"字样的选项
+3. **开始使用**：看到 ROS2GO 桌面就成功了！ 🎉
+
+::: details 💡 如何进入启动菜单？
+常见品牌的启动菜单快捷键：
+- **联想**：F12
+- **华硕**：F8 或 Esc
+- **惠普**：F9
+- **戴尔**：F12
+- **小米**：F12
+
+开机时立即按对应按键，看到菜单后选择 USB 启动项
+:::
+
+![ROS2GO启动界面](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241902600.webp)
 
 ## 启动工具 {#start-tool}
 
@@ -72,54 +93,82 @@
 
 6：进入 bios
 
-## 无法启动 {#cannot-start}
+## 🔧 启动失败？别担心！ {#cannot-start}
 
-::: info
-如果无法启动，您可以检查以下 4 步是否正确设置
+::: tip 💡 常见问题快速自检
+遇到问题先别慌，按照下面的步骤一步步检查：
 :::
 
-### 1、关闭安全启动 Secure Boot
+### 📋 问题诊断清单
 
-微软设计 Secure Boot 的原本用意可能是出于保证系统安全防止恶意软件侵入，但结果似乎成了 PC 厂商保护市场垄断、阻碍竞争的一种手段，比如：只有厂商认证的网卡可以识别，安装使用其他操作系统无法启动等等，如果无法启动可以关闭 Secure Boot，系统选择为 other，关闭后不会对本身系统产生问题。
-如果您不清楚自己 Secure Boot 如何关闭，可以搜索一下，类似：
+**✅ 第1步：检查基础设置**
+- [ ] BitLocker 已关闭（Windows 用户）
+- [ ] ROS2GO 插在 USB 3.0 接口（蓝色接口）
+- [ ] 已关闭 Secure Boot（安全启动）
+- [ ] 能在启动菜单中看到 ROS2GO 选项
 
-- 华硕主板 Secure Boot 如何关闭
-- 小米笔记本 Secure Boot 如何关闭
-- 联想笔记本 Secure Boot 如何关闭
+**✅ 第2步：如果看不到启动选项**
 
-### 2、启动项如何选择
+::: details 解决方案：学会进入 BIOS 和启动菜单
+**进入 BIOS 的方法：**
+不同品牌按键不同，开机时立即按：
+- 💻 **联想/ThinkPad**：F1 或 F2
+- 💻 **华硕**：F2 或 Del
+- 💻 **惠普**：F10 或 Esc
+- 💻 **戴尔**：F2
+- 💻 **小米**：F2
 
-不同品牌品牌，启动项选择不同，如果您不清楚自己电脑启动项是什么，可以搜索一下，类似：
+**进入启动菜单的方法：**
+- 💻 **联想**：F12
+- 💻 **华硕**：F8 或 Esc
+- 💻 **惠普**：F9
+- 💻 **戴尔**：F12
+- 💻 **小米**：F12
 
-- [电脑 BIOS 热键 U 盘启动快捷键](https://www.bing.com/search?q=%E7%94%B5%E8%84%91BIOS%E7%83%AD%E9%94%AEU%E7%9B%98%E5%90%AF%E5%8A%A8%E5%BF%AB%E6%8D%B7%E9%94%AE)
-- 华硕主板 U 盘启动按 F 几
-- 小米笔记本 U 盘启动按 F 几
-- 联想笔记本 U 盘启动按 F 几
-- 华为笔记本 U 盘启动按 F 几
+💡 **小技巧**：如果不确定按键，搜索"您的电脑型号 + BIOS按键"
+:::
 
-### 3、UEFI 支持
+**✅ 第3步：能看到启动选项但进不去系统**
 
-ROS2GO 随身系统最新版本只支持 UEFI 的方式进行引导启动，如果您的电脑是近 10 年出厂，那么基本不用担心。
+::: details 解决方案：尝试不同启动模式
+在 ROS2GO 启动界面，尝试以下选项：
 
-### 4、快速启动关闭
+1. **首选**：选择 "Ubuntu"（默认选项）
+2. **如果第1个不行**：选择 "Ubuntu 高级选项" → 选择较老的内核版本
+3. **特殊情况**：选择 "Boot Puppy Rescue OS"（系统恢复模式）
 
-这个一般没有影响，也不用关闭，当然有兴趣可以试试
-启动项详解
+![ROS2GO启动选项](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241903118.webp)
+:::
 
-目前最新版的 ROS2GO 系统为 Ubuntu 20.04 + ROS Noetic + ROS2 Humble，进入到启动项后如图所示
+**✅ 第4步：检查硬件兼容性**
 
-**Ubuntu**
+::: warning 💡 关于兼容性
+- **台式机**：兼容性通常很好 ✅
+- **笔记本**：可能需要特殊驱动，查看[兼容性列表](../applicable/index.md)
+- **10年以上老电脑**：可能不支持 UEFI 启动
+:::
 
-如您选择 Ubuntu 选项，默认启动 Ubuntu 20.04，如果正常启动，网卡正常识别，那么您直接使用即可
+### 🆘 还是不行？获取帮助
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241903118.webp)
+**错误信息示例及解决方案：**
 
-**Ubuntu 高级选项**
+::: details ❌ 看到 "invalid signature" 错误
+```
+error: (hde, gpt1)/vmlinuz has invalid signature
+error: you need to load the kernel first
+按任意键继续
+```
+**解决方案**：这说明 Secure Boot 没有关闭，请重新进入 BIOS 关闭安全启动
+:::
 
-如您选择 Ubuntu 选项无法启动、网卡无法正常识别，可以尝试使用 Ubuntu 高级选项，选择启动内核为 Linux 5.10 老版本内核进行尝试。
+::: details ❌ 电脑识别不到 ROS2GO
+**可能原因**：
+1. USB 接口问题 → 换个 USB 3.0 接口试试
+2. 电脑太老不支持 UEFI → 联系客服询问兼容性
+3. BIOS 设置问题 → 确认启动模式设为 UEFI
+:::
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241903885.webp)
-
-**Boot Puppy Rescue OS**
-
-Puppy Rescue OS 是我们转为 ROS2GO 随身系统提供的系统恢复方法，我们会在如何恢复章节专门讲解。
+**需要人工支持？**
+- 📞 **QQ技术群**：[群号在这里](/about)
+- 📧 **微信客服**：[联系方式](/about)
+- 📱 **视频求助**：拍摄完整的启动过程视频，便于技术人员诊断

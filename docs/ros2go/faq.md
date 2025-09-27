@@ -1,189 +1,237 @@
-# ROS2GO 常见问题
+# 🤔 常见问题解答
 
-## 如何查看 ROS2GO 版本 {#how-to-check-ros2go-version}
-
-::: tip 版本检测
-v20241019 以后的版本已内置 `fastfetch` 工具。
+::: tip 💡 快速查找
+使用 `Ctrl + F` 搜索关键词，快速找到您的问题！
 :::
 
-### 安装 fastfetch
+## 📱 基础使用
 
-1. 下载安装包：[fastfetch-linux-amd64.deb](https://github.com/tianbot/tianbot_docs/releases/download/fastfetch-latest/fastfetch-linux-amd64.deb)
+### 🔍 如何查看 ROS2GO 版本 {#how-to-check-ros2go-version}
 
-2. 在终端中运行：
+**最简单的方法：**
 ```bash
 fastfetch -l none
 ```
 
-## 默认用户名和密码 {#default-credentials}
+::: details 没有 fastfetch 命令？
+如果您的版本是 v20241019 之前的，请先安装：
+1. [下载安装包](https://github.com/tianbot/tianbot_docs/releases/download/fastfetch-latest/fastfetch-linux-amd64.deb)
+2. 安装：`sudo dpkg -i fastfetch-linux-amd64.deb`
+:::
+
+### 🔐 用户名和密码 {#default-credentials}
 
 - **用户名**：`tianbot`
-- **密码**：`ros` 
+- **密码**：`ros`
 
+### 🔄 ROS1/ROS2 环境切换 {#how-to-switch-ros1-ros2}
 
-## ROS1/ROS2 环境切换 {#how-to-switch-ros1-ros2}
-
-### 切换到 ROS1
+**切换到 ROS1：**
 ```bash
 source $(ros2go_switch -v 1)
 ```
 
-### 切换到 ROS2
+**切换到 ROS2：**
 ```bash
 source $(ros2go_switch -v 2)
 ```
 
-## 中英文输入法切换 {#input-method-switch}
-
-使用 `Ctrl + 空格` 切换输入法，在搜狗输入法下按 `Shift` 键切换中英文输入。
-
-## ROS2 Humble 依赖包安装 {#how-to-install-humble-dependencies}
-
-::: warning 重要提示
-不要直接使用 `apt` 安装 ROS2 Humble 依赖包，应使用源码编译方式。
+::: tip 💡 小技巧
+可以把常用的切换命令添加到 `~/.bashrc` 文件中，这样每次打开终端就自动切换了！
 :::
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240305124006.png)
+## ⌨️ 输入法和界面
 
-### 正确安装方式
+### 🌐 中英文输入法切换 {#input-method-switch}
 
-在 `humble_patch_ws/src` 目录下使用 git 拉取功能包源码，编译后 source 该工作空间：
+- **切换输入法**：`Ctrl + 空格`
+- **中英文切换**：在搜狗输入法下按 `Shift` 键
 
+## 📦 软件安装和使用
+
+### 🚀 ROS2 Humble 依赖包安装 {#how-to-install-humble-dependencies}
+
+::: warning ⚠️ 重要提醒
+**不要**直接使用 `apt install` 安装 ROS2 Humble 包！应该使用源码编译。
+:::
+
+**正确的安装步骤：**
+
+1. **创建工作空间**
 ```bash
-# 创建工作空间
 mkdir -p humble_patch_ws/src
+cd humble_patch_ws/src
+```
 
-# 克隆功能包（替换为实际需要的功能包地址和分支）
-git clone https://github.com/YYYY/XXXXX.git -b ros2 humble_patch_ws/src/XXXX
+2. **下载源码**（以某个功能包为例）
+```bash
+git clone https://github.com/XXXXX/package_name.git -b ros2
+```
 
-# 编译
-cd humble_patch_ws && colcon build --merge-install
+3. **编译安装**
+```bash
+cd .. && colcon build --merge-install
+```
 
-# 激活环境
+4. **激活环境**
+```bash
 source humble_patch_ws/install/setup.bash
 ```
 
-之后即可正常使用 humble 版本下的该功能包
-
-::: tip 提示
-1. 每次需要用到该功能包时，都需要重新 `source humble_patch/install/setup.bash` 才能正常使用
-2. 如果想要在每次打开终端时自动 `source humble_patch/install/setup.bash`，可以考虑在 `~/.bashrc` 文件中
-`source $(ros2go_switch -v 2)`后面添加
-```shell
+::: tip 💡 自动加载
+想要每次开机自动加载？在 `~/.bashrc` 文件的 `source $(ros2go_switch -v 2)` 后面添加：
+```bash
 source humble_patch/install/setup.bash --extend
 ```
 :::
 
-## 如何使用 QQ/微信 {#how-to-use-qq-wechat}
+### 💬 如何使用 QQ/微信 {#how-to-use-qq-wechat}
 
-- QQ：https://im.qq.com/linuxqq/support.html
-- 微信：https://linux.weixin.qq.com
+- **QQ**：[下载 Linux 版本](https://im.qq.com/linuxqq/support.html)
+- **微信**：[下载 Linux 版本](https://linux.weixin.qq.com)
 
-## 为什么看视频没声音 {#why-no-sound-when-watching-video}
+## 🔧 硬件兼容性问题
 
-首先你需要确定一下，
+### 🔇 为什么看视频没声音 {#why-no-sound-when-watching-video}
 
-1. 你的电脑上是否安装了声卡
-2. 你的声卡是可用的
+**快速检查：**
+1. ✅ 确认电脑有声卡且在 Windows 下能正常播放声音
+2. ✅ 检查 ROS2GO 系统音量设置
 
-如果你在 Windows 上使用时可以听到声音，但是在 Linux 上没有声音，那么很可能是 Linux 驱动不兼容。
-因为 linux 官方为了兼容市面上多数的声卡，发布的是通用驱动，但对于部分厂商魔改过的声卡，显然则采用公版驱动无法正常驱动声卡，这同时也会影响到麦克风的正常工作。
+**如果还是没声音：**
 
-ROS2GO 是基于 linux 内核和 Ubuntu 打造，所以也是一样的。通常 ubuntu 系统的长期支持版，如 ubuntu20.04，其硬件驱动会落后最新的 linux 硬件驱动 1~2 年，在 ROS2GO 中，我们采用了 linux 更新最快、最为活跃的 oem 内核系列，以保证用户体验，但仍然无法做到十全十美。
+::: details 解决方案：使用 USB 声卡
+**推荐方案**：购买 USB 声卡 + 有线耳机
 
-::: tip 解决方法
-目前有一个硬件上的解决方法，就是通过听说一体的 USB 声卡 (淘宝上可以买到)+听说一体的有线耳机（目前智能手机的原装耳机一般都是可以的） 
-- 问：那为什么直接将有线耳机插在电脑上不可以呢？ 
-- 答：大体上的逻辑是这样的，有线耳机只能充当输入输出设备，本身不能处理模拟输入的声音信号，集成了音频处理芯片的 USB 声卡（或某些拓展坞 hub）能够处理声音信号。所以，需要通过耳机连接 USB 声卡（或带有声卡的拓展坞 hub），然后再将 USB 声卡（或这种拓展坞 hub）连接电脑，就能够正常识别麦克风和扬声器设备了。 
+**为什么要这样？**
+- Linux 驱动可能不支持您的声卡
+- USB 声卡兼容性更好，即插即用
+
+**购买建议：**
+- 🎧 **笔记本用户**：[EDUP 迷你 USB 无线接收器](https://detail.tmall.com/item.htm?id=579340555919)
+- 🖥️ **台式机用户**：[EDUP 千兆免驱动双频 USB 无线网卡](https://detail.tmall.com/item.htm?id=544565906232)
 :::
 
-## 关机卡住怎么办
+### 📶 进入 ROS2GO 后没有 WiFi {#no-wifi}
 
-::: tip 解决方案 
+**解决方案（按优先级排序）：**
 
-很多人会出现，电脑黑屏后，很长时间没有反应，此时不要过于担心，粗暴的方法就是按住开关键，强制关机，不影响恢复，当然这种情况**很少**发生，**但是千万不要在关机途中进行强制断电，拔掉 ROS2GO 等操作**
-目前这个问题在部分电脑上比较常见，目前有两种方式： 
- 
-1. 直接强制关机 
-即：按住电源键直接断电，经过长时间的测试，不会出现什么问题 
- 
-2. 软重启通过 Windows 关机 
-使用软重启按键：`Ctrl + Alt + PrtScSysRq`，松开`PrtScSysRq`键，然后在按住`Ctrl+Alt`键之后，依次按下`r`,`e`,`i`,`s`,`u`,`b`。切换到 Windows，再关机 
+1. **🔌 最简单**：手机 USB 网络共享
+   - iPhone：设置 → 个人热点 → 允许其他人加入
+   - Android：设置 → 网络共享 → USB 网络共享
+
+2. **🛒 购买 USB WiFi 适配器**
+   - [EDUP 迷你版](https://detail.tmall.com/item.htm?id=579340555919)（笔记本推荐）
+   - [EDUP 桌面版](https://detail.tmall.com/item.htm?id=544565906232)（台式机推荐）
+
+3. **📤 反馈网卡信息**
+   ```bash
+   lspci | grep -i network
+   ```
+   将输出结果发给技术支持群，我们会尝试添加驱动支持
+
+4. **📦 安装最新固件**
+   从 [GitHub](https://github.com/tianbot/tianbot_docs/releases) 下载最新的 `Linux firmware` 包：
+   ```bash
+   sudo dpkg -i linux-firmware-*.deb
+   ```
+
+## 💾 系统问题
+
+### 🔄 关机卡住怎么办 {#shutdown-stuck}
+
+**正常解决方案：**
+1. **等待**：有些电脑关机确实需要较长时间
+2. **强制关机**：长按电源键直接断电（不会损坏系统）
+
+**高级解决方案：**
+使用 `Ctrl + Alt + PrtScSysRq` 组合键，然后依次按 `r`、`e`、`i`、`s`、`u`、`b`
+
+::: warning ⚠️ 重要提醒
+**千万不要**在关机过程中拔掉 ROS2GO！
 :::
 
-## ROS2GO 三不要操作 {#three-dont}
+### 💿 无法访问 Windows 硬盘 {#cannot-access-windows-disk}
 
-> 很大一部分兼容性问题（99% 以上），主要是因为电脑与 Ubuntu 的兼容问题，这个问题可以善用搜索的方法，先在搜索引擎上搜索相关问题。
+**原因**：Windows 快速启动导致磁盘没有完全关闭
 
-1. 不要在使用中直接拔掉 ROS2GO
-2. 不要随意修改根（/）目录下的文件
-3. 不要轻易改动预置 NVIDIA 驱动
-
-## 系统文件相关和软件版本 {#system-file-and-software-version}
-
-| 版本       | 操作系统及版本                | ROS 版本          | 总容量 | 系统占用说明                                       |
-|------------|-------------------------------|-------------------|--------|---------------------------------------------------|
-| P128| Ubuntu 20.04 + Noetic + Humble | Noetic + Humble    | 128GB   | 资料盘 10GB，根分区空余约 100GB `可定制更大容量` |
-
-## 配套课程相关
-
-目前有：古月出品《ROS 机械臂开发实战》、田博出品《ROS 移动机器人开发实战》等
-
-- 观看方式：打开终端输入：`ros2go_video` 稍等几秒钟即可打开默认浏览器查看在线课程
-
-- 观看时限：**从首次浏览在线课程开始算起**，三月内有效
-
-## 无法启动提示任意键继续 {#cannot-start}
-
-```shell
-error: (hde, gpt1)/vmlinuz has invalid signature
-error: you need to load the kernel first
-按任意键继续 or press any key to continue
+**解决方案：**
+```bash
+sudo ntfsfix /dev/sda2  # 替换为实际的磁盘分区号
 ```
 
-![image-20211208151355112](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112081513401.webp)
-这个提示一般都是没有关闭安全启动 Secure Boot，只需在 BIOS 中关闭掉即可正常启动
+::: tip 💡 彻底解决
+在 Windows 中关闭快速启动：
+控制面板 → 电源选项 → 选择电源按钮的功能 → 取消勾选"启用快速启动"
+:::
 
-## 进入 ROS2GO 后没有 WiFi
+### ⚙️ 设置打不开，闪退 {#settings-crash}
 
-网卡型号实在太多了，同时厂家会定制奇怪型号的网卡，ROS2GO 无法保证所有网卡都支持，请查阅兼容列表中**网卡型号**支持，检查一下是否支持您的 WiFi 型号，如果无法识别网卡首先查看是否关闭 Secure Boot 或者更换内核启动查看是否可以正常驱动，如果还是无法正常驱动，可以试试以下方法
-
-1. 手机连接电脑，使用手机自带的 USB 网络共享功能，本条经测试苹果和安卓手机都是可以使用的，具体方法可以搜索查看
-
-2. 购买一个 USB 接口的 WiFi 适配器
-
-  - 笔记本[EDUP 翼联迷你 usb 无线接收器](https://detail.tmall.com/item.htm?id=579340555919)。
-  - 台式机[EDUP 翼联千兆免驱动双频 USB 无线网卡](https://detail.tmall.com/item.htm?id=544565906232)
-
-3. ROS2GO 系统终端输入：`lspci | grep -i network` 将结果反馈给售后群，我们工程师会视情况给出解决建议
-
-4. 使用手机 USB 网络共享功能，本条经测试苹果和安卓手机都是可以使用的，具体方法如下：
-
-- 安卓端
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20241223152024.png)
-- 苹果端
-苹果手机可以通过 USB 共享网络给电脑使用，打开设置功能，开启蜂窝网络，打开个人热点 (未开启蜂窝网络该功能不可用)，将 USB 数据线与电脑进行连接，选择允许其他人加入，根据提示选择 USB 共享网络，此时电脑即可正常上网;
-
-5. 从 [tianbot_docs/releases](https://github.com/tianbot/tianbot_docs/releases) 下载日期最新的`Linux firmware for ROS2GO`固件包，解压后使用`sudo dpkg -i`命令安装`.deb`安装包
-
-## 无法访问原来的 Windows 下的硬盘 {#cannot-access-windows-disk}
-
-这是一个使用双系统时常见的问题，最常见的原因是没有关闭 Windows 的快速启动，这样 Windows 并不是完全正常的关闭，了解问题可参考这个[链接](https://askubuntu.com/questions/145902/unable-to-mount-windows-ntfs-filesystem-due-to-hibernation)，修复此类问题：Error mounting /dev/sda2，使用命令
-
-```shell
-sudo ntfsfix /dev/sda2  
+**解决方案：**
+```bash
+sudo apt install pipewire
 ```
 
-## 设置打不开，闪退
+::: info ℹ️ 版本说明
+v20241019 及以后版本已修复此问题
+:::
 
-早期版本 ROS2GO 缺少`pipewire`包，安装即可：`sudo apt install pipewire`，`v20241019`版本之后已修复这个问题
+## 🚫 三不要原则 {#three-dont}
 
-## 如何将系统安装到硬盘上 {#how-to-install-ros2go-to-hard-disk}
+> 🔥 **99%的问题都是因为违反了这些原则！**
 
-理论上是完全可行的，但这属于**高危操作**，如果有时间可以自己折腾，天之博特公司不做任何技术支持保证。具体可以参考 CSDN 用户"静精进境"的文章[ROS2GO 与 WIN10 双系统安装](https://blog.csdn.net/fzx1443678836/article/details/88718959)。
+1. **❌ 不要**在使用中直接拔掉 ROS2GO
+2. **❌ 不要**随意修改根（/）目录下的文件
+3. **❌ 不要**轻易改动预置 NVIDIA 驱动
 
-请一定注意，对本机进行任何安装系统或者类似磁盘操作之前请备份重要数据，备份备份再备份！
+## 📊 系统信息
 
-## 我是企业用户，能定制么 {#can-i-customize}
+### 💾 系统文件相关和软件版本 {#system-file-and-software-version}
 
-ROS2GO 为企业提供软硬件客制化方案，定制包含不仅限于：容量、LOGO、默认用户信息、随盘资料、驱动支持、软件包、桌面背景等，如您有需要，请联系在线客服，我们会有专人为您解答。
+| 版本 | 操作系统及版本 | ROS 版本 | 总容量 | 系统占用说明 |
+|------|----------------|----------|--------|-------------|
+| P128 | Ubuntu 20.04 + Noetic + Humble | Noetic + Humble | 128GB | 资料盘 10GB，根分区空余约 100GB `可定制更大容量` |
+
+### 🎓 配套课程相关
+
+目前提供：古月出品《ROS 机械臂开发实战》、田博出品《ROS 移动机器人开发实战》等
+
+- **观看方式**：打开终端输入 `ros2go_video`，稍等几秒钟即可打开默认浏览器查看在线课程
+- **观看时限**：从首次浏览在线课程开始算起，三月内有效
+
+## 💼 企业用户
+
+### 🎨 我是企业用户，能定制么 {#can-i-customize}
+
+当然可以！我们提供：
+- 🏷️ **硬件定制**：容量、LOGO、外观
+- ⚙️ **系统定制**：默认用户、预装软件、桌面背景
+- 📚 **资料定制**：随盘文档、驱动支持
+- 🎓 **教育定制**：课程内容、实验环境
+
+📞 **联系方式**：[在线客服](/about)
+
+## 🆘 获取帮助
+
+**遇到问题？按这个顺序寻求帮助：**
+
+1. **📖 先查文档**：使用搜索功能查找相关问题
+2. **🔍 搜索引擎**：搜索 "ROS2GO + 您的问题关键词"
+3. **👥 社区求助**：加入技术支持 QQ 群
+4. **📞 联系客服**：提供详细的错误信息和电脑型号
+
+::: tip 💡 提问技巧
+提问时请提供：
+- 🖥️ 电脑品牌和型号
+- 📋 ROS2GO 版本号
+- ❌ 完整的错误信息截图
+- 📝 已经尝试过的解决方案
+:::
+
+---
+
+::: info 📚 相关文档
+- [快速启动指南](./guide/how-to-start.md)
+- [设备兼容性说明](./applicable/index.md)
+- [系统恢复指南](./guide/how-to-recover.md)
+:::
