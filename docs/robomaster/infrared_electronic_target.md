@@ -113,6 +113,12 @@
 
 官网下载连接 <https://www.st.com/zh/development-tools/stsw-link009.html/>
 
+::: info 网盘
+通过网盘分享的文件：en.stsw-link009.zip
+链接: https://pan.baidu.com/s/1MQpDGWcqHiZNsAuQnO5VGw?pwd=2016 提取码: 2016 
+--来自百度网盘超级会员v4的分享
+:::
+
 可咨询客服获取驱安装包
 
 ##### 安装驱动
