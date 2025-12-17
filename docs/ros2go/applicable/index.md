@@ -113,6 +113,21 @@ sudo dpkg -i linux-firmware-upstream*.deb
 sudo reboot
 ```
 
+## ROS2升级 {#ros2_humble}
+
+### 安装步骤
+
+```bash
+# 1. 下载安装包
+ros2go-github-download latest r
+
+# 2. 安装固件
+sudo dpkg -i ros2_humble*.deb
+
+# 3. 重新加载环境变量
+source /opt/ros/humble/setup.bah
+```
+
 ### 问题反馈
 
 如果遇到网络设备不兼容问题，请运行以下命令并提供输出信息：
