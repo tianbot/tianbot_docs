@@ -82,6 +82,11 @@ export default defineConfig({
     //     }
     // },
     themeConfig, // 主题配置
+    vite: {
+        build: {
+            chunkSizeWarningLimit: 1600
+        }
+    },
 });
 
 const customElements = [
