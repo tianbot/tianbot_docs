@@ -1,6 +1,6 @@
 # 机器人集群
 
-本篇介绍RMTT与Tianbot_mini之间的集群
+本篇介绍两台Tianbot_mini之间的集群
 
 ## 硬件准备
 
