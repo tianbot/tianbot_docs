@@ -25,14 +25,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Cache VitePress build
-        uses: actions/cache@v4
-        with:
-          path: docs/.vitepress/cache
-          key: vitepress-${{ hashFiles('docs/**/*.md', 'docs/.vitepress/config/**') }}
-          restore-keys: |
-            vitepress-
-
       - name: Build
         run: pnpm run docs:build
 
