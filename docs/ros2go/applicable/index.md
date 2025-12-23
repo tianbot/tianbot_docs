@@ -125,7 +125,7 @@ ros2go-github-download latest r
 sudo dpkg -i ros2_humble*.deb
 
 # 3. 重新加载环境变量
-source /opt/ros/humble/setup.bah
+source /opt/ros/humble/setup.bash
 ```
 
 ### 问题反馈

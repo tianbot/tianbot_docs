@@ -43,7 +43,7 @@
 
 #### 添加 USB 设备
 
-选中 BOS2G0 系统恢复工具，点击设置
+选中 ROS2GO 系统恢复工具，点击设置
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555440.png)
 

@@ -83,7 +83,7 @@ Virtual Box 一定注意要安装官网最新版本：https://www.virtualbox.org
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555697.png)
 
-选中 BOS2G0 系统恢复工具，点击设置
+选中 ROS2GO 系统恢复工具，点击设置
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555440.png)
 

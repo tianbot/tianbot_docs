@@ -305,25 +305,34 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             collapsed: false,
             items: [
               {
-                text: '使用手册',
-                collapsed: true,
+                text: '使用指南',
                 link: '/ros2go/guide/',
+              },
+              {
+                text: '快速开始',
+                collapsed: true,
                 items: [
-                  { text: '如何启动', link: '/ros2go/guide/how-to-start', },
-                  { text: '如何备份', link: '/ros2go/guide/how-to-backup', },
-                  { text: '如何恢复', link: '/ros2go/guide/how-to-recover' },
-                  { text: '如何升级', link: '/ros2go/guide/how-to-update' },
+                  { text: '启动系统', link: '/ros2go/guide/how-to-start' },
+                  { text: '备份数据', link: '/ros2go/guide/how-to-backup' },
                 ],
               },
               {
-                text: '设备兼容',
+                text: '升级与维护',
                 collapsed: true,
-                link: '/ros2go/applicable',
                 items: [
-                  { text: 'Apple 笔记本 (x86)', link: '/ros2go/applicable/macbook' },
+                  { text: '系统升级', link: '/ros2go/guide/how-to-update' },
+                  { text: '设备兼容', link: '/ros2go/applicable/' },
+                  { text: 'Apple 笔记本', link: '/ros2go/applicable/macbook' },
                 ],
               },
-              { text: '常见问题', link: '/ros2go/faq' },
+              {
+                text: '故障排除',
+                collapsed: true,
+                items: [
+                  { text: '系统恢复', link: '/ros2go/guide/how-to-recover' },
+                  { text: '常见问题', link: '/ros2go/faq' },
+                ],
+              },
               { text: '更新日志', link: '/ros2go/changelog' },
             ],
           },
