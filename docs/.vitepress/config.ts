@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress'
+import llmstxt from 'vitepress-plugin-llms'
 import {metaConfig} from './config/constants';
 import {head} from './config/head';
 import {markdown} from './config/markdown';
@@ -84,6 +85,7 @@ export default defineConfig({
     // },
     themeConfig, // 主题配置
     vite: {
+        plugins: [llmstxt()],
         build: {
             chunkSizeWarningLimit: 1600
         }
