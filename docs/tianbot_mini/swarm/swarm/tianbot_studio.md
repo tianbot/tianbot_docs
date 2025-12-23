@@ -7,6 +7,7 @@
 
 ## 给mini 开机 ，使用线缆连接机器人
 
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tianbotmini/usb-cable-connect-mini.png)
 
 使用tianbot mini出厂自带的USB 充电线，连接tianbot mini的充电口和电脑的USB口，以便电脑ROS2GO正确识别到tianbot mini设备
 
