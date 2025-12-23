@@ -13,7 +13,8 @@ export default defineConfig({
     title: metaConfig.title,
     description: metaConfig.description,
     locales: metaConfig.locales, //多语言
-    // cleanUrls: true,        // 开启纯净链接无 html
+    cleanUrls: true,             // 纯净 URL，无 .html 后缀
+    metaChunk: true,             // 页面元数据单独打包，提高缓存效率
 
     //启用深色模式
     appearance: true,        // 默认浅色且开启切换
