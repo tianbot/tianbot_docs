@@ -578,6 +578,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: '第二台机器人多机模式的配置', link: '/tianbot_mini/swarm/swarm/2nd-wifi-config' },
                       { text: '两台机器人的联动', link: '/tianbot_mini/swarm/swarm/cooperate-of-two-robot' },
                       { text: '仿真与实体之间的联动', link: '/tianbot_mini/swarm/swarm/cooperate-of-sim2real' },
+                      { text: 'tianbot mini 与 tianbot mini 协同', link: '/tianbot_mini/swarm/swarm/swarm-of-mini-and-mini' },
                       { text: 'tianbot mini 与 rmtt 的空地协同', link: '/tianbot_mini/swarm/swarm/swarm-of-mini-and-rmtt' },
                       { text: 'mini 与 rmtt 的协同救援、物资递送任务', link: '/tianbot_mini/swarm/swarm/collaborative_rescue_and_material_delivery' },
                     ],
