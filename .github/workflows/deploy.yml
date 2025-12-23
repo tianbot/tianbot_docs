@@ -31,7 +31,7 @@ jobs:
       - name: Deploy via rsync
         uses: burnett01/rsync-deployments@7.0.1
         with:
-          switches: -rltvz --delete --no-perms --no-owner --no-group
+          switches: -rlvz --delete --no-perms --no-owner --no-group --no-times
           path: docs/.vitepress/dist/
           remote_path: ${{ secrets.DEPLOY_PATH }}
           remote_host: ${{ secrets.DEPLOY_HOST }}
