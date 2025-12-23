@@ -574,6 +574,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     text: '多机器人联动',
                     collapsed: true,
                     items: [
+                      { text: '使用Tianbot Studio配置 tianbot mini机器人', link: '/tianbot_mini/swarm/swarm/tianbot_studio' },
                       { text: '配置 WIFI 环境', link: '/tianbot_mini/swarm/swarm/wifi-config' },
                       { text: '第二台机器人多机模式的配置', link: '/tianbot_mini/swarm/swarm/2nd-wifi-config' },
                       { text: '两台机器人的联动', link: '/tianbot_mini/swarm/swarm/cooperate-of-two-robot' },
