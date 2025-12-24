@@ -140,11 +140,8 @@ source humble_patch/install/setup.bash --extend
    ```
    将输出结果发给技术支持群，我们会尝试添加驱动支持
 
-4. **📦 安装最新固件**
-   从 [GitHub](https://github.com/tianbot/tianbot_docs/releases) 下载最新的 `Linux firmware` 包：
-   ```bash
-   sudo dpkg -i linux-firmware-*.deb
-   ```
+4. **📦 安装最新 Linux 固件**
+   参考 [固件升级指南](./applicable/#firmware) 更新硬件驱动固件
 
 ## 系统问题
 
