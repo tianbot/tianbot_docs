@@ -85,14 +85,12 @@ Tianbot Mini 多机编队
 :::
 
 #### Rviz 多机模型显示
-1. 启动多机 launch 文件。 
-2. 打开 Rviz
-3. 检查 Display 面板下的 RobotModel 设置。	需手动添加多个 RobotModel，并分别指定 Description Topic 为 tbmn_01/robot_description 等，三台车模型均正确显示。
+1. 启动多机 launch 文件。
+2. 打开 Rviz，检查 Display 面板下的 RobotModel 设置。	需手动添加多个 RobotModel，并分别指定 Description Topic 为 tbmn_01/robot_description 等，三台车模型均正确显示。
 
 #### TF 树完整性检查
 1. 运行 rosrun rqt_tf_tree rqt_tf_tree。
 2. 检查树状结构。 必须存在 3 个独立的 map -> base_link 分支；无断开的节点。
-
 
 #### AMCL 定位发布检查
 1. 运行 rostopic echo /tianbot_mini_1/amcl_pose (抽查一台)。	话题应持续有数据输出，表明定位算法正在运行。
@@ -104,8 +102,8 @@ Tianbot Mini 多机编队
 :::
 
 在路由器模式键盘控制
-1. 确认机器人已连接路由器（非 AP 直连）。 
-2. 电脑端运行 roslaunch tianbot_mini teleop.launch。 
+1. 确认机器人已连接路由器（非 AP 直连）。
+2. 电脑端运行 roslaunch tianbot_mini teleop.launch。
 3. 按键控制移动。	机器人响应键盘指令移动。（注意： 此时不要使用网页端遥控器，网页端通常仅适用于 AP 模式）。
 
 ### 4. 编队跟随与定位优化
@@ -128,10 +126,10 @@ Tianbot Mini 多机编队
 
 #### 转弯速度限制
 1. 控制 Leader 进行转弯。
-2. 严格限制线速度 < 0.2 m/s。
+2. 严格限制线速度 < 0.2 m/s。
 3. Follower 能平滑跟随过弯，未发生严重超调或丢失目标。
 
 ### 调试避坑指南
-1.关于地图： 绝对不要使用未建好的临时地图跑编队。AMCL 极其依赖地图特征，地图烂=定位飘=编队乱。
-2.关于速度： Mini 小车由轮系硬件限制，转弯时线速度一旦超过 0.2 m/s，极易出现打滑或控制失效，务必在代码中做限幅。
-3.关于 Rviz： 如果发现车少了一个，第一时间检查 Namespace (命名空间) 是否填对。
+1. 关于地图： 绝对不要使用未建好的临时地图跑编队。AMCL 极其依赖地图特征，地图烂=定位飘=编队乱。
+2. 关于速度： Mini 小车由轮系硬件限制，转弯时线速度一旦超过 0.2 m/s，极易出现打滑或控制失效，务必在代码中做限幅。
+3. 关于 Rviz： 如果发现车少了一个，第一时间检查 Namespace (命名空间) 是否填对。
