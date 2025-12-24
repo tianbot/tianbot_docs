@@ -20,7 +20,7 @@ pip install https://gh-proxy.tianbot.com/https://github.com/tianbot/tianbot_docs
 ```bash
 # 更新内核
 ros2go-github-download latest k
-# 更新固件驱动
+# 更新 Linux 固件（硬件驱动）
 ros2go-github-download latest f
 # 更新 NVIDIA 驱动
 ros2go-github-download latest n
@@ -152,7 +152,7 @@ ros2go-github-download latest u
 4. 全国产化，增加认证
 
 ## v20220920
-1. 固件自助升级
+1. 系统镜像自助升级（OTA）
 2. 增加ROS2GO启动器，更便捷的启动体验！
 
 ## v20220811

@@ -1,7 +1,7 @@
 # 如何升级 {#how-to-upgrade}
 
 ::: danger 注意
-系统固件升级会丢失数据，在操作前请备份好数据，未备份导致个人数据丢失，天之博特不承担任何责任。
+系统镜像升级会丢失数据，在操作前请备份好数据，未备份导致个人数据丢失，天之博特不承担任何责任。
 :::
 
 ::: warning 提示
@@ -11,21 +11,21 @@
 如果不确定可以在售后群中进行确认，其他版本升级可以联系淘宝客服。
 :::
 
-为了更方便的使用和安全，我们一直在更新迭代，本章节主要讲解系统全量 OTA 更新功能，本功能支持在线自助更新系统，我们也会不定期发布最新系统固件。
+为了更方便的使用和安全，我们一直在更新迭代，本章节主要讲解系统全量 OTA 更新功能，本功能支持在线自助更新系统，我们也会不定期发布最新系统镜像。
 
 ::: danger 数据无价
-本章节如何升级特指的文件系统级全量 OTA 方式：升级固件会丢失数据，在使用前需备份好数据，数据丢失天之博特不承担任何责任，谨慎尝试、谨慎尝试、谨慎尝试。
+本章节如何升级特指的文件系统级全量 OTA 方式：升级系统镜像会丢失数据，在使用前需备份好数据，数据丢失天之博特不承担任何责任，谨慎尝试、谨慎尝试、谨慎尝试。
 :::
 
 ::: warning 旧版本用户
-升级固件功能需要 ROS2GO 支持 Puppy Rescue OS 独立恢复系统。如果您的 ROS2GO 无法进入恢复系统，请联系客服寄回重置以获取升级支持。寄回前请备份好数据，数据丢失天之博特不承担任何责任。
+OTA 升级功能需要 ROS2GO 支持 Puppy Rescue OS 独立恢复系统。如果您的 ROS2GO 无法进入恢复系统，请联系客服寄回重置以获取升级支持。寄回前请备份好数据，数据丢失天之博特不承担任何责任。
 :::
 
 ## 升级简述 {#update-brief}
 
 ROS2GO 系统升级，简单来说只需要 4 步：
 
-1. 下载**最新固件**---必须
+1. 下载**最新系统镜像**---必须
 2. 将 ROS2GO 插入 USB3.0 端口，启动 ROS2GO
 3. 在启动项中选择`Boot Puppy Rescue OS`
 4. 选择`C` 全量`OTA`方式开始升级，进度条走完即可升级成功
@@ -34,13 +34,13 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 请根据如下步骤逐步进行
 
-首先请浏览查看 `OTA 全流程` 的演示视频**如何使用 VirtualBox 来完成 ROS2GO 的 OTA 固件升级.mp4**, 然后继续后续步骤
+首先请浏览查看 `OTA 全流程` 的演示视频**如何使用 VirtualBox 来完成 ROS2GO 的 OTA 系统升级.mp4**, 然后继续后续步骤
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docros2go-ota-with-virtual.png)
 
-### 1.固件下载 {#1.firmware-download}
+### 1.系统镜像下载 {#1.firmware-download}
 
-下载最新固件（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
+下载最新系统镜像（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
 
 ::: tip 下载地址
 [百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016)（提取码：2016）
@@ -115,5 +115,5 @@ md5sum *
 1. 电脑 + Windows10 及以上
 2. ROS2GO * 1
 3. [ToDesk](https://www.todesk.com/download.html) (远程桌面)
-4. ROS2GO [最新固件](/ros2go/guide/how-to-update#1.firmware-download)
+4. ROS2GO [最新系统镜像](/ros2go/guide/how-to-update#1.firmware-download)
 :::

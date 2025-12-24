@@ -8,7 +8,7 @@
 
 | 资源 | 用途 | 下载链接 |
 |------|------|----------|
-| OTA 演示视频 + 恢复镜像 | 系统全量升级所需固件 | [百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016) |
+| OTA 演示视频 + 系统镜像 | 系统全量升级所需镜像 | [百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016) |
 | ROS2GO 系统恢复工具.ova | VirtualBox 虚拟机恢复工具 | [百度网盘](https://pan.baidu.com/e/1OJHoi_Z3KXnSi_4zCzFSpQ) |
 
 ::: tip 下载提示
@@ -32,7 +32,7 @@ ROS2GO 支持三个级别的恢复功能：
 
 最近的 ROS2GO 系统中我们进一步增强了系统恢复能力，在原来`ros2go_recovery`基础之上，新增了自动增量备份功能，用户可以通过`Timeshift`软件自助控制备份还原策略。
 
-除此之外我们还增加了系统全量 OTA 功能，用户可以在 Puppy Rescue OS 独立恢复系统下，升级 ROS2GO 到我们发布的任意系统。仅需下载我们定时发布的固件包，放置到指定位置然后执行恢复操作即可。
+除此之外我们还增加了系统全量 OTA 功能，用户可以在 Puppy Rescue OS 独立恢复系统下，升级 ROS2GO 到我们发布的任意系统。仅需下载我们定时发布的系统镜像，放置到指定位置然后执行恢复操作即可。
 :::
 
 ## 恢复步骤 {#recovery-steps}
