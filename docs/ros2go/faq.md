@@ -73,9 +73,9 @@ mkdir -p humble_patch_ws/src
 cd humble_patch_ws/src
 ```
 
-2. **下载源码**（以某个功能包为例）
+2. **下载源码**（以 navigation2 为例）
 ```bash
-git clone https://github.com/XXXXX/package_name.git -b ros2
+git clone https://github.com/ros-navigation/navigation2.git -b humble
 ```
 
 3. **编译安装**

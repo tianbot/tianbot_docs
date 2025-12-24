@@ -110,12 +110,6 @@ USB 设备，添加 ROS2GO
 
 此时，按下回车键，根据提示选择 Puppy Rescue OS 系统即可
 
-进入 Puppy Rescue OS 独立恢复系统下，根据需要，选择对应选项，然后输入 yes，等待进度条走完后重启电脑即可。
-
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup#bios-load-recover)
-
-- B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击`B-RECOVERY`选项即可。
-
-- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/ros2go/guide/how-to-update#update-brief)
+进入 Puppy Rescue OS 独立恢复系统下，根据需要选择对应选项（参考上方[恢复方式选择](#choose-recovery-mode)），然后输入 yes，等待进度条走完后重启电脑即可。
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
