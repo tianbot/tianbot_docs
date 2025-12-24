@@ -28,10 +28,9 @@ roscd abc_swarm/nodes && python3 tianbot_mini_scan_ip.py
 ```
  在输出中此时连接到路由器后被分配的 IP 地址，确认tianbot mini 已上线，成功连接到路由器
 
-3. 在夜光地图和挡板环境中建图
+### 3. 在夜光地图和挡板环境中建图
 
 运行 建图节点，建立当前围挡场地的栅格地图，以供下一步amcl 定位
-
 
 ::: tip 关键点
 tianbot mini 的放置方向应该要与`RMTT 夜光地图`的`X轴`的正方向保持一致，`mini`的车头应该要与`夜光地图X轴`的方向一致，同时位置点应该坐落在`DJI`图标上
@@ -51,7 +50,8 @@ roslaunch tianbot_mini teleop.launch      # 运行 teleop 键盘控制节点
 roslaunch tianbot_mini map_save.launch    # 保存栅格地图
 ```
    
-5. 启动tianbot mini的驱动 + 添加一个/map 到 /tianbot_mini/map 的两个参考坐标系静态坐标变换关系\
+### 4. 添加关键TF静态变换
+启动tianbot mini的驱动 + 添加一个/map 到 /tianbot_mini/map 的两个参考坐标系静态坐标变换关系\
 
 ::: info 注意
 tianbot mini 的放置方向应该要与刚才建图时保持一致
@@ -90,7 +90,9 @@ roslaunch tianbot_mini amcl_abc_demo.launch
 
 还需要使用可视化工具rviz的 `2D Pose Estimate` 功能，设定初始位姿以供 `amcl` 进行初始定位
 
-5. 通过简单的PID 位置控制，使得`tianbot mini 机器人`跟随 `RMTT 无人机`进行运动
+### 5. 运行PID跟随节点
+
+通过简单的PID 位置控制，使得`tianbot mini 机器人`跟随 `RMTT 无人机`进行运动
 
 - 位置误差的来源为TF变换
 - 被控对象是`tianbot mini`
@@ -105,7 +107,7 @@ roscd abc_swarm/nodes && gedit  pid_tracker.py
 
 打开一个可视化编辑窗口后，将下述代码，复制粘贴在窗口中，然后`Ctrl + S` 进行保存，
 
-** pid_tracker.py**
+**pid_tracker.py**
 ``` python
 #!/usr/bin/env python
 
@@ -183,6 +185,7 @@ if __name__ == '__main__':
         rate.sleep()
 ```
 
+给脚本添加执行权限，并运行脚本程序
 
 ```bash
 roscd abc_swarm/nodes && chmod +x  pid_tracker.py
@@ -194,7 +197,7 @@ rosrun abc_swarm pid_tracker.py _target_frame:=base_link _tracker_frame:=tianbot
 
 - [RMTT 使用说明](https://docs.tianbot.com/rmtt/)
 
-1.给RMTT配网（必须）
+### 1.给RMTT配网（必须）
 
 保证 RMTT 配置连接到指定路由器上
 ```bash
@@ -202,28 +205,33 @@ roscd rmtt_driver/scripts
 ./set_sta.py TianbotOffice www.tianbot.com
 ```
 
-2.查询 RMTT 连接到路由器后被分配的 IP 地址
+### 2.查询 RMTT 连接到路由器后被分配的 IP 地址
 
 ```bash
 roscd rmtt_driver/scripts
 ./rmtt_scan_ip.py
 ```
 
-3. 开启SDK控制模式，具体操作参考链接[使用 RoboMaster SDK 命令控制](https://docs.tianbot.com/rmtt/#%E4%BD%BF%E7%94%A8-robomaster-sdk-%E5%91%BD%E4%BB%A4%E6%8E%A7%E5%88%B6)
+### 3. 开启SDK控制模式
 
-4. 启动 RMTT 驱动（分配的ip地址记得修改）
+具体操作参考链接[使用 RoboMaster SDK 命令控制](https://docs.tianbot.com/rmtt/#%E4%BD%BF%E7%94%A8-robomaster-sdk-%E5%91%BD%E4%BB%A4%E6%8E%A7%E5%88%B6)
+
+### 4. 启动 RMTT 驱动
+
+（分配的ip地址记得修改）
 
 ```bash
 roslaunch rmtt_driver rmtt_bringup.launch drone_ip:=192.168.0.215
 ```
 
-5. 添加并启动飞机正方形路径点巡航例程
+### 5. 添加并启动飞机正方形路径点巡航例程
 
 ```bash
 roscd rmtt_driver/scripts && gedit square_with_translation.py
 ```
 
 打开一个可视化编辑窗口后，将下述代码，复制粘贴在窗口中，然后`Ctrl + S` 进行保存，
+
 **square_with_translation.py**
 ```python
 #!/usr/bin/env python3
