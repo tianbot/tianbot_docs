@@ -40,19 +40,15 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 ### 1.固件下载 {#1.firmware-download}
 
-下载最新固件
+下载最新固件（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
 
-::: tip 提示
-固件下载地址请在在 ROS2GO 技术支持企业微信群联系群主
+::: tip 下载地址
+[百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016)（提取码：2016）
+
+使用 [百度网盘客户端](https://pan.baidu.com/download#) 下载，如需加速可在拼多多搜索 `百度网盘会员1天`
 :::
-
-1. Ubuntu 20.04 + ROS Noetic + ROS2 Humble
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271626988.png)
-
-::: tip 提示
-下载方式：使用[百度网盘客户端](https://pan.baidu.com/download#)下载，如需加速下载，可以自行在拼多多搜索`百度网盘会员1天`
-:::
 
 ### 2.完整性校验 {#2.integrity-verification}
 
