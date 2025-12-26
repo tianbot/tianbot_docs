@@ -33,7 +33,7 @@
 
 ### 下载 ROS2GO 系统恢复工具
 
-- [ROS2GO 系统恢复工具](https://docs.tianbot.com/ros2go/guide/how-to-recover.html#ros2go-recovery-tool)
+- [ROS2GO 系统恢复工具](../guide/how-to-recover.md#ros2go-recovery-tool)
 
 打开 VirtualBox 选择导入，选中下载完成的 `ROS2GO系统恢复工具.ova`
 
@@ -79,7 +79,7 @@ USB 设备，添加 ROS2GO
 
 然后即可成功进入 ROS2GO 的引导界面
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-DocTianbot-Docimage-20240103155011818.png)
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/image-20240103155011818.png)
 
 此时根据提示选择，按下回车键即可成功进入
 

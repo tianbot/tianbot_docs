@@ -38,7 +38,7 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docros2go-ota-with-virtual.png)
 
-### 1.系统镜像下载 {#1.firmware-download}
+### 1.系统镜像下载 {#1.image-download}
 
 下载最新系统镜像（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
 
@@ -115,5 +115,5 @@ md5sum *
 1. 电脑 + Windows10 及以上
 2. ROS2GO * 1
 3. [ToDesk](https://www.todesk.com/download.html) (远程桌面)
-4. ROS2GO [最新系统镜像](/ros2go/guide/how-to-update#1.firmware-download)
+4. ROS2GO [最新系统镜像](/ros2go/guide/how-to-update#1.image-download)
 :::

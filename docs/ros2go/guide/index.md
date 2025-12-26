@@ -69,7 +69,7 @@ ROS2GO 是由天之博特打造的**便携式 ROS 集成开发系统**。基于 
 - 保修申请须提供有效的购买证明
 :::
 
-### 开箱视频
+### 开箱视频 {#unboxing}
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
   <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no"
