@@ -65,10 +65,10 @@ export const themeConfig: DefaultTheme.Config = {
         level: [2, 4],
     },
 
-    //编辑本页
+    //反馈问题
     editLink: {
-        pattern: 'https://github.com/tianbot/tianbot_docs/edit/main/docs/:path',
-        text: '在 GitHub 编辑本页'
+        pattern: 'https://github.com/tianbot/tianbot_docs/issues/new?title=文档问题&body=页面：https://docs.tianbot.com/:path%0A%0A问题描述：',
+        text: '📝 反馈文档问题'
     },
 
     //上次更新时间
