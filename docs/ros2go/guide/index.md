@@ -50,10 +50,26 @@ ROS2GO 是由天之博特打造的**便携式 ROS 集成开发系统**。基于 
 | --- | --- |
 | 容量 | 128GB |
 | 接口 | USB 3.2 |
-| 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble |
+| 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble ¹ |
 | 默认用户 / 密码 | `tianbot` / `ros` |
 | 预装功能包 | TIANBOT、TIANRACER、Turtlebot、MoveIt、Hector、Gmapping、Cartographer 等 |
 | 预装软件 | VS Code、Arduino、QQ、WPS、搜狗输入法 等 |
+
+::: info ¹ 系统支持周期与新版本规划
+**当前版本**：Ubuntu 20.04 LTS 标准支持已于 2025 年 4 月结束，ROS Noetic 已于 2025 年 5 月 EOL。
+
+**即将推出**：Ubuntu 24.04 + ROS2 Jazzy 版本
+
+| 对比项 | 当前版本 (20.04) | 新版本 (24.04) |
+|--------|------------------|----------------|
+| ROS1 支持 | ✅ Noetic (EOL) | ✅ 通过自建 PPA 原生支持 Noetic |
+| ROS2 支持 | Humble | Jazzy (LTS) |
+| 系统支持 | 延长支持到 2030 | 标准支持到 2029 |
+
+> 💡 ROS1 兼容方案采用自建 PPA 原生安装，非容器或 Snap 封装，确保与现有工作流无缝衔接。
+
+新版本开发进度请关注 [更新日志](../changelog.md)。
+:::
 
 ### 保修政策
 

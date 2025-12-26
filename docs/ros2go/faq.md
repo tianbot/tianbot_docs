@@ -85,13 +85,18 @@ cd .. && colcon build --merge-install
 
 4. **激活环境**
 ```bash
-source humble_patch_ws/install/setup.bash
+source ~/humble_patch_ws/install/setup.bash
 ```
+
+::: details 💡 参数说明
+- `--merge-install`：将所有包安装到同一个目录，简化环境变量配置
+- `--extend`：扩展现有 ROS 环境而非覆盖，允许同时使用多个工作空间
+:::
 
 ::: tip 💡 自动加载
 想要每次开机自动加载？在 `~/.bashrc` 文件的 `source $(ros2go_switch -v 2)` 后面添加：
 ```bash
-source humble_patch/install/setup.bash --extend
+source ~/humble_patch_ws/install/setup.bash --extend
 ```
 :::
 
@@ -195,9 +200,16 @@ v20241019 及以后版本已修复此问题
 
 ### 系统文件相关和软件版本 {#system-file-and-software-version}
 
-| 版本 | 操作系统及版本 | ROS 版本 | 总容量 | 系统占用说明 |
-|------|----------------|----------|--------|-------------|
-| P128 | Ubuntu 20.04 + Noetic + Humble | Noetic + Humble | 128GB | 资料盘 10GB，根分区空余约 100GB `可定制更大容量` |
+| 版本 | 操作系统 | ROS 版本 | 总容量 | 说明 |
+|------|----------|----------|--------|------|
+| P128 (当前) | Ubuntu 20.04 | Noetic + Humble | 128GB | 根分区空余约 100GB |
+| P128 (规划中) | Ubuntu 24.04 | Noetic (自建 PPA) + Jazzy | 128GB | 开发中，敬请期待 |
+
+> 💡 新版本 ROS1 兼容方案采用自建 PPA 原生安装，非容器或 Snap 封装，确保与现有工作流无缝衔接。
+
+::: tip 💡 容量可定制
+如需更大容量，请联系客服定制。
+:::
 
 ### 配套课程相关 {#courses}
 
