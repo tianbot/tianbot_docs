@@ -7,7 +7,7 @@ Linux 系统的硬件兼容性一直是个复杂问题。通常情况下：
 - 最新 Linux 驱动又落后于 Windows 驱动
 
 ::: details 📋 当前版本说明
-**ROS2GO 20.04 版本**：为了同时支持 ROS1 Noetic 和 ROS2 Humble，我们使用 Ubuntu 20.04 LTS。如果完全依赖 Ubuntu 官方驱动，将落后主流硬件驱动至少 5 年。
+**ROS2GO 20.04 版本**：为了同时支持 ROS1 Noetic 和 ROS2 Humble，我们使用 Ubuntu 20.04 LTS。通过自定义内核编译直接追踪上游最新版本，已完全解决驱动滞后问题。
 
 **ROS2GO 24.04 版本（开发中）**：即将推出的 Ubuntu 24.04 版本将搭载 ROS2 Jazzy，同时兼容 ROS1。新版本将大幅改善硬件兼容性，减少对定制内核的依赖。
 :::
