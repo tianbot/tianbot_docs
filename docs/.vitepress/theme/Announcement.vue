@@ -39,6 +39,9 @@
 </template>
 
 <script>
+import { useRoute } from 'vitepress';
+import { watch } from 'vue';
+
 export default {
     data() {
         return {
@@ -50,6 +53,15 @@ export default {
             dragOffset: { x: 0, y: 0 },
             snapThreshold: 20,
         };
+    },
+    setup() {
+        const route = useRoute();
+        return { route };
+    },
+    watch: {
+        'route.path'() {
+            this.showPopover = false;
+        }
     },
     computed: {
         btnStyle() {
