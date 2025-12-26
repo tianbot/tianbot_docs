@@ -163,7 +163,7 @@ BitLocker 是 Windows 的磁盘加密功能。当你修改 BIOS 设置（如关�
 在 ROS2GO 启动界面，尝试以下选项：
 
 1. **首选**：选择 "Ubuntu"（默认选项）
-2. **如果第1个不行**：选择 "Ubuntu 高级选项" → 选择较老的内核版本
+2. **如果第1个不行**：选择 "Ubuntu 高级选项" → 选择倒数第2或第3个内核版本（版本号较小的）
 3. **特殊情况**：选择 "Boot Puppy Rescue OS"（系统恢复模式）
 
 ![ROS2GO启动选项](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241903118.webp)
