@@ -10,7 +10,6 @@ import { useRoute } from 'vitepress';
 import mediumZoom from 'medium-zoom';
 import CopyOrDownloadAsMarkdownButtons from 'vitepress-plugin-llms/vitepress-components/CopyOrDownloadAsMarkdownButtons.vue'
 
-import './Announcement.css'
 import './index.css';
 
 export default {
