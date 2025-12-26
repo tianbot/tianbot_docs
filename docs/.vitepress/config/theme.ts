@@ -44,7 +44,7 @@ export const themeConfig: DefaultTheme.Config = {
     ],
 
     //手机端深浅模式文字修改
-    darkModeSwitchLabel: '深浅模式',
+    darkModeSwitchLabel: '外观',
 
     //页脚
 
