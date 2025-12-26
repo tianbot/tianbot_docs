@@ -57,7 +57,7 @@ pnpm run docs:preview
 ### Image Management
 - Images are hosted on Alibaba Cloud OSS: `https://tianbot-pic.oss-cn-beijing.aliyuncs.com/`
 - PicGo is used for image uploading with automatic path generation
-- Image paths follow pattern: `tianbot-pic/Tianbot-Doc/[category]/`
+- **Important**: Image paths may have non-standard formats like `tianbot-pic/Tianbot-DocTianbot-Docimage-xxx.png` (no slashes between segments). Do not "fix" these paths - they are intentional OSS paths.
 
 ### Markdown Features
 The site uses enhanced Markdown with:
@@ -67,14 +67,27 @@ The site uses enhanced Markdown with:
 - Bilibili video embedding
 - Custom styling for tables and content layout
 
+### Theme Customization
+- Custom styles: `docs/.vitepress/theme/index.css`
+- Features include: heading gradients, medium-zoom for images, copy-as-markdown buttons, ultra-wide screen optimization
+
 ### Content Guidelines
 - Each major section should have an `index.md` as the main entry point
+- ROS2GO section: `/ros2go/` redirects to `/ros2go/guide/` as the unified entry point
 - Use VitePress container syntax for callouts: `:::tip`, `:::warning`, `:::danger`
 - Embed Bilibili videos using iframe with `&autoplay=0` parameter
 - Use relative links for cross-references: `[link text](../other-section/file.md)`
 - Maintain consistent Chinese language throughout documentation
+- Use h4 headings (`####`) for numbered steps instead of bold text for better semantics
 
 ### Site Deployment
 - Production site: https://docs.tianbot.com
 - Sitemap generation is configured for SEO
 - Git-based last modified timestamps are tracked
+
+## Product Technical Notes
+
+### ROS2GO
+- Based on Ubuntu 20.04 LTS, supports both ROS1 Noetic and ROS2 Humble
+- Uses custom kernel compilation tracking upstream latest to solve driver lag issues
+- Ubuntu 24.04 version in development with ROS2 Jazzy and self-hosted PPA for ROS1 Noetic support
