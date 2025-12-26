@@ -80,6 +80,14 @@ The site uses enhanced Markdown with:
 - Maintain consistent Chinese language throughout documentation
 - Use h4 headings (`####`) for numbered steps instead of bold text for better semantics
 
+### Writing Style (Feynman Approach)
+- **用大白话解释** - 避免堆砌术语，像给朋友讲故事一样写文档
+- **先讲"为什么"** - 在介绍操作步骤前，先说明这样做的原因和目的
+- **善用类比** - 用生活中的例子解释抽象概念（如：话题通信像微信群聊）
+- **循序渐进** - 从简单到复杂，每一步都建立在前一步的理解之上
+- **承认局限** - 诚实说明哪些情况可能不适用，不要过度承诺
+- **少即是多** - 一段话只讲一个重点，避免信息过载
+
 ### Site Deployment
 - Production site: https://docs.tianbot.com
 - Sitemap generation is configured for SEO
