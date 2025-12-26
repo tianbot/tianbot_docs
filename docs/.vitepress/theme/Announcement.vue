@@ -30,7 +30,7 @@
                 <a href="https://tianbot.taobao.com/" target="_blank" class="action-btn primary">
                     🛒 店铺
                 </a>
-                <a href="/about" class="action-btn success">
+                <a href="/about" class="action-btn success" @click="closePopover">
                     👥 加群
                 </a>
             </div>
@@ -162,11 +162,11 @@ export default {
 .floating-btn {
     position: fixed;
     bottom: 100px;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #a8b5f0 0%, #c9a8e8 100%);
+    box-shadow: 0 3px 12px rgba(168, 181, 240, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -177,9 +177,28 @@ export default {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* 移动端更小 */
+@media (max-width: 768px) {
+    .floating-btn {
+        width: 38px;
+        height: 38px;
+    }
+    .btn-icon {
+        font-size: 16px;
+    }
+    .btn-close {
+        width: 14px;
+        height: 14px;
+        font-size: 11px;
+        line-height: 13px;
+        top: -3px;
+        right: -3px;
+    }
+}
+
 .floating-btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 5px 16px rgba(168, 181, 240, 0.45);
 }
 
 .floating-btn:active {
@@ -187,7 +206,7 @@ export default {
 }
 
 .btn-icon {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .btn-close {
@@ -226,7 +245,7 @@ export default {
 }
 
 .header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #a8b5f0 0%, #c9a8e8 100%);
     color: white;
     padding: 12px 16px;
     display: flex;
@@ -287,12 +306,12 @@ export default {
 }
 
 .action-btn.primary {
-    background: #667eea;
+    background: #a8b5f0;
     color: white;
 }
 
 .action-btn.success {
-    background: #26de81;
+    background: #7dd3a8;
     color: white;
 }
 
