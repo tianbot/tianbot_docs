@@ -67,8 +67,8 @@ export const themeConfig: DefaultTheme.Config = {
 
     //反馈问题
     editLink: {
-        pattern: 'https://github.com/tianbot/tianbot_docs/issues/new?title=文档问题&body=页面：https://docs.tianbot.com/:path%0A%0A问题描述：',
-        text: '📝 反馈文档问题'
+        pattern: 'https://github.com/tianbot/tianbot_docs/issues/new?template=doc-feedback.yml&page-url=https://docs.tianbot.com/:path',
+        text: '反馈文档问题'
     },
 
     //上次更新时间
