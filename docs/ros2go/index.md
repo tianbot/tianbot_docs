@@ -1,25 +1,9 @@
-# ROS2GO
+---
+title: ROS2GO
+head:
+  - - meta
+    - http-equiv: refresh
+      content: 0;url=/ros2go/guide/
+---
 
-ROS2GO 是由天之博特打造的**便携式 ROS 集成开发系统**。基于 Ubuntu 深度定制，无需对原有系统做任何改动，即可在绝大多数 x86 架构的 PC、笔记本上快速启动。
-
-## 快速入口
-
-| 我想... | 去这里 |
-|---------|--------|
-| 刚收到货，立即开始使用 | [使用指南](./guide/) |
-| 了解我的电脑是否兼容 | [设备兼容](./applicable/) |
-| 查找问题解决方案 | [常见问题 FAQ](./faq.md) |
-| 查看版本更新历史 | [更新日志](./changelog.md) |
-
-## 适用人群
-
-- 想快速了解 ROS 的初学者
-- 需要统一开发环境的工程师
-- 需要统一教学环境的高校实验室、培训机构
-- 需要统一比赛开发环境的 RUMA、智能车等比赛
-
-## 延伸阅读
-
-- [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)
-- [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)
-- [带上ROS2GO，来一场说走就走的ROS旅行](http://www.guyuehome.com/2237)
+正在跳转到 [ROS2GO 使用指南](/ros2go/guide/)...
