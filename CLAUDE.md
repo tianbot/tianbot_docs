@@ -56,7 +56,7 @@ pnpm run docs:preview
 
 ### Image Management
 - Images are hosted on Alibaba Cloud OSS: `https://tianbot-pic.oss-cn-beijing.aliyuncs.com/`
-- PicGo is used for image uploading with automatic path generation
+- Use [pic-opendal](https://github.com/frostming/pic-opendal) for image uploading (`cargo install pic-od`)
 - **Important**: Image paths may have non-standard formats like `tianbot-pic/Tianbot-DocTianbot-Docimage-xxx.png` (no slashes between segments). Do not "fix" these paths - they are intentional OSS paths.
 
 ### Markdown Features
