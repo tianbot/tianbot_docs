@@ -96,6 +96,6 @@ ROS2GO 是由天之博特打造的**便携式 ROS 集成开发系统**。基于 
 
 - [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)
 - [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)
-- [ROS2Go--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)
-- [巧萌易携之ROS2Go的不完全教研攻略](https://blog.csdn.net/zhangrelay/article/details/83615341)
+- [ROS2GO--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)
+- [巧萌易携之ROS2GO的不完全教研攻略](https://blog.csdn.net/zhangrelay/article/details/83615341)
 - [带上ROS2GO，来一场说走就走的ROS旅行](http://www.guyuehome.com/2237)
