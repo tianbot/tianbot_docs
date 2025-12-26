@@ -53,6 +53,9 @@ export default {
     },
     computed: {
         btnStyle() {
+            // SSR 时 window 不存在
+            if (typeof window === 'undefined') return {};
+
             const style = {};
             if (this.position.x <= window.innerWidth / 2) {
                 style.left = this.position.x + 'px';
