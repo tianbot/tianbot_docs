@@ -138,7 +138,7 @@ p code {
 
 /* Copy/Download as Markdown 按钮样式优化 */
 .markdown-copy-buttons {
-  margin-bottom: 24px !important;
+  margin-bottom: 8px !important;
   justify-content: flex-end !important;
 }
 
