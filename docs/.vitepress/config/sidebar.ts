@@ -313,6 +313,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 items: [
                   { text: '启动系统', link: '/ros2go/guide/how-to-start' },
+                  { text: '设备兼容', link: '/ros2go/applicable/' },
                   { text: '备份数据', link: '/ros2go/guide/how-to-backup' },
                 ],
               },
@@ -321,7 +322,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 items: [
                   { text: '系统升级', link: '/ros2go/guide/how-to-update' },
-                  { text: '设备兼容', link: '/ros2go/applicable/' },
                   { text: 'Apple 笔记本', link: '/ros2go/applicable/macbook' },
                 ],
               },

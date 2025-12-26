@@ -198,6 +198,6 @@ error: you need to load the kernel first
 :::
 
 **需要人工支持？**
-- **QQ技术群**：[群号在这里](/about)
-- **微信客服**：[联系方式](/about)
+- **QQ 频道**：[ROS2GO 交流群](https://pd.qq.com/s/ff87jqozl)（推荐，问题更容易被看到）
+- **QQ 群 / 微信群**：[点击查看联系方式](/about)
 - **视频求助**：拍摄完整的启动过程视频，便于技术人员诊断

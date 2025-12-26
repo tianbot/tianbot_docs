@@ -47,11 +47,11 @@ ROS2GO 支持三个级别的恢复功能：
 
 ### 恢复方式选择 {#choose-recovery-mode}
 
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup#bios-load-recover)
+- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](./how-to-backup.md#bios-load-recover)
 
 - B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击`B-RECOVERY`选项即可。
 
-- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/ros2go/guide/how-to-update#update-brief)
+- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](./how-to-update.md#update-brief)
 
 针对各自遇到的情况选择恢复方式即可快速进行恢复，关于恢复相关技术支持可以在技术支持群进行咨询。
 

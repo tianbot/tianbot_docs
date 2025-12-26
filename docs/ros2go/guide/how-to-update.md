@@ -33,7 +33,7 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docros2go-ota-with-virtual.png)
 
-### 1.系统镜像下载 {#1.image-download}
+### 1. 系统镜像下载 {#image-download}
 
 下载最新系统镜像（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
 
@@ -45,7 +45,7 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271626988.png)
 
-### 2.完整性校验 {#2.integrity-verification}
+### 2. 完整性校验 {#integrity-verification}
 
 在 Windows 上使用`git bash`进行校验
 
@@ -84,8 +84,8 @@ md5sum *
 此时你的`ROS2GO_DATA/ros2go_ota/firmware`目录应如下图所示
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071350446.webp)
 
-### 3.进入恢复系统 {#3.into-recovery-system}
-重启电脑，切换至 Windows 系统，然后参考[文章](/ros2go/guide/how-to-recover#from-virtualbox-start)使用 Virtual Box 虚拟机启动部分，然后再继续进行以下操作
+### 3. 进入恢复系统 {#into-recovery-system}
+重启电脑，切换至 Windows 系统，然后参考[文章](./how-to-recover.md#from-virtualbox-start)使用 Virtual Box 虚拟机启动部分，然后再继续进行以下操作
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
 
@@ -93,7 +93,7 @@ md5sum *
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
 
-### 4.升级成功 {#4.upgrade-success}
+### 4. 升级成功 {#upgrade-success}
 
 - 遇到 Do you wish to run this program? 输入`yes`，然后按下 Enter 键即可
 - 遇到 Press ENTER key to save session....的选项，选择`NO SAVE`，然后按下 Enter 键即可
@@ -102,7 +102,7 @@ md5sum *
 
 如果重启之后无法进入系统，请不要焦虑，请按照流程再更新一次。
 
-### 5. 远程协助 {#5.remote-assistance}
+### 5. 远程协助 {#remote-assistance}
 
 如果升级过程中遇到难以解决的问题，淘宝联系客服并提供订单号，技术人员会远程协助你。
 
@@ -110,5 +110,5 @@ md5sum *
 1. 电脑 + Windows10 及以上
 2. ROS2GO * 1
 3. [ToDesk](https://www.todesk.com/download.html) (远程桌面)
-4. ROS2GO [最新系统镜像](/ros2go/guide/how-to-update#1.image-download)
+4. ROS2GO [最新系统镜像](#image-download)
 :::
