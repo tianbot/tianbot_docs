@@ -4,9 +4,11 @@
 
 ## 修改机器人环境变量(配网工具Tianbot Toolkit下)
 切换ROS2GO（电脑端）的WIFI连接，使其连接至配网工具Tianbot Toolkit的WIFI
+
 > 注意：确保先配置网络信息，再配置机器人环境变量信息
+
 从浏览器登录至`192.168.4.1`连接到`TIANBOT Toolkit`工具
-修改`ROS`环境变量信息，填入需要连接的`ROBOT NAME`和`ROS MASTER URI`，然后点击配置机器人信息即可，等待 5s 作用，配置成功后，小车会发出滴滴滴的声音
+修改`ROS`环境变量信息，填入需要连接的`ROBOT NAME`和`ROS MASTER URI`，然后点击配置机器人信息即可，等待 5s 作用，配置成功后，机器人会发出滴滴滴的声音
 在下图当中填入`ROBOT NAME`和`ROS_MASTER_URI`
 `ROBOT NAME`是机器人端的节点名称，可以理解为机器人的名称
 `ROS_MASTER_URI`是在上一小步当中使用`ifconfig`获取到的ROS2GO的ip地址（这个地址是在室内WIFI下分配的）
@@ -15,6 +17,10 @@
 ![image-20240604102918335](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604102918335.png)
 
 同时勾选上下方的开机启动
+
+> 勾选开机启动实际上是在开机时自动运行/home/tianbot/tianbot_ws/src/tianbot/tianbot_bringup/launch/tianbot_bringup.launch这个launch文件
+
+
 然后点击获取机器人配置信息
 
 ![image-20240604101753740](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604101753740.png)
@@ -26,12 +32,19 @@
 
 ## 运行roscore（（室内WIFI下））
 将ROS2GO的WIFI连接切换至室内WIFI
-在ROS2GO上运行`roscore`,一段时间之后会听到小车发出滴滴声，证明连接上主节点
+在ROS2GO上运行`roscore`,重启机器人，一段时间之后会听到机器人发出滴滴声，证明连接上主节点
+
+> 注意：如果先启动的机器人，再在ROS2GO上运行roscore可能会出现连接不上的问题
+> 这个时候需要在远程桌面上手动执行launch文件
+> 运行如下命令
+> roslaunch /home/tianbot/tianbot_ws/src/tianbot/tianbot_bringup/launch/tianbot_bringup.launch
+>
+
 此时在ROS2GO端或是远程的机器人端使用`Ctrl+ alt+t `新开一个终端，键入`rostopic list`
 
 ![image-20240604151024912](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604151024912.png)
 
-可以看到下列与小车有关的话题，
+可以看到下列与机器人有关的话题，
 
 - 其中/tianbot_01/则对应了机器人的 Robot_name 参数
 - cmd_vel 对应了机器人的速度控制话题
@@ -135,4 +148,21 @@ twist:
 
 # 运动控制测试
 
+在任意终端上运行（ROS2GO或者远程操控的miniPC）下面两个代码之一，可以发现机器人向前移动了部分距离，运动控制正常
+
+
+下面两个命令的效果但是一样的
+```bash
 rostopic pub /tianbot_01/cmd_vel geometry_msgs/Twist "{linear: {x: 0.2, y: 0.0, z: 0.0}, angular: {x: 0.0,y: 0.0,z: 0.0}}"
+```
+
+```bash
+rostopic pub /tianbot_01/cmd_vel geometry_msgs/Twist "linear:
+  x: 0.2
+  y: 0.0
+  z: 0.0
+angular:
+  x: 0.0
+  y: 0.0
+  z: 0.0" 
+```
