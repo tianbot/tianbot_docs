@@ -1,4 +1,4 @@
-# 首次链接
+# 首次连接
 ## 机器人与遥控器
 在产品充满电后，开机，打开遥控器，遥控机器人进行移动（注意此时左上侧的三段开关为扳下状态），若机器人成功移动则证明机器人与遥控器链接正常。
 
@@ -9,12 +9,14 @@
 ### 连接配网工具Tianbot Toolkit
 #### 机器人与配网工具Tianbot Toolkit
 首先将配网工具Tianbot Toolkit 连接至机器人的miniPC的USB接口，连接方式如下：
-[](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240715151243.png)
-连接成功之后会显示Tianbot（请稍等一段时间）
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240715151243.png)
+
+连接成功之后会显示其AP号（请稍等一段时间）
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc6fe5a260bc1cd32686980976ae4be729.png)
 
 #### ROS2GO与配网工具Tianbot Toolkit
 
-重新扫描当前可连接的`wifi`，连接到`TIANBOT-577DA0`热点（不同配网工具所显示的AP不同，具体以实际显示为主，这里只是做演示）
+重新扫描当前可连接的`wifi`，连接到`TIANBOT-<AP号>`热点（不同配网工具所显示的AP不同，具体以实际显示为主，这里只是做演示，下图连接的即为`TIANBOT-577DA0`）
 
 ![image-20240603163041606](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240603163041606.png)
 
@@ -26,8 +28,8 @@
 
 此时ROS2GO与机器人就连接到由配网工具Tianbot Toolkit构造的同一局域网下，接下来就可以对机器人进行配置了（通过配网工具Tianbot Toolkit）
 
-# 通过配网工具Tianbot Toolkit配置机器人
-## 获取机器人当前配置信息
+## 通过配网工具Tianbot Toolkit配置机器人
+### 获取机器人当前配置信息
 点击获取机器人配置信息，然后看到已提交的提示信息，点击`OK`，即可看到获取到的配置信息
 
 ![image-20240603163717880](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240603163717880.png)
@@ -36,7 +38,7 @@
 
 ![image-20240603164243366](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240603164243366.png)
 
-## 机器人连接WIFI
+### 机器人连接WIFI
 第一次连接机器人，此时机器人不知道所处环境的WIFI，这时候就需要配置WIFI
 首先修改网络连接配置信息，
 
@@ -48,14 +50,12 @@ SSID就是WIFI名称，PASSWORD为WIFI密码
 
   配置完成之后下方的机器人配置信息就会更新，显示出已连接WIFI的信息
   此时，小车就可以连接到WIFI，并且在配网工具Tianbot Toolkit上会显示连接到WIFI所分配的IP地址
-
-
-# 使用ROS2GO的远程桌面登录机器人
-## 切换ROS2GO的WIFI连接
+## 使用ROS2GO的远程桌面登录机器人
+### 切换ROS2GO的WIFI连接
 首先在上一步当中我们的ROS2GO连接到了配网工具Tianbot Toolkit所构建的局域网当中，在这一步当中我们需要切换ROS2GO的WIFI连接。
 上一步当中我们将机器人连接到了室内的WIFI，此时配网工具Tianbot Toolkit的作用就剩下显示IP的功能（我们的ROS2GO不需要连接Tianbot Toolkit所产生的局域网内了），我们需要将ROS2GO也连接至室内的WIFI（就是机器人连接的SSID）.
 
-## 使用远程桌面软件登录机器人的miniPC
+### 使用远程桌面软件登录机器人的miniPC
 经过上一小步我们的ROS2GO和机器人又处在同一局域网下了（由室内WIFI构成的局域网）
 首先我们打开ROS2GO上的Rustdesk软件
 
@@ -82,7 +82,7 @@ SSID就是WIFI名称，PASSWORD为WIFI密码
 
 
 
-# 视频教程
+## 视频教程
 具体连接方式可以参考以下视频：
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
   <iframe src="//player.bilibili.com/player.html?aid=113564874446807&bvid=BV1TYzqYWEkm&cid=27089243777&page=1&autoplay=0" frameborder="no" scrolling="no" 

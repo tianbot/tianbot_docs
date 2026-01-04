@@ -12,11 +12,12 @@
 在下图当中填入`ROBOT NAME`和`ROS_MASTER_URI`
 `ROBOT NAME`是机器人端的节点名称，可以理解为机器人的名称
 `ROS_MASTER_URI`是在上一小步当中使用`ifconfig`获取到的ROS2GO的ip地址（这个地址是在室内WIFI下分配的）
-同时勾选上下方的开机启动
+
 
 ![image-20240604102918335](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docimage-20240604102918335.png)
 
 同时勾选上下方的开机启动
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docca83df4216dad6249a11801163454bc4.png)
 
 > 勾选开机启动实际上是在开机时自动运行/home/tianbot/tianbot_ws/src/tianbot/tianbot_bringup/launch/tianbot_bringup.launch这个launch文件
 
@@ -30,7 +31,7 @@
 之后将机器人重启
 
 
-## 运行roscore（（室内WIFI下））
+## 运行roscore（室内WIFI下）
 将ROS2GO的WIFI连接切换至室内WIFI
 在ROS2GO上运行`roscore`,重启机器人，一段时间之后会听到机器人发出滴滴声，证明连接上主节点
 
@@ -64,9 +65,9 @@
 ```
 此时证明机器人端与ROS2GO的主节点通讯完毕
 
-# 话题数据查看
+## 话题数据查看
 
-## imu
+### imu
 
 ```bash
 rostopic echo /tianbot_01/imu 
@@ -103,7 +104,7 @@ linear_acceleration_covariance: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 ...........
 ```
 
-## odom
+### odom
 
 ```bash
 rostopic echo /tianbot_01/odom
@@ -146,7 +147,7 @@ twist:
 ```
 
 
-# 运动控制测试
+## 运动控制测试
 
 在任意终端上运行（ROS2GO或者远程操控的miniPC）下面两个代码之一，可以发现机器人向前移动了部分距离，运动控制正常
 

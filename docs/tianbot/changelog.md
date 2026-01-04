@@ -10,4 +10,4 @@
 ## v1.0.1 Released
 
 1.调整顺序
-2.增加first_connect
+2.增加解释
