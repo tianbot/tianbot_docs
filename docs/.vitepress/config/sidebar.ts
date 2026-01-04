@@ -361,6 +361,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 items: [
                   { text: '使用指引', link: '/tianbot/guide-06S/' },
                   { text: '路由器和软件环境配置', link: '/tianbot/guide-06S/software-env-config' },
+                  { text: '路由器推荐及ARP绑定功能', link: '/tianbot/guide-06S/arp_config' },
                   { text: '小车网络和环境变量配置', link: '/tianbot/guide-06S/tianbot_toolkit' },
                   { text: '常见问题', link: '/tianbot/guide-06S/question' },
                   { text: 'ROS 基础功能', link: '/tianbot/guide-06S/basic-feature' },
