@@ -352,7 +352,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 items: [
                   { text: '使用指引', link: '/tianbot/guide-06S/' },
                   { text: '首次连接', link: '/tianbot/guide-06S/first_connect' },
-                  { text: '第一次使用', link: '/tianbot/guide-06S/first_use' },
+                  { text: '首次使用', link: '/tianbot/guide-06S/first_use' },
                   { text: 'SLAM 建图和导航', link: '/tianbot/guide-06S/SLAM_and_navigation' },
                   { text: '集群环境配置', link: '/tianbot/guide-06S/software-env-config' },
                   { text: '简单集群控制', link: '/tianbot/guide-06S/basic_swarm_control' },
