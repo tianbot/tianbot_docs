@@ -1,31 +1,26 @@
 # 如何升级 {#how-to-upgrade}
 
-::: danger 注意
-系统固件升级会丢失数据，在操作前请备份好数据，未备份导致个人数据丢失，天之博特不承担任何责任。
+::: danger ⚠️ 重要：升级前必读
+**系统镜像升级会清空数据！** 请务必先备份重要文件。
+
+- 升级采用文件系统级全量 OTA 方式
+- 数据丢失后天之博特不承担责任
+- 如不确定，请先[联系我们](/about)确认
 :::
 
-::: warning 提示
+::: warning 版本要求
 使用全量 OTA 更新功能的前提是：
 - 目前使用的是 Ubuntu 20.04 版本的 ROS2GO，并且可以正常进入 Puppy Rescue OS 独立恢复系统
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240304111832.png)
-如果不确定可以在售后群中进行确认，其他版本升级可以联系淘宝客服。
-:::
 
-为了更方便的使用和安全，我们一直在更新迭代，本章节主要讲解系统全量 OTA 更新功能，本功能支持在线自助更新系统，我们也会不定期发布最新系统固件。
-
-::: danger 数据无价
-本章节如何升级特指的文件系统级全量 OTA 方式：升级固件会丢失数据，在使用前需备份好数据，数据丢失天之博特不承担任何责任，谨慎尝试、谨慎尝试、谨慎尝试。
-:::
-
-::: warning 数据无价
-升级固件功能为 2022 年 6 月以后新增功能，暂不和 2022 年 6 月以前的版本兼容，如果以前的 ROS2GO 需要使用升级功能，建议联系客服寄回重置，这样就可以支持升级固件，需要提醒寄回前需备份好数据，数据丢失天之博特不承担任何责任。
+**旧版本用户**：如果您的 ROS2GO 无法进入恢复系统，请[联系我们](/about)寄回重置以获取升级支持。
 :::
 
 ## 升级简述 {#update-brief}
 
 ROS2GO 系统升级，简单来说只需要 4 步：
 
-1. 下载**最新固件**---必须
+1. 下载**最新系统镜像**---必须
 2. 将 ROS2GO 插入 USB3.0 端口，启动 ROS2GO
 3. 在启动项中选择`Boot Puppy Rescue OS`
 4. 选择`C` 全量`OTA`方式开始升级，进度条走完即可升级成功
@@ -34,27 +29,23 @@ ROS2GO 系统升级，简单来说只需要 4 步：
 
 请根据如下步骤逐步进行
 
-首先请浏览查看 `OTA 全流程` 的演示视频**如何使用 VirtualBox 来完成 ROS2GO 的 OTA 固件升级.mp4**, 然后继续后续步骤
+首先请浏览查看 `OTA 全流程` 的演示视频**如何使用 VirtualBox 来完成 ROS2GO 的 OTA 系统升级.mp4**, 然后继续后续步骤
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docros2go-ota-with-virtual.png)
 
-### 1.固件下载 {#1.firmware-download}
+### 1. 系统镜像下载 {#image-download}
 
-下载最新固件
+下载最新系统镜像（Ubuntu 20.04 + ROS Noetic + ROS2 Humble）
 
-::: tip 提示
-固件下载地址请在在 ROS2GO 技术支持企业微信群联系群主
+::: tip 下载地址
+[百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016)（提取码：2016）
+
+使用 [百度网盘客户端](https://pan.baidu.com/download#) 下载，如需加速可在拼多多搜索 `百度网盘会员1天`
 :::
-
-1. Ubuntu 20.04 + ROS Noetic + ROS2 Humble
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310271626988.png)
 
-::: tip 提示
-下载方式：使用[百度网盘客户端](https://pan.baidu.com/download#)下载，如需加速下载，可以自行在拼多多搜索`百度网盘会员1天`
-:::
-
-### 2.完整性校验 {#2.integrity-verification}
+### 2. 完整性校验 {#integrity-verification}
 
 在 Windows 上使用`git bash`进行校验
 
@@ -93,8 +84,8 @@ md5sum *
 此时你的`ROS2GO_DATA/ros2go_ota/firmware`目录应如下图所示
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071350446.webp)
 
-### 3.进入恢复系统 {#3.into-recovery-system}
-重启电脑，切换至 Windows 系统，然后参考[文章](/ros2go/guide/how-to-recover#from-virtualbox-start)使用 Virtual Box 虚拟机启动部分，然后再继续进行以下操作
+### 3. 进入恢复系统 {#into-recovery-system}
+重启电脑，切换至 Windows 系统，然后参考[文章](./how-to-recover.md#from-virtualbox-start)使用 Virtual Box 虚拟机启动部分，然后再继续进行以下操作
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202109241901671.webp)
 
@@ -102,7 +93,7 @@ md5sum *
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)
 
-### 4.升级成功 {#4.upgrade-success}
+### 4. 升级成功 {#upgrade-success}
 
 - 遇到 Do you wish to run this program? 输入`yes`，然后按下 Enter 键即可
 - 遇到 Press ENTER key to save session....的选项，选择`NO SAVE`，然后按下 Enter 键即可
@@ -111,13 +102,13 @@ md5sum *
 
 如果重启之后无法进入系统，请不要焦虑，请按照流程再更新一次。
 
-### 5. 远程协助 {#5.remote-assistance}
+### 5. 远程协助 {#remote-assistance}
 
-如果升级过程中遇到难以解决的问题，淘宝联系客服并提供订单号，技术人员会远程协助你。
+如果升级过程中遇到难以解决的问题，[联系我们](/about)并提供订单号，技术人员会远程协助你。
 
 ::: tip 预先准备
 1. 电脑 + Windows10 及以上
 2. ROS2GO * 1
 3. [ToDesk](https://www.todesk.com/download.html) (远程桌面)
-4. ROS2GO [最新固件](/ros2go/guide/how-to-update#1.firmware-download)
+4. ROS2GO [最新系统镜像](#image-download)
 :::

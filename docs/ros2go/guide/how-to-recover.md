@@ -1,20 +1,39 @@
 # 如何恢复 {#how-to-recover}
 
+## 资源下载 {#download-resources}
+
+::: danger 重要
+以下资源用于系统恢复/升级，请根据需要下载
+:::
+
+| 资源 | 用途 | 下载链接 |
+|------|------|----------|
+| OTA 演示视频 + 系统镜像 | 系统全量升级所需镜像 | [百度网盘](https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016) |
+| ROS2GO 系统恢复工具.ova | VirtualBox 虚拟机恢复工具 | [百度网盘](https://pan.baidu.com/e/1OJHoi_Z3KXnSi_4zCzFSpQ) |
+
+::: tip 下载提示
+使用 [百度网盘客户端](https://pan.baidu.com/download#) 下载，如需加速可在拼多多搜索 `百度网盘会员1天`
+:::
+
 ## 系统恢复介绍 {#brief-of-recover-system}
 
-早期 ROS2GO 支持 USB HDD 和 Live CD 两种运行模式。Live CD 模式下根分区文件系统不可修改，好处是这种模式系统怎么都玩不坏，但缺点就是系统重启后所有改动都会丢失；而 USB HDD 模式与一般 OS 无异，所有操作都会保留，但是不慎误操作搞坏文件系统，想要恢复就只能联系客服寄回重置。
+ROS2GO 支持三个级别的恢复功能：
+
+| 恢复方式 | 适用场景 | 数据影响 |
+|----------|----------|----------|
+| A. 用户级增量备份 `Timeshift` | 恢复到之前的快照状态 | 恢复到快照时的状态 |
+| B. 系统级原厂快照 `ros2go_recovery` | 系统无法启动，恢复出厂 | 清除所有用户数据 |
+| C. 文件系统级全量 `OTA` | 升级到最新系统版本 | 清除所有用户数据 |
+
+::: details 了解更多背景知识
+早期 ROS2GO 支持 USB HDD 和 Live CD 两种运行模式。Live CD 模式下根分区文件系统不可修改，好处是这种模式系统怎么都玩不坏，但缺点就是系统重启后所有改动都会丢失；而 USB HDD 模式与一般 OS 无异，所有操作都会保留，但是不慎误操作搞坏文件系统，想要恢复就只能[联系我们](/about)寄回重置。
 
 后来我们去掉 Live CD 模式，新增了 Puppy Rescue OS 独立恢复系统，可以理解为类 Windows PE 系统。在独立恢复系统内我们构建了自助恢复工具`ros2go_recovery`，如果遇到误操作系统无法正常启动，可以键入少量命令调起`ros2go_recovery`工具即可将 ROS2GO 系统还原至出厂状态。
 
 最近的 ROS2GO 系统中我们进一步增强了系统恢复能力，在原来`ros2go_recovery`基础之上，新增了自动增量备份功能，用户可以通过`Timeshift`软件自助控制备份还原策略。
 
-除此之外我们还增加了系统全量 OTA 功能，用户可以在 Puppy Rescue OS 独立恢复系统下，升级 ROS2GO 到我们发布的任意系统。仅需下载我们定时发布的固件包，放置到指定位置然后执行恢复操作即可。
-
-至此，ROS2GO 支持了三个级别的恢复功能
-
-- 用户级增量备份恢复`Timeshift`
-- 系统级原厂快照恢复`ros2go_recovery`
-- 文件系统级全量`OTA`
+除此之外我们还增加了系统全量 OTA 功能，用户可以在 Puppy Rescue OS 独立恢复系统下，升级 ROS2GO 到我们发布的任意系统。仅需下载我们定时发布的系统镜像，放置到指定位置然后执行恢复操作即可。
+:::
 
 ## 恢复步骤 {#recovery-steps}
 
@@ -28,11 +47,11 @@
 
 ### 恢复方式选择 {#choose-recovery-mode}
 
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup#bios-load-recover)
+- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](./how-to-backup.md#bios-load-recover)
 
 - B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击`B-RECOVERY`选项即可。
 
-- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/ros2go/guide/how-to-update#update-brief)
+- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](./how-to-update.md#update-brief)
 
 针对各自遇到的情况选择恢复方式即可快速进行恢复，关于恢复相关技术支持可以在技术支持群进行咨询。
 
@@ -47,13 +66,7 @@
 Puppy Rescue OS 独立恢复系统内核比较旧，某些电脑比较新，可能会进不了这个恢复系统，如果遇到这种情况，切换到 Windows 后在 `Virtual box` 虚拟机下操作，虚拟机操作步骤如下：
 
 ::: tip 提示
-
 Virtual Box 一定注意要安装官网最新版本：https://www.virtualbox.org
-
-`RO2GO的OTA升级演示视频及恢复镜像下载`
-
-链接：https://pan.baidu.com/s/17t--eRr-uNSrcdaSTF01cg?pwd=2016
-
 :::
 
 1. 下载安装 VirtualBox 及下述中的几个文件
@@ -64,13 +77,13 @@ Virtual Box 一定注意要安装官网最新版本：https://www.virtualbox.org
 
 ### ROS2GO 系统恢复工具 {#ros2go-recovery-tool}
 
-[恢复工具下载](https://pan.baidu.com/e/1OJHoi_Z3KXnSi_4zCzFSpQ)
+从 [资源下载](#download-resources) 章节下载 `ROS2GO系统恢复工具.ova`
 
 打开 VirtualBox 选择导入，选中下载完成的 `ROS2GO系统恢复工具.ova`
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555697.png)
 
-选中 BOS2G0 系统恢复工具，点击设置
+选中 ROS2GO 系统恢复工具，点击设置
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555440.png)
 
@@ -97,12 +110,6 @@ USB 设备，添加 ROS2GO
 
 此时，按下回车键，根据提示选择 Puppy Rescue OS 系统即可
 
-进入 Puppy Rescue OS 独立恢复系统下，根据需要，选择对应选项，然后输入 yes，等待进度条走完后重启电脑即可。
-
-- A 用户级增量备份恢复`Timeshift`：可以选择需要恢复的快照，[具体操作参考](/ros2go/guide/how-to-backup#bios-load-recover)
-
-- B 系统级原厂快照恢复`ros2go_recovery`：恢复出厂模式，使用鼠标点击`B-RECOVERY`选项即可。
-
-- C 文件系统级全量`OTA`：用于系统升级，[具体步骤](/ros2go/guide/how-to-update#update-brief)
+进入 Puppy Rescue OS 独立恢复系统下，根据需要选择对应选项（参考上方[恢复方式选择](#choose-recovery-mode)），然后输入 yes，等待进度条走完后重启电脑即可。
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112071358548.webp)

@@ -135,3 +135,88 @@ p code {
   max-width: 200px !important;          /* 右侧目录宽度限制为 200px */
   padding-left: 0 !important;           /* 移除目录左侧内边距 */
 }
+
+/* Copy/Download as Markdown 按钮样式优化 */
+.markdown-copy-buttons {
+  margin-bottom: 8px !important;
+  justify-content: flex-end !important;
+}
+
+.markdown-copy-buttons-inner {
+  gap: 8px !important;
+}
+
+.markdown-copy-buttons button {
+  position: relative;
+  padding: 8px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 0 !important;
+  color: var(--vp-c-text-2) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease !important;
+  overflow: visible;
+}
+
+.markdown-copy-buttons button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown-copy-buttons button svg {
+  width: 18px !important;
+  height: 18px !important;
+  transition: all 0.2s ease;
+}
+
+.markdown-copy-buttons button:hover {
+  color: var(--vp-c-brand-1) !important;
+  background: var(--vp-c-default-soft) !important;
+}
+
+.markdown-copy-buttons button:hover svg {
+  transform: scale(1.1);
+}
+
+.markdown-copy-buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Tooltip 效果 */
+.markdown-copy-buttons button::after {
+  content: 'Copy as Markdown';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px !important;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-elv);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.markdown-copy-buttons button.download::after {
+  content: 'Download as Markdown';
+}
+
+.markdown-copy-buttons button:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* 深色模式适配 */
+.dark .markdown-copy-buttons button::after {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}

@@ -1,7 +1,7 @@
 import type {HeadConfig} from "vitepress";
 
 export const head: HeadConfig[] = [
-    ['link',{ rel: 'png', href: '/logo.png'}],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
     
     // get picture no referrer， such as aliyun-oss,  the follower code change " <meta name="referrer" content="no-referrer" /> " in .html file
     ['meta', { name:'referrer', content:'no-referrer'}],

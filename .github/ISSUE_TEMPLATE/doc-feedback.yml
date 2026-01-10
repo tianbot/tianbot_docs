@@ -1,0 +1,42 @@
+name: 文档问题反馈
+description: 反馈文档中的错误、遗漏或改进建议
+title: "[文档] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page-url
+    attributes:
+      label: 页面链接
+      description: 请填写有问题的文档页面 URL
+      placeholder: https://docs.tianbot.com/...
+    validations:
+      required: true
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 问题类型
+      options:
+        - 内容错误
+        - 内容过时
+        - 描述不清
+        - 缺少内容
+        - 链接失效
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述
+      description: 请详细描述您发现的问题
+      placeholder: 请描述问题...
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 改进建议
+      description: 如有改进建议请在此填写（可选）
+      placeholder: 您的建议...
+    validations:
+      required: false

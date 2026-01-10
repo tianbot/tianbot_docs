@@ -312,6 +312,12 @@ roscd rmtt_ros/.. && gedit rmtt_driver/launch/rmtt_bringup.launch
 :::
 - [TELLO SDK 使用说明](https://dl-cdn.ryzerobotics.com/downloads/tello/0301/Tello+SDK+%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.pdf)
 
+下面的这个demo示例完成了一个简单的动作流程，实现效果
+1. 飞机起飞，
+2. 向前飞50cm，
+3. 再向右飞25cm，
+4. 然后降落
+
 **tello_control_with_sdk.py**
 ```python
 import rospy

@@ -1,84 +1,101 @@
-## 产品介绍 {#introduction}
+# ROS2GO 使用指南
 
-ROS2GO™ 是由天之博特打造的便携式 ROS 集成开发系统。基于 Ubuntu 深度定制（包括内核、固件、显卡驱动等），无需对原有系统做任何改动，即可在绝大多数 x86 架构的 PC、笔记本上快速启动，为初学者、开发人员和科研人员提供便捷的 ROS 开发环境。
+::: tip 你现在想做什么？
+根据你的情况，选择下面最合适的入口
+:::
 
-::: tip 适用场景
-ROS2GO 适用于以下用户群体：
+## 刚收到货？
+
+<div class="custom-block tip">
+
+**3 分钟让 ROS2GO 跑起来** [立即开始 →](./how-to-start.md)
+
+插上 USB，调整一下电脑设置，就能看到熟悉的 Ubuntu 桌面了。
+
+</div>
+
+## 日常使用中？
+
+| 我想... | 去这里 |
+|---------|--------|
+| 保护我的工作成果，避免数据丢失 | [备份指南](./how-to-backup.md) |
+| 获取最新的内核、驱动、功能 | [升级指南](./how-to-update.md) |
+| 了解我的电脑是否兼容 | [兼容性说明](../applicable/) |
+
+## 遇到问题了？
+
+| 问题描述 | 解决方案 |
+|----------|----------|
+| 电脑启动不了 ROS2GO | [启动故障排查](./how-to-start.md#cannot-start) |
+| 系统搞坏了，想恢复 | [系统恢复指南](./how-to-recover.md) |
+| WiFi/声卡/显卡不工作 | [兼容性与驱动](../applicable/#ros2go-utils) |
+| 其他各种问题 | [常见问题 FAQ](../faq.md) |
+
+---
+
+## 产品概览
+
+ROS2GO 是由天之博特打造的**便携式 ROS 集成开发系统**。基于 Ubuntu 深度定制，无需对原有系统做任何改动，即可在绝大多数 x86 架构的 PC、笔记本上快速启动。
+
+### 适用人群
+
 - 想快速了解 ROS 的初学者
 - 需要统一开发环境的工程师
 - 需要统一教学环境的高校实验室、培训机构
-- 需要统一产品出厂配置的资料环境
 - 需要统一比赛开发环境的 RUMA、智能车等比赛
-:::
 
-
-## 产品特点 {#features}
-
-- **开箱即用**：无需安装，插入电脑即可[启动](how-to-start.md#start-steps)
-- **轻量便携**：体积小巧，重量轻，可随身携带
-- **定制内核**：集成 BBRv3、Multi-generational LRU、Intel/AMD P-state 驱动、CachyOS 补丁、AUFS 支持、zstd v1.56、Btrfs 透明压缩等先进特性
-- **定制驱动**：支持主流硬件（显卡、声卡、网卡等），包括 Intel/AMD/NVIDIA/MTK/Qualcomm 等厂商产品
-- **无忧恢复**：内置多种[恢复方案](how-to-recover.md)，确保系统稳定性
-- **稳定维护**：积极更新上游[内核、固件、ROS 功能包](https://github.com/tianbot/tianbot_docs/releases)，保持系统新颖
-- **专业售后**：[多渠道售后](/about)支持，保障您的使用体验
-
-
-## 产品规格 {#specifications}
+### 产品规格
 
 | 项目 | 详情 |
 | --- | --- |
-| 材质 | 合金 |
 | 容量 | 128GB |
 | 接口 | USB 3.2 |
-| 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble（源码编译） |
-| 默认用户 | `tianbot` |
-| 默认密码 | `ros` |
-| 预装功能包 | TIANBOT、TIANRACER、Turtlebot、MoveIt、Hector、Gmapping、OpenNI、Cartographer 等 |
-| 预装软件 | VS Code、Arduino、QQ、WPS、搜狗输入法、GIMP 等 |
-| 支持硬件 | **激光雷达**：傲视智绘、思岚、北阳、西克 等<br/>**深度相机**：Intel RealSense、Asus、Astra、Kinect 等 |
+| 预装系统 | Ubuntu 20.04 + ROS Noetic + ROS2 Humble ¹ |
+| 默认用户 / 密码 | `tianbot` / `ros` |
+| 预装功能包 | TIANBOT、TIANRACER、Turtlebot、MoveIt、Hector、Gmapping、Cartographer 等 |
+| 预装软件 | VS Code、Arduino、QQ、WPS、搜狗输入法 等 |
 
+::: info ¹ 系统支持周期与新版本规划
+**当前版本**：Ubuntu 20.04 LTS 标准支持已于 2025 年 4 月结束，ROS Noetic 已于 2025 年 5 月 EOL。
 
-## 产品清单 {#package}
+**即将推出**：Ubuntu 24.04 + ROS2 Jazzy 版本
 
-- ROS2GO 1 个
-- 使用说明 1 个
-- 挂绳 1 根
+| 对比项 | 当前版本 (20.04) | 新版本 (24.04) |
+|--------|------------------|----------------|
+| ROS1 支持 | ✅ Noetic (EOL) | ✅ 通过自建 PPA 原生支持 Noetic |
+| ROS2 支持 | Humble | Jazzy (LTS) |
+| 系统支持 | 延长支持到 2030 | 标准支持到 2029 |
 
-::: tip 注意
-1. 收货后请您检查产品是否完整，如有问题可随时联系客服人员
-2. 包装内容和产品样式变更恕不另外单独通知，具体包装和实际规格以收到货物为准
+> 💡 ROS1 兼容方案采用自建 PPA 原生安装，非容器或 Snap 封装，确保与现有工作流无缝衔接。
+
+新版本开发进度请关注 [更新日志](../changelog.md)。
 :::
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202310241233148.jpg)
+### 保修政策
 
-## 保修政策 {#warranty}
-
-> 保修期自收到货物起算，期间客户正常使用，无擅自拆修、改装，出现非人为的性能故障。
-
-| 类型   |   时效  |
+| 类型 | 时效 |
 | :---: | :---: |
-|  `ROS2GO`盘体  |  `365`天  |
-|  系统重置  |  `1`次  |
-|  系统升级  |  `1`次  |
+| ROS2GO 盘体 | 365 天 |
+| 系统重置 | 1 次 |
+| 系统升级 | 1 次 |
 
-::: danger ⚠️
-- 系统重置代指：系统不能正常启动，如需系统重置请联系客服，确认购买信息无误后，寄回重置。
-- 系统升级代指：系统大版本更新，功能包升级，如需升级请联系客服，确认购买信息无误后，寄回升级。
-- 保修申请须提供有效的购买证明、单据。
+::: warning 注意
+- 系统重置：系统不能正常启动时，[联系我们](/about)寄回重置
+- 系统升级：系统大版本更新时，[联系我们](/about)寄回升级
+- 保修申请须提供有效的购买证明
 :::
 
-## 开箱视频 {#unboxing}
+### 开箱视频 {#unboxing}
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no" 
+  <iframe src="//player.bilibili.com/player.html?aid=456565029&bvid=BV1r5411a7sd&cid=221459248&p=1&autoplay=0" frameborder="no" scrolling="no"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
-## 使用文章 {#user-article}
+### 延伸阅读
 
-- [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)  
-- [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)  
-- [ROS2Go--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)   
-- [巧萌易携之ROS2Go的不完全教研攻略](https://blog.csdn.net/zhangrelay/article/details/83615341)   
-- [带上ROS2GO，来一场说走就走的ROS旅行](http://www.guyuehome.com/2237)  
-- [ROS2GO系统简介](http://www.corvin.cn/990.html)  
+- [ROS2GO是什么？一个便捷的ROS随身系统](https://zhuanlan.zhihu.com/p/47984126)
+- [ROS学习开发套件 – 田老师对ROS2GO简单全面的介绍](https://www.tianbot.com/2018/11/11/81a4ef888b/)
+- [ROS2GO--藏身在迷你固态硬盘中的机器人实验室](https://blog.csdn.net/ZhangRelay/article/details/83096996)
+- [巧萌易携之ROS2GO的不完全教研攻略](https://blog.csdn.net/zhangrelay/article/details/83615341)
+- [带上ROS2GO，来一场说走就走的ROS旅行](http://www.guyuehome.com/2237)

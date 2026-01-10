@@ -1,4 +1,4 @@
-# Tianbot-Doc 维护文档
+# Tianbot Docs
 
 天之博特产品使用手册和ROS开发者指南文档站点。
 
@@ -25,53 +25,29 @@ pnpm run docs:build
 - `basic/` - ROS 基础概念
 - `advanced/` - 高级主题
 
-### 图床配置
-使用 PicGo + 阿里云 OSS：
-- 设定 Keyld：AccessKeyID
-- 设定 KeySecret：AccessKeySecret
-- 储存空间名：tianbot-pic
-- 存储区域：oss-cn-beijing
-- 存储路径：tianbot-pic/Tianbot-Doc/
+### 图床工具
 
-### Markdown 语法
+使用 [pic-opendal](https://github.com/frostming/pic-opendal) + 阿里云 OSS：
 
-**提示框：**
-```markdown
-::: tip 提示
-内容
-:::
+```bash
+# 安装
+cargo install pic-od
 
-::: warning 警告
-内容
-:::
+# 上传图片
+pic-od upload image.png
 
-::: danger 危险
-内容
-:::
+# 批量上传
+pic-od upload *.png
 ```
 
-**B站视频嵌入：**
-```markdown
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=xxx&bvid=xxx&autoplay=0"
-    frameborder="no" scrolling="no"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
+配置文件 `~/.config/pic-od/config.toml` 示例：
+```toml
+[default]
+type = "oss"
+bucket = "tianbot-pic"
+endpoint = "https://oss-cn-beijing.aliyuncs.com"
+access_key_id = "your-access-key-id"
+access_key_secret = "your-access-key-secret"
+root = "tianbot-pic/Tianbot-Doc/"
+url_base = "https://tianbot-pic.oss-cn-beijing.aliyuncs.com"
 ```
-
-**代码组：**
-```markdown
-::: code-group
-```sh [ROS1]
-command for ros1
-```
-```sh [ROS2]
-command for ros2
-```
-:::
-```
-
-## License
-
-Copyright © 2025 Tianbot
-Admin: JIT_SU <sujie@tianbot.com>

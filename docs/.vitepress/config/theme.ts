@@ -44,7 +44,7 @@ export const themeConfig: DefaultTheme.Config = {
     ],
 
     //手机端深浅模式文字修改
-    darkModeSwitchLabel: '深浅模式',
+    darkModeSwitchLabel: '外观',
 
     //页脚
 
@@ -65,10 +65,10 @@ export const themeConfig: DefaultTheme.Config = {
         level: [2, 4],
     },
 
-    //编辑本页
+    //反馈问题
     editLink: {
-        pattern: 'https://github.com/tianbot/tianbot_docs/edit/main/docs/:path',
-        text: '在 GitHub 编辑本页'
+        pattern: 'https://github.com/tianbot/tianbot_docs/issues/new?template=doc-feedback.yml&page-url=https://docs.tianbot.com/:path',
+        text: '反馈文档问题'
     },
 
     //上次更新时间
