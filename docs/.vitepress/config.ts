@@ -1,4 +1,5 @@
 import {defineConfig} from 'vitepress'
+import llmstxt from 'vitepress-plugin-llms'
 import {metaConfig} from './config/constants';
 import {head} from './config/head';
 import {markdown} from './config/markdown';
@@ -13,7 +14,8 @@ export default defineConfig({
     title: metaConfig.title,
     description: metaConfig.description,
     locales: metaConfig.locales, //多语言
-    // cleanUrls: true,        // 开启纯净链接无 html
+    cleanUrls: true,             // 纯净 URL，无 .html 后缀
+    metaChunk: true,             // 页面元数据单独打包，提高缓存效率
 
     //启用深色模式
     appearance: true,        // 默认浅色且开启切换
@@ -82,6 +84,12 @@ export default defineConfig({
     //     }
     // },
     themeConfig, // 主题配置
+    vite: {
+        plugins: [llmstxt()],
+        build: {
+            chunkSizeWarningLimit: 1600
+        }
+    },
 });
 
 const customElements = [

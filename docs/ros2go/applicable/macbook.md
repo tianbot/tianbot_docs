@@ -33,7 +33,7 @@
 
 ### 下载 ROS2GO 系统恢复工具
 
-- [ROS2GO 系统恢复工具](https://docs.tianbot.com/ros2go/guide/how-to-recover.html#ros2go-recovery-tool)
+- [ROS2GO 系统恢复工具](../guide/how-to-recover.md#ros2go-recovery-tool)
 
 打开 VirtualBox 选择导入，选中下载完成的 `ROS2GO系统恢复工具.ova`
 
@@ -43,7 +43,7 @@
 
 #### 添加 USB 设备
 
-选中 BOS2G0 系统恢复工具，点击设置
+选中 ROS2GO 系统恢复工具，点击设置
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202209201555440.png)
 

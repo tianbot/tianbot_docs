@@ -1,5 +1,16 @@
 # 路由器和软件环境配置
 
+## 集群网络拓扑结构说明
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tom06s/swarm_network_topology.png)
+
+这张系统拓扑图描述了一个典型的动捕闭环控制系统：
+- ​感知层：动捕相机捕捉标志点，通过交换机传给 WinPC，由 VRPN 协议广播位姿数据。
+
+- 决策层：ROS2GO 运行 vrpn_client_ros 节点接收位姿，并作为 ROS Master 计算 PID 或轨迹跟踪指令。
+
+- 执行层：小车通过 Wi-Fi 接收 /cmd_vel，驱动电机，同时回传里程计/IMU 等机器人数据。
+
 ## 路由器配置
 
 ### 连接路由器
