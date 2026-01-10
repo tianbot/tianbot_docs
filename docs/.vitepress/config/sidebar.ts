@@ -360,13 +360,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 collapsed: true,
                 items: [
                   { text: '使用指引', link: '/tianbot/guide-06S/' },
-                  { text: '路由器和软件环境配置', link: '/tianbot/guide-06S/software-env-config' },
-                  { text: '路由器推荐及ARP绑定功能', link: '/tianbot/guide-06S/arp_config' },
-                  { text: '小车网络和环境变量配置', link: '/tianbot/guide-06S/tianbot_toolkit' },
-                  { text: '常见问题', link: '/tianbot/guide-06S/question' },
-                  { text: 'ROS 基础功能', link: '/tianbot/guide-06S/basic-feature' },
+                  { text: '首次连接', link: '/tianbot/guide-06S/first_connect' },
+                  { text: '首次使用', link: '/tianbot/guide-06S/first_use' },
+                  { text: 'SLAM 建图和导航', link: '/tianbot/guide-06S/SLAM_and_navigation' },
+                  { text: '集群环境配置', link: '/tianbot/guide-06S/software-env-config' },
                   { text: '简单集群控制', link: '/tianbot/guide-06S/basic_swarm_control' },
-                  { text: 'SLAM 建图和导航', link: '/tianbot/guide-06S/slam_and_nav_of_tom06s' },
+                  { text: '常见问题', link: '/tianbot/guide-06S/question' },
                 ],
               },
               {
