@@ -42,7 +42,7 @@
 ```bash
 roscd abc_swarm/nodes && python3 tianbot_mini_scan_ip.py 
 ```
- 在输出中此时连接到路由器后被分配的 IP 地址，确认tianbot mini 已上线，成功连接到路由器
+ 在输出中此时连接到路由器后被分配的 IP 地址，确认tianbot mini 已上线，成功连接到路由器，连接上时状态显示灯会由红色（AP模式）->蓝色（STA模式），如果未连接上，重复上述步骤，或者更换目标WIFI热点（2.4G频段的）
 
 ### 3. 在夜光地图和挡板环境中建图
 
@@ -244,7 +244,7 @@ roscd rmtt_driver/scripts
 ```
 保证 RMTT 配置连接到指定`WIFI热点`上，比如这里是`TianbotOffice`
 
-然后将按钮拨到上面，变为`STA`模式
+然后将按钮拨到上面，变为`STA`模式，等待半分钟，飞机如果连接上热点，飞机桨叶会转，如果未连接上，重复上述步骤，或者更换目标WIFI热点（5G频段的）
 
 ### 2.查询 RMTT 连接到路由器后被分配的 IP 地址
 
