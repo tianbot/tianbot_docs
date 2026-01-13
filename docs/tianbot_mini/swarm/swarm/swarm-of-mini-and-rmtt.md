@@ -6,7 +6,7 @@
 - ROS2GO
 - 一台Mini
 - 一台RMTT
-- 路由器
+- 2.4G/5G双频段路由器
 - RMTT 配套夜光地图
 - Tianbot Mini 配套挡板
 
@@ -17,9 +17,25 @@
 
 ## Tianbot_mini
 
+### 开机进入AP模式
+
+使用手机或者电脑，确认连接到以`TBMN-XXXX`开头的热点名称，然后打开浏览器中输入`192.168.1.1`，拖动页面中的遥杆，即可控制`tianbot_mini`进行运动
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tianbotmini/web_joystick.png)
+
 ### 1.  给 Tianbot Mini 进行配网
 
 参考[使用 Tianbot Studio 工具给 tianbot mini 机器人配置网络](https://docs.tianbot.com/tianbot_mini/swarm/swarm/tianbot_studio)
+
+然后在`Tianbot_Studio`工具中将 `tianbot_mini` 机器人的里程计重置为`(0, 0)`，双轮离地，将车头朝向`DJI`图标的右手边，不要挡住`DJI`图标
+
+发送`setodom 0 0 \r\n`
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tianbotmini/setodom_zero.png)
+
+再次获取里程计，如下图所示，已经成功置零，后续如需重新置零，重复此操作即可
+
+发送`getodom \r\n`
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tianbotmini/getodom.png)
 
 ### 2. 扫描一下 tianbot mini 当前 IP
 
@@ -38,13 +54,18 @@ tianbot mini 的放置方向应该要与`RMTT 夜光地图`的`X轴`的正方向
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/swarm/grid_map_dji_align.png)
 
+注意运行下面的命令前，先将车的里程计置零
 ```bash
 roslaunch tianbot_mini demo_slam.launch    # 运行gmapping 建图
 ```
 
 ```bash
-roslaunch tianbot_mini teleop.launch      # 运行 teleop 键盘控制节点
+roslaunch tianbot_mini teleop.launch      # 运行 teleop 键盘控制节点，鼠标点击此终端，然后按下`i j , l`按键即可控制`tianbot_mini`运动
 ```
+
+::: info 注意
+由于`tianbot_mini是三轮车底盘，所以万向轮会对里程计造成影响，行进速度应当尽可能慢
+:::
 
 ```bash
 roslaunch tianbot_mini map_save.launch    # 保存栅格地图
@@ -65,7 +86,7 @@ rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 1 tianbot_mini/map map
 
 #### 为`tianbot_mini`启动`amcl`
 ```bash
-rolaunch tianbot_mini demo_amcl.launch
+roslaunch tianbot_mini demo_amcl.launch
 ```
 
 还需要使用可视化工具rviz的 `2D Pose Estimate` 功能，设定初始位姿以供 `amcl` 进行初始定位
@@ -165,6 +186,37 @@ if __name__ == '__main__':
         rate.sleep()
 ```
 
+::: tip 提示
+
+这段代码实现了一个基于 **PID 控制算法的自动追踪节点**（通常用于机器人跟随、无人机跟随等场景）。
+
+它通过监听坐标变换（TF）来计算“追踪者”与“目标”之间的相对位置，并实时生成速度指令。以下是其核心功能的简述：
+
+### 1. 核心任务：跟随目标（TF Tracking）
+*   **坐标监听**：代码利用 `tf.TransformListener` 持续获取 `tracker_frame`（追踪者坐标系）到 `target_frame`（目标坐标系）的相对位置和角度。
+*   **距离控制**：计算追踪者与目标的距离 `dis`。通过 PID 控制器，使机器人维持在预设的距离 `set_distance` 上。
+*   **方向控制**：计算目标相对于追踪者的方位角。通过 PID 控制器，使机器人始终面向目标。
+
+### 2. PID 控制机制
+*   **线性 PID (`pid_linear`)**：根据“目标距离与实际距离的差值”输出线速度（前进/后退）。设置了输出限制 `(-0.25, 0.25)`，防止速度过快。
+*   **角速度 PID (`pid_angular`)**：根据“方位角偏差”输出角速度（左转/右转）。设置了输出限制 `(-1.57, 1.57)`（即最大每秒 90 度）。
+
+### 3. 动态参数调节 (Dynamic Reconfigure)
+*   代码集成了 `dynamic_reconfigure` 服务。这意味着你可以在程序运行时，通过可视化工具（如 `rqt_reconfigure`）直接修改 PID 的 P、I、D 参数，而无需重启代码。
+
+### 4. 运动逻辑微调（策略优化）
+为了让运动更平稳，代码加入了一些逻辑判断：
+*   **死区限制**：如果线速度输出极小（`< 0.02`），则强制归零，防止电机“抖动”。
+*   **转向优先**：如果距离已经达到目标但角度还有偏离，则停止移动专门进行原地转弯。
+*   **直线优先**：如果角度偏差很小（`< 3度`），则减弱转向，专注于直线运动。
+
+### 5. 输出
+*   最后将计算好的 `linear.x`（线速度）和 `angular.z`（角速度）封装进 `geometry_msgs/Twist` 消息中，发布到指定的运动控制话题（如 `/cmd_vel`），从而驱动机器人运动。
+
+**一句话总结：**
+这是一个**闭环控制系统**，它让机器人像“磁铁”一样，始终保持在目标物体面前一段固定的距离，并根据目标的移动自动调整自己的速度和方向。
+:::
+
 给脚本添加执行权限，并运行脚本程序
 
 ```bash
@@ -179,11 +231,20 @@ rosrun abc_swarm pid_tracker.py _target_frame:=base_link _tracker_frame:=tianbot
 
 ### 1.给RMTT配网（必须）
 
-保证 RMTT 配置连接到指定路由器上
+
+将这个按钮拨到下面，此时开机电脑就能收到 RMTT 的 WIFI 信号，
+
+![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20241211135053.png)
+
+将手机连接到以 RMTT-XX 开头的 WiFi 热点上
+
 ```bash
 roscd rmtt_driver/scripts
 ./set_sta.py TianbotOffice www.tianbot.com
 ```
+保证 RMTT 配置连接到指定`WIFI热点`上，比如这里是`TianbotOffice`
+
+然后将按钮拨到上面，变为`STA`模式
 
 ### 2.查询 RMTT 连接到路由器后被分配的 IP 地址
 
@@ -191,6 +252,8 @@ roscd rmtt_driver/scripts
 roscd rmtt_driver/scripts
 ./rmtt_scan_ip.py
 ```
+
+接下来将飞机放置在`DJI`的图标上方，机头朝向首字母的`d`的正向
 
 ### 3. 开启SDK控制模式
 
@@ -203,7 +266,6 @@ roscd rmtt_driver/scripts
 ```bash
 roslaunch rmtt_driver rmtt_bringup.launch drone_ip:=192.168.0.215
 ```
-
 ### 5. 添加并启动飞机正方形路径点巡航例程
 
 ```bash
@@ -218,150 +280,88 @@ roscd rmtt_driver/scripts && gedit square_with_translation.py
 # -*- coding: utf-8 -*-
 
 import rospy
-from geometry_msgs.msg import PoseStamped
 from std_msgs.msg import String
-import math
-import threading
 import time
 
-class FlySquareWithTranslation:
-    def __init__(self, points, return_point=(0.0, 0.0, 1.0), control_rate=10.0, hover_time=3):
-        rospy.init_node("fly_square_translation_node", anonymous=True)
-
+class SimpleFlySquare:
+    def __init__(self, side_cm=100, height_cm=100, speed=50):
+        rospy.init_node("simple_fly_square_node", anonymous=True)
+        
+        # 指令发布者
         self.cmd_pub = rospy.Publisher("/sdk_cmd", String, queue_size=10)
-        self.pose_sub = rospy.Subscriber("/pose", PoseStamped, self.pose_callback)
+        
+        self.side = side_cm    # 正方形边长 (cm)
+        self.height = height_cm # 飞行高度 (cm)
+        self.speed = speed      # 飞行速度 (cm/s)
+        
+        # 预设飞行路径：(x, y, z) 相对位移
+        # 这里的逻辑是：向前 -> 向右 -> 向后 -> 向左，回到原点
+        self.square_path = [
+            (self.side, 0, 0),   # 边1
+            (0, self.side, 0),   # 边2
+            (-self.side, 0, 0),  # 边3
+            (0, -self.side, 0)   # 边4
+        ]
 
-        self.current_pose = None
-        self.lock = threading.Lock()
-
-        self.flight_speed = 50  # cm/s
-        self.reached_threshold = 0.15  # m
-        self.control_rate = control_rate
-        self.max_step = 50  # 每次修正最大 50cm
-        self.points = points
-        self.return_point = return_point
-        self.hover_time = hover_time
-        self.emergency_land_flag = False
-
-        rospy.loginfo(f"🛩️ 正方形顶点: {self.points}")
-        rospy.loginfo(f"🏠 回到起点: {self.return_point}")
-
-    def pose_callback(self, msg):
-        with self.lock:
-            self.current_pose = msg.pose
-
-    def distance_to_target(self, target):
-        if self.current_pose is None:
-            return float('inf')
-        dx = target[0] - self.current_pose.position.x
-        dy = target[1] - self.current_pose.position.y
-        dz = target[2] - self.current_pose.position.z
-        return math.sqrt(dx*dx + dy*dy + dz*dz)
-
-    def send_command(self, cmd):
+    def send_command(self, cmd, wait_time=5.0):
+        """发送指令并等待无人机执行完成"""
+        if rospy.is_shutdown():
+            return
+        rospy.loginfo(f"🚀 发送指令: {cmd} (等待 {wait_time}s)")
         self.cmd_pub.publish(String(data=cmd))
-
-    def move_toward_target(self, target):
-        if self.current_pose is None:
-            return
-        dx = int((target[0] - self.current_pose.position.x) * 100)
-        dy = int((target[1] - self.current_pose.position.y) * 100)
-        dz = int((target[2] - self.current_pose.position.z) * 100)
-
-        dx = max(min(dx, self.max_step), -self.max_step)
-        dy = max(min(dy, self.max_step), -self.max_step)
-        dz = max(min(dz, self.max_step), -self.max_step)
-
-        if dx == 0 and dy == 0 and dz == 0:
-            return
-
-        cmd = f"go {dx} {dy} {dz} {self.flight_speed}"
-        self.send_command(cmd)
-
-    def emergency_land(self):
-        rospy.logwarn("⚠️ 紧急降落触发！")
-        self.send_command("land")
-        self.emergency_land_flag = True
-
-    def fly_to_point(self, target, print_info=True):
-        rate = rospy.Rate(self.control_rate)
-        while not rospy.is_shutdown() and not self.emergency_land_flag:
-            dist = self.distance_to_target(target)
-            if print_info:
-                print(f"当前距离目标 {target}: {dist:.2f} m", end='\r')
-            if dist < self.reached_threshold:
-                if print_info:
-                    print(f"\n✅ 到达目标点: {target}")
-                    print(f"📍 实际位置: x={self.current_pose.position.x:.2f}, "
-                          f"y={self.current_pose.position.y:.2f}, "
-                          f"z={self.current_pose.position.z:.2f}")
-                time.sleep(self.hover_time)
-                break
-            self.move_toward_target(target)
-            rate.sleep()
+        rospy.sleep(wait_time)
 
     def run(self):
-        # 激活 SDK
-        self.send_command("command")
-        rospy.sleep(2)
-
-        # 起飞
-        self.send_command("takeoff")
-        rospy.sleep(8)
-
-        # 等待第一次 pose 数据
-        rospy.loginfo("等待 /pose 数据...")
-        while self.current_pose is None and not rospy.is_shutdown():
-            rospy.sleep(0.1)
-        rospy.loginfo(f"收到起飞后当前位置: x={self.current_pose.position.x:.2f}, "
-                      f"y={self.current_pose.position.y:.2f}, "
-                      f"z={self.current_pose.position.z:.2f}")
-
         try:
-            # 飞正方形顶点
-            for point in self.points:
-                self.fly_to_point(point, print_info=True)
+            # 1. 基础准备
+            self.send_command("command", wait_time=2.0)
+            
+            # 2. 起飞
+            self.send_command("takeoff", wait_time=8.0)
 
-            # 再飞回第一个顶点
-            first_point = self.points[0]
-            rospy.loginfo("🔙 再次回到第一个顶点")
-            self.fly_to_point(first_point, print_info=True)
-            #rospy.sleep(3)  # 悬停等待3秒
+            # 3. 调整到初始高度（如果需要）
+            # self.send_command(f"up {self.height}", wait_time=4.0)
 
-            # 最后回到原点
-            rospy.loginfo("🔙 回到起点")
-            self.fly_to_point(self.return_point, print_info=False)
+            # 4. 循环飞行正方形
+            rospy.loginfo("顺时针飞行正方形路径...")
+            for i, (dx, dy, dz) in enumerate(self.square_path):
+                cmd = f"go {dx} {dy} {dz} {self.speed}"
+                rospy.loginfo(f"执行第 {i+1} 段航线")
+                # 根据边长和速度估算等待时间（边长/速度 + 2秒缓冲）
+                duration = (max(abs(dx), abs(dy), abs(dz)) / self.speed) + 2.0
+                self.send_command(cmd, wait_time=duration)
+
+            rospy.loginfo("✅ 任务完成")
 
         except KeyboardInterrupt:
-            self.emergency_land()
-
-        if not self.emergency_land_flag:
-            self.send_command("land")
-            rospy.loginfo("🛬 飞行完成，已降落")
-
+            rospy.logwarn("⚠️ 检测到中断，尝试紧急降落")
+        
+        finally:
+            # 5. 降落
+            self.send_command("land", wait_time=5.0)
+            rospy.loginfo("🛬 已发送降落指令")
 
 if __name__ == "__main__":
-    # 正方形顶点 (地图原点为中心，边长1m，高度1m)
-    side = 1.0
-    half = side / 2.0
-    height = 1.0
-    square_points = [
-        ( half, -half, height),
-        ( half,  half, height),
-        (-half,  half, height),
-        (-half, -half, height)
-    ]
-
     try:
-        fly_controller = FlySquareWithTranslation(square_points,
-                                                  return_point=(0.0, 0.0, height),
-                                                  control_rate=5.0,
-                                                  hover_time=3)
-        fly_controller.run()
+        # 设置：边长100cm，高度100cm，速度50cm/s
+        controller = SimpleFlySquare(side_cm=100, speed=50)
+        controller.run()
     except rospy.ROSInterruptException:
         pass
-
 ```
+
+
+::: info 具体飞行表现
+
+### 1. 飞行轨迹（理想状态）
+飞机会在空中画出一个边长为 1 米的**正方形**，具体步骤为：
+1.  **起飞**：原地垂直上升至默认高度（通常是 1m 左右）并悬停。
+2.  **前进**：向前飞 100cm，然后停下等待约 4 秒。
+3.  **横移**：向右飞 100cm，然后停下等待约 4 秒。
+4.  **后退**：向后飞 100cm，然后停下等待约 4 秒。
+5.  **左移**：向左飞 100cm，回到（理论上的）起点上方。
+6.  **降落**：原地垂直下降。
+:::
 
 然后 添加可执行权限，并运行程序
 
