@@ -5,6 +5,12 @@
 - ROS2GO 用于运行 Tianbot Studio 软件
 - tianbot mini ，有电
 
+::: info 安装文件下载
+通过网盘分享的文件：tianbotstudio-v0.5.deb
+链接: https://pan.baidu.com/s/19SwYh_U7Qp2sxall9mOCVg?pwd=jkv8 提取码: jkv8 
+--来自百度网盘超级会员v4的分享
+:::
+
 ## 给mini 开机 ，使用线缆连接机器人
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/tianbotmini/usb-cable-connect-mini.png)
