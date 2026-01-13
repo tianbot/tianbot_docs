@@ -57,35 +57,15 @@ roslaunch tianbot_mini map_save.launch    # 保存栅格地图
 tianbot mini 的放置方向应该要与刚才建图时保持一致
 :::
 
-我们需要向`tianbot_mini`功能包中添加代码
+#### 手动发布从 `/map`  到 `tianbot_mini/map` 的TF变化
 
 ```bash
-roscd tianbot_mini/launch && gedit amcl_abc_demo.launch
+rosrun tf2_ros static_transform_publisher 0 0 0 0 0 0 1 tianbot_mini/map map
 ```
 
-打开一个可视化编辑窗口后，将下述代码，复制粘贴在窗口中，然后`Ctrl + S` 进行保存，
-
-**amcl_abc_demo.launch**
-```xml
-<launch>
-    <!-- 1. 启动 bringup.launch -->
-    <include file="$(find tianbot_mini)/launch/bringup.launch" />
-
-    <!-- 2. 启动 lidar.launch（去掉 launch-prefix） -->
-    <include file="$(find tianbot_mini)/launch/lidar.launch" />
-
-    <!-- 3. 启动 amcl.launch -->
-    <include file="$(find tianbot_mini)/launch/amcl.launch" />
-
-    <!-- 4. 启动 static_transform_publisher -->
-    <node name="static_tf_publisher" pkg="tf2_ros" type="static_transform_publisher" 
-          args="0 0 0 0 0 0 1 tianbot_mini/map map" />
-</launch>
-
-```
-
+#### 为`tianbot_mini`启动`amcl`
 ```bash
-roslaunch tianbot_mini amcl_abc_demo.launch
+rolaunch tianbot_mini demo_amcl.launch
 ```
 
 还需要使用可视化工具rviz的 `2D Pose Estimate` 功能，设定初始位姿以供 `amcl` 进行初始定位
