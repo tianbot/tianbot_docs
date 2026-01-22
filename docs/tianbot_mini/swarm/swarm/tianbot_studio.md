@@ -9,6 +9,13 @@
 通过网盘分享的文件：tianbotstudio-v0.5.deb
 链接: https://pan.baidu.com/s/19SwYh_U7Qp2sxall9mOCVg?pwd=jkv8 提取码: jkv8 
 --来自百度网盘超级会员v4的分享
+
+下载完成后，按照如下命令进行安装，然后在更多应用中搜索🔍找到该应用，即可使用
+
+```bash
+sudo dpkg -i tianbotstudio-v0.5.deb
+```
+
 :::
 
 ## 给mini 开机 ，使用线缆连接机器人
