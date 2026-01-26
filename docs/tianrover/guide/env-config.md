@@ -10,7 +10,7 @@
 
 <p style="text-align: center">具体连接方式如上图</p> 
 
-2. 连接后，在计算机上通过 SSH 访问 `TIANRACER T108` 无人车
+2. 连接后，在计算机上通过 SSH 访问 `TIANROVER` 无人车
 
 ```shell
 ssh tianbot@192.168.55.1
@@ -45,15 +45,15 @@ sudo nmcli device wifi connect WIFI 名称 password WIFI 密码
 
 从终端（`tianbot@tianbot-nano`）中打印的信息中可以看到，显示`wlan0`网卡的 ip 地址为`192.168.0.129`,则说明小车的 Jetson 板卡主控已成功连接局域网之下
 
-6. 如无意外，此时已成功的配置 `TIANRACER T108` 无人车的 Jeston 板卡 连接到 WIFI 网络中，我们将 USB 断开连接。 -->
+6. 如无意外，此时已成功的配置 `TIANROVER` 无人车的 Jeston 板卡 连接到 WIFI 网络中，我们将 USB 断开连接。 -->
 
 ## 远程桌面连接
 
 <!-- - 方式一：当将 Jeston 板卡连接到局域网热点后，可以直接使用 `VNC` 或 `Rustdesk` 进行连接。
 
-- 方式二：`T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。 -->
+- 方式二：`TIANROVER` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。 -->
 
-- `T108` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。
+- `TIANROVER` 整车出厂时自带车载路由，也可以连接到车载热点后，直接使用 `VNC` 或 `Rustdesk` 进行连接。
 
 ::: info 提示
 使用车载路由连接时，
