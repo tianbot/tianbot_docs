@@ -75,7 +75,7 @@ roslaunch livox_ros_driver2 msg_MID360.launch
 ### 启动Point_LIO建图程序 {#launch_point_lio}
 
 ```shell
-cd point_lio/ws
+cd pointlio_ws
 
 source devel/setup.bash
 
@@ -95,4 +95,26 @@ roslaunch point_lio mapping_mid360.launch
 
 ### 运行Fast_LIO建图 {#launch_fast_lio}
  
-TODO
+```shell
+cd fastlio_ws
+
+source devel/setup.bash
+roslaunch fast_lio mapping_mid360.launch
+```
+
+如果要更改雷达话题节点则需要在`FAST_LIO/config/mid360.yaml`文件中的`mid360.yaml`中的`lid_topic`与`imu_topic`进行修改
+
+#### 保存点云图 {#save_pointcloud}
+
+在启动文件中将 `pcd_save_enable` 设置为 1 -LIO 终止后，所有扫描结果（全局坐标系）将被累积并保存到文件 `FAST_LIO/PCD/scans.pcd` 中。可以使用 `pcl_viewer scans.pcd` 可视化这些点云。
+
+
+::: info pcl_viewer 使用技巧
+
+当 pcl_viewer 运行时，按键盘 1、2、3、4、5 可以更改要显示/着色的内容。
+- 1 is all random
+- 2 is X values
+- 3 is Y values
+- 4 is Z values
+- 5 is intensity
+:::
