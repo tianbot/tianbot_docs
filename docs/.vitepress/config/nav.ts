@@ -11,6 +11,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'TOM', link: '/tianbot/' },
             { text: 'Tianrover', link: '/tianrover/' },
             { text: 'Tianracer', link: '/tianracer/' },
+            { text: 'Formula Mini', link: 'https://tianbot.github.io/FormulaMini/'},
             { text: 'Tianbot mini', link: '/tianbot_mini/' },
             { text: 'Robomaster TT', link: '/rmtt/' },
             { text: 'ROSECHO', link: '/rosecho/' },
