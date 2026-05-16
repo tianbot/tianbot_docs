@@ -18,18 +18,12 @@ export const nav: DefaultTheme.Config['nav'] = [
     { 
         text: '知识专栏',
         items: [
-            { text: '如何优雅的提问', link: '/basic/how_to_ask_for_help' },
-            { text: '工具使用中的技巧', link: '/basic/git'},
-            {
-                text: '实用文档',
-                items: [
-                    { text: 'ROS 学习指南', link: '/basic/ros/ros1-vs-ros2'},
-                    { text: 'ROS 仿真模拟', link: '/simulation/' },
-                    { text: '机器人进阶技能', link: '/advanced/' },
-                    { text: '社区热门开源项目相关', link: '/advanced/applications/'},
-                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'}
-                ]
-            },
+            { text: '从这里开始学 ROS', link: '/basic/ros/robotic-enginner-roadmap' },
+            { text: '入门准备', link: '/basic/' },
+            { text: 'ROS 学习', link: '/basic/ros/robotic-enginner-roadmap' },
+            { text: 'ROS 实践应用', link: '/basic/navigation/' },
+            { text: '机器人仿真', link: '/simulation/' },
+            { text: '进阶开发', link: '/advanced/' },
             {
                 text: '外部学习资料',
                 items: [

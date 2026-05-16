@@ -25,6 +25,36 @@ const productSidebarPrefixes: Record<string, ProductSidebarName> = {
 
 const productSidebarNames = new Set<ProductSidebarName>(Object.values(productSidebarPrefixes));
 
+type KnowledgeSidebarName =
+  | '入门准备'
+  | 'ROS 学习'
+  | 'ROS 实践应用'
+  | '机器人仿真'
+  | '进阶开发';
+
+type KnowledgeSidebarSource = {
+  basicItems: DefaultTheme.SidebarItem[];
+  simulationItems: DefaultTheme.SidebarItem[];
+  advancedItems: DefaultTheme.SidebarItem[];
+};
+
+const knowledgeSidebarPrefixes: Record<string, KnowledgeSidebarName> = {
+  '/basic/ros/': 'ROS 学习',
+  '/basic/navigation/': 'ROS 实践应用',
+  '/basic/camera/': 'ROS 实践应用',
+  '/basic/lidar/': 'ROS 实践应用',
+  '/basic/': '入门准备',
+  '/simulation/': '机器人仿真',
+  '/advanced/': '进阶开发',
+};
+
+function cloneSidebarItem(item: DefaultTheme.SidebarItem): DefaultTheme.SidebarItem {
+  return {
+    ...item,
+    items: item.items?.map(cloneSidebarItem),
+  };
+}
+
 function buildProductSidebar(activeProduct: ProductSidebarName | null): DefaultTheme.SidebarItem[] {
   const sidebarMulti = sidebar as DefaultTheme.SidebarMulti;
   const rootProductSidebar = sidebarMulti['/'] as DefaultTheme.SidebarItem[];
@@ -51,6 +81,93 @@ function configureProductSidebars() {
   }
 
   sidebarMulti['/'] = buildProductSidebar(null);
+}
+
+function getSidebarSectionItems(prefix: string): DefaultTheme.SidebarItem[] {
+  const sidebarItems = (sidebar as DefaultTheme.SidebarMulti)[prefix] as DefaultTheme.SidebarItem[] | undefined;
+
+  return sidebarItems?.[0]?.items?.map(cloneSidebarItem) ?? [];
+}
+
+function getKnowledgeSidebarSource(): KnowledgeSidebarSource {
+  return {
+    basicItems: getSidebarSectionItems('/basic/'),
+    simulationItems: getSidebarSectionItems('/simulation/'),
+    advancedItems: getSidebarSectionItems('/advanced/'),
+  };
+}
+
+function isSidebarItem(item: DefaultTheme.SidebarItem | undefined): item is DefaultTheme.SidebarItem {
+  return Boolean(item);
+}
+
+function createKnowledgeSidebarSection(
+  text: KnowledgeSidebarName,
+  activeSection: KnowledgeSidebarName,
+  items: DefaultTheme.SidebarItem[],
+  link: string,
+): DefaultTheme.SidebarItem {
+  return {
+    text,
+    link,
+    collapsed: text !== activeSection,
+    items: items.map(cloneSidebarItem),
+  };
+}
+
+function buildKnowledgeSidebar(
+  activeSection: KnowledgeSidebarName,
+  source: KnowledgeSidebarSource,
+): DefaultTheme.SidebarItem[] {
+  const howToAsk = source.basicItems.find((item) => item.link === '/basic/how_to_ask_for_help');
+  const tools = source.basicItems.find((item) => item.text === '工具使用中的技巧');
+  const rosGuide = source.basicItems.find((item) => item.text === 'ROS 学习指南');
+  const sensors = source.basicItems.find((item) => item.text === '常见传感器的驱动和使用');
+  const rosGuideItems = rosGuide?.items ?? [];
+  const navigation2 = rosGuideItems.find((item) => item.text === 'Navigation2');
+  const rosLearningItems = rosGuideItems.filter((item) => item.text !== 'Navigation2');
+
+  return [
+    createKnowledgeSidebarSection(
+      '入门准备',
+      activeSection,
+      [howToAsk, tools].filter(isSidebarItem),
+      '/basic/',
+    ),
+    createKnowledgeSidebarSection(
+      'ROS 学习',
+      activeSection,
+      rosLearningItems,
+      '/basic/ros/robotic-enginner-roadmap',
+    ),
+    createKnowledgeSidebarSection(
+      'ROS 实践应用',
+      activeSection,
+      [navigation2, sensors].filter(isSidebarItem),
+      '/basic/navigation/',
+    ),
+    createKnowledgeSidebarSection(
+      '机器人仿真',
+      activeSection,
+      source.simulationItems,
+      '/simulation/',
+    ),
+    createKnowledgeSidebarSection(
+      '进阶开发',
+      activeSection,
+      source.advancedItems,
+      '/advanced/',
+    ),
+  ];
+}
+
+function configureKnowledgeSidebars() {
+  const sidebarMulti = sidebar as DefaultTheme.SidebarMulti;
+  const source = getKnowledgeSidebarSource();
+
+  for (const [prefix, activeSection] of Object.entries(knowledgeSidebarPrefixes)) {
+    sidebarMulti[prefix] = buildKnowledgeSidebar(activeSection, source);
+  }
 }
 
 //  TODO
@@ -336,7 +453,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: '用 isaacgym 复现 LocomotionWithNP3O_raw', link: '/advanced/isaac/isaacgym_locomotion_with_N3PO' },
                       { text: '用 isaacgym 复现 LocomotionWithNP3O-master-tinymal4', link: '/advanced/isaac/isaacgym_locomotion_with_N3PO_tinymal4' },
                       { text: '用 isaacsim 复现 ASAP', link: '/advanced/isaac/isaacsim_ASAP' },
-                      { text: '用 isaacsim 复现 NavRL', link: '/advanced/isaac/isaacsim_NavRL' },
                       { text: '用 isaacsim 复现 RLRoverLab', link: '/advanced/isaac/isaacsim_RLRoverLab' },
                       { text: '用 isaacsim 复现 robot_lab', link: '/advanced/isaac/isaacsim_robot_lab' },
                       { text: '用 isaacsim 复现 isaacLab.manipulation', link: '/advanced/isaac/isaacsim_isaacLab.manipulation' },
@@ -705,4 +821,5 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     ],
 }
 
+configureKnowledgeSidebars();
 configureProductSidebars();
