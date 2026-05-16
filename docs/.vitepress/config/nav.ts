@@ -10,7 +10,6 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'TOM', link: '/tianbot/' },
             { text: 'Tianrover', link: '/tianrover/' },
             { text: 'Tianracer', link: '/tianracer/' },
-            { text: 'Formula Mini', link: 'https://tianbot.github.io/FormulaMini/'},
             { text: 'Tianbot mini', link: '/tianbot_mini/' },
             { text: 'Robomaster TT', link: '/rmtt/' },
             { text: 'ROSECHO', link: '/rosecho/' },
@@ -28,7 +27,13 @@ export const nav: DefaultTheme.Config['nav'] = [
                     { text: 'ROS 仿真模拟', link: '/simulation/' },
                     { text: '机器人进阶技能', link: '/advanced/' },
                     { text: '社区热门开源项目相关', link: '/advanced/applications/'},
-                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'},
+                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'}
+                ]
+            },
+            {
+                text: '外部学习资料',
+                items: [
+                    { text: 'Formula Mini 项目资料', link: 'https://tianbot.github.io/FormulaMini/'},
                     { text: '嵌入式小白的学习之路', link: 'https://tianbot.github.io/learning_RM_board_c/#/'}
                 ]
             }
