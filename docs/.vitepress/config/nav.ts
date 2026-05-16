@@ -1,4 +1,3 @@
-import { text } from "stream/consumers";
 import type { DefaultTheme } from "vitepress";
 
 //导航栏
@@ -17,19 +16,6 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'ROSECHO', link: '/rosecho/' },
         ],
     },
-    {   
-        text: 'RoboMaster 产品专区',
-        items: [                        
-            { text: '红外电子靶', link: '/robomaster/infrared_electronic_target'},
-            {
-                text: '实用文档',
-                items: [
-                    { text: '嵌入式小白的学习之路', link: 'https://tianbot.github.io/learning_RM_board_c/#/' }
-                ]
-            }
-        ],
-        
-    },
     { 
         text: '知识专栏',
         items: [
@@ -42,7 +28,8 @@ export const nav: DefaultTheme.Config['nav'] = [
                     { text: 'ROS 仿真模拟', link: '/simulation/' },
                     { text: '机器人进阶技能', link: '/advanced/' },
                     { text: '社区热门开源项目相关', link: '/advanced/applications/'},
-                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'}
+                    { text: 'Nvidia Isaac 生态相关', link: '/advanced/isaac/'},
+                    { text: '嵌入式小白的学习之路', link: 'https://tianbot.github.io/learning_RM_board_c/#/'}
                 ]
             }
         ]
