@@ -352,6 +352,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             //分组标题 1
             text: 'ROS2GO',
             collapsed: false,
+            link: '/ros2go/',
             items: [
               {
                 text: '使用指南',
@@ -671,6 +672,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             //分组标题 5
             text: 'ROBOMASTER TT',
             collapsed: false,
+            link: '/rmtt/',
             items: [
               { text: '使用手册', link: '/rmtt/' },
               { text: '实验手册', link: '/rmtt/experiment/' },
@@ -682,6 +684,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             //分组标题 6
             text: 'ROSECHO',
             collapsed: false,
+            link: '/rosecho/',
             items: [
               { text: '开箱说明', link: '/rosecho/' },
               { text: '使用手册', link: '/rosecho/guide/' },
