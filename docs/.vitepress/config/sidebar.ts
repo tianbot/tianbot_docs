@@ -4,6 +4,55 @@ import fg from 'fast-glob';
 
 const sync = fg.sync;
 
+type ProductSidebarName =
+  | 'ROS2GO'
+  | 'TOM'
+  | 'TIANRACER'
+  | 'TIANROVER'
+  | 'TIANBOT MINI'
+  | 'ROBOMASTER TT'
+  | 'ROSECHO';
+
+const productSidebarPrefixes: Record<string, ProductSidebarName> = {
+  '/ros2go/': 'ROS2GO',
+  '/tianbot/': 'TOM',
+  '/tianracer/': 'TIANRACER',
+  '/tianrover/': 'TIANROVER',
+  '/tianbot_mini/': 'TIANBOT MINI',
+  '/rmtt/': 'ROBOMASTER TT',
+  '/rosecho/': 'ROSECHO',
+};
+
+const productSidebarNames = new Set<ProductSidebarName>(Object.values(productSidebarPrefixes));
+
+function buildProductSidebar(activeProduct: ProductSidebarName | null): DefaultTheme.SidebarItem[] {
+  const sidebarMulti = sidebar as DefaultTheme.SidebarMulti;
+  const rootProductSidebar = sidebarMulti['/'] as DefaultTheme.SidebarItem[];
+
+  return rootProductSidebar.map((item) => {
+    const productName = item.text as ProductSidebarName | undefined;
+
+    if (!productName || !productSidebarNames.has(productName)) {
+      return item;
+    }
+
+    return {
+      ...item,
+      collapsed: productName !== activeProduct,
+    };
+  });
+}
+
+function configureProductSidebars() {
+  const sidebarMulti = sidebar as DefaultTheme.SidebarMulti;
+
+  for (const [prefix, productName] of Object.entries(productSidebarPrefixes)) {
+    sidebarMulti[prefix] = buildProductSidebar(productName);
+  }
+
+  sidebarMulti['/'] = buildProductSidebar(null);
+}
+
 //  TODO
 export const sidebar: DefaultTheme.Config['sidebar'] = {
     '/basic/': [
@@ -652,3 +701,5 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           },
     ],
 }
+
+configureProductSidebars();
