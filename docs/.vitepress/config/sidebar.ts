@@ -120,12 +120,24 @@ function buildKnowledgeSidebar(
   source: KnowledgeSidebarSource,
 ): DefaultTheme.SidebarItem[] {
   const howToAsk = source.basicItems.find((item) => item.link === '/basic/how_to_ask_for_help');
-  const tools = source.basicItems.find((item) => item.text === '工具使用中的技巧');
-  const rosGuide = source.basicItems.find((item) => item.text === 'ROS 学习指南');
-  const sensors = source.basicItems.find((item) => item.text === '常见传感器的驱动和使用');
-  const rosGuideItems = rosGuide?.items ?? [];
-  const navigation2 = rosGuideItems.find((item) => item.text === 'Navigation2');
-  const rosLearningItems = rosGuideItems.filter((item) => item.text !== 'Navigation2');
+  const tools = source.basicItems.find((item) => item.items?.some((child) => child.link === '/basic/git'));
+  const rosGuide = source.basicItems.find((item) => item.items?.some((child) => child.link === '/basic/ros/robotic-enginner-roadmap'));
+  const sensors = source.basicItems.find(
+    (item) => item.items?.some((child) => child.items?.some((grandChild) => grandChild.link === '/basic/camera/mono-usb-camera')),
+  );
+
+  if (!howToAsk || !tools || !rosGuide || !sensors) {
+    throw new Error('Failed to build knowledge sidebar: required /basic/ sections are missing.');
+  }
+
+  const rosGuideItems = rosGuide.items ?? [];
+  const navigation2 = rosGuideItems.find((item) => item.link === '/basic/navigation/');
+
+  if (!navigation2) {
+    throw new Error('Failed to build knowledge sidebar: Navigation2 section is missing from ROS guide.');
+  }
+
+  const rosLearningItems = rosGuideItems.filter((item) => item.link !== '/basic/navigation/');
 
   return [
     createKnowledgeSidebarSection(
