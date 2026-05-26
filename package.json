@@ -1,0 +1,27 @@
+{
+  "name": "tianbot-doc",
+  "description": "用于记录天之博特(Tianbot)产品的使用手册和ROS开发者指南",
+  "author": "tianbot",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^24.10.4",
+    "cross-spawn": "^7.0.6",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.1.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "medium-zoom": "^1.1.0",
+    "search-insights": "^2.17.3",
+    "vite": "^7.3.0",
+    "vitepress": "2.0.0-alpha.15",
+    "vitepress-plugin-llms": "^1.9.3",
+    "vue": "^3.5.26"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
