@@ -365,6 +365,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           collapsed: true,
           items: [
             {
+              text: '2026 iCAN 无人车线上仿真赛',
+              link: '/competition/f1tenth_online/2026-ican/',
+              collapsed: false,
+              items: [
+                { text: '比赛规则', link: '/competition/f1tenth_online/2026-ican/contest-rules' },
+                { text: '环境准备', link: '/competition/f1tenth_online/2026-ican/env-config' },
+                { text: '代码更新', link: '/competition/f1tenth_online/2026-ican/update-upstream' },
+                { text: '运行 Demo 与正式跑圈', link: '/competition/f1tenth_online/2026-ican/run-and-test' },
+                { text: '赛事绑定', link: '/competition/f1tenth_online/2026-ican/event-binding' },
+                { text: '成绩提交与查询', link: '/competition/f1tenth_online/2026-ican/submit-results' },
+                { text: '常见问题', link: '/competition/f1tenth_online/2026-ican/troubleshooting' },
+              ],
+            },
+            {
               text: '2025 睿抗无人车线上仿真赛',
               link: '/competition/f1tenth_online/2025-raicom/',
               collapsed: true,
