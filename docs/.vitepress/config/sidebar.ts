@@ -364,20 +364,20 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           link: '/competition/f1tenth_online/',
           collapsed: true,
           items: [
-            { text: '比赛规则', link: '/competition/f1tenth_online/contest-rules' },
             {
-              text: '参赛手册',
+              text: '2025 睿抗无人车线上仿真赛',
+              link: '/competition/f1tenth_online/2025-raicom/',
               collapsed: true,
               items: [
+                { text: '比赛规则', link: '/competition/f1tenth_online/contest-rules' },
                 { text: '环境搭建', link: '/competition/f1tenth_online/env-config' },
                 { text: '代码更新', link: '/competition/f1tenth_online/update-upstream' },
                 { text: '修改代码', link: '/competition/f1tenth_online/modify-code' },
                 { text: '运行测试', link: '/competition/f1tenth_online/run-and-test' },
                 { text: '作品提交', link: '/competition/f1tenth_online/submit-works' },
-                { text: '1v1 对抗', link: '/competition/f1tenth_online/1v1-battle' },
+                { text: '往届问题及视频', link: '/competition/f1tenth_online/question-and-video' },
               ],
             },
-            // { text: '视频教程及相关问题', link: '/competition/f1tenth_online/question-and-video' }  
           ],
         },
         { text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' },
