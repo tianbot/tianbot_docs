@@ -44,9 +44,10 @@ jobs:
           import concurrent.futures, hashlib, os, pathlib, time
           from urllib.request import Request, urlopen
           root = pathlib.Path('docs/.vitepress/dist')
-          base = pathlib.Path('competition/f1tenth_online')
-          pages = [base / 'index.html', base / '2025-raicom/index.html']
-          pages += sorted((root / base / '2026-ican').glob('*.html'))
+          base = pathlib.Path('competition/roboracer_online')
+          pages = sorted((root / base).rglob('*.html'))
+          pages += sorted((root / 'competition/f1tenth_online').rglob('*.html'))
+          pages += [pathlib.Path('competition/roboracer_offline/index.html'), pathlib.Path('competition/f1tenth_offline/index.html')]
           pages = [path.relative_to(root) if path.is_relative_to(root) else path for path in pages]
           def verify(path):
               route = str(path).removesuffix('index.html') if path.name == 'index.html' else str(path).removesuffix('.html')

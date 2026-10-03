@@ -25,7 +25,7 @@ jobs:
           def addresses(host):
               return {entry[4][0] for entry in socket.getaddrinfo(host, None)}
           print('Deployment host matches public DNS:', bool(addresses(os.environ['DEPLOY_HOST']) & addresses('docs.tianbot.com')))
-          with urlopen('https://docs.tianbot.com/competition/f1tenth_online/2026-ican/?diagnose=release', timeout=30) as response:
+          with urlopen('https://docs.tianbot.com/competition/roboracer_online/2026-ican/?diagnose=release', timeout=30) as response:
               page = response.read().decode()
               print('Public page HTTP status:', response.status)
               print('Public page contains iCAN title:', '<title>2026 iCAN' in page)
@@ -39,7 +39,7 @@ jobs:
             "$DEPLOY_USER@$DEPLOY_HOST" "python3 - '$encoded_path'" <<'PY'
           import base64, hashlib, os, pathlib, re, subprocess, sys
           deploy = pathlib.Path(base64.b64decode(sys.argv[1]).decode()).resolve()
-          relative = pathlib.Path('competition/f1tenth_online/2026-ican/index.html')
+          relative = pathlib.Path('competition/roboracer_online/2026-ican/index.html')
           def inspect(label, directory):
               page = directory / relative
               print(label + ' new page exists:', page.is_file())
