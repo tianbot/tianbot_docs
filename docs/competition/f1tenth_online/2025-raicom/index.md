@@ -1,19 +1,24 @@
-# 2025 睿抗无人车线上仿真赛
+---
+search: false
+aside: false
+head:
+  - - meta
+    - name: robots
+      content: noindex
+  - - link
+    - rel: canonical
+      href: https://docs.tianbot.com/competition/roboracer_online/2025-raicom/
+---
 
-::: warning 往届赛事资料
-本入口保留 2025 年睿抗（RAICOM）无人车线上仿真赛的原有教程。文中的裁判程序、比赛规则、截图和作品提交方法属于往届环境，不作为其他年份赛事的操作依据。参加今年比赛请阅读 [2026 iCAN 参赛手册](../2026-ican/)。
-:::
+<script setup>
+import { onMounted } from 'vue'
+onMounted(() => {
+  window.location.replace('/competition/roboracer_online/2025-raicom/' + window.location.search + window.location.hash)
+})
+</script>
 
-无人车线上仿真赛以 ROS 和 Gazebo 为基础，参赛者通过编写和调试无人车控制算法，在仿真赛道中完成竞速任务。
+# RoboRacer 文档已迁移
 
-## 往届参赛手册
+此页面已迁移至 RoboRacer 文档目录，正在跳转。
 
-- [比赛规则](../contest-rules)
-- [环境搭建](../env-config)
-- [更新比赛环境](../update-upstream)
-- [修改代码](../modify-code)
-- [运行测试](../run-and-test)
-- [作品提交](../submit-works)
-- [相关问题及说明视频](../question-and-video)
-
-[返回无人车线上仿真赛目录](../)
+如果没有自动跳转，请点击[新的文档地址](/competition/roboracer_online/2025-raicom/)。

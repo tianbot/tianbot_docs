@@ -4,7 +4,7 @@
 
 【实验目标】
 
-学习 F1TENTH 仿真环境 simulator 下 Scan Matching（扫描匹配定位算法）
+学习 RoboRacer 的旧版 `f1tenth_simulator` 仿真环境下 Scan Matching（扫描匹配定位算法）
 学习蒙特卡洛定位法
 实现三种激光雷达建图算法的使用，并对比建图效果
 了解激光雷达消息结构

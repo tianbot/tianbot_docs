@@ -1,12 +1,24 @@
-# 无人车线上仿真赛
+---
+search: false
+aside: false
+head:
+  - - meta
+    - name: robots
+      content: noindex
+  - - link
+    - rel: canonical
+      href: https://docs.tianbot.com/competition/roboracer_online/
+---
 
-本目录按赛事年份收录无人车线上仿真赛的参赛资料。请先选择自己参加的赛事，再阅读对应的规则、环境准备和操作步骤。
+<script setup>
+import { onMounted } from 'vue'
+onMounted(() => {
+  window.location.replace('/competition/roboracer_online/' + window.location.search + window.location.hash)
+})
+</script>
 
-| 赛事 | 文档内容 |
-| --- | --- |
-| [2026 iCAN 无人车线上仿真赛](./2026-ican/) | 本届初赛：环境准备、TEB 多航点 Demo、独立裁判、赛事绑定及成绩提交 |
-| [2025 睿抗无人车线上仿真赛](./2025-raicom/) | 保留往届比赛规则、环境搭建、代码修改、运行测试和作品提交资料 |
+# RoboRacer 文档已迁移
 
-不同年份的裁判入口、判圈规则和成绩提交方式可能不同，请不要混用往届命令。
+此页面已迁移至 RoboRacer 文档目录，正在跳转。
 
-参加今年比赛请从 [2026 iCAN 参赛手册](./2026-ican/)开始。成绩提交窗口为 **2026 年 10 月 1 日至 10 月 15 日 23:59（北京时间）**。
+如果没有自动跳转，请点击[新的文档地址](/competition/roboracer_online/)。

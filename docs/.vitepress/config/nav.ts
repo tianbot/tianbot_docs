@@ -38,8 +38,8 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [ 
             { text: '空地协同线上仿真赛', link: '/competition/air_ground_synergy_online/' },
             { text: '空地协同线下挑战赛', link: '/competition/air_ground_synergy_offline/' },
-            { text: '无人车线上仿真赛', link: '/competition/f1tenth_online/' },
-            { text: '无人车线下挑战赛', link: '/competition/f1tenth_offline/' }
+            { text: 'RoboRacer 无人车线上仿真赛', link: '/competition/roboracer_online/' },
+            { text: 'RoboRacer 无人车线下挑战赛', link: '/competition/roboracer_offline/' }
         ]
     },
     { 

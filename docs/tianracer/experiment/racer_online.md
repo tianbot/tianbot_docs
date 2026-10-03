@@ -1,6 +1,10 @@
-# 比赛一 F1TENTH线上仿真赛
+# 比赛一 RoboRacer 线上仿真赛
 
-`想要了解更多内容`，请点击[这里](/competition/f1tenth_online/)
+`想要了解更多内容`，请点击[这里](/competition/roboracer_online/)
+
+::: info 历史教学示例
+下面保留 2021 ROS 暑期学校的比赛示例与原视频名称。参加 2026 iCAN 初赛请阅读[本届参赛手册](/competition/roboracer_online/2026-ican/)，使用本届五圈规则与独立裁判流程。
+:::
 
 ## 【比赛目标】
 
@@ -16,7 +20,7 @@ B站视频链接：
 更多教程可关注天之博特B站账号：天之博特TIANBOT
 【关键步骤】
 
-TIANRACER支持使用F1TENTH的仿真器，仿真环境可以尝试下面方式安装
+TIANRACER 支持使用 RoboRacer 的旧版 `f1tenth_simulator` 仿真器，仿真环境可以尝试下面方式安装
 ```shell
 cd ~/catkin_ws/src/
 git clone https://github.com/f1tenth/f1tenth_simulator.git

@@ -36,7 +36,7 @@ teb_local_planner包是2D导航功能包中base_local_planner的插件实现。
 
 算法详解可参考：http://wiki.ros.org/teb_local_planner
 
-TEB应用在F1TENTH simulator里：
+TEB 应用在 RoboRacer 的旧版 `f1tenth_simulator` 中：
 ```shell
 roslaunch f1tenth_simulator simulator.launch
 roslaunch tianracer_competition open_map_teb.launch

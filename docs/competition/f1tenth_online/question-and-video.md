@@ -1,45 +1,24 @@
-# 2025 睿抗：相关问题及说明视频
+---
+search: false
+aside: false
+head:
+  - - meta
+    - name: robots
+      content: noindex
+  - - link
+    - rel: canonical
+      href: https://docs.tianbot.com/competition/roboracer_online/question-and-video
+---
 
-::: warning 2025 睿抗历史资料
-本文保留往届教程，使用的是旧版比赛环境和裁判流程。请勿将其中的命令、规则或提交方式用于今年比赛。[返回 2025 睿抗入口](./2025-raicom/)，或在[无人车线上仿真赛目录](./)选择对应年份。
-:::
+<script setup>
+import { onMounted } from 'vue'
+onMounted(() => {
+  window.location.replace('/competition/roboracer_online/question-and-video' + window.location.search + window.location.hash)
+})
+</script>
 
+# RoboRacer 文档已迁移
 
-### 如何配置比赛环境
+此页面已迁移至 RoboRacer 文档目录，正在跳转。
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=579101106&bvid=BV1s64y1L763&cid=1349214446&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-### 如何调整比赛画面和布局
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=749044127&bvid=BV13C4y1A7tv&cid=1349209937&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-### 如何使用 OBS 录制视频
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=578888051&bvid=BV1g64y177Zs&cid=1349212576&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-### 如何使用提交工具提交文件
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=451563700&bvid=BV1gj411j7o7&cid=1349213623&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-### 如何修改算法和测试
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=791574237&bvid=BV1BC4y1y7an&cid=1349215214&p=1&autoplay=0" frameborder="no" scrolling="no" 
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-## 相关问题
-
-正在更新中.............
+如果没有自动跳转，请点击[新的文档地址](/competition/roboracer_online/question-and-video)。

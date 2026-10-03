@@ -22,8 +22,8 @@
 看名字就知道，这个工作空间是用来学习ROS的。
 :::
 
-- `f1tenth_gym`  ： F1TENTH仿真环境
-- `f1tenth_simulator` ：F1TENTH仿真模拟器
+- `f1tenth_gym`  ： RoboRacer Gym 仿真环境
+- `f1tenth_simulator` ：RoboRacer 仿真模拟器
 - `jaka_robot` ：节卡机械臂仿真
 - `nwpu_course` ：西北工业大学 智能无人系统综合设计仿真环境
 - `ros_21_tutorials` ：古月 ROS1入门21讲

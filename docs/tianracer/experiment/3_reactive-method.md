@@ -2,7 +2,7 @@
 
 ## 【实验目标】
 
-在 F1TENTH 仿真环境下完成：
+在 RoboRacer 的旧版 `f1tenth_simulator` 仿真环境下完成：
 - 了解并实现 simulator 下 wall_flowing 算法（PID 控制器）
 - 了解并实现一种用于避障的反应式算法 Follow the Gap
 
