@@ -37,3 +37,39 @@ jobs:
           remote_host: ${{ secrets.DEPLOY_HOST }}
           remote_user: ${{ secrets.DEPLOY_USER }}
           remote_key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Verify published competition pages
+        run: |
+          python3 - <<'PY'
+          import concurrent.futures, hashlib, os, pathlib, time
+          from urllib.request import Request, urlopen
+          root = pathlib.Path('docs/.vitepress/dist')
+          base = pathlib.Path('competition/f1tenth_online')
+          pages = [base / 'index.html', base / '2025-raicom/index.html']
+          pages += sorted((root / base / '2026-ican').glob('*.html'))
+          pages = [path.relative_to(root) if path.is_relative_to(root) else path for path in pages]
+          def verify(path):
+              route = str(path).removesuffix('index.html') if path.name == 'index.html' else str(path).removesuffix('.html')
+              expected = (root / path).read_bytes()
+              url = 'https://docs.tianbot.com/' + route + '?release=' + os.environ['GITHUB_SHA']
+              request = Request(url, headers={'Cache-Control': 'no-cache'})
+              for attempt in range(4):
+                  try:
+                      with urlopen(request, timeout=30) as response:
+                          actual = response.read()
+                      if actual == expected:
+                          return str(path), True
+                      error = 'response differs from built page (expected SHA256 ' + hashlib.sha256(expected).hexdigest() + ')'
+                  except Exception as failure:
+                      error = str(failure)
+                  if attempt < 3:
+                      time.sleep(5)
+              print('Publication verification failed:', route, error)
+              return str(path), False
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+              results = list(pool.map(verify, pages))
+          for path, passed in results:
+              print('PASS' if passed else 'FAIL', path)
+          if not all(passed for _, passed in results):
+              raise SystemExit('Rsync completed, but the public site does not serve this release. Check DEPLOY_PATH against the HTTPS Nginx root.')
+          PY
