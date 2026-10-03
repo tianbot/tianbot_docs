@@ -37,7 +37,7 @@ jobs:
           encoded_path=$(printf '%s' "$DEPLOY_PATH" | base64 -w0)
           ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
             "$DEPLOY_USER@$DEPLOY_HOST" "python3 - '$encoded_path'" <<'PY'
-          import base64, hashlib, pathlib, re, subprocess, sys
+          import base64, hashlib, os, pathlib, re, subprocess, sys
           deploy = pathlib.Path(base64.b64decode(sys.argv[1]).decode()).resolve()
           relative = pathlib.Path('competition/f1tenth_online/2026-ican/index.html')
           def inspect(label, directory):
@@ -87,5 +87,9 @@ jobs:
                   root = pathlib.Path(value.strip().strip('"\'')).resolve()
                   print('Server block', index, 'root:', str(root))
                   print('Nginx root matches deployment directory:', root == deploy)
+                  print('Nginx root matches standard docs directory:', root == pathlib.Path('/var/www/docs.tianbot.com').resolve())
+                  print('Nginx root writable by deployment user:', os.access(root, os.W_OK))
+                  print('Deployment directory is inside Nginx root:', root in deploy.parents)
+                  print('Nginx root is inside deployment directory:', deploy in root.parents)
                   inspect('Nginx document root', root)
           PY
