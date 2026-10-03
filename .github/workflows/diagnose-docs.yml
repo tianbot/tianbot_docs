@@ -1,0 +1,91 @@
+name: Diagnose docs deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check public site and deployment server
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import os, socket
+          from urllib.request import urlopen
+          def addresses(host):
+              return {entry[4][0] for entry in socket.getaddrinfo(host, None)}
+          print('Deployment host matches public DNS:', bool(addresses(os.environ['DEPLOY_HOST']) & addresses('docs.tianbot.com')))
+          with urlopen('https://docs.tianbot.com/competition/f1tenth_online/2026-ican/?diagnose=release', timeout=30) as response:
+              page = response.read().decode()
+              print('Public page HTTP status:', response.status)
+              print('Public page contains iCAN title:', '<title>2026 iCAN' in page)
+              print('Public Last-Modified:', response.headers.get('Last-Modified'))
+          PY
+          eval "$(ssh-agent -s)" >/dev/null
+          trap 'ssh-agent -k >/dev/null' EXIT
+          printf '%s\n' "$DEPLOY_KEY" | ssh-add - >/dev/null 2>&1
+          encoded_path=$(printf '%s' "$DEPLOY_PATH" | base64 -w0)
+          ssh -o BatchMode=yes -o StrictHostKeyChecking=accept-new -o ConnectTimeout=20 \
+            "$DEPLOY_USER@$DEPLOY_HOST" "python3 - '$encoded_path'" <<'PY'
+          import base64, hashlib, pathlib, re, subprocess, sys
+          deploy = pathlib.Path(base64.b64decode(sys.argv[1]).decode()).resolve()
+          relative = pathlib.Path('competition/f1tenth_online/2026-ican/index.html')
+          def inspect(label, directory):
+              page = directory / relative
+              print(label + ' new page exists:', page.is_file())
+              if page.is_file():
+                  content = page.read_bytes()
+                  print(label + ' new page contains iCAN title:', b'<title>2026 iCAN' in content)
+                  print(label + ' new page SHA256:', hashlib.sha256(content).hexdigest())
+          inspect('Deployment directory', deploy)
+          output = ''
+          for command in (['nginx', '-T'], ['sudo', '-n', 'nginx', '-T']):
+              try:
+                  result = subprocess.run(command, capture_output=True, text=True, timeout=20)
+              except (OSError, subprocess.TimeoutExpired):
+                  continue
+              if result.returncode == 0:
+                  output = result.stdout
+                  break
+          if not output:
+              print('Nginx configuration dump unavailable; reading accessible configuration files')
+              paths = set(pathlib.Path('/etc/nginx').rglob('*.conf'))
+              paths.update(pathlib.Path('/etc/nginx/sites-enabled').glob('*'))
+              for path in sorted(paths):
+                  try:
+                      output += '\n' + path.read_text()
+                  except OSError:
+                      pass
+          output = re.sub(r'#[^\n]*', '', output)
+          matches = []
+          for start in re.finditer(r'\bserver\s*\{', output):
+              depth, end = 1, start.end()
+              while end < len(output) and depth:
+                  depth += (output[end] == '{') - (output[end] == '}')
+                  end += 1
+              block = output[start.end():end-1]
+              names = re.findall(r'\bserver_name\s+([^;]+);', block)
+              if not any('docs.tianbot.com' in value.split() for value in names):
+                  continue
+              roots = re.findall(r'\broot\s+([^;]+);', block)
+              listens = re.findall(r'\blisten\s+([^;]+);', block)
+              matches.append((listens, roots))
+          print('Matching docs.tianbot.com server blocks:', len(matches))
+          for index, (listens, roots) in enumerate(matches, 1):
+              print('Server block', index, 'listen:', ', '.join(listens))
+              for value in roots:
+                  root = pathlib.Path(value.strip().strip('"\'')).resolve()
+                  print('Server block', index, 'root:', str(root))
+                  print('Nginx root matches deployment directory:', root == deploy)
+                  inspect('Nginx document root', root)
+          PY
