@@ -655,15 +655,27 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             link: '/tianrover/',
             items: [
               { text: '注意事项', link: '/tianrover/notice' },
+              { text: '收货清单', link: '/tianrover/list' },
               {
-                text: '使用手册',
+                text: 'Lunar Rover 使用说明',
                 collapsed: true,
                 items: [
-                  { text: '使用指引', link: '/tianrover/guide/' },
-                  { text: '软件环境配置', link: '/tianrover/guide/env-config' },
-                  { text: 'ROS 基础功能', link: '/tianrover/guide/basic-feature' },
-                  { text: 'SLAM 建图', link: '/tianrover/guide/slam' },
-                  { text: '自主导航', link: '/tianrover/guide/navigation' },
+                  { text: '使用指引', link: '/tianrover/guide-lunar/' },
+                  { text: '软件环境配置', link: '/tianrover/guide-lunar/env-config' },
+                  { text: 'ROS 基础功能', link: '/tianrover/guide-lunar/basic-feature' },
+                  { text: 'SLAM 建图', link: '/tianrover/guide-lunar/slam' },
+                  { text: '自主导航', link: '/tianrover/guide-lunar/navigation' },
+                ],
+              },
+              {
+                text: 'Mars Rover 使用说明',
+                collapsed: true,
+                items: [
+                  { text: '使用指引', link: '/tianrover/guide-mars/' },
+                  { text: '软件环境配置', link: '/tianrover/guide-mars/env-config' },
+                  { text: 'ROS 基础功能', link: '/tianrover/guide-mars/basic-feature' },
+                  { text: 'SLAM 建图', link: '/tianrover/guide-mars/slam' },
+                  { text: '自主导航', link: '/tianrover/guide-mars/navigation' },
                 ],
               },
               { text: '常见问题', link: '/tianrover/question' },

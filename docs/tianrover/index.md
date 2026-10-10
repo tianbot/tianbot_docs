@@ -1,4 +1,13 @@
-# tianrover使用手册
+# TIANROVER
+
+::: tip 车型说明
+TIANROVER 系列目前包含两款车型：
+
+- [Lunar Rover（月球车）使用说明](./guide-lunar/)
+- [Mars Rover（火星车）使用说明](./guide-mars/)
+
+注意事项、收货清单、常见问题和更新日志为 TIANROVER 系列通用文档。
+:::
 
 ## 产品简介
 
@@ -8,7 +17,19 @@ Tianrover是天之博特TOM全向自主移动机器人平台系列之一，是�
 
 拓展模块是在底盘基础上安装的一个拓展平台，可搭载外部控制器（如MiniPC、妙算等）、传感器（如摄像头、激光雷达等）、执行器（机械臂、夹爪等），利于科研教育对各种接口的需求。
 
-![image-20231102140540973](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021406719.png)
+### 两款车型外观
+
+<table style="width:100%;table-layout:fixed;display:table;">
+  <tr>
+    <th>Lunar Rover（月球车）</th>
+    <th>Mars Rover（火星车）</th>
+  </tr>
+  <tr>
+    <td><img src="https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202311021406719.png" alt="Lunar Rover 外观" style="width:100%;height:300px;object-fit:contain;"></td>
+    <td><img src="/images/mars-rover.png" alt="Mars Rover 外观" style="width:100%;height:300px;object-fit:contain;"></td>
+  </tr>
+</table>
+
 
 ## **适用场景**
 
@@ -32,29 +53,15 @@ Tianrover是天之博特TOM全向自主移动机器人平台系列之一，是�
 ## 硬件系统
 
 ### 硬件架构
-整体硬件电路系统采用标准通信方式，其整机电路拓扑图如下：
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc%E5%9B%BE%E7%89%876.png)
 
-### 接口介绍
+TIANROVER 两款车型采用相同的总体硬件架构。整车由底层控制器、车载运算设备、传感器和执行机构组成；具体器件型号和安装方式以对应车型说明书为准。
 
-![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc%E5%9B%BE%E7%89%877.png)
+![TIANROVER 硬件架构（示意图）](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc%E5%9B%BE%E7%89%876.png)
 
-1. 总电源：长按总电源，听到滴声提示音后松手整车供电、点按显示当前电量；
-2. 电量显示：多彩数码管进行电池电量显示；
-3. 蜂鸣器：开机启动、关机、电量低时发出提示音；
-4. 充电指示灯：
-- 绿色呼吸灯为正在充电
-- 蓝色常亮为电量充满、
-- 红色慢闪为充电电压错误
-- 红色快闪为电源故障需检查
-5. 充电接口：使用25.2V3A锂电池充电器充电、不可反接、短接！
-6. 硬盘快拆面板：拆下此面板后可拆下上位机硬盘；
-7. HMDI接口：输出上位机运行画面；
-8. 上位机开机按钮：按下后上位机开机；（默认上位机开机不自启）
-9. USB接口：USB3.0接口，直接连接在上位机上；
-10. 外部供电接口：为挂搭载设备提供输出24V3A电源；
-11. 急停开关：按下后整车执行电机断电，但不影响上位机供电。
+接口位置、接口数量和接口功能因车型而异，详见各自的使用说明：
 
+- [Lunar Rover 接口介绍](./guide-lunar/#接口介绍)
+- [Mars Rover 接口介绍](./guide-mars/#接口介绍)
 
 ## 软件系统
 整个软件系统包含驱动模块，功能模块和算法模块，以增强平台的可移植性，提高开发的效率。
@@ -76,29 +83,37 @@ Tianrover是天之博特TOM全向自主移动机器人平台系列之一，是�
 
 ## **产品参数**
 
-| 类型     | <div style="width:290px"> Tianrover_mini </div> | 
-| :---: | :---: |
-| 材质               | 铝合金、不锈钢、碳纤维          |
-| 底盘尺寸(长*宽*高) | 790 * 705 * 480mm                   |
-| 整车质量           | 29kg                            |
-| 额定载荷           | 30Kg                            |
-| 驱动方式           | 六轮独立驱动 六轮独立同步转向   |
-| 动力系统           | 直流减速伺服系统                |
-| 悬挂方式           | 双侧联动自适应悬挂系统          |
-| 移动速度           | 小于 10Km/h                     |
-| 最大爬坡           | <40°或 20cm                     |
-| 越障能力           | 台阶、非结构废墟地形等地形      |
-| 控制方式           | CAN、RS485、DBUS、串口等        |
-| 工作电压           | 24V / 12V                       |
-| 工作时间           | >5小时                          |
-| 充电器             | AC 220V  DC 25.2V               |
-| 充电时间           | 7H                              |
-| 其它接口           | UART、PWM、USB、IIC、SPI、CAN等 |
-| 其它配件           | 充电器、ROS2GO、线材包等        |
+以上参数为当前车型配置，具体参数以实车和产品交付资料为准。
 
-- 整车控制器 STM32F4 
-- 运算平台: Jeston xavier NX
-- 激光雷达: Livox mid360
-- 深度相机: ZED2i
+| 参数 | Lunar Rover | Mars Rover |
+|---|---|---|
+| 材质 | 铝合金、不锈钢、碳纤维 | 铝合金、不锈钢 |
+| 底盘尺寸（长 × 宽 × 高） | 790 × 705 × 480 mm | 1385 × 878 × 756 mm |
+| 整车质量 | 29 kg | 80 kg |
+| 额定载荷 | 30 kg | 50 kg |
+| 驱动方式 | 六轮独立驱动、六轮独立同步转向 | 六轮独立驱动、六轮独立同步转向 |
+| 动力系统 | 直流减速伺服系统 | 直流减速伺服系统 |
+| 悬挂方式 | 双侧联动自适应悬挂系统 | 双侧联动自适应悬挂系统 |
+| 移动速度 | 小于 10 km/h | ≥ 1.8 m/s |
+| 最大爬坡 | < 40° 或 20 cm | ≥ 16° |
+| 越障能力 | 台阶、非结构废墟地形等地形 | 台阶、非结构废墟地形等地形 |
+| 控制方式 | CAN、RS485、DBUS、串口等 | CAN、RS485、DBUS、串口等 |
+| 工作电压 | 24 V / 12 V | 36 V |
+| 工作时间 | > 5 小时 | > 6 小时 |
+| 充电器 | AC 220 V、DC 25.2 V | AC 220 V、DC 43.8 V |
+| 充电时间 | 7 h | 4 h |
+| 其它接口 | UART、PWM、USB、IIC、SPI、CAN 等 | UART、PWM、USB、IIC、SPI、CAN 等 |
+| 其它配件 | 充电器、ROS2GO、随车工具 | 充电器、ROS2GO、随车工具 |
+
+### 主要配置
+
+| 配置项 | Lunar Rover | Mars Rover |
+|---|---|---|
+| 整车控制器 | STM32F4 | STM32F4 |
+| 运算平台 | Jetson Xavier NX | Jetson Orin NX |
+| 激光雷达 | Livox Mid-360 | Helios 16 |
+| 深度相机 | ZED2i | ZED2i |
+
 
 **以上功能根据配置不同，支持功能不同，更多产品详情咨询TIANBOT销售人员**。
+
