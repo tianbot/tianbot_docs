@@ -1,124 +1,145 @@
-::: warning Mars Rover 内容占位
-本页当前由 Lunar Rover 使用说明迁移而来，仅用于文档结构和版式占位。Mars Rover 的实际参数、接口、图片和操作步骤确认后需要逐项校对。
+# SLAM 建图
+
+Mars Rover 当前使用 ROS 2 `tianrover` 功能包。二维建图适合后续 AMCL/Nav2 地面导航；三维建图使用 FAST-LIO2 或 KISS-ICP 与 RTAB-Map。旧版 MID360、Point-LIO 和 ROS 1 启动命令不适用于本页 Helios 16 流程。
+
+## 1. 使用前准备
+
+先按[基础功能](./basic-feature)检查驱动、点云和扫描。每个新终端加载环境：
+
+```bash
+source /opt/ros/humble/setup.bash
+source ~/tianbot_ws/install/setup.bash
+source ~/tianrover_ws/install/setup.bash
+export TIANBOT_NAME=mars
+```
+
+工作区路径以本车安装位置为准。建图前停止已有导航或其他建图程序，同一车一次只运行一种建图算法。
+
+## 2. 创建二维地图 {#generate_map}
+
+### 启动底盘和传感器
+
+终端 1：
+
+```bash
+ros2 launch tianrover bringup.launch.py
+```
+
+已按基础功能启动整车驱动时，保留该终端，不重复执行。
+
+### 选择建图算法
+
+终端 2，按本车已安装算法选择一条命令：
+
+| 算法 | 启动命令 |
+| --- | --- |
+| Gmapping | `ros2 launch tianrover tianrover_gmapping.launch.py` |
+| Cartographer | `ros2 launch tianrover tianrover_cartographer.launch.py` |
+| SLAM Toolbox | `ros2 launch tianrover slam.launch.py` |
+
+缺少对应算法功能包时联系交付人员检查安装，不改用 ROS 1 命令。
+
+### 查看地图
+
+终端 3，在图形桌面运行：
+
+```bash
+ros2 launch tianrover rviz.launch.py
+```
+
+Fixed Frame 使用 `mars/map`。确认扫描正常、地图逐渐生成后，按[使用指引](./)切换遥控模式，由操作人员低速行驶覆盖场地。观察墙面是否重影、转弯后扫描是否与地图对齐。
+
+![Mars Rover 二维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-2d-5a10a16d25b530b1.png)
+
+*二维建图示例：场地栅格地图与机器人位置。*
+
+### 保存二维地图 {#save-map}
+
+停车，保持建图程序运行，在新终端保存。地图名称不加扩展名，每次使用新名称。
+
+Gmapping：
+
+```bash
+ros2 launch tianrover map_save.launch.py slam_methods:=gmapping \
+  map_path:=$HOME/maps map_file:=mars_gmapping_v1
+```
+
+Cartographer：
+
+```bash
+ros2 launch tianrover map_save.launch.py slam_methods:=cartographer \
+  map_path:=$HOME/maps map_file:=mars_cartographer_v1
+```
+
+SLAM Toolbox：
+
+```bash
+ros2 launch tianrover map_save.launch.py slam_methods:=slam_toolbox \
+  map_path:=$HOME/maps map_file:=mars_toolbox_v1
+```
+
+确认保存命令成功退出，`~/maps/` 下存在对应 `.yaml` 和 `.pgm`。Cartographer 还会保存 `.pbstream`；用于本手册导航的是 `.yaml`。若保存报错，不把部分输出当作完整地图，查看报错并更换新文件名重试。
+
+保存成功后，在建图终端按 `Ctrl+C` 退出建图；保留整车驱动，按[自主导航](./navigation)加载刚保存的地图。
+
+## 3. 创建三维地图 {#mapping-3d}
+
+::: warning 使用范围
+三维建图需已部署对应前端与 RTAB-Map，并使用带真实逐点时间的 Helios 16 点云。FAST-LIO2 还需已确认的 IMU 标定文件。三维定位导航尚未完成实车交付验收，见[三维地图定位说明](./navigation#navigation-3d)。
 :::
 
-# slam建图 
+先正常退出二维 bringup 和建图，避免与三维入口重复启动。下面以 **FAST-LIO2 + ZED 2i IMU** 为例；标定文件路径由交付人员提供，示例使用 `~/fastlio_calibration.yaml`。
 
-## 地图创建 {#generate_map}
+终端 1，车辆静止时启动：
 
-示例算法采用`hku-mars`实验室开源的[`Point-LIO`](https://github.com/hku-mars/Point-LIO)建图算法
-
-### 启动底盘和雷达驱动
-
-```shell
-cd tianbot_ws
-
-source devel/setup.bash
-
-roslaunch tianbot_bringup tianbot_bringup.launch
+```bash
+ros2 launch tianrover bringup_3d.launch.py frontend:=fastlio \
+  calibration:=$HOME/fastlio_calibration.yaml
 ```
 
-### 单独启动雷达驱动
+若提示标定未确认，先联系交付人员核对标定文件，不跳过校验。
 
-```shell
-cd tianbot_ws
+终端 2，使用新数据库名称：
 
-source devel/setup.bash
-
-roslaunch livox_ros_driver2 msg_MID360.launch
+```bash
+ros2 launch tianrover mapping_3d.launch.py frontend:=fastlio use_rgbd:=true \
+  database:=$HOME/maps/mars3d_v1.db
 ```
 
-### 雷达参数设置 {#ros_basic_livox_config}
+终端 3：
 
-在`launch`文件中可以设置将`多个雷达的话题`进行`合并发布`或者是`单独分开发布`。
-
-通过设置参数`multi topic`，
-
-- 该参数设为`0`时是合并所有雷达为`一个topic`发出，
-- 设为`1`时会分成`多个topic`发出，多个topic则会以雷达自身的`ip`进行区分。
-
-如何进行多个激光雷达添加：打开`tianbot_ws/src/Helios 16 驱动对应的配置文件`文件，按 Helios 16 驱动文档配置雷达 IP 和相关参数
-
-```json
-
-....
-    "lidar_ configs" : [
-        {
-            "ip" : "192.168.1.185",
-            "pcl_ data_ type" : 1,
-            "pattern_ mode " :0,
-            "extrinsic_ parameter" : {
-                "roll": 0.0,
-                "pitch": 0.0,
-                "yaw": 0.0,
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        },
-        {
-            "ip" : "192.168.1.123",
-            "pcl_ data_ type" : 1 ,
-            "pattern_ mode" : 0 ,
-            "extrinsic_ parameter " : {
-                "roll": 180.0,
-                "pitch": 0.0,
-                "yaw": 0.0,
-                "x": 0,
-                "y": 0,
-                "z": 0
-            }
-        }
-    ]
- 
+```bash
+ros2 launch tianrover rviz_3d.launch.py
 ```
 
-## 地图保存
+默认固定坐标系为 `mars/odom_lidar`；查看累计地图时可改为 `mars/map`，添加 PointCloud2 `/mars/cloud_map`。先确认 `/mars/odom_lidar` 和 `/mars/lidar/cloud_deskewed` 持续更新，再低速遥控建图。
 
+使用已部署的 KISS 前端时，终端 1、2 分别改为以下命令；与 FAST-LIO2 二选一：
 
-### 启动Point_LIO建图程序 {#launch_point_lio}
-
-```shell
-cd pointlio_ws
-
-source devel/setup.bash
-
-roslaunch point_lio mapping_mid360.launch
+```bash
+ros2 launch tianrover bringup_3d.launch.py frontend:=kiss
 ```
 
-如果要更改雷达话题节点则需要在`src/Point_LIO/config`文件中的`mid360.yaml`中的`lid_topic`与`imu_topic`进行修改
-
-在建图程序结束后程序会自动保存点云图
-
-开关参数：对`src/Point_LIO/config/mid360.yaml`文件中的`pcd_save_en`参数进行修改，
-
-- `true`：为结束后保存地图
-- `false`：为不保存
-
-保存后的地图默认存储在`src/Point_LIO/PCD`文件夹下
-
-### 运行Fast_LIO建图 {#launch_fast_lio}
- 
-```shell
-cd fastlio_ws
-
-source devel/setup.bash
-roslaunch fast_lio mapping_mid360.launch
+```bash
+ros2 launch tianrover mapping_3d.launch.py frontend:=kiss use_rgbd:=true \
+  database:=$HOME/maps/mars3d_kiss_v1.db
 ```
 
-如果要更改雷达话题节点则需要在`FAST_LIO/config/mid360.yaml`文件中的`mid360.yaml`中的`lid_topic`与`imu_topic`进行修改
+KISS 不使用 IMU；查看时运行 `ros2 launch tianrover rviz.launch.py fixed_frame:=mars/map`，可添加 `/mars/cloud_map` 与 `/mars/kiss/frame`。若不启用相机，三维 bringup 加 `use_zed:=false`，mapping 改为 `use_rgbd:=false`。
 
-#### 保存点云图 {#save_pointcloud}
+![Mars Rover 三维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-3d-28436697557c0846.png)
 
-在启动文件中将 `pcd_save_enable` 设置为 1 -LIO 终止后，所有扫描结果（全局坐标系）将被累积并保存到文件 `FAST_LIO/PCD/scans.pcd` 中。可以使用 `pcl_viewer scans.pcd` 可视化这些点云。
+*三维建图示例：累计点云地图与场地栅格地图。*
 
+### 保存三维地图 {#save-3d}
 
-::: info pcl_viewer 使用技巧
+三维保存与二维不同：**停车，先在 mapping 终端正常 `Ctrl+C`，等待 RTAB-Map 完全退出，再保存**。保留三维 bringup，不强制杀死建图进程。
 
-当 pcl_viewer 运行时，按键盘 1、2、3、4、5 可以更改要显示/着色的内容。
-- 1 is all random
-- 2 is X values
-- 3 is Y values
-- 4 is Z values
-- 5 is intensity
-:::
+```bash
+ros2 launch tianrover map_save_3d.launch.py offline:=true \
+  database:=$HOME/maps/mars3d_v1.db output:=$HOME/maps/mars3d_v1_saved.db
+```
+
+KISS 将输入、输出改为对应的 `mars3d_kiss_v1` 文件。输出须为新文件；数据库仍被使用、图节点不足或输出已存在时，入口会拒绝保存，应按报错处理。
+
+保存产物为 RTAB-Map `.db` 数据库，不是 PCD，也不能交给二维导航入口。保留原库与保存副本，后续使用 `*_saved.db` 定位。
