@@ -1,6 +1,6 @@
 # 自主导航 {#nav}
 
-Mars Rover 当前使用 ROS 2 Nav2，二维定位为 AMCL，全局规划为 NavFn，局部控制为 DWB。本页按已保存地图说明操作；旧版 ROS 1 `move_base`、TEB/DWA/EBAND 启动命令不适用于当前包。
+MarsRover 使用 ROS 2 `tianrover_navigation` 功能包启动 Nav2，二维定位为 AMCL，全局规划为 NavFn，局部控制为 DWB。本页按已保存地图说明操作；旧版 ROS 1 `move_base`、TEB/DWA/EBAND 启动命令不适用于当前包。
 
 ## 1. 导航前准备
 
@@ -14,16 +14,15 @@ Mars Rover 当前使用 ROS 2 Nav2，二维定位为 AMCL，全局规划为 NavF
 source /opt/ros/humble/setup.bash
 source ~/tianbot_ws/install/setup.bash
 source ~/tianrover_ws/install/setup.bash
-export TIANBOT_NAME=mars
 ```
 
-工作区路径以本车安装位置为准，全部终端使用相同机器人名称。
+工作区路径以本车安装位置为准，全部终端加载同一个[车辆配置文件](./env-config#vehicle-config)。下文以机器人名称 `mars` 为例。
 
 ## 2. 加载地图并启动二维导航
 
 ```bash
 export TIANROVER_MAX_SPEED=0.10
-ros2 launch tianrover navigation.launch.py map:=$HOME/maps/mars_gmapping_v1.yaml
+ros2 launch tianrover_navigation navigation.launch.py map:=$HOME/maps/mars_gmapping_v1.yaml
 ```
 
 将地图替换为实际保存的 YAML；Cartographer 和 SLAM Toolbox 的栅格地图也使用同一导航入口。`0.10 m/s` 为低速检查示例，须按现场条件确认。
@@ -33,7 +32,7 @@ ros2 launch tianrover navigation.launch.py map:=$HOME/maps/mars_gmapping_v1.yaml
 另开图形终端：
 
 ```bash
-ros2 launch tianrover rviz.launch.py
+ros2 launch tianrover_rviz rviz.launch.py
 ```
 
 默认 Fixed Frame 为 `mars/map`。地图文件不存在时会报错；未指定 `map` 时默认使用 `~/.local/share/tianrover/maps/mars/map.yaml`，不会自动使用旧 `TianbotOffice` 地图。
@@ -50,7 +49,7 @@ ros2 launch tianrover rviz.launch.py
 
 观察全局路径、局部障碍物与车辆实际运动，到达后确认车辆停稳。六轮底盘支持的遥控运动模式不代表当前导航支持全向横移；本入口按前向线速度和转向角速度控制。
 
-![Mars Rover 二维导航示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-navigation-2d-0d505d211c7c4bd5.png)
+![MarsRover 二维导航示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-navigation-2d-0d505d211c7c4bd5.png)
 
 *二维导航示例：地图、代价地图、机器人位置与规划路径。*
 
@@ -91,7 +90,7 @@ FAST-LIO2 地图示例：
 
 ```bash
 export TIANROVER_MAX_SPEED=0.10
-ros2 launch tianrover localize_and_navigate_3d.launch.py frontend:=fastlio \
+ros2 launch tianrover_navigation localize_and_navigate_3d.launch.py frontend:=fastlio \
   use_rgbd:=true database:=$HOME/maps/mars3d_v1_saved.db
 ```
 
@@ -100,12 +99,12 @@ KISS 使用 `frontend:=kiss` 和对应保存库。未启用相机时使用 `use_
 图形终端：
 
 ```bash
-ros2 launch tianrover rviz.launch.py fixed_frame:=mars/map
+ros2 launch tianrover_rviz rviz.launch.py fixed_frame:=mars/map
 ```
 
 先确认地图和实时点云显示、定位与扫描对齐，再按上面的初始位姿步骤操作。此入口由 RTAB-Map 提供地图与定位，不另外启动 AMCL。
 
-![Mars Rover 三维地图定位示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-localization-3d-162ca549a9b2efcb.png)
+![MarsRover 三维地图定位示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-localization-3d-162ca549a9b2efcb.png)
 
 *三维地图定位示例：机器人模型、场地地图与点云显示。*
 

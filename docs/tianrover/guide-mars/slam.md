@@ -1,6 +1,6 @@
 # SLAM 建图
 
-Mars Rover 当前使用 ROS 2 `tianrover` 功能包。二维建图适合后续 AMCL/Nav2 地面导航；三维建图使用 FAST-LIO2 或 KISS-ICP 与 RTAB-Map。旧版 MID360、Point-LIO 和 ROS 1 启动命令不适用于本页 Helios 16 流程。
+MarsRover 的建图与地图保存入口由 ROS 2 `tianrover_slam` 功能包提供，底盘和传感器由 `tianrover_bringup` 启动。二维建图适合后续 AMCL/Nav2 地面导航；三维建图使用 FAST-LIO2 或 KISS-ICP 与 RTAB-Map。旧版 MID360、Point-LIO 和 ROS 1 启动命令不适用于本页 Helios 16 流程。
 
 ## 1. 使用前准备
 
@@ -10,10 +10,9 @@ Mars Rover 当前使用 ROS 2 `tianrover` 功能包。二维建图适合后续 A
 source /opt/ros/humble/setup.bash
 source ~/tianbot_ws/install/setup.bash
 source ~/tianrover_ws/install/setup.bash
-export TIANBOT_NAME=mars
 ```
 
-工作区路径以本车安装位置为准。建图前停止已有导航或其他建图程序，同一车一次只运行一种建图算法。
+工作区路径以本车安装位置为准，机器人名称从[车辆配置文件](./env-config#vehicle-config)读取，下文以 `mars` 为例。建图前停止已有导航或其他建图程序，同一车一次只运行一种建图算法。
 
 ## 2. 创建二维地图 {#generate_map}
 
@@ -22,7 +21,7 @@ export TIANBOT_NAME=mars
 终端 1：
 
 ```bash
-ros2 launch tianrover bringup.launch.py
+ros2 launch tianrover_bringup bringup.launch.py
 ```
 
 已按基础功能启动整车驱动时，保留该终端，不重复执行。
@@ -33,9 +32,9 @@ ros2 launch tianrover bringup.launch.py
 
 | 算法 | 启动命令 |
 | --- | --- |
-| Gmapping | `ros2 launch tianrover tianrover_gmapping.launch.py` |
-| Cartographer | `ros2 launch tianrover tianrover_cartographer.launch.py` |
-| SLAM Toolbox | `ros2 launch tianrover slam.launch.py` |
+| Gmapping | `ros2 launch tianrover_slam tianrover_gmapping.launch.py` |
+| Cartographer | `ros2 launch tianrover_slam tianrover_cartographer.launch.py` |
+| SLAM Toolbox | `ros2 launch tianrover_slam slam.launch.py` |
 
 缺少对应算法功能包时联系交付人员检查安装，不改用 ROS 1 命令。
 
@@ -44,12 +43,12 @@ ros2 launch tianrover bringup.launch.py
 终端 3，在图形桌面运行：
 
 ```bash
-ros2 launch tianrover rviz.launch.py
+ros2 launch tianrover_rviz rviz.launch.py
 ```
 
 Fixed Frame 使用 `mars/map`。确认扫描正常、地图逐渐生成后，按[使用指引](./)切换遥控模式，由操作人员低速行驶覆盖场地。观察墙面是否重影、转弯后扫描是否与地图对齐。
 
-![Mars Rover 二维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-2d-5a10a16d25b530b1.png)
+![MarsRover 二维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-2d-5a10a16d25b530b1.png)
 
 *二维建图示例：场地栅格地图与机器人位置。*
 
@@ -60,21 +59,21 @@ Fixed Frame 使用 `mars/map`。确认扫描正常、地图逐渐生成后，按
 Gmapping：
 
 ```bash
-ros2 launch tianrover map_save.launch.py slam_methods:=gmapping \
+ros2 launch tianrover_slam map_save.launch.py slam_methods:=gmapping \
   map_path:=$HOME/maps map_file:=mars_gmapping_v1
 ```
 
 Cartographer：
 
 ```bash
-ros2 launch tianrover map_save.launch.py slam_methods:=cartographer \
+ros2 launch tianrover_slam map_save.launch.py slam_methods:=cartographer \
   map_path:=$HOME/maps map_file:=mars_cartographer_v1
 ```
 
 SLAM Toolbox：
 
 ```bash
-ros2 launch tianrover map_save.launch.py slam_methods:=slam_toolbox \
+ros2 launch tianrover_slam map_save.launch.py slam_methods:=slam_toolbox \
   map_path:=$HOME/maps map_file:=mars_toolbox_v1
 ```
 
@@ -93,7 +92,7 @@ ros2 launch tianrover map_save.launch.py slam_methods:=slam_toolbox \
 终端 1，车辆静止时启动：
 
 ```bash
-ros2 launch tianrover bringup_3d.launch.py frontend:=fastlio \
+ros2 launch tianrover_bringup bringup_3d.launch.py frontend:=fastlio \
   calibration:=$HOME/fastlio_calibration.yaml
 ```
 
@@ -102,14 +101,14 @@ ros2 launch tianrover bringup_3d.launch.py frontend:=fastlio \
 终端 2，使用新数据库名称：
 
 ```bash
-ros2 launch tianrover mapping_3d.launch.py frontend:=fastlio use_rgbd:=true \
+ros2 launch tianrover_slam mapping_3d.launch.py frontend:=fastlio use_rgbd:=true \
   database:=$HOME/maps/mars3d_v1.db
 ```
 
 终端 3：
 
 ```bash
-ros2 launch tianrover rviz_3d.launch.py
+ros2 launch tianrover_rviz rviz_3d.launch.py
 ```
 
 默认固定坐标系为 `mars/odom_lidar`；查看累计地图时可改为 `mars/map`，添加 PointCloud2 `/mars/cloud_map`。先确认 `/mars/odom_lidar` 和 `/mars/lidar/cloud_deskewed` 持续更新，再低速遥控建图。
@@ -117,17 +116,17 @@ ros2 launch tianrover rviz_3d.launch.py
 使用已部署的 KISS 前端时，终端 1、2 分别改为以下命令；与 FAST-LIO2 二选一：
 
 ```bash
-ros2 launch tianrover bringup_3d.launch.py frontend:=kiss
+ros2 launch tianrover_bringup bringup_3d.launch.py frontend:=kiss
 ```
 
 ```bash
-ros2 launch tianrover mapping_3d.launch.py frontend:=kiss use_rgbd:=true \
+ros2 launch tianrover_slam mapping_3d.launch.py frontend:=kiss use_rgbd:=true \
   database:=$HOME/maps/mars3d_kiss_v1.db
 ```
 
-KISS 不使用 IMU；查看时运行 `ros2 launch tianrover rviz.launch.py fixed_frame:=mars/map`，可添加 `/mars/cloud_map` 与 `/mars/kiss/frame`。若不启用相机，三维 bringup 加 `use_zed:=false`，mapping 改为 `use_rgbd:=false`。
+KISS 不使用 IMU；查看时运行 `ros2 launch tianrover_rviz rviz.launch.py fixed_frame:=mars/map`，可添加 `/mars/cloud_map` 与 `/mars/kiss/frame`。若不启用相机，三维 bringup 加 `use_zed:=false`，mapping 改为 `use_rgbd:=false`。
 
-![Mars Rover 三维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-3d-28436697557c0846.png)
+![MarsRover 三维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-3d-28436697557c0846.png)
 
 *三维建图示例：累计点云地图与场地栅格地图。*
 
@@ -136,7 +135,7 @@ KISS 不使用 IMU；查看时运行 `ros2 launch tianrover rviz.launch.py fixed
 三维保存与二维不同：**停车，先在 mapping 终端正常 `Ctrl+C`，等待 RTAB-Map 完全退出，再保存**。保留三维 bringup，不强制杀死建图进程。
 
 ```bash
-ros2 launch tianrover map_save_3d.launch.py offline:=true \
+ros2 launch tianrover_slam map_save_3d.launch.py offline:=true \
   database:=$HOME/maps/mars3d_v1.db output:=$HOME/maps/mars3d_v1_saved.db
 ```
 
