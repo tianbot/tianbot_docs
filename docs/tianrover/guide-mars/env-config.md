@@ -106,7 +106,7 @@ source ~/tianrover_ws/install/setup.bash
 | `tianrover_teleop` | 交互终端键盘遥控 |
 | `tianrover_gazebo` | 开发电脑单独构建的 Mini 仿真，不随实车元包构建 |
 
-`tianrover` 是用于聚合依赖的元包。具体操作使用上述功能包的启动命令，见[基础功能](./basic-feature)、[SLAM 建图](./slam)和[自主导航](./basic-feature#navigation)。
+`tianrover` 是用于聚合依赖的元包。具体操作使用上述功能包的启动命令，见[基础功能](./basic-feature)、[SLAM 建图](./slam)和[自主导航](./navigation)。
 
 ## 车辆配置 {#vehicle-config}
 

@@ -675,6 +675,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   { text: '软件环境配置', link: '/tianrover/guide-mars/env-config' },
                   { text: 'ROS 基础功能', link: '/tianrover/guide-mars/basic-feature' },
                   { text: 'SLAM 建图', link: '/tianrover/guide-mars/slam' },
+                  { text: '自主导航', link: '/tianrover/guide-mars/navigation' },
                 ],
               },
               { text: '常见问题', link: '/tianrover/question' },

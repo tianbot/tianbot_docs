@@ -81,12 +81,12 @@ Cartographer 使用独立保存流程，不读取该配置。更多配置见[车
 若二维扫描始终只能看到约 5.7 m，先检查投影高度带，见[扫描参数](./env-config#二维扫描与地图保存参数)；
 单独增大扫描或建图距离上限，无法恢复已在高度过滤中移除的点。
 
-保存成功后，在建图终端按 `Ctrl+C` 退出建图；保留整车驱动，按[自主导航](./basic-feature#navigation)加载刚保存的地图。
+保存成功后，在建图终端按 `Ctrl+C` 退出建图；保留整车驱动，按[自主导航](./navigation)加载刚保存的地图。
 
 ## 3. 创建三维地图 {#mapping-3d}
 
 ::: warning 使用范围
-三维建图需已部署对应前端与 RTAB-Map，并使用带真实逐点时间的 Helios 16 点云。FAST-LIO2 还需已确认的 IMU 标定文件。三维定位导航尚未完成实车交付验收，见[三维地图定位说明](./basic-feature#navigation-3d)。
+三维建图需已部署对应前端与 RTAB-Map，并使用带真实逐点时间的 Helios 16 点云。FAST-LIO2 还需已确认的 IMU 标定文件。保存地图后，可按[三维地图定位与地面导航](./navigation#navigation-3d)加载地图并发送导航目标。
 :::
 
 先正常退出二维 bringup 和建图，避免与三维入口重复启动。下面以 **FAST-LIO2 + ZED 2i IMU** 为例；标定文件路径由交付人员提供，示例使用 `~/fastlio_calibration.yaml`。
