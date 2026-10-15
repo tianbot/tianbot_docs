@@ -24,11 +24,23 @@ ros2 launch tianrover_bringup bringup.launch.py
 
 终端 2，按本车已安装算法选择一条命令：
 
-| 算法 | 启动命令 |
-| --- | --- |
-| Gmapping | `ros2 launch tianrover_slam tianrover_gmapping.launch.py` |
-| Cartographer | `ros2 launch tianrover_slam tianrover_cartographer.launch.py` |
-| SLAM Toolbox | `ros2 launch tianrover_slam slam.launch.py` |
+#### Gmapping
+
+```bash
+ros2 launch tianrover_slam tianrover_gmapping.launch.py
+```
+
+#### Cartographer
+
+```bash
+ros2 launch tianrover_slam tianrover_cartographer.launch.py
+```
+
+#### SLAM Toolbox
+
+```bash
+ros2 launch tianrover_slam slam.launch.py
+```
 
 缺少对应算法功能包时联系交付人员检查安装，不改用 ROS 1 命令。
 

@@ -33,13 +33,35 @@ ros2 launch tianrover_bringup bringup.launch.py use_zed:=false
 
 单独启动用于检查某个模块。先退出相应的整车驱动，避免重复启动。
 
-| 功能 | 启动命令 |
-| --- | --- |
-| 底盘 | `ros2 launch tianrover_bringup base.launch.py` |
-| Helios 16 雷达 | `ros2 launch tianrover_bringup lidar.launch.py` |
-| ZED 2i 深度相机 | `ros2 launch tianrover_bringup zed.launch.py` |
-| 机器人模型 | `ros2 launch tianrover_description description.launch.py` |
-| 二维扫描投影 | `ros2 launch tianrover_bringup scan.launch.py` |
+### 底盘
+
+```bash
+ros2 launch tianrover_bringup base.launch.py
+```
+
+### Helios 16 雷达
+
+```bash
+ros2 launch tianrover_bringup lidar.launch.py
+```
+
+### ZED 2i 深度相机
+
+```bash
+ros2 launch tianrover_bringup zed.launch.py
+```
+
+### 机器人模型
+
+```bash
+ros2 launch tianrover_description description.launch.py
+```
+
+### 二维扫描投影
+
+```bash
+ros2 launch tianrover_bringup scan.launch.py
+```
 
 扫描投影需要雷达点云和机器人模型坐标变换；仅启动 `scan.launch.py` 不会启动雷达。
 
