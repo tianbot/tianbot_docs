@@ -4,13 +4,7 @@ TianRover 火星车 的建图与地图保存入口由 ROS 2 `tianrover_slam` 功
 
 ## 1. 使用前准备
 
-先按[基础功能](./basic-feature)检查驱动、点云和扫描。每个新终端加载环境：
-
-```bash
-source /opt/ros/humble/setup.bash
-source ~/tianbot_ws/install/setup.bash
-source ~/tianrover_ws/install/setup.bash
-```
+先按[基础功能](./basic-feature)检查驱动、点云和扫描。已部署火星车的新 Bash 终端会自动加载运行环境，打开后直接执行下面的命令即可。
 
 工作区路径以本车安装位置为准，机器人名称从[车辆配置文件](./env-config#vehicle-config)读取，下文以 `mars` 为例。建图前停止已有导航或其他建图程序，同一车一次只运行一种建图算法。
 
@@ -80,7 +74,7 @@ ros2 launch tianrover_slam map_save.launch.py slam_methods:=slam_toolbox \
 确认保存命令成功退出，`~/maps/` 下存在对应 `.yaml` 和 `.pgm`。Cartographer 还会保存 `.pbstream`；用于本手册导航的是 `.yaml`。若保存报错，不把部分输出当作完整地图，查看报错并更换新文件名重试。
 
 Gmapping 和 SLAM Toolbox 保存地图时，空闲阈值默认为 `0.196`。需要调整时，在保存终端
-加载环境之后、运行保存命令之前执行 `export TIANROVER_MAP_FREE_THRESH=0.196`，
+运行保存命令之前执行 `export TIANROVER_MAP_FREE_THRESH=0.196`，
 数值应在 0 与占用阈值之间。它只控制保存时的像素分类，不改变在线建图；
 Cartographer 使用独立保存流程，不读取该配置。更多配置见[车辆配置](./env-config#vehicle-config)。
 

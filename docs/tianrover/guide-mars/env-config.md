@@ -53,13 +53,44 @@ RustDesk 连接密码为 `Tianbot_2016`。
 | `~/.config/tianrover/my_tianrover.sh` | 本车的名称、串口和运行参数配置 |
 | `~/maps` | 本手册示例使用的地图目录 |
 
-安装位置不同的车辆，请按交付目录替换工作区路径。每个新终端先执行：
+安装位置不同的车辆，请按交付目录替换工作区路径。当前车载 `tianbot` 用户的 `~/.bashrc`
+已配置自动加载 ROS 2 Humble 和 `~/tianrover_ws/install/setup.bash`；车辆工作区的安装脚本
+还会串联加载 `~/tianbot_ws` 中的底盘等驱动。
+**在车载桌面打开 Bash 终端，或通过 SSH 登录后，即可直接执行 ROS 命令，无需重复 source。**
+终端自动加载工作区时，也会读取本车的外部配置。
+
+| 环境层 | 加载来源 | 用途 |
+| --- | --- | --- |
+| ROS 2 Humble | `/opt/ros/humble/setup.bash` | ROS 命令及基础功能包 |
+| 驱动工作区 | `~/tianbot_ws/install`，由车辆工作区串联加载 | 底盘、相机等现场驱动 |
+| 车辆工作区 | `~/tianrover_ws/install/setup.bash` | TianRover 功能包及车辆配置 |
+
+需要检查自动加载是否正常时执行：
+
+```bash
+echo "$ROS_DISTRO"
+ros2 pkg prefix tianrover_bringup
+ros2 pkg prefix tianbot_core
+```
+
+应分别得到 `humble`、车辆工作区中的 `tianrover_bringup` 路径和驱动工作区中的
+`tianbot_core` 路径。这只是环境检查，不会启动底盘或传感器。
+
+### 自动加载排错与脚本环境 {#manual-env}
+
+若新终端找不到 `ros2` 或功能包，先检查 `~/.bashrc` 的自动加载配置及工作区安装目录。
+其他电脑尚未配置自动加载时，也需按其实际安装目录加载环境。
+
+::: details 仅在自动加载失效或非交互脚本中手动加载
+非交互脚本、远程单条命令和服务不会自动获得交互终端中的完整环境，需要显式加载：
 
 ```bash
 source /opt/ros/humble/setup.bash
-source ~/tianbot_ws/install/setup.bash
 source ~/tianrover_ws/install/setup.bash
 ```
+
+车辆工作区会串联加载其驱动依赖。以上是排错和脚本用法，不是每次打开终端的日常步骤。
+:::
 
 日常操作使用以下功能包：
 
@@ -91,7 +122,7 @@ export TIANROVER_BASE_PORT=/dev/tianbot_base
 export TIANROVER_USE_ZED=false
 ```
 
-其中 `TIANBOT_NAME` 决定话题和坐标系前缀；`TIANROVER_USE_ZED=false` 表示整车启动时关闭相机。按本车实际配置修改，修改后重新加载工作区环境并重启相应程序，无需重新编译。
+其中 `TIANBOT_NAME` 决定话题和坐标系前缀；`TIANROVER_USE_ZED=false` 表示整车启动时关闭相机。按本车实际配置修改，修改后先退出相应程序，再从新终端启动，无需重新编译。新终端会自动读取新配置。
 
 首次配置且文件不存在时，可以从已安装功能包复制示例：
 
@@ -124,8 +155,9 @@ export TIANROVER_SCAN_RANGE=20.0
 约到 5.7 m 就会被过滤；当前默认 ±0.35 m 用于覆盖约 20 m 的束线高度偏移，
 不代表已完成 20 m 实测验收。更换雷达或调整安装姿态后，应重新确认地面和障碍物的过滤效果。
 
-车辆停车并退出对应程序后，在准备启动程序的终端重新执行上面的三层环境加载命令，
-再启动程序。已有终端或已运行节点不会因配置文件修改而自动更新。
+车辆停车并退出对应程序后，打开新终端再启动程序即可读取新配置。
+若需要继续使用已有终端，可执行一次 `source ~/tianrover_ws/install/setup.bash` 刷新环境后再启动。
+已有终端或已运行节点不会因配置文件修改而自动更新。
 
 ## 更新源码与重新编译 {#software-update}
 
@@ -148,15 +180,13 @@ git pull --ff-only
 **拉取只更新源码。源码有更新后，需要重新编译，再使用新版程序：**
 
 ```bash
-source /opt/ros/humble/setup.bash
-source ~/tianbot_ws/install/setup.bash
-source ~/tianrover_ws/install/setup.bash
 cd ~/tianrover_ws
 colcon build --base-paths src/tianrover --packages-up-to tianrover \
   --symlink-install --parallel-workers 2 --event-handlers console_direct+
 source install/setup.bash
 ```
 
-该命令编译本仓库的元包及其各功能包，复用车辆已安装的驱动和算法依赖。确认构建汇总没有失败后，再按[基础功能](./basic-feature)启动设备；其他已打开终端也需重新加载环境。
+该命令编译本仓库的元包及其各功能包，复用车辆已安装的驱动和算法依赖。确认构建汇总没有失败后，再按[基础功能](./basic-feature)启动设备。构建命令后的 `source install/setup.bash`
+只用于让当前终端读取刚生成的安装环境；也可以关闭该终端，改从新终端启动设备。其他已有终端需刷新环境或重新打开。
 
 `git status -sb` 可查看未提交修改和本地分支是否领先更新源；`git diff` 可查看未提交的已跟踪文件差异。车上的修改不会因 `git pull` 自动传回更新源。

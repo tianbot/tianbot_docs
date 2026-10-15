@@ -8,15 +8,9 @@ TianRover 火星车 使用 ROS 2 `tianrover_navigation` 功能包启动 Nav2，�
 - 保持一套 `bringup.launch.py` 运行，确认扫描、里程计与模型显示正常。
 - 按[使用指引](./)将云卓 G20 序号 2 三档开关置于中间或最上方，进入 ROS 模式；确认急停释放、周围场地空旷。
 
-每个新终端加载环境：
+已部署火星车的新 Bash 终端会自动加载运行环境，打开后直接执行下面的命令即可。
 
-```bash
-source /opt/ros/humble/setup.bash
-source ~/tianbot_ws/install/setup.bash
-source ~/tianrover_ws/install/setup.bash
-```
-
-工作区路径以本车安装位置为准，全部终端加载同一个[车辆配置文件](./env-config#vehicle-config)。下文以机器人名称 `mars` 为例。
+工作区路径以本车安装位置为准，新终端会自动读取同一个[车辆配置文件](./env-config#vehicle-config)。下文以机器人名称 `mars` 为例。
 
 ## 2. 加载地图并启动二维导航
 
@@ -53,7 +47,7 @@ ros2 launch tianrover_rviz rviz.launch.py
 
 *二维导航示例：地图、代价地图、机器人位置与规划路径。*
 
-需要取消本车的单目标导航时，在已加载环境的新终端执行：
+需要取消本车的单目标导航时，在新终端执行：
 
 ```bash
 ros2 service call /mars/navigate_to_pose/_action/cancel_goal action_msgs/srv/CancelGoal "{}"
@@ -118,7 +112,7 @@ ros2 topic echo /mars/map --once --no-arr --qos-durability transient_local
 
 KISS 实时点云为 `/mars/kiss/frame`。若出现 `Transform data too old`、输出长期中断或控制循环报错，先停止运动并联系技术支持。三维地图用于定位和点云避障，Nav2 仍在地面地图中规划，不支持任意三维轨迹或楼梯导航。
 
-三维导航默认使用上述前端的点云作为障碍物输入。使用其他已验证点云时，可在加载环境后
+三维导航默认使用上述前端的点云作为障碍物输入。使用其他已验证点云时，可在新终端中
 设置 `TIANROVER_NAV_POINTS_TOPIC`；通过 `TIANROVER_NAV_PARAMS` 指定外部 Nav2 YAML 时，
 会保留其中配置的 `footprint`（车体轮廓）。没有配置时使用默认矩形
 `[[-0.75,-0.49],[-0.75,0.49],[0.75,0.49],[0.75,-0.49]]`，坐标单位为 m。

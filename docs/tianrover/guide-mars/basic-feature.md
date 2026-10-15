@@ -2,20 +2,15 @@
 
 本页用于已部署 ROS 2 Humble 的 TianRover 火星车，介绍驱动启动和基本数据检查。连接车载电脑的方法见[软件环境配置](./env-config)，遥控器与 ROS 模式切换见[使用指引](./)。
 
-## 1. 打开终端并加载环境
+## 1. 打开终端
 
-每个新终端先执行：
+已部署火星车的新 Bash 终端会自动加载 ROS 2 Humble、驱动工作区和车辆工作区。
+**打开终端后即可执行本页命令，无需每次手动 source。**
 
-```bash
-source /opt/ros/humble/setup.bash
-source ~/tianbot_ws/install/setup.bash
-source ~/tianrover_ws/install/setup.bash
-```
-
-以下按车载部署工作区 `~/tianrover_ws` 举例。如果本车安装在其他目录，将第三行替换为实际工作区的 `install/setup.bash`。加载工作区时会读取 `~/.config/tianrover/my_tianrover.sh`。下文以 `TIANBOT_NAME=mars` 为例；机器人名称不同于 `mars` 时，相应修改话题和坐标系名称。配置与软件更新步骤见[软件环境配置](./env-config#vehicle-config)。
+以下按车载部署工作区 `~/tianrover_ws` 举例。终端自动加载工作区时也会读取 `~/.config/tianrover/my_tianrover.sh`。下文以 `TIANBOT_NAME=mars` 为例；机器人名称不同于 `mars` 时，相应修改话题和坐标系名称。配置与软件更新步骤见[软件环境配置](./env-config#vehicle-config)。
 
 ::: tip ROS 版本
-本流程使用 `ros2 launch`，不使用旧版 `roslaunch` 或 `devel/setup.bash`。若提示找不到功能包，先核对上述环境是否加载；不要直接套用 Lunar Rover 的启动命令。
+本流程使用 `ros2 launch`，不使用旧版 `roslaunch` 或 `devel/setup.bash`。若提示找不到功能包，按[运行环境排错](./env-config#manual-env)检查自动加载；不要直接套用 Lunar Rover 的启动命令。
 :::
 
 ## 2. 启动整车驱动
@@ -50,7 +45,7 @@ ros2 launch tianrover_bringup bringup.launch.py use_zed:=false
 
 ## 4. 检查底盘和传感器
 
-在新终端加载环境后执行：
+在新终端执行：
 
 ```bash
 ros2 node list
