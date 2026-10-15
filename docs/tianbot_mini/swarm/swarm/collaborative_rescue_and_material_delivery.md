@@ -27,7 +27,7 @@
 | :---: | :---: |
 | ROS2GO P128 | 1 |
 | tianbot_mini   | 1 |
-| Robomaster TT  | 1 |
+| RoboMaster TT  | 1 |
 | RMTT 配套拓展板  | 1 |
 |   3D 打印夹爪   | 1 |
 |   3D 打印托盘   | 1 |

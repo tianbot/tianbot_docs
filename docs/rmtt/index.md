@@ -1,4 +1,4 @@
-#  Robomaster TT 使用手册
+#  RoboMaster TT 使用手册
 
 ## 获取 License 授权
 ::: tip 请注意
@@ -9,7 +9,7 @@
 ros2go 中的全部服务中不包含 `RMTT` 的`软件服务使用授权 License`
 :::
 
-首次收到 Robomaster TT 使用套装后，需要使用tello App对Robomaster TT进行设备检查
+首次收到 RoboMaster TT 使用套装后，需要使用tello App对RoboMaster TT进行设备检查
 
 - 检查飞机及传感器和启动飞行是否正常
 - 检查拓展模块是否升级和激活

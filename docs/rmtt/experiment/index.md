@@ -5,7 +5,7 @@
 
 ### 1. 简介
 
-Robomaster TT是Robomaster系列中一款面向初学者的机器人。 
+RoboMaster TT是RoboMaster系列中一款面向初学者的机器人。
 
 - [RoboMaster SDK 多机编队TT](https://robomaster-dev.readthedocs.io/zh_CN/latest/python_sdk/multi_robot_drone_example.html#)
 

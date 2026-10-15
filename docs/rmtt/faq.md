@@ -110,7 +110,7 @@ nothing to commit, working tree clean
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Docrmtt_activate_status.jpg)
 
-- Robomaster TT * 1
+- RoboMaster TT * 1
 - Micro usb 线 * 1
 - 电脑 Windows * 1
 
