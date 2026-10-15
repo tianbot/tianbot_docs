@@ -8,7 +8,7 @@
 本文主要介绍如何搭建比赛环境，包括以下内容：
 - 安装 ubuntu，
 - 安装 ROS
-- 安装 tianracer 功能包
+- 安装 `tianracer` 功能包
 - 安装 OBS Studio
 
 ## 环境要求 {#env-requirements}

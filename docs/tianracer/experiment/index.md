@@ -1,4 +1,4 @@
-# tianracer实验
+# TianRacer 实验
 
 - [实验一、实验工具的使用](./1_use-of-tools.md)
 - [实验二 ROS控制底盘运动](./2_control-chassis-move-by-ros.md)

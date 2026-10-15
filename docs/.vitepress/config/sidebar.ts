@@ -293,7 +293,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   // link: '/simulation/wheel_robot/ackermann/index',
                   collapsed: true,
                   items: [
-                    { text: 'Tianracer 系列仿真实例', link: '/simulation/wheel_robot/ackermann/tianracer' },
+                    { text: 'TianRacer 系列仿真实例', link: '/simulation/wheel_robot/ackermann/tianracer' },
                   ],
                 },
                 {
@@ -308,7 +308,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                   text: '火星车模型',
                   collapsed: true,
                   items: [
-                    { text: 'Tianrover 系列仿真实例', link: '/simulation/wheel_robot/rover/tianrover' },
+                    { text: 'TianRover 系列仿真实例', link: '/simulation/wheel_robot/rover/tianrover' },
                   ],
                 },
               ],
@@ -349,7 +349,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
               items: [
                 { text: 'abc_swarm 集群仿真实例', link: '/simulation/swarm/abc_swarm_for_mini_and_tello' },
                 { text: '智能无人系统仿真环境', link: '/simulation/swarm/smart_unmanned_system' },
-                { text: 'tianracer 集群仿真实例', link: '/simulation/swarm/swarm_for_tianracer' },
+                { text: 'TianRacer 集群仿真实例', link: '/simulation/swarm/swarm_for_tianracer' },
               ],
             },
             { text: '传感器仿真实例', link: '/simulation/index' },
@@ -641,7 +641,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 text: '开发手册',
                 collapsed: true,
                 items:[
-                  {text: '使用 MATLAB 开发 Tianracer', link: '/tianracer/development/matlab'},
+                  {text: '使用 MATLAB 开发 TianRacer', link: '/tianracer/development/matlab'},
                 ]
               },
               { text: '常见问题', link: '/tianracer/question' },

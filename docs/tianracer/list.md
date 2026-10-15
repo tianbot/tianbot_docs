@@ -8,7 +8,7 @@
 
 |序号 | 名称 | 数量 | 图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
-|1| Tianracer T105 | 1 | ![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)| 
+|1| TianRacer T105 | 1 | ![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)|
 |2| 大疆 DT7 遥控器或乐迪 T8S 遥控器 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154343.png) |     
 |3| 动力电池充电器 | 1 | 具体型号不固定，以实物为准 |
 |4| ROS2GO 随身系统 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154457.png) |    
@@ -17,7 +17,7 @@
 
 |序号 | 名称 | 数量 | 图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
-|1| Tianracer T108 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154048.png)| 
+|1| TianRacer T108 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154048.png)|
 |2| 大疆 DT7 遥控器或乐迪 T8S 遥控器 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154343.png) |     
 |3| 动力电池充电器 | 1 | 具体型号不固定，以实物为准 |
 |4| ROS2GO 随身系统 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154457.png) |     
@@ -26,14 +26,14 @@
 
 |序号 | 名称 | 数量 | 图片（下图仅供参考，具体以收到货物为准）|
 |:--:|:--:|:--:|:--:|
-|1| Tianracer T110 | 1 | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)| 
+|1| TianRacer T110 | 1 | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)|
 |2| 大疆 DT7 遥控器或乐迪 T8S 遥控器 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154343.png) |     
 |3| 动力电池充电器 | 1 | 具体型号不固定，以实物为准 |
 |4| ROS2GO 随身系统 | 1 | ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530154457.png) |  
 
 ## 整车参数
 
-|产品型号|Tianracer T105|Tianracer T108|Tianracer T110|
+|产品型号|TianRacer T105|TianRacer T108|TianRacer T110|
 |:--:|:--:|:--:|:--:|
 |产品展示|![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)|![产品展示](https://static.tianbot.com/product/20220316/0270c2851da25e9e8ab5b8c05a5d9faa.png) | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)|
 |产品尺寸 | 850 x 480 x 220 mm | 608 x 327 x 213 mm |380 x 210 x 195 mm|
@@ -48,19 +48,19 @@
 |是否防水防尘 | 防水、防尘 | 防水、防尘 | 不防水、不防尘 | 
 
 ### 运算平台
-|产品型号|Tianracer T105 |Tianracer T108|Tianracer T110|
+|产品型号|TianRacer T105 |TianRacer T108|TianRacer T110|
 |:--:|:--:|:--:|:--:|
 |运算平台 | Jeston TX2 系列 | Jeston Xavier NX | Jeston Nano 4G |
 
 ### 控制平台
-|产品型号|Tianracer T105|Tianracer T108|Tianracer T110|
+|产品型号|TianRacer T105|TianRacer T108|TianRacer T110|
 |:--:|:--:|:--:|:--:|
 |主控芯片 | STM32F411 | STM32F407VET6 |STM32F407VET6|
 |输入电压 | 5V | 5V |5V |
 |接口 | CAN、DBUS、UART、PWM | DBUS、UART、PWM | DBUS、UART、PWM|
 
 ### 传感器
-|产品型号|Tianracer T105|Tianracer T108|Tianracer T110|
+|产品型号|TianRacer T105|TianRacer T108|TianRacer T110|
 |:--:|:--:|:--:|:--:|
 |激光雷达 | RS-LIDAR-16 | 傲视 Osight IE102-H | 思岚 Rpliadr A1  / 锐驰 richbeam Lakibeam1 |
 |深度相机 | Intel Realsense 系列 或 ZED 系列 | Intel Realsense D455 | 单目 USB 摄像头 |

@@ -2,7 +2,7 @@
 
 ## 网络连接
 
-MarsRover 出厂时使用车载路由器提供网络连接。将电脑连接到以下 Wi-Fi 后，即可访问车辆上位机和路由器后台。
+TianRover 火星车 出厂时使用车载路由器提供网络连接。将电脑连接到以下 Wi-Fi 后，即可访问车辆上位机和路由器后台。
 
 | 项目 | 配置 |
 |---|---|
@@ -102,6 +102,30 @@ cp "$(ros2 pkg prefix --share tianrover_bringup)/config/my_tianrover.sh.example"
 ```
 
 已有配置的车辆保留原文件，更新源码时不覆盖它。地图和逐车配置放在源码仓库之外。
+
+### 二维扫描与地图保存参数
+
+| 配置项 | 当前默认值 | 用途 |
+| --- | --- | --- |
+| `TIANROVER_SCAN_MIN_HEIGHT` | `-0.35` | 二维投影最低高度，单位 m，相对雷达坐标系 |
+| `TIANROVER_SCAN_MAX_HEIGHT` | `0.35` | 二维投影最高高度，单位 m，相对雷达坐标系 |
+| `TIANROVER_SCAN_RANGE` | `20.0` | 二维扫描距离上限，单位 m |
+| `TIANROVER_MAP_FREE_THRESH` | `0.196` | SLAM Toolbox / Gmapping 保存栅格地图时的空闲阈值 |
+
+例如，按本车雷达安装情况确认后，在外部配置中设置：
+
+```bash
+export TIANROVER_SCAN_MIN_HEIGHT=-0.35
+export TIANROVER_SCAN_MAX_HEIGHT=0.35
+export TIANROVER_SCAN_RANGE=20.0
+```
+
+旧配置中的 `-0.10` / `0.10` 不会随源码更新自动替换。Helios 16 近水平束线在该高度带内
+约到 5.7 m 就会被过滤；当前默认 ±0.35 m 用于覆盖约 20 m 的束线高度偏移，
+不代表已完成 20 m 实测验收。更换雷达或调整安装姿态后，应重新确认地面和障碍物的过滤效果。
+
+车辆停车并退出对应程序后，在准备启动程序的终端重新执行上面的三层环境加载命令，
+再启动程序。已有终端或已运行节点不会因配置文件修改而自动更新。
 
 ## 更新源码与重新编译 {#software-update}
 

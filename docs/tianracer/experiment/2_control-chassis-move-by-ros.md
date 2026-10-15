@@ -2,9 +2,9 @@
 
 ## 【实验目标】
 
-- 通过roslaunch指令启动小车底盘，了解如何通过ROS启动Tianracer无人车
+- 通过roslaunch指令启动小车底盘，了解如何通过ROS启动TianRacer无人车
 - 对可视化工具Rviz进行简单的配置操作，体验底盘的运行效果
-- 通过话题消息，学习ROS是如何控制Tianracer无人车运动的
+- 通过话题消息，学习ROS是如何控制TianRacer无人车运动的
 - 通过teleop节点，学习如何用键盘按键控制底盘运动
 
 ## 【实验内容】
@@ -18,7 +18,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211739157.webp)
 
-（小车端）可以外接显示器、键盘，按同样方法查看小车IP，Tianracer无人车配置了OLED屏幕，可直接在上面查看IP等信息
+（小车端）可以外接显示器、键盘，按同样方法查看小车IP，TianRacer无人车配置了OLED屏幕，可直接在上面查看IP等信息
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211739572.png)
 
@@ -73,7 +73,7 @@ rostopic list
 ```
 
 
-发现有一堆信息，这就是底盘启动的话题，但我们发现并没有cmd_vel速度话题，这是因为Tianracer是一款阿克曼运动模型的无人车，需要转换为ackermann消息
+发现有一堆信息，这就是底盘启动的话题，但我们发现并没有cmd_vel速度话题，这是因为TianRacer是一款阿克曼运动模型的无人车，需要转换为ackermann消息
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740175.png)
 
@@ -84,7 +84,7 @@ rostopic list
 
 ### 单独启动底盘传感器
 
-启动Tianracer底盘
+启动TianRacer底盘
 ```shell
 roslaunch tianracer_core tianracer_core.launch
 ```

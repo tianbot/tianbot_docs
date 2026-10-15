@@ -76,7 +76,7 @@ rosrun tianracer_navigation ackermann_convert_drive.py __ns:=tianracer  # tianra
 :::
 
 ::: info 提示
-tianracer 功能包中没有单独部署该避障算法节点，而是将全部算法集成在 L1_controller 节点中，建议参考以下链接，自己动手按照 wall_follow.py 的部署方法尝试一下 Follow The Gap 避障算法
+`tianracer` 功能包中没有单独部署该避障算法节点，而是将全部算法集成在 L1_controller 节点中，建议参考以下链接，自己动手按照 wall_follow.py 的部署方法尝试一下 Follow The Gap 避障算法
 :::
 
 方法详解：https://www.nathanotterness.com/2019/04/the-disparity-extender-algorithm-and.html

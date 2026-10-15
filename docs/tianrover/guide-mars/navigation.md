@@ -1,6 +1,6 @@
 # 自主导航 {#nav}
 
-MarsRover 使用 ROS 2 `tianrover_navigation` 功能包启动 Nav2，二维定位为 AMCL，全局规划为 NavFn，局部控制为 DWB。本页按已保存地图说明操作；旧版 ROS 1 `move_base`、TEB/DWA/EBAND 启动命令不适用于当前包。
+TianRover 火星车 使用 ROS 2 `tianrover_navigation` 功能包启动 Nav2，二维定位为 AMCL，全局规划为 NavFn，局部控制为 DWB。本页按已保存地图说明操作；旧版 ROS 1 `move_base`、TEB/DWA/EBAND 启动命令不适用于当前包。
 
 ## 1. 导航前准备
 
@@ -49,7 +49,7 @@ ros2 launch tianrover_rviz rviz.launch.py
 
 观察全局路径、局部障碍物与车辆实际运动，到达后确认车辆停稳。六轮底盘支持的遥控运动模式不代表当前导航支持全向横移；本入口按前向线速度和转向角速度控制。
 
-![MarsRover 二维导航示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-navigation-2d-0d505d211c7c4bd5.png)
+![TianRover 火星车 二维导航示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-navigation-2d-0d505d211c7c4bd5.png)
 
 *二维导航示例：地图、代价地图、机器人位置与规划路径。*
 
@@ -104,7 +104,7 @@ ros2 launch tianrover_rviz rviz.launch.py fixed_frame:=mars/map
 
 先确认地图和实时点云显示、定位与扫描对齐，再按上面的初始位姿步骤操作。此入口由 RTAB-Map 提供地图与定位，不另外启动 AMCL。
 
-![MarsRover 三维地图定位示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-localization-3d-162ca549a9b2efcb.png)
+![TianRover 火星车 三维地图定位示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-localization-3d-162ca549a9b2efcb.png)
 
 *三维地图定位示例：机器人模型、场地地图与点云显示。*
 
@@ -117,3 +117,9 @@ ros2 topic echo /mars/map --once --no-arr --qos-durability transient_local
 ```
 
 KISS 实时点云为 `/mars/kiss/frame`。若出现 `Transform data too old`、输出长期中断或控制循环报错，先停止运动并联系技术支持。三维地图用于定位和点云避障，Nav2 仍在地面地图中规划，不支持任意三维轨迹或楼梯导航。
+
+三维导航默认使用上述前端的点云作为障碍物输入。使用其他已验证点云时，可在加载环境后
+设置 `TIANROVER_NAV_POINTS_TOPIC`；通过 `TIANROVER_NAV_PARAMS` 指定外部 Nav2 YAML 时，
+会保留其中配置的 `footprint`（车体轮廓）。没有配置时使用默认矩形
+`[[-0.75,-0.49],[-0.75,0.49],[0.75,0.49],[0.75,-0.49]]`，坐标单位为 m。
+轮廓、运动包络和制动距离仍需实车确认，配置生效不代表避障和停车已通过验收。

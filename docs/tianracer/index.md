@@ -1,10 +1,10 @@
-# tianracer 使用手册
+# TianRacer 使用手册
 
 ## 产品简介
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc20240530163104.png)
 
-Tianracer 面向教育、竞赛和科研的机器人是一种全功能的智能学习工具，适用于高年级的本科学生、科研人员和参与机器人竞赛的团队。无论是在课堂上还是实验室中，该机器人都能提供丰富的学习资源和实践机会，以推动创造力、合作能力和问题解决技巧的发展。
+TianRacer 面向教育、竞赛和科研的机器人是一种全功能的智能学习工具，适用于高年级的本科学生、科研人员和参与机器人竞赛的团队。无论是在课堂上还是实验室中，该机器人都能提供丰富的学习资源和实践机会，以推动创造力、合作能力和问题解决技巧的发展。
 
 对于本科学生而言，该机器人提供了丰富的学习资料和良好的扩展性，非常适合二次开发。学生不仅可以通过该款无人车平台学习 ROS，进行机器人理论与实践上的深度结合，也可借此不断强化工程能力，提升科研素养，培养他们的逻辑思维、创新能力和解决问题的技巧。
 
@@ -12,7 +12,7 @@ Tianracer 面向教育、竞赛和科研的机器人是一种全功能的智能�
 
 - FASTLAB 高飞老师 算法验证平台
 
-对于参与竞赛的团队来说，Tianracer 系列中的 T110 作为 RoboRacer（原 F1TENTH）竞赛技术支持方推出的阿克曼平台，其良好的性能，能够帮助他们在竞争激烈的环境中脱颖而出。参赛队员可以利用机器人的功能和灵活性，实现复杂任务的自动化、编程控制的精确性和团队协作的高效性。这样，他们可以有效地解决问题、展示创新和实现优异的竞赛成绩。
+对于参与竞赛的团队来说，TianRacer 系列中的 T110 作为 RoboRacer（原 F1TENTH）竞赛技术支持方推出的阿克曼平台，其良好的性能，能够帮助他们在竞争激烈的环境中脱颖而出。参赛队员可以利用机器人的功能和灵活性，实现复杂任务的自动化、编程控制的精确性和团队协作的高效性。这样，他们可以有效地解决问题、展示创新和实现优异的竞赛成绩。
 
 - 2022 年 F1TENTH 中国赛 冠军车型
 
@@ -31,7 +31,7 @@ TIANRACER 起源于 MIT Racecar，参考 Hypha Racecar 平台，由 TIANBOT 团�
 
 ### 产品功能
 
-Tianracer 底层计算平台为 TIANBOT 控制器，主控芯片为 STM32，主要完成实时各种任务：
+TianRacer 底层计算平台为 TIANBOT 控制器，主控芯片为 STM32，主要完成实时各种任务：
 - 以编码器或 IMU 为反馈的闭环控制任务
 - 主控平台与运算平台的通信任务
 - 传感器（编码器、IMU、电压）数据采集任务
@@ -40,7 +40,7 @@ Tianracer 底层计算平台为 TIANBOT 控制器，主控芯片为 STM32，主�
 [什么是实时操作系统和非实时操作系统？](https://www.cnblogs.com/bandaoyu/p/16752957.html)
 :::
 
-Tianracer 车载运算设备为 NVIDIA Jetson Nano 扮演着上层计算平台的角色，负责较大运算量的各种算法执行：
+TianRacer 车载运算设备为 NVIDIA Jetson Nano 扮演着上层计算平台的角色，负责较大运算量的各种算法执行：
 
 - 环境感知，包括实时定位、建图、目标检测、识别和追踪
 - 运动规划，包括全局规划（路径规划），局部规划（轨迹规划）
@@ -83,7 +83,7 @@ ROS 端的底层驱动预置于配套的运算平台，代码开源，包含
 <details>
 <summary>📖 (点击打开/折叠)</summary>
 
-|产品型号|Tianracer T105|Tianracer T108|Tianracer T110|
+|产品型号|TianRacer T105|TianRacer T108|TianRacer T110|
 |:--:|:--:|:--:|:--:|
 |产品展示|![](https://static.tianbot.com/product/20220307/9ab86c750bb5fb1b2c7ffe1374a155d7.png)|![产品展示](https://static.tianbot.com/product/20220316/0270c2851da25e9e8ab5b8c05a5d9faa.png) | ![](https://static.tianbot.com/product/20220307/3575b35d4364b8b897570e4a2e62c4b1.png)|
 |产品尺寸 | 850 x 480 x 220 mm | 608 x 327 x 213mm |380 x 210 x 195|
@@ -113,7 +113,7 @@ ROS 端的底层驱动预置于配套的运算平台，代码开源，包含
 
 ## 实验手册
 
-- [Tianracer 实验](/tianracer/experiment/)
+- [TianRacer 实验](/tianracer/experiment/)
 
 ## RoboRacer 线上仿真赛
 

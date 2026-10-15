@@ -29,11 +29,11 @@ features:
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用 USB、CAN、UART 等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
     link: /tianbot/
   - icon: 🪐
-    title: Tianrover
+    title: TianRover
     details: 自主移动机器人平台系列，主要面向科研教育行业的高性能开源全向移动底盘，提供开源控制程序、开发文档，支持使用 USB、CAN、UART 等作为外部通信接口，可灵活使用打造自己独特的机器人方案...
     link: /tianrover/
   - icon: 🏁
-    title: Tianracer
+    title: TianRacer
     details: 使用 Jetson Nano 计算平台作为核心控制器的 TianRacer-Dev 无人车开发平台的使用说明，涉及基本功能、硬件、软件的相关信息...
     link: /tianracer/
   - icon: 🚗

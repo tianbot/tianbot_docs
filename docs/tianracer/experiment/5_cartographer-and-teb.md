@@ -10,7 +10,7 @@
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot/202112211740786.png)
 
-### Tianracer.lua配置
+### TianRacer.lua配置
 
 
 ### 局部规划器base_local planner

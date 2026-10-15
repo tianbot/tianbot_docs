@@ -1,8 +1,8 @@
-# Tianracer 仿真实例
+# TianRacer 仿真实例
 
 ::: info 提示
 
-下述内容只在tianracer代码的dev分支上有效，使用之前请确保已经切换的正确的代码分支
+下述内容只在 TianRacer 代码的dev分支上有效，使用之前请确保已经切换的正确的代码分支
 
 确认当前分支
 
@@ -388,7 +388,7 @@ roslaunch tianracer_gazebo spawn_model.launch
 roslaunch tianracer_gazebo initialpose_pub.launch x_pos:=0 y_pos:=0 z:=0 R_pos:=0 P_pos:=0 Y_pos:=1.54
 ```
 
-### 放置多个 tianracer 和 rviz {#spawn_with_rviz.launch}
+### 放置多个 TianRacer 和 rviz {#spawn_with_rviz.launch}
 
 该工具用于创建新机器人对应 `robot_name` 的 `.rviz` 文件，用于添加新的机器人，以解决在 `.rviz` 文件中无法添加机器人名字空间的问题
 如果需要添加新的机器人，你需要执行分两步完成
@@ -402,7 +402,7 @@ roslaunch tianracer_gazebo initialpose_pub.launch x_pos:=0 y_pos:=0 z:=0 R_pos:=
 rosrun  tianracer_gazebo change_rviz_name.py (新的机器的名称), # 比如 tianracer_007
 ```
 
-其次，通过以下命令添加 tianracer 并启动对应的 rviz
+其次，通过以下命令添加 TianRacer 并启动对应的 rviz
 
 ```bash
 roslaunch tianracer_gazebo spawn_with_rviz.launch robot_name:=tianracer_04 rviz_name:=tianracer_04 y_pos:=3

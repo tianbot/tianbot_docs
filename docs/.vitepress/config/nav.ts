@@ -8,8 +8,8 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
             { text: 'ROS2GO', link: '/ros2go/guide/' },
             { text: 'TOM', link: '/tianbot/' },
-            { text: 'Tianrover', link: '/tianrover/' },
-            { text: 'Tianracer', link: '/tianracer/' },
+            { text: 'TianRover', link: '/tianrover/' },
+            { text: 'TianRacer', link: '/tianracer/' },
             { text: 'Tianbot mini', link: '/tianbot_mini/' },
             { text: 'Robomaster TT', link: '/rmtt/' },
             { text: 'ROSECHO', link: '/rosecho/' },

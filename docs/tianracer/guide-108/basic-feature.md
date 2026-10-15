@@ -97,7 +97,7 @@ rosrun tianracer_navigation cmd_vel_to_ackermann_drive.py _twist_cmd_topic:=/tia
 ```
 
 ::: warning
-- 对于Tianracer系列来说，原生可以使用 ackermann_msgs/AckermannDrive 消息类型，如果希望使用Twist消息进行控制，需要运行上面的命令进行话题转发，然后即可正常使用
+- 对于TianRacer系列来说，原生可以使用 ackermann_msgs/AckermannDrive 消息类型，如果希望使用Twist消息进行控制，需要运行上面的命令进行话题转发，然后即可正常使用
 - 注意遥控器需要切换到禁用模式，否则车无法执行来自ROS通信链路中的控制信号
 :::
 
@@ -117,7 +117,7 @@ angular:
 - angular.z 控制旋转
 
 ::: info 提示
-1. 在使用键盘控制时，需要注意话题的对应问题，`teleop_twist_keyboard.py` 默认话题为 `cmd_vel`，在给 Tianracer 系列使用时需要映射为`/tianracer/cmd_vel`
+1. 在使用键盘控制时，需要注意话题的对应问题，`teleop_twist_keyboard.py` 默认话题为 `cmd_vel`，在给 TianRacer 系列使用时需要映射为`/tianracer/cmd_vel`
 2. 话题重映射方法为 在终端中输入 
 ```bash
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/tianracer/cmd_vel

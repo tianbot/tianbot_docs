@@ -32,7 +32,7 @@ roslaunch tianracer_gazebo demo_tianracer_teb_nav.launch world:=tianracer_racetr
 
 启动成功应能观察到：
 
-- Gazebo 中有本届赛道和一辆 Tianracer。
+- Gazebo 中有本届赛道和一辆 TianRacer。
 - RViz 中有地图、车辆和传感器显示。
 - 终端没有导致关键节点退出的错误。
 - 此时尚未启动多航点任务，小车应保持静止。

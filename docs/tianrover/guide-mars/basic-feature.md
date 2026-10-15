@@ -1,6 +1,6 @@
 # ROS 2 基础功能 {#ros_basic}
 
-本页用于已部署 ROS 2 Humble 的 MarsRover，介绍驱动启动和基本数据检查。连接车载电脑的方法见[软件环境配置](./env-config)，遥控器与 ROS 模式切换见[使用指引](./)。
+本页用于已部署 ROS 2 Humble 的 TianRover 火星车，介绍驱动启动和基本数据检查。连接车载电脑的方法见[软件环境配置](./env-config)，遥控器与 ROS 模式切换见[使用指引](./)。
 
 ## 1. 打开终端并加载环境
 
@@ -81,9 +81,9 @@ ros2 launch tianrover_rviz rviz.launch.py fixed_frame:=mars/odom
 
 查看 RobotModel、Scan 和 TF。观察整车位移时使用 `mars/odom`；建图和导航时使用 `mars/map`。
 
-![MarsRover URDF 模型在 RViz 中的显示效果](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-urdf-3ad1bd803631919e.png)
+![TianRover 火星车 URDF 模型在 RViz 中的显示效果](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-urdf-3ad1bd803631919e.png)
 
-*MarsRover URDF 模型与 TF 坐标轴显示示例。*
+*TianRover 火星车 URDF 模型与 TF 坐标轴显示示例。*
 
 默认模型关节为展示零位，不能据此判断实车轮子或转向电机的实际位置。
 

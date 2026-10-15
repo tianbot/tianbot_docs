@@ -1,6 +1,6 @@
 # SLAM 建图
 
-MarsRover 的建图与地图保存入口由 ROS 2 `tianrover_slam` 功能包提供，底盘和传感器由 `tianrover_bringup` 启动。二维建图适合后续 AMCL/Nav2 地面导航；三维建图使用 FAST-LIO2 或 KISS-ICP 与 RTAB-Map。旧版 MID360、Point-LIO 和 ROS 1 启动命令不适用于本页 Helios 16 流程。
+TianRover 火星车 的建图与地图保存入口由 ROS 2 `tianrover_slam` 功能包提供，底盘和传感器由 `tianrover_bringup` 启动。二维建图适合后续 AMCL/Nav2 地面导航；三维建图使用 FAST-LIO2 或 KISS-ICP 与 RTAB-Map。旧版 MID360、Point-LIO 和 ROS 1 启动命令不适用于本页 Helios 16 流程。
 
 ## 1. 使用前准备
 
@@ -48,7 +48,7 @@ ros2 launch tianrover_rviz rviz.launch.py
 
 Fixed Frame 使用 `mars/map`。确认扫描正常、地图逐渐生成后，按[使用指引](./)切换遥控模式，由操作人员低速行驶覆盖场地。观察墙面是否重影、转弯后扫描是否与地图对齐。
 
-![MarsRover 二维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-2d-5a10a16d25b530b1.png)
+![TianRover 火星车 二维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-2d-5a10a16d25b530b1.png)
 
 *二维建图示例：场地栅格地图与机器人位置。*
 
@@ -78,6 +78,14 @@ ros2 launch tianrover_slam map_save.launch.py slam_methods:=slam_toolbox \
 ```
 
 确认保存命令成功退出，`~/maps/` 下存在对应 `.yaml` 和 `.pgm`。Cartographer 还会保存 `.pbstream`；用于本手册导航的是 `.yaml`。若保存报错，不把部分输出当作完整地图，查看报错并更换新文件名重试。
+
+Gmapping 和 SLAM Toolbox 保存地图时，空闲阈值默认为 `0.196`。需要调整时，在保存终端
+加载环境之后、运行保存命令之前执行 `export TIANROVER_MAP_FREE_THRESH=0.196`，
+数值应在 0 与占用阈值之间。它只控制保存时的像素分类，不改变在线建图；
+Cartographer 使用独立保存流程，不读取该配置。更多配置见[车辆配置](./env-config#vehicle-config)。
+
+若二维扫描始终只能看到约 5.7 m，先检查投影高度带，见[扫描参数](./env-config#二维扫描与地图保存参数)；
+单独增大扫描或建图距离上限，无法恢复已在高度过滤中移除的点。
 
 保存成功后，在建图终端按 `Ctrl+C` 退出建图；保留整车驱动，按[自主导航](./navigation)加载刚保存的地图。
 
@@ -126,7 +134,7 @@ ros2 launch tianrover_slam mapping_3d.launch.py frontend:=kiss use_rgbd:=true \
 
 KISS 不使用 IMU；查看时运行 `ros2 launch tianrover_rviz rviz.launch.py fixed_frame:=mars/map`，可添加 `/mars/cloud_map` 与 `/mars/kiss/frame`。若不启用相机，三维 bringup 加 `use_zed:=false`，mapping 改为 `use_rgbd:=false`。
 
-![MarsRover 三维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-3d-28436697557c0846.png)
+![TianRover 火星车 三维建图示例](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/MarsRover/mars-rviz-mapping-3d-28436697557c0846.png)
 
 *三维建图示例：累计点云地图与场地栅格地图。*
 

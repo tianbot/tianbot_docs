@@ -1,6 +1,6 @@
 # 更新到 iCAN 比赛环境
 
-本页用于已经有 Tianracer 仿真环境的 ROS2GO。更新后需要具备 `waypoint_laps.launch` 和独立的 `tianracer_sim_referee` 裁判包。
+本页用于已经有 TianRacer 仿真环境的 ROS2GO。更新后需要具备 `waypoint_laps.launch` 和独立的 `tianracer_sim_referee` 裁判包。
 
 ## 1. 先停止本次仿真
 

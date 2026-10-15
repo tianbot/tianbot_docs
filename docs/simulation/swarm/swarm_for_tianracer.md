@@ -1,6 +1,6 @@
-# Tianracer 集群仿真实例
+# TianRacer 集群仿真实例
 
-本文是基于Tianracer睿驰开发的集群实例
+本文是基于TianRacer睿驰开发的集群实例
 
 目前代码已经更新至[tianbot/tianracer](https://github.com/tianbot/tianracer)
 
@@ -43,7 +43,7 @@ roslaunch tianracer_gazebo demo_sim_two_tianracer.launch
 
 这个命令会打开一个Gazebo环境和两个rviz的环境
 ![图片](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc202312191444081.png)
-- Gazebo：图中左侧部分，在gazebo中会展示出来两辆tianracer小车
+- Gazebo：图中左侧部分，在gazebo中会展示出来两辆 TianRacer 小车
 - 两个rviz：图中右侧部分，两个rviz分别对应了在gazebo中的两辆小车，通过这两个rviz中的navigation_goal可以分别给两辆小车发送不一样的move_base_goal
 
 ## 添加新的机器人
@@ -57,7 +57,7 @@ roslaunch tianracer_gazebo demo_sim_two_tianracer.launch
 rosrun  tianracer_gazebo change_rviz_name.py (新的机器的名称)
 ```
 
-其次，通过以下命令添加tianracer并启动对应的rviz
+其次，通过以下命令添加 TianRacer 并启动对应的rviz
 
 
 以下是一个示例，我们创建了tianracer_04，并将他放在了y=3的位置
