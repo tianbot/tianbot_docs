@@ -61,4 +61,4 @@ roslaunch --nodes ~/abc_swarm_delivery/experiment.launch start_driver:=false sta
 生成launch与普通实验入口一样，反馈有效后可能自动入位。检查清楚再运行，不需要额外调用人工启用服务。
 :::
 
-更新软件后，旧组合指纹可能变化。应审阅新行为后重新生成到新目录，不手工改指纹掩盖算法或配置变化。完整字段以[仓库中的生成说明](https://github.com/tianbot/abc_swarm/tree/teaching/main-reorg/ai)为准。
+更新软件后，旧组合指纹可能变化。应审阅新行为后重新生成到新目录，不手工改指纹掩盖算法或配置变化。完整字段以[仓库中的生成说明](https://github.com/tianbot/abc_swarm/tree/main/ai)为准。

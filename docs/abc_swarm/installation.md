@@ -14,7 +14,7 @@ printenv ROS_DISTRO
 
 ## 获取功能包
 
-新动捕实验位于abc_swarm的**teaching/main-reorg分支**。下列命令使用独立的abc_swarm_ws工作空间，适合第一次安装；已有配套工作空间可继续使用，但应先确认其中的分支与新实验入口。
+新动捕实验位于abc_swarm的**main分支**。下列命令使用独立的abc_swarm_ws工作空间，适合第一次安装；已有配套工作空间可继续使用，但应先确认其中的分支与新实验入口。
 
 #### 1. 加载ROS环境
 
@@ -27,7 +27,7 @@ source /opt/ros/noetic/setup.bash
 ```bash
 mkdir -p ~/abc_swarm_ws/src
 cd ~/abc_swarm_ws/src
-git clone --branch teaching/main-reorg https://github.com/tianbot/abc_swarm.git
+git clone --branch main https://github.com/tianbot/abc_swarm.git
 ```
 
 已有同名目录时，不要重复clone或覆盖已有文件。先查看已有仓库状态和分支，再决定使用哪个工作空间。

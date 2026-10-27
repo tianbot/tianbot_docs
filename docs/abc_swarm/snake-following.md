@@ -32,7 +32,7 @@ rostopic echo /abc_swarm_demo/status
 
 这个算法可能在转弯时切弯，不保证第三台严格复走头车经过的轨迹。前车停止后，后车仍使用同一前置点跟随公式，不自动换成完整位姿点镇定。
 
-RViz中可以看各车位姿与当前目标；没有显示窗口时可加use_rviz:=true，参数和状态含义见[参考页](./reference.md)。
+RViz默认打开，可以看各车位姿与当前目标；不需要窗口时可加use_rviz:=false，参数和状态含义见[参考页](./reference.md)。
 
 ## 自动领航
 

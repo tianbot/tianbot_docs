@@ -49,6 +49,6 @@ roslaunch abc_swarm demo_mocap_three_mini_leader_follower_triangle.launch start_
 - spacing调整后方和左右偏移，默认0.5m。
 - speed、radius、laps、clockwise配置auto头车路径；跟随算法限幅与键盘初始请求分别设置，见[参数说明](./reference.md)。
 - startup:=false只跳过启动入位，用于已经摆好队形的对照，不会换成另一套跟随算法。
-- RViz显示控制位姿和当前目标，auto还有头车计划路径；没有打开窗口时可加use_rviz:=true。已由外部界面显示时可关闭。
+- RViz默认打开，显示控制位姿和当前目标，auto还有头车计划路径；已由外部界面显示时可加use_rviz:=false关闭。
 
 跟随阶段没有全程ORCA避让，但仍有间距和反馈停车保护。进入fault后查看reason，处理原因再重启，见[常见问题](./faq.md)。

@@ -50,4 +50,4 @@ Mini是差速车，TOM06S是全向车，TT还涉及高度和起降。它们需�
 - 车不动、一直调整或出现fault：看[常见问题](./faq.md)。
 - 配网或按键操作不清楚：回到[Mini配网与集群模式](../tianbot_mini/swarm/guide/network-setup.md)。
 
-源码与配套说明：[abc_swarm仓库](https://github.com/tianbot/abc_swarm/tree/teaching/main-reorg)。
+源码与配套说明：[abc_swarm仓库](https://github.com/tianbot/abc_swarm/tree/main)。

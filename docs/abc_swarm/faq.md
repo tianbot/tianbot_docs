@@ -100,4 +100,4 @@ rospack find abc_swarm
 git -C "$(rospack find abc_swarm)" branch --show-current
 ```
 
-新实验在teaching/main-reorg分支，原视频main中的资源不能等同于这套新动捕入口。切换前保留自己的改动，不覆盖客户已修改文件。
+新实验已纳入main分支；多年未更新的旧版仓库可能没有这些入口。更新前保留自己的改动，不覆盖客户已修改文件；原视频的命令和资源仍按课程兼容规则保留。

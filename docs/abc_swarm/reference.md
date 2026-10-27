@@ -101,7 +101,7 @@ rostopic echo /tianbot_mini_01/cmd_vel
 
 ## RViz显示
 
-圆形和三角形轨迹默认打开RViz；跟随实验通过use_rviz开关使用相同显示。需要打开时，在原命令后加use_rviz:=true；不需要时设false。
+圆形、三角形轨迹和三角/蛇形跟随实验默认打开RViz；不需要窗口时，在原命令后加use_rviz:=false。
 
 固定坐标系为world，可以看到动捕TF、控制位姿、当前目标，以及本任务真正存在的计划路径。manual头车没有预设路径；auto显示头车路径；三车轨迹显示三条路径。
 
