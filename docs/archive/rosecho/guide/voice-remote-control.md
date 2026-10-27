@@ -32,7 +32,7 @@ cat scripts/voice_teleop.py
     elif ros_msg == u"停止":
         self.rosecho_tts.cancel_goal()
         linear_vel = 0.0
-        angular_vel = 0.0  
+        angular_vel = 0.0
     else:
         return
 

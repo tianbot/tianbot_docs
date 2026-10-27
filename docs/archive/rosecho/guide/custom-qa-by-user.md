@@ -20,7 +20,7 @@ def asr_callback(self, data):
     ros_msg = data.data.strip('"')
     if not isinstance(ros_msg, unicode):
         ros_msg = unicode(ros_msg, "utf8")
- 
+
     if ros_msg ==  u"做个自我介绍吧":
         text = ttsGoal()
         text.text = "大家好，我叫波弟，就是大家的小助手，我具备人脸识别、手势识别、自主导航、视觉避障、语音交互等功能，更多功能正在解锁中，希望日后能在生活中帮助到大家！"

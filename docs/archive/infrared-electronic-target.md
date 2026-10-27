@@ -20,7 +20,7 @@ search: false
 ## 安装演示教程
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-    <iframe src="//player.bilibili.com/player.html?aid=1454258022&bvid=BV1Ui421k7yy&cid=1539634399&p=1&autoplay=0" frameborder="no" scrolling="no" 
+    <iframe src="//player.bilibili.com/player.html?aid=1454258022&bvid=BV1Ui421k7yy&cid=1539634399&p=1&autoplay=0" frameborder="no" scrolling="no"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
@@ -124,7 +124,7 @@ search: false
 
 ::: info 网盘
 通过网盘分享的文件：en.stsw-link009.zip
-链接: https://pan.baidu.com/s/1MQpDGWcqHiZNsAuQnO5VGw?pwd=2016 提取码: 2016 
+链接: https://pan.baidu.com/s/1MQpDGWcqHiZNsAuQnO5VGw?pwd=2016 提取码: 2016
 --来自百度网盘超级会员v4的分享
 :::
 

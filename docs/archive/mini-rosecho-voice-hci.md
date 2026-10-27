@@ -12,7 +12,7 @@ ROSECHO文档已停止持续维护。本页保留原视频及示例，软件与�
 **视频地址**
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-  <iframe src="//player.bilibili.com/player.html?aid=464075821&bvid=BV1tL411u7xr&cid=439017134&p=1&autoplay=0" frameborder="no" scrolling="no" 
+  <iframe src="//player.bilibili.com/player.html?aid=464075821&bvid=BV1tL411u7xr&cid=439017134&p=1&autoplay=0" frameborder="no" scrolling="no"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
