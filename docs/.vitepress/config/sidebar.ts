@@ -11,7 +11,8 @@ type ProductSidebarName =
   | 'TIANROVER'
   | 'TIANBOT MINI'
   | 'ROBOMASTER TT'
-  | 'ROSECHO';
+  | 'ABC Swarm'
+  | 'Tianbot Studio';
 
 const productSidebarPrefixes: Record<string, ProductSidebarName> = {
   '/ros2go/': 'ROS2GO',
@@ -20,7 +21,8 @@ const productSidebarPrefixes: Record<string, ProductSidebarName> = {
   '/tianrover/': 'TIANROVER',
   '/tianbot_mini/': 'TIANBOT MINI',
   '/rmtt/': 'ROBOMASTER TT',
-  '/rosecho/': 'ROSECHO',
+  '/abc_swarm/': 'ABC Swarm',
+  '/tianbot_studio/': 'Tianbot Studio',
 };
 
 const productSidebarNames = new Set<ProductSidebarName>(Object.values(productSidebarPrefixes));
@@ -59,18 +61,16 @@ function buildProductSidebar(activeProduct: ProductSidebarName | null): DefaultT
   const sidebarMulti = sidebar as DefaultTheme.SidebarMulti;
   const rootProductSidebar = sidebarMulti['/'] as DefaultTheme.SidebarItem[];
 
-  return rootProductSidebar.map((item) => {
+  const products = rootProductSidebar.map((item) => {
     const productName = item.text as ProductSidebarName | undefined;
-
-    if (!productName || !productSidebarNames.has(productName)) {
-      return item;
-    }
-
-    return {
-      ...item,
-      collapsed: productName !== activeProduct,
-    };
+    if (!productName || !productSidebarNames.has(productName)) return item;
+    return { ...item, collapsed: productName !== activeProduct };
   });
+  const software = new Set(['ROS2GO', 'ABC Swarm', 'Tianbot Studio']);
+  return [
+    { text: '机器人产品', items: products.filter((item) => !software.has(item.text ?? '')) },
+    { text: '软件产品', items: products.filter((item) => software.has(item.text ?? '')) },
+  ];
 }
 
 function configureProductSidebars() {
@@ -737,7 +737,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'Arduino 转圈讲解', link: '/tianbot_mini/solo/more_application/circle-by-arduino' },
                       { text: 'python 转圈、点灯', link: '/tianbot_mini/solo/more_application/circle-and-lighting-by-python' },
                       { text: '超声波测距', link: '/tianbot_mini/solo/more_application/ultrasonic-range' },
-                      { text: 'ROSECHO', link: '/tianbot_mini/solo/more_application/rosecho-voice-hci' },
                       { text: 'TTS 与 ASR 节点编程', link: '/tianbot_mini/solo/more_application/tts-and-asr-program' },
                       { text: 'HTML 机器人的 GUI 搭建', link: '/tianbot_mini/solo/more_application/html-gui' },
                       { text: '图传机器人', link: '/tianbot_mini/solo/more_application/image-transmission' },
@@ -748,11 +747,12 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                 ],
               },
               {
-                text: 'Swarm 集群系列 使用手册',
+                text: '集群接入与原视频课程',
                 collapsed: true,
                 items: [
                   { text: '使用指引', link: '/tianbot_mini/swarm/guide/' },
                   { text: '使用环境配置', link: '/tianbot_mini/swarm/guide/env-config' },
+                  { text: '配网与进入集群模式', link: '/tianbot_mini/swarm/guide/network-setup' },
                   {
                     text: '快速上手',
                     collapsed: true,
@@ -789,7 +789,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                     text: '多机器人联动',
                     collapsed: true,
                     items: [
-                      { text: '使用Tianbot Studio配置 tianbot mini机器人', link: '/tianbot_mini/swarm/swarm/tianbot_studio' },
+                      { text: '使用Tianbot Studio配网', link: '/tianbot_mini/swarm/swarm/tianbot_studio' },
                       { text: '配置 WIFI 环境', link: '/tianbot_mini/swarm/swarm/wifi-config' },
                       { text: '第二台机器人多机模式的配置', link: '/tianbot_mini/swarm/swarm/2nd-wifi-config' },
                       { text: '两台机器人的联动', link: '/tianbot_mini/swarm/swarm/cooperate-of-two-robot' },
@@ -806,7 +806,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
                       { text: 'Arduino 转圈讲解', link: '/tianbot_mini/swarm/more_application/circle-by-arduino' },
                       { text: 'python 转圈、点灯', link: '/tianbot_mini/swarm/more_application/circle-and-lighting-by-python' },
                       { text: '超声波测距', link: '/tianbot_mini/swarm/more_application/ultrasonic-range' },
-                      { text: 'ROSECHO', link: '/tianbot_mini/swarm/more_application/rosecho-voice-hci' },
                       { text: 'TTS 与 ASR 节点编程', link: '/tianbot_mini/swarm/more_application/tts-and-asr-program' },
                       { text: 'HTML 机器人的 GUI 搭建', link: '/tianbot_mini/swarm/more_application/html-gui' },
                       { text: '图传机器人', link: '/tianbot_mini/swarm/more_application/image-transmission' },
@@ -836,25 +835,35 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ],
           },
           {
-            //分组标题 6
-            text: 'ROSECHO',
-            collapsed: false,
-            link: '/rosecho/',
+            text: 'ABC Swarm', link: '/abc_swarm/', collapsed: true,
             items: [
-              { text: '开箱说明', link: '/rosecho/' },
-              { text: '使用手册', link: '/rosecho/guide/' },
+              { text: '产品介绍', link: '/abc_swarm/' },
+              { text: '安装与软件环境', link: '/abc_swarm/installation' },
+              { text: 'Mini集群接入', link: '/abc_swarm/mini' },
+              { text: 'NOKOV动捕接入', link: '/abc_swarm/mocap' },
               {
-                text: '快速上手',
-                collapsed: true,
+                text: '动捕实验', collapsed: false,
                 items: [
-                  { text: '云端问答', link: '/rosecho/guide/qa-in-cloud' },
-                  { text: 'rosecho 功能包详解', link: '/rosecho/guide/ros-package-brief' },
-                  { text: '语音遥控', link: '/rosecho/guide/voice-remote-control' },
-                  { text: '用户自定义问答', link: '/rosecho/guide/custom-qa-by-user' },
-                  { text: 'AIUI 配置', link: '/rosecho/guide/aiui-config' },
+                  { text: '点镇定与自动入位', link: '/abc_swarm/point-stabilization' },
+                  { text: '三角形跟随', link: '/abc_swarm/triangle-following' },
+                  { text: '蛇形跟随', link: '/abc_swarm/snake-following' },
+                  { text: '三车画圆', link: '/abc_swarm/circle' },
+                  { text: '三车沿三角形运动', link: '/abc_swarm/triangle' },
                 ],
               },
-              { text: '更新日志', link: '/rosecho/changelog' },
+              { text: '参数、状态与RViz', link: '/abc_swarm/reference' },
+              { text: '用AI配置实验', link: '/abc_swarm/ai-experiments' },
+              { text: '常见问题', link: '/abc_swarm/faq' },
+              { text: '原视频课程与仿真', link: '/abc_swarm/legacy-course' },
+            ],
+          },
+          {
+            text: 'Tianbot Studio', link: '/tianbot_studio/', collapsed: true,
+            items: [
+              { text: '软件介绍', link: '/tianbot_studio/' },
+              { text: '安装与连接', link: '/tianbot_studio/installation' },
+              { text: 'Mini网络配置', link: '/tianbot_studio/mini-network' },
+              { text: '常见问题', link: '/tianbot_studio/faq' },
             ],
           },
     ],
@@ -862,3 +871,36 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
 
 configureKnowledgeSidebars();
 configureProductSidebars();
+
+// 历史资料单独导航，旧地址继续可访问，不回到现役产品目录。
+const archiveSidebar: DefaultTheme.SidebarItem[] = [
+  { text: '历史产品资料', link: '/archive/', items: [
+          {
+            //分组标题 6
+            text: 'ROSECHO（历史资料）',
+            collapsed: false,
+            link: '/archive/rosecho/',
+            items: [
+              { text: '开箱说明', link: '/archive/rosecho/' },
+              { text: '使用手册', link: '/archive/rosecho/guide/' },
+              {
+                text: '快速上手',
+                collapsed: true,
+                items: [
+                  { text: '云端问答', link: '/archive/rosecho/guide/qa-in-cloud' },
+                  { text: 'rosecho 功能包详解', link: '/archive/rosecho/guide/ros-package-brief' },
+                  { text: '语音遥控', link: '/archive/rosecho/guide/voice-remote-control' },
+                  { text: '用户自定义问答', link: '/archive/rosecho/guide/custom-qa-by-user' },
+                  { text: 'AIUI 配置', link: '/archive/rosecho/guide/aiui-config' },
+                ],
+              },
+              { text: '更新日志', link: '/archive/rosecho/changelog' },
+            ],
+          },
+    { text: 'Mini的ROSECHO历史课程', link: '/archive/mini-rosecho-voice-hci' },
+    { text: '红外电子靶', link: '/archive/infrared-electronic-target' },
+  ] },
+];
+(sidebar as DefaultTheme.SidebarMulti)['/archive/'] = archiveSidebar;
+(sidebar as DefaultTheme.SidebarMulti)['/rosecho/'] = archiveSidebar;
+(sidebar as DefaultTheme.SidebarMulti)['/robomaster/infrared_electronic_target'] = archiveSidebar;

@@ -1,5 +1,10 @@
 # 本篇介绍RMTT与Tianbot_mini之间的集群
 
+::: tip 原视频课程
+本页保留原视频的名称与操作。新版[Mini配网与集群模式](../guide/network-setup.md)集中说明多车连接；动捕点镇定、跟随和轨迹实验从[ABC Swarm](../../../abc_swarm/index.md)进入。
+:::
+
+
 ## 硬件准备
 
 - 一台电脑PC

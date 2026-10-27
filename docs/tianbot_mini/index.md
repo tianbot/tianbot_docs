@@ -1,5 +1,8 @@
 #  Tianbot mini使用手册
 
+单机使用按本产品手册准备；多台Mini先完成[配网与进入集群模式](./swarm/guide/network-setup.md)，再从[ABC Swarm](../abc_swarm/index.md)选择点镇定、队形或轨迹实验。网络配置工具见[Tianbot Studio](../tianbot_studio/index.md)。
+
+
 ## 产品介绍
 
 **功能完善**：TIANBOT迷你机器人配备360°激光雷达传感器，集成差速运动控制系统，只需3步即可实现SLAM建图导航功能，从开机到建图导航仅需数秒钟，快速帮您使用ROS机器人操作系统控制与构建智能机器人，同时可通过预置接口，连接扩展模块，轻松拓展更加丰富的应用场景。
