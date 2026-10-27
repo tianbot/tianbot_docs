@@ -4,15 +4,26 @@ import type { DefaultTheme } from "vitepress";
 export const nav: DefaultTheme.Config['nav'] = [
     { text: '官网', link: 'https://www.tianbot.com' },
     {
-        text: 'ROS 产品文档',
+        text: '产品文档',
         items: [
-            { text: 'ROS2GO', link: '/ros2go/guide/' },
-            { text: 'TOM', link: '/tianbot/' },
-            { text: 'TIANROVER', link: '/tianrover/' },
-            { text: 'TIANRACER', link: '/tianracer/' },
-            { text: 'TIANBOT MINI', link: '/tianbot_mini/' },
-            { text: 'ROBOMASTER TT', link: '/rmtt/' },
-            { text: 'ROSECHO', link: '/rosecho/' },
+            {
+                text: '机器人产品',
+                items: [
+                    { text: 'TOM', link: '/tianbot/' },
+                    { text: 'TIANROVER', link: '/tianrover/' },
+                    { text: 'TIANRACER', link: '/tianracer/' },
+                    { text: 'TIANBOT MINI', link: '/tianbot_mini/' },
+                    { text: 'ROBOMASTER TT', link: '/rmtt/' },
+                ],
+            },
+            {
+                text: '软件产品',
+                items: [
+                    { text: 'ROS2GO', link: '/ros2go/guide/' },
+                    { text: 'ABC Swarm', link: '/abc_swarm/' },
+                    { text: 'Tianbot Studio', link: '/tianbot_studio/' },
+                ],
+            },
         ],
     },
     { 
@@ -42,6 +53,7 @@ export const nav: DefaultTheme.Config['nav'] = [
             { text: 'RoboRacer 无人车线下挑战赛', link: '/competition/roboracer_offline/' }
         ]
     },
+    { text: '历史资料', link: '/archive/' },
     { 
         text: '关于我们',
         link: 'about',

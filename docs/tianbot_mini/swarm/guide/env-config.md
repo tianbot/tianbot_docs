@@ -1,5 +1,10 @@
 # 使用环境配置
 
+::: tip 选择对应的使用路线
+新动捕集群实验使用[ABC Swarm安装与软件环境](../../../abc_swarm/installation.md)，并先完成[Mini配网与集群模式](./network-setup.md)。下文保留原课程的单机热点与SLAM环境说明。
+:::
+
+
 ## 1、ROS2GO 启动电脑
 
 TIANBOT 迷你机器人来说附带的 ROS2GO 随身系统已预置当前版本固件所匹配的功能包，目前搭配的 ROS2GO 系统为 Ubuntu18.04+ROS melodic 版本，使用 ROS2GO 中启动系统，简单来说只需要 3 步：

@@ -1,5 +1,10 @@
 # 两台机器人联动
 
+::: tip 原视频课程
+本页保留原视频的名称与操作。新版[Mini配网与集群模式](../guide/network-setup.md)集中说明多车连接；动捕点镇定、跟随和轨迹实验从[ABC Swarm](../../../abc_swarm/index.md)进入。
+:::
+
+
 B站ROS零基础入门百日谈16
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0;">

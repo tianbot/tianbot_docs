@@ -1,5 +1,8 @@
 # 使用 Nokov 动捕将 VRPN 流发布到 ROS1 广播中 {#VRPN ROS With NOKOV}
 
+三Mini集群实验的完整准备顺序、场地配置和反馈检查见[ABC Swarm动捕接入](../../abc_swarm/mocap.md)。本页保留NOKOV/VRPN设置与通用话题示例。
+
+
 ## 刚体坐标系检查
 
 ![](https://tianbot-pic.oss-cn-beijing.aliyuncs.com/tianbot-pic/Tianbot-Doc/nokov/rigid_body_frame_check.png)

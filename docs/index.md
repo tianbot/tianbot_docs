@@ -44,10 +44,14 @@ features:
     title: RoboMaster TT
     details: 大疆 RoboMaster TT，不仅可满足日常无人机教学、部分竞赛、演示等多种需求，也可搭配 Tianbot mini 机器人即可构成空地协同套装，让学生和老师更专注在空地协同和编队控制的学习上...
     link: /rmtt/
-  - icon: 📢
-    title: ROSECHO
-    details: 专为 ROS 机器人开发打造的语音交互模块，科大讯飞强力驱动，中英双语支持，来为你的移动机器人加上耳朵吧...
-    link: /rosecho/
+  - icon: 🔺
+    title: ABC Swarm
+    details: 集群教学与实验软件，从多机接入、动捕定位到点镇定、队形跟随和轨迹运动，按实验逐步学习多机器人协作。
+    link: /abc_swarm/
+  - icon: 🛠️
+    title: Tianbot Studio
+    details: 设备配置与调试工具，通过串口读取和保存Mini网络参数，为单机使用和集群接入做好准备。
+    link: /tianbot_studio/
   - icon: 📖
     title: 开发基础和必备技能
     details: ROS 机器人软件开发的基础知识和必备技能，持续更新中...
